@@ -40,7 +40,6 @@
 #include <QString>
 #include <QStringList>
 #include <QStringView>
-#include <QTimer>
 
 #include "access/accessibility.h"
 #include "base/net/downloadmanager.h"
@@ -100,11 +99,6 @@ DownloadFromURLDialog::DownloadFromURLDialog(QWidget *parent)
         m_ui->textUrls->setText(urls.join(u'\n') + u"\n");
         m_ui->textUrls->moveCursor(QTextCursor::End);
         m_ui->buttonBox->setFocus();
-        // accessibility: the focus lands on "Download"; say that the links are already there
-        QTimer::singleShot(300, this, [this, count = urls.size()]
-        {
-            Access::announce(this, ((count == 1) ? tr("1 link pasted") : tr("%1 links pasted").arg(count)));
-        });
     }
 
     // accessibility: the links field is named after its label, the hint below is its description
@@ -137,6 +131,10 @@ DownloadFromURLDialog::DownloadFromURLDialog(QWidget *parent)
     };
     connect(m_ui->textUrls, &QTextEdit::textChanged, linkList, refreshLinks);
     refreshLinks();
+    // links taken from the clipboard: land on the list, which reads the first link (Enter still
+    // downloads, through the dialog's default button), rather than on a silent "Download"
+    if (!urls.isEmpty())
+        linkList->setFocus(Qt::OtherFocusReason);
     Access::onKeyboardPaste(m_ui->textUrls, [this, lines]
     {
         const QStringList urls = lines();
