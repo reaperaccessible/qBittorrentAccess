@@ -31,6 +31,7 @@
 
 #include <algorithm>
 
+#include <QAccessible>
 #include <QClipboard>
 #include <QDebug>
 #include <QFileDialog>
@@ -157,6 +158,9 @@ TransferListWidget::TransferListWidget(IGUIApplication *app, QWidget *parent)
     setAccessibleName(tr("Torrents"));
     m_sortFilterModel->setAccessibleTextProvider([this](const QModelIndex &index)
     {
+        // the current row names the column chosen with Left/Right: it stays on the braille display
+        if ((m_readColumn >= 0) && (index.row() == currentIndex().row()))
+            return accessibleCellText(index.row(), m_readColumn);
         return accessibleRowText(index.row());
     });
 
@@ -1374,7 +1378,24 @@ void TransferListWidget::announceColumn(const int step)
     }
 
     m_readColumn = columns[target];
-    Access::announce(this, accessibleCellText(current.row(), m_readColumn));
+    // The current item takes the column as its name ("Progress 45%") and says so: the screen reader
+    // speaks the change and keeps it on the braille display (an announcement is only a flash message).
+    // Pressing Left/Right again reads the up-to-date value.
+    notifyCurrentNameChanged();
+}
+
+void TransferListWidget::notifyCurrentNameChanged()
+{
+    const QModelIndex current = currentIndex();
+    QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(this);
+    if (!current.isValid() || !iface || !iface->tableInterface())
+        return;
+    if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(current.row(), current.column()))
+    {
+        QAccessibleEvent event {this, QAccessible::NameChanged};
+        event.setChild(iface->indexOfChild(cell));
+        QAccessible::updateAccessibility(&event);
+    }
 }
 
 void TransferListWidget::toggleCurrentTorrentsStartStop()
@@ -1415,6 +1436,19 @@ void TransferListWidget::keyPressEvent(QKeyEvent *event)
         {
             toggleCurrentTorrentsStartStop();
             return;
+        }
+        if (((key == Qt::Key_Up) || (key == Qt::Key_Down)) && (m_readColumn >= 0))
+        {
+            // back to the whole row; at an edge the row does not change, so say it here
+            const bool atEdge = !((key == Qt::Key_Up) ? indexAbove(currentIndex()) : indexBelow(currentIndex())).isValid();
+            if (atEdge)
+            {
+                m_readColumn = -1;
+                notifyCurrentNameChanged();
+                Access::announce(this, ((key == Qt::Key_Up) ? QCoreApplication::translate("Access", "First")
+                    : QCoreApplication::translate("Access", "Last")), true);
+                return;
+            }
         }
         if (Access::announceListEdge(this, event))
             return;

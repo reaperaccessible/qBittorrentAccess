@@ -131,6 +131,7 @@ private:
     QString accessibleCellText(int row, int column) const;
     QList<int> visibleColumnsInOrder() const;
     void announceColumn(int step);
+    void notifyCurrentNameChanged();
     void toggleCurrentTorrentsStartStop();
     void openPreviewSelectDialog(const BitTorrent::Torrent *torrent);
     QModelIndex mapToSource(const QModelIndex &index) const;
