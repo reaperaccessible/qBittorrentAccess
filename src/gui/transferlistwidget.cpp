@@ -156,11 +156,18 @@ TransferListWidget::TransferListWidget(IGUIApplication *app, QWidget *parent)
 
     // Accessibility: name the list and let screen readers read the whole row, not just one cell
     setAccessibleName(tr("Torrents"));
-    m_sortFilterModel->setAccessibleTextProvider([this](const QModelIndex &index)
+    m_sortFilterModel->setAccessibleTextProvider([this](const QModelIndex &index) -> QString
     {
-        // the current row names the column chosen with Left/Right: it stays on the braille display
+        // the current row names the column chosen with Left/Right (it stays on the braille display):
+        // the value alone after Left/Right, the torrent name and the value after Up/Down (two-axis rule)
         if ((m_readColumn >= 0) && (index.row() == currentIndex().row()))
-            return accessibleCellText(index.row(), m_readColumn);
+        {
+            const QString cell = accessibleCellText(index.row(), m_readColumn);
+            if (m_columnOnly)
+                return cell;
+            const QString name = m_sortFilterModel->index(index.row(), TransferListModel::TR_NAME).data(Qt::DisplayRole).toString().trimmed();
+            return name + u", " + cell;
+        }
         return accessibleRowText(index.row());
     });
 
@@ -1378,6 +1385,7 @@ void TransferListWidget::announceColumn(const int step)
     }
 
     m_readColumn = columns[target];
+    m_columnOnly = true;
     // The current item takes the column as its name ("Progress 45%") and says so: the screen reader
     // speaks the change and keeps it on the braille display (an announcement is only a flash message).
     // Pressing Left/Right again reads the up-to-date value.
@@ -1437,13 +1445,15 @@ void TransferListWidget::keyPressEvent(QKeyEvent *event)
             toggleCurrentTorrentsStartStop();
             return;
         }
-        if (((key == Qt::Key_Up) || (key == Qt::Key_Down)) && (m_readColumn >= 0))
+        if (((key == Qt::Key_Up) || (key == Qt::Key_Down)) && (m_readColumn >= 0) && m_columnOnly)
         {
-            // back to the whole row; at an edge the row does not change, so say it here
+            // at an edge the row does not change: switch to "name, value" here and say it
             const bool atEdge = !((key == Qt::Key_Up) ? indexAbove(currentIndex()) : indexBelow(currentIndex())).isValid();
             if (atEdge)
             {
-                m_readColumn = -1;
+                m_columnOnly = false;
+                if (m_readColumn == TransferListModel::TR_NAME)
+                    m_readColumn = -1;
                 notifyCurrentNameChanged();
                 Access::announce(this, ((key == Qt::Key_Up) ? QCoreApplication::translate("Access", "First")
                     : QCoreApplication::translate("Access", "Last")), true);
@@ -1496,9 +1506,15 @@ void TransferListWidget::currentChanged(const QModelIndex &current, const QModel
     // This is critical for screen readers to announce the currently selected torrent.
     // Without this call, users relying on assistive technologies cannot effectively
     // navigate the torrent list with keyboard arrow keys.
-    QTreeView::currentChanged(current, previous);
+    // Up/Down keep the column chosen with Left/Right (browse the list by size, by progress...): the new row
+    // says "name, value"; on the Name column it is the whole row again. Set before Qt announces the row.
     if (current.row() != previous.row())
-        m_readColumn = -1; // a new row is read whole again
+    {
+        m_columnOnly = false;
+        if (m_readColumn == TransferListModel::TR_NAME)
+            m_readColumn = -1;
+    }
+    QTreeView::currentChanged(current, previous);
 
     BitTorrent::Torrent *torrent = nullptr;
     if (current.isValid())

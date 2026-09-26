@@ -150,5 +150,6 @@ private:
 
     TransferListModel *m_listModel = nullptr;
     TransferListSortModel *m_sortFilterModel = nullptr;
-    int m_readColumn = -1; // accessibility: column read with Left/Right on the current row, -1 = whole row
+    int m_readColumn = -1; // accessibility: column chosen with Left/Right, kept by Up/Down; -1 = whole row
+    bool m_columnOnly = false; // accessibility: last key was Left/Right, the current item names the value alone
 };
