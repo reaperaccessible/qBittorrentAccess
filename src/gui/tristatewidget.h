@@ -43,6 +43,10 @@ public:
     void setCheckState(Qt::CheckState checkState);
     void setCloseOnInteraction(bool enabled);
 
+    // accessibility: read by the screen reader interface of this widget
+    QString text() const;
+    Qt::CheckState checkState() const;
+
 signals:
     void triggered(bool checked) const;
 
@@ -54,6 +58,7 @@ private:
     void keyPressEvent(QKeyEvent *event) override;
 
     void toggleCheckState();
+    void notifyCheckStateChanged();
 
     bool m_closeOnInteraction = true;
     Qt::CheckState m_checkState = Qt::Unchecked;

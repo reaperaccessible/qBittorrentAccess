@@ -28,25 +28,114 @@
 
 #include "tristatewidget.h"
 
+#include <QAccessible>
+#include <QAccessibleWidget>
 #include <QApplication>
+#include <QMenu>
 #include <QMouseEvent>
 #include <QPainter>
 #include <QPaintEvent>
 #include <QString>
 #include <QStyle>
 #include <QStyleOptionMenuItem>
+#include <QWidgetAction>
+
+namespace
+{
+    // Accessibility: without this, Windows shows the widget as an unnamed "group"; it is a checkable menu
+    // item with a name and a checked, unchecked or mixed state
+    class TriStateWidgetAccessible final : public QAccessibleWidget
+    {
+    public:
+        explicit TriStateWidgetAccessible(TriStateWidget *widget)
+            : QAccessibleWidget(widget, QAccessible::MenuItem)
+        {
+        }
+
+        QString text(const QAccessible::Text t) const override
+        {
+            if (t == QAccessible::Name)
+                return QString(tristate()->text()).remove(u'&');
+            return QAccessibleWidget::text(t);
+        }
+
+        QAccessible::State state() const override
+        {
+            QAccessible::State s = QAccessibleWidget::state();
+            s.checkable = true;
+            s.checked = (tristate()->checkState() == Qt::Checked);
+            s.checkStateMixed = (tristate()->checkState() == Qt::PartiallyChecked);
+            return s;
+        }
+
+        QStringList actionNames() const override
+        {
+            return {toggleAction()};
+        }
+
+        void doAction(const QString &actionName) override
+        {
+            if (actionName != toggleAction())
+                return;
+            QKeyEvent enter {QEvent::KeyPress, Qt::Key_Return, Qt::NoModifier};
+            QApplication::sendEvent(widget(), &enter);
+        }
+
+    private:
+        TriStateWidget *tristate() const
+        {
+            return static_cast<TriStateWidget *>(widget());
+        }
+    };
+
+    QAccessibleInterface *triStateWidgetFactory(const QString &className, QObject *object)
+    {
+        if ((className == u"TriStateWidget") && object && object->isWidgetType())
+            return new TriStateWidgetAccessible(static_cast<TriStateWidget *>(object));
+        return nullptr;
+    }
+}
 
 TriStateWidget::TriStateWidget(const QString &text, QWidget *parent)
     : QWidget {parent}
     , m_text {text}
 {
     setMouseTracking(true);  // for visual effects via mouse navigation
-    setFocusPolicy(Qt::TabFocus);  // for visual effects via keyboard navigation
+    // accessibility: the focus stays on the menu, which speaks this entry as one checkable item (a focused
+    // widget made the screen reader say the entry twice); keyboard selection is drawn in paintEvent
+    setFocusPolicy(Qt::NoFocus);
+
+    static const bool factoryInstalled = []
+    {
+        QAccessible::installFactory(triStateWidgetFactory);
+        return true;
+    }();
+    Q_UNUSED(factoryInstalled);
 }
 
 void TriStateWidget::setCheckState(const Qt::CheckState checkState)
 {
     m_checkState = checkState;
+    notifyCheckStateChanged();
+}
+
+QString TriStateWidget::text() const
+{
+    return m_text;
+}
+
+Qt::CheckState TriStateWidget::checkState() const
+{
+    return m_checkState;
+}
+
+void TriStateWidget::notifyCheckStateChanged()
+{
+    QAccessible::State changed;
+    changed.checked = true;
+    changed.checkStateMixed = true;
+    QAccessibleStateChangeEvent event {this, changed};
+    QAccessible::updateAccessibility(&event);
 }
 
 void TriStateWidget::setCloseOnInteraction(const bool enabled)
@@ -85,7 +174,12 @@ void TriStateWidget::paintEvent(QPaintEvent *)
         break;
     };
 
-    if ((opt.state & QStyle::State_HasFocus)
+    // selected with the keyboard: the menu's current item is this widget's action
+    const auto *menu = qobject_cast<const QMenu *>(parentWidget());
+    const auto *currentAction = menu ? qobject_cast<const QWidgetAction *>(menu->activeAction()) : nullptr;
+    const bool keyboardSelected = currentAction && (currentAction->defaultWidget() == this);
+
+    if (keyboardSelected || (opt.state & QStyle::State_HasFocus)
         || rect().contains(mapFromGlobal(QCursor::pos())))
         {
         opt.state |= QStyle::State_Selected;
@@ -146,4 +240,5 @@ void TriStateWidget::toggleCheckState()
         m_checkState = Qt::Unchecked;
         break;
     };
+    notifyCheckStateChanged();
 }

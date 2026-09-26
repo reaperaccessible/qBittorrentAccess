@@ -38,6 +38,8 @@ TriStateAction::TriStateAction(const QString &text, QWidget *parent)
     , m_triStateWidget {new TriStateWidget {text, parent}}
 {
     setCheckable(true);
+    // accessibility: the menu exposes this action as its item; without a text it was an empty item
+    setText(text);
 
     // required for QAction::setChecked(bool) to work
     connect(this, &QAction::toggled, this, [this](const bool checked)
