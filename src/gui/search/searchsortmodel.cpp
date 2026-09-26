@@ -29,6 +29,7 @@
 
 #include "searchsortmodel.h"
 
+#include "gui/access/accessibility.h"
 #include "base/global.h"
 
 SearchSortModel::SearchSortModel(QObject *parent)
@@ -36,6 +37,16 @@ SearchSortModel::SearchSortModel(QObject *parent)
 {
     setSortRole(UnderlyingDataRole);
     setFilterRole(UnderlyingDataRole);
+}
+
+QVariant SearchSortModel::data(const QModelIndex &index, const int role) const
+{
+    if (role == Qt::AccessibleTextRole)
+    {
+        if (const QVariant rowText = Access::rowTextFor(index); rowText.isValid())
+            return rowText;
+    }
+    return QSortFilterProxyModel::data(index, role);
 }
 
 void SearchSortModel::enableNameFilter(const bool enabled)

@@ -66,6 +66,7 @@
 #include "base/utils/fs.h"
 #include "base/utils/foreignapps.h"
 #include "base/utils/io.h"
+#include "gui/access/accessibility.h"
 #include "gui/desktopintegration.h"
 #include "gui/interfaces/iguiapplication.h"
 #include "gui/uithememanager.h"
@@ -451,6 +452,13 @@ SearchWidget::SearchWidget(IGUIApplication *app, QWidget *parent)
 
     loadHistory();
     restoreSession();
+
+    // Accessibility: the combo boxes have no label on screen
+    m_ui->lineEditSearchPattern->setAccessibleName(Access::cleanLabel(m_ui->searchButton->text()));
+    m_ui->comboCategory->setAccessibleName(tr("Category"));
+    m_ui->selectPlugin->setAccessibleName(tr("Search plugin"));
+    m_ui->tabWidget->setAccessibleName(tr("Searches"));
+    Access::labelControls(this);
 }
 
 bool SearchWidget::eventFilter(QObject *object, QEvent *event)

@@ -60,6 +60,14 @@ namespace Access
     // `owner` keeps the filter alive.
     void installMenuFocusFix(QObject *owner);
 
+    // Application-wide: every dialog gets labelControls() when it is shown, so fields of dialogs we
+    // never touched are named after their labels too. `owner` keeps the filter alive.
+    void installDialogLabeling(QObject *owner);
+
+    // QTreeWidget / QListWidget own their model: set the whole-row text on every item
+    // (Qt::AccessibleTextRole), and again whenever items change
+    void keepItemRowTexts(QTreeView *view, int primaryColumn);
+
     // Label text as a screen reader should say it: no '&' mnemonic, no HTML, no trailing ':'
     QString cleanLabel(const QString &text);
 

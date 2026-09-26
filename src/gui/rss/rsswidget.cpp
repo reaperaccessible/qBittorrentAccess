@@ -47,6 +47,7 @@
 #include "base/rss/rss_feed.h"
 #include "base/rss/rss_folder.h"
 #include "base/rss/rss_session.h"
+#include "gui/access/accessibility.h"
 #include "gui/autoexpandabledialog.h"
 #include "gui/interfaces/iguiapplication.h"
 #include "gui/lineedit.h"
@@ -184,6 +185,14 @@ RSSWidget::RSSWidget(IGUIApplication *app, QWidget *parent)
             , this, &RSSWidget::handleUnreadCountChanged);
 
     m_ui->textBrowser->installEventFilter(this);
+
+    // Accessibility: article list and article text named, "First," / "Last," at the edges
+    m_ui->articleListWidget->setAccessibleName(tr("Articles"));
+    m_rssFilter->setAccessibleName(Access::cleanLabel(m_rssFilter->placeholderText()));
+    m_ui->textBrowser->setAccessibleName(tr("Article"));
+    Access::installListEdgeAnnouncer(m_ui->feedListWidget);
+    Access::installListEdgeAnnouncer(m_ui->articleListWidget);
+    Access::labelControls(this);
 }
 
 RSSWidget::~RSSWidget()

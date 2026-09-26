@@ -41,6 +41,8 @@
 #include <QTreeView>
 #include <QComboBox>
 #include <QCoreApplication>
+#include <QDialog>
+#include <QDialogButtonBox>
 #include <QFormLayout>
 #include <QGridLayout>
 #include <QGroupBox>
@@ -309,6 +311,22 @@ namespace
         }
     };
 
+    class DialogLabelingFilter final : public QObject
+    {
+    public:
+        using QObject::QObject;
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() == QEvent::Show)
+            {
+                if (auto *dialog = qobject_cast<QDialog *>(watched))
+                    Access::labelControls(dialog);
+            }
+            return QObject::eventFilter(watched, event);
+        }
+    };
+
     class ListEdgeFilter final : public QObject
     {
     public:
@@ -362,6 +380,10 @@ QString Access::cleanLabel(const QString &text)
     result = result.simplified();
     if (result.endsWith(u"(?)"_s)) // link to the documentation, not part of the name
         result.chop(3);
+    if (result.endsWith(u"..."_s)) // screen readers say "dot dot dot"
+        result.chop(3);
+    if (result.endsWith(u'\u2026'))
+        result.chop(1);
     while (!result.isEmpty() && (result.endsWith(u':') || result.endsWith(u'：') || result.back().isSpace()))
         result.chop(1);
     return result;
@@ -396,6 +418,8 @@ void Access::labelControls(QWidget *root)
 
     for (auto *scroll : root->findChildren<QScrollArea *>())
         scroll->setFocusPolicy(Qt::NoFocus);
+    for (auto *buttonBox : root->findChildren<QDialogButtonBox *>())
+        buttonBox->setFocusPolicy(Qt::NoFocus); // its buttons are the Tab stops, not the box
 
     // A group box is named after its own title (Qt names a nested one after its parent's title);
     // this matters for checkable group boxes, which are Tab stops
@@ -616,6 +640,45 @@ void Access::ReadOnlyList::keyPressEvent(QKeyEvent *event)
 void Access::installMenuFocusFix(QObject *owner)
 {
     qApp->installEventFilter(new MenuFocusFilter(owner));
+}
+
+void Access::installDialogLabeling(QObject *owner)
+{
+    qApp->installEventFilter(new DialogLabelingFilter(owner));
+}
+
+void Access::keepItemRowTexts(QTreeView *view, const int primaryColumn)
+{
+    QAbstractItemModel *model = view->model();
+    const auto update = [view, model, primaryColumn]
+    {
+        // setData() below emits dataChanged: do not recurse
+        static bool updating = false;
+        if (updating)
+            return;
+        updating = true;
+        const std::function<void (const QModelIndex &)> walk = [&](const QModelIndex &parent)
+        {
+            for (int row = 0; row < model->rowCount(parent); ++row)
+            {
+                const QModelIndex index = model->index(row, 0, parent);
+                const QString text = rowText(view, index, primaryColumn);
+                for (int column = 0; column < model->columnCount(parent); ++column)
+                {
+                    const QModelIndex cell = index.siblingAtColumn(column);
+                    if (cell.data(Qt::AccessibleTextRole).toString() != text)
+                        model->setData(cell, text, Qt::AccessibleTextRole);
+                }
+                walk(index);
+            }
+        };
+        walk({});
+        updating = false;
+    };
+    QObject::connect(model, &QAbstractItemModel::rowsInserted, view, update);
+    QObject::connect(model, &QAbstractItemModel::modelReset, view, update);
+    QObject::connect(model, &QAbstractItemModel::dataChanged, view, update);
+    update();
 }
 
 void Access::focusFirstChild(QWidget *page)

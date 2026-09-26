@@ -60,6 +60,8 @@ public:
 
     explicit SearchSortModel(QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override; // accessibility: whole-row text
+
     void enableNameFilter(bool enabled);
     void setNameFilter(const QString &searchTerm = {});
 

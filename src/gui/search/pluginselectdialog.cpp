@@ -42,6 +42,7 @@
 #include "base/net/downloadmanager.h"
 #include "base/preferences.h"
 #include "base/utils/fs.h"
+#include "gui/access/accessibility.h"
 #include "gui/autoexpandabledialog.h"
 #include "gui/uithememanager.h"
 #include "gui/utils.h"
@@ -90,6 +91,11 @@ PluginSelectDialog::PluginSelectDialog(SearchPluginManager *pluginManager, QWidg
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+
+    // Accessibility: the plugin list is named and read as whole rows, "First," / "Last," at the edges
+    m_ui->pluginsTree->setAccessibleName(windowTitle());
+    Access::keepItemRowTexts(m_ui->pluginsTree, PLUGIN_NAME);
+    Access::installListEdgeAnnouncer(m_ui->pluginsTree);
 }
 
 PluginSelectDialog::~PluginSelectDialog()

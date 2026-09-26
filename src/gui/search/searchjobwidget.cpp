@@ -46,6 +46,7 @@
 #include "base/search/searchhandler.h"
 #include "base/search/searchpluginmanager.h"
 #include "base/utils/misc.h"
+#include "gui/access/accessibility.h"
 #include "gui/interfaces/iguiapplication.h"
 #include "gui/lineedit.h"
 #include "gui/uithememanager.h"
@@ -187,6 +188,20 @@ SearchJobWidget::SearchJobWidget(const QString &id, IGUIApplication *app, QWidge
     connect(m_ui->resultsBrowser, &QAbstractItemView::doubleClicked, this, &SearchJobWidget::onItemDoubleClicked);
 
     connect(UIThemeManager::instance(), &UIThemeManager::themeChanged, this, &SearchJobWidget::onUIThemeChanged);
+
+    // Accessibility: results named and read as whole rows, "First," / "Last," at the edges,
+    // filter fields named after their labels
+    m_ui->resultsBrowser->setAccessibleName(tr("Search results"));
+    m_ui->minSeeds->setAccessibleName(tr("Minimum seeds"));
+    m_ui->maxSeeds->setAccessibleName(tr("Maximum seeds"));
+    m_ui->minSize->setAccessibleName(tr("Minimum size"));
+    m_ui->minSizeUnit->setAccessibleName(tr("Minimum size unit"));
+    m_ui->maxSize->setAccessibleName(tr("Maximum size"));
+    m_ui->maxSizeUnit->setAccessibleName(tr("Maximum size unit"));
+    m_lineEditSearchResultsFilter->setAccessibleName(Access::cleanLabel(m_lineEditSearchResultsFilter->placeholderText()));
+    Access::registerRowText(m_ui->resultsBrowser, SearchSortModel::NAME);
+    Access::installListEdgeAnnouncer(m_ui->resultsBrowser);
+    Access::labelControls(this);
 }
 
 SearchJobWidget::SearchJobWidget(const QString &id, const QString &searchPattern

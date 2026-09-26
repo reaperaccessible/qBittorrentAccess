@@ -50,6 +50,7 @@
 #include "base/utils/compare.h"
 #include "base/utils/io.h"
 #include "base/utils/string.h"
+#include "gui/access/accessibility.h"
 #include "gui/addtorrentparamswidget.h"
 #include "gui/autoexpandabledialog.h"
 #include "gui/torrentcategorydialog.h"
@@ -171,6 +172,15 @@ AutomatedRssDownloader::AutomatedRssDownloader(QWidget *parent)
 
     connect(RSS::AutoDownloader::instance(), &RSS::AutoDownloader::processingStateChanged
             , this, &AutomatedRssDownloader::handleProcessingStateChanged);
+
+    // Accessibility: short names for the icon buttons (their tooltips are long sentences),
+    // the rule list named after its label
+    m_ui->addRuleBtn->setAccessibleName(tr("Add new rule"));
+    m_ui->removeRuleBtn->setAccessibleName(tr("Delete rule"));
+    m_ui->renameRuleBtn->setAccessibleName(tr("Rename rule"));
+    m_ui->cloneRuleBtn->setAccessibleName(tr("Clone rule"));
+    m_ui->ruleList->setAccessibleName(Access::cleanLabel(m_ui->ruleListLabel->text()));
+    Access::installListEdgeAnnouncer(m_ui->ruleList);
 }
 
 AutomatedRssDownloader::~AutomatedRssDownloader()
