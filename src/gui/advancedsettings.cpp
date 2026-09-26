@@ -40,6 +40,7 @@
 #include "base/global.h"
 #include "base/preferences.h"
 #include "base/unicodestrings.h"
+#include "gui/access/accessibility.h"
 #include "gui/desktopintegration.h"
 #include "gui/mainwindow.h"
 #include "interfaces/iguiapplication.h"
@@ -1012,6 +1013,8 @@ void AdvancedSettings::addRow(const int row, const QString &text, T *widget)
 
     setCellWidget(row, PROPERTY, label);
     setCellWidget(row, VALUE, widget);
+    Access::setControlName(widget, Access::cleanLabel(text)); // accessibility: the cell widget is named after its row
+    label->setBuddy(widget);
 
     if constexpr (std::is_same_v<T, QCheckBox>)
     {

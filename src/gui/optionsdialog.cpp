@@ -69,6 +69,7 @@
 #include "base/utils/password.h"
 #include "base/utils/random.h"
 #include "base/utils/sslkey.h"
+#include "access/accessibility.h"
 #include "addnewtorrentdialog.h"
 #include "advancedsettings.h"
 #include "banlistoptionsdialog.h"
@@ -233,6 +234,11 @@ OptionsDialog::OptionsDialog(IGUIApplication *app, QWidget *parent)
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+
+    // Accessibility: name every field after its own label (not its group title), name the page list
+    m_ui->tabSelection->setAccessibleName(tr("Pages"));
+    m_advancedSettings->setAccessibleName(m_ui->tabSelection->item(TAB_ADVANCED)->text());
+    Access::labelControls(this);
 }
 
 OptionsDialog::~OptionsDialog()
@@ -940,6 +946,7 @@ void OptionsDialog::loadConnectionTabOptions()
     m_ui->textFilterPath->setSelectedPath(session->IPFilterFile());
 
     m_ui->IpFilterRefreshBtn->setIcon(UIThemeManager::instance()->getIcon(u"view-refresh"_s));
+    m_ui->IpFilterRefreshBtn->setToolTip(tr("Reload the IP filter")); // accessibility: icon-only button
     m_ui->IpFilterRefreshBtn->setEnabled(m_ui->checkIPFilter->isChecked());
     m_ui->checkIpFilterTrackers->setChecked(session->isTrackerFilteringEnabled());
 
