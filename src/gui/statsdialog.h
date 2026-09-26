@@ -32,6 +32,11 @@
 
 #include "base/settingvalue.h"
 
+namespace Access
+{
+    class ReadOnlyList;
+}
+
 namespace Ui
 {
     class StatsDialog;
@@ -50,6 +55,9 @@ private slots:
     void update();
 
 private:
+    void refreshList();
+
     Ui::StatsDialog *m_ui = nullptr;
+    Access::ReadOnlyList *m_list = nullptr; // accessibility: the statistics as "Caption: value" rows
     SettingValue<QSize> m_storeDialogSize;
 };

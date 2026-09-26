@@ -676,10 +676,13 @@ QVariant Access::rowTextFor(const QModelIndex &index)
     return rowText(it->view, index, it->primaryColumn);
 }
 
-QStringList Access::captionValueRows(const std::initializer_list<const QGridLayout *> grids, const bool includeHidden)
+QStringList Access::captionValueRows(const std::initializer_list<const QGridLayout *> grids, const bool includeHidden
+    , const std::function<bool (const QLabel *label)> &isValueLabel)
 {
-    const auto isValue = [](const QLabel *label)
+    const auto isValue = [&isValueLabel](const QLabel *label)
     {
+        if (isValueLabel)
+            return isValueLabel(label);
         return label->objectName().endsWith(u"Val") || label->objectName().endsWith(u"Data");
     };
     const auto labelAt = [&isValue](const QLayoutItem *item) -> const QLabel *

@@ -30,6 +30,9 @@
 
 #include <algorithm>
 
+#include <QGroupBox>
+
+#include "access/accessibility.h"
 #include "base/bittorrent/cachestatus.h"
 #include "base/bittorrent/session.h"
 #include "base/bittorrent/sessionstatus.h"
@@ -51,6 +54,16 @@ StatsDialog::StatsDialog(QWidget *parent)
 
     connect(m_ui->buttonBox, &QDialogButtonBox::accepted, this, &StatsDialog::close);
 
+    // Accessibility: the values are static texts no key reaches (read in one block when the dialog
+    // opened); one read-only "Caption: value" list replaces the groups, refreshed with the data
+    // without speaking (Up/Down read the current values). Created before the first update().
+    m_list = new Access::ReadOnlyList(this);
+    m_list->setAccessibleName(windowTitle());
+    for (QGroupBox *group : findChildren<QGroupBox *>())
+        group->hide();
+    m_ui->verticalLayout->insertWidget(0, m_list, 1);
+    setAccessibleDescription(tr("Statistics. Up, Down: read the values. Ctrl+C: copy a value. Escape: close."));
+
     update();
     connect(BitTorrent::Session::instance(), &BitTorrent::Session::statsUpdated
             , this, &StatsDialog::update);
@@ -59,9 +72,12 @@ StatsDialog::StatsDialog(QWidget *parent)
     m_ui->labelCacheHitsText->hide();
     m_ui->labelCacheHits->hide();
 #endif
+    refreshList(); // without the rows just hidden
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+
+    m_list->setFocus(Qt::OtherFocusReason); // accessibility: land on the values, not on "Close"
 }
 
 StatsDialog::~StatsDialog()
@@ -114,4 +130,13 @@ void StatsDialog::update()
 
     // Total connected peers
     m_ui->labelPeers->setText(QString::number(ss.peersCount));
+    refreshList();
+}
+
+void StatsDialog::refreshList()
+{
+    // caption labels are named "...Text", value labels are not
+    const auto isValue = [](const QLabel *label) { return !label->objectName().contains(u"Text"); };
+    m_list->setRows(Access::captionValueRows({m_ui->gridLayout_2, m_ui->gridLayout, m_ui->gridLayout_3}
+        , false, isValue)); // the groups are hidden, not the labels: rows hidden on purpose (cache hits) stay out
 }

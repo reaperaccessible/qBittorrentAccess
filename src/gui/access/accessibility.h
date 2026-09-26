@@ -35,6 +35,7 @@
 
 class QAbstractItemView;
 class QGridLayout;
+class QLabel;
 class QKeyEvent;
 class QModelIndex;
 class QObject;
@@ -125,8 +126,9 @@ namespace Access
     // "Caption: value" rows of grid layouts made of caption labels and value labels (value labels are
     // the ones whose objectName ends with "Val" or "Data", possibly inside a scroll area), in reading
     // order; empty values are skipped, hidden pairs too unless includeHidden (grids hidden because a
-    // list mirrors them)
-    QStringList captionValueRows(std::initializer_list<const QGridLayout *> grids, bool includeHidden = false);
+    // list mirrors them). `isValue` replaces the objectName rule when the dialog names them otherwise.
+    QStringList captionValueRows(std::initializer_list<const QGridLayout *> grids, bool includeHidden = false
+        , const std::function<bool (const QLabel *label)> &isValue = {});
 
     // Read-only list of "Label: value" rows: "First," / "Last," at the edges, Ctrl+C copies the value
     class ReadOnlyList final : public QListWidget
