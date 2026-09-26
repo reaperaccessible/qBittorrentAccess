@@ -29,6 +29,7 @@
 #include "shortcutsdialog.h"
 
 #include <QDialogButtonBox>
+#include <QKeySequence>
 #include <QVBoxLayout>
 
 #include "base/global.h"
@@ -76,13 +77,15 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+Enter"_s, tr("Open destination folder, in the torrent list")},
         {u"Ctrl+Shift+C"_s, tr("Copy magnet link, in the torrent list")},
         {u"F2"_s, tr("Rename, in the torrent list")},
-        {u"Delete"_s, tr("Remove torrent")},
-        {u"Shift+Delete"_s, tr("Remove torrent and its files")},
+        {u"Applications"_s, tr("Context menu of the selected item")},
+        {u"Right, Left"_s, tr("Open, close a submenu, in menus")},
+        {u"Del"_s, tr("Remove torrent")},
+        {u"Shift+Del"_s, tr("Remove torrent and its files")},
         {u"Ctrl+F"_s, tr("Filter torrents")},
-        {u"Ctrl+Plus"_s, tr("Move up in queue")},
-        {u"Ctrl+Minus"_s, tr("Move down in queue")},
-        {u"Ctrl+Shift+Plus"_s, tr("Move to top of queue")},
-        {u"Ctrl+Shift+Minus"_s, tr("Move to bottom of queue")},
+        {u"Ctrl++"_s, tr("Move up in queue")},
+        {u"Ctrl+-"_s, tr("Move down in queue")},
+        {u"Ctrl+Shift++"_s, tr("Move to top of queue")},
+        {u"Ctrl+Shift+-"_s, tr("Move to bottom of queue")},
         {u"Ctrl+I"_s, tr("Statistics")},
         {u"Alt+O"_s, tr("Options")},
         {u"F1"_s, tr("Documentation")},
@@ -91,8 +94,21 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
 
     auto *list = new ReadOnlyList(this);
     list->setAccessibleName(title); // short and fixed: the braille line keeps the current row visible
+    // keys written by Qt in the interface language ("Ctrl+Maj+O", "Suppr", "Entrée"...); the table above
+    // uses Qt's portable names, several sequences separated by ", "
+    const auto keysText = [](const QString &portable)
+    {
+        QStringList parts;
+        for (const QString &sequence : portable.split(u", "_s))
+        {
+            // a key Qt has no name for (Applications) is written as is
+            const QString native = QKeySequence(sequence, QKeySequence::PortableText).toString(QKeySequence::NativeText);
+            parts.append(native.isEmpty() ? sequence : native);
+        }
+        return parts.join(u", "_s);
+    };
     for (const auto &[keys, action] : shortcuts)
-        list->addItem(keys + u": " + action);
+        list->addItem(keysText(keys) + u" : " + action);
     list->setCurrentRow(0);
 
     auto *buttons = new QDialogButtonBox(QDialogButtonBox::Close, this);

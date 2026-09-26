@@ -287,10 +287,54 @@ namespace
 
         bool eventFilter(QObject *watched, QEvent *event) override
         {
+            if (event->type() == QEvent::Hide)
+            {
+                // Left arrow or Escape closes a submenu: the focus is back on its item in the parent menu,
+                // but Qt sends no focus event (the parent's active item did not change); say it
+                if (auto *menu = qobject_cast<QMenu *>(watched))
+                {
+                    for (QObject *object : menu->menuAction()->associatedObjects())
+                    {
+                        auto *parentMenu = qobject_cast<QMenu *>(object);
+                        if (!parentMenu || (parentMenu == menu) || !parentMenu->isVisible())
+                            continue;
+                        if (QAction *item = parentMenu->activeAction(); item && (item == menu->menuAction()))
+                        {
+                            Access::announce(parentMenu, QCoreApplication::translate("Access", "%1, submenu")
+                                .arg(Access::cleanLabel(item->text())));
+                        }
+                        break;
+                    }
+                }
+            }
             if (event->type() == QEvent::Show)
             {
                 if (auto *menu = qobject_cast<QMenu *>(watched))
                 {
+                    // an item that opens a submenu says how to open it (Qt does not)
+                    if (!menu->property("qbtaccessSubmenuHint").toBool())
+                    {
+                        menu->setProperty("qbtaccessSubmenuHint", true);
+                        connect(menu, &QMenu::hovered, menu, [menu](QAction *action)
+                        {
+                            // only the last arrival counts (fast Up/Down would otherwise queue several hints)
+                            const int arrival = menu->property("qbtaccessArrival").toInt() + 1;
+                            menu->setProperty("qbtaccessArrival", arrival);
+                            if (!action->menu())
+                                return;
+                            // after the item itself is spoken (a focus change cuts earlier speech)
+                            QTimer::singleShot(150, menu, [menu, arrival, action = QPointer<QAction>(action)]
+                            {
+                                if (action && menu->isVisible() && (menu->property("qbtaccessArrival").toInt() == arrival)
+                                    && (menu->activeAction() == action) && !action->menu()->isVisible())
+                                {
+                                    Access::announce(menu, QCoreApplication::translate("Access", "submenu, Right arrow to open")
+                                        , true);
+                                }
+                            });
+                        });
+                    }
+
                     // after popup() has finished positioning and possibly selecting an action itself
                     QTimer::singleShot(0, menu, [menu]
                     {
