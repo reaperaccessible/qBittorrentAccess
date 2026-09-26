@@ -73,6 +73,8 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+M"_s, tr("Force start, in the torrent list")},
         {u"Enter"_s, tr("Double-click action, in the torrent list")},
         {u"Left, Right"_s, tr("Read one column of the torrent; Up and Down then stay in it, in the torrent list")},
+        {u"Home, End"_s, tr("Name column, last column, in the torrent list")},
+        {u"Ctrl+Home, Ctrl+End"_s, tr("First torrent, last torrent, in the torrent list")},
         {u"Space"_s, tr("Start or stop the torrent, in the torrent list")},
         {u"Ctrl+Enter"_s, tr("Open destination folder, in the torrent list")},
         {u"Ctrl+Shift+C"_s, tr("Copy magnet link, in the torrent list")},
