@@ -67,6 +67,9 @@ ExecutionLogWidget::ExecutionLogWidget(const Log::MsgTypes types, QWidget *paren
 
     m_ui->tabGeneral->layout()->addWidget(messageView);
     m_ui->tabBan->layout()->addWidget(peerView);
+    // accessibility: name each list after its tab ("General", "Blocked IPs")
+    messageView->setAccessibleName(m_ui->tabConsole->tabText(m_ui->tabConsole->indexOf(m_ui->tabGeneral)).remove(u'&'));
+    peerView->setAccessibleName(m_ui->tabConsole->tabText(m_ui->tabConsole->indexOf(m_ui->tabBan)).remove(u'&'));
 
 #ifndef Q_OS_MACOS
     m_ui->tabConsole->setTabIcon(0, UIThemeManager::instance()->getIcon(u"help-contents"_s, u"view-calendar-journal"_s));

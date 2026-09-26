@@ -41,6 +41,8 @@ qt_wrap_ui(UI_HEADERS
 add_library(qbt_gui STATIC
     # headers
     aboutdialog.h
+    access/accessibility.h
+    access/shortcutsdialog.h
     addnewtorrentdialog.h
     addtorrentparamswidget.h
     advancedsettings.h
@@ -149,6 +151,8 @@ add_library(qbt_gui STATIC
 
     # sources
     aboutdialog.cpp
+    access/accessibility.cpp
+    access/shortcutsdialog.cpp
     addnewtorrentdialog.cpp
     addtorrentparamswidget.cpp
     advancedsettings.cpp

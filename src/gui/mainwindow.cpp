@@ -75,6 +75,8 @@
 #include "base/utils/password.h"
 #include "base/version.h"
 #include "aboutdialog.h"
+#include "access/accessibility.h"
+#include "access/shortcutsdialog.h"
 #include "autoexpandabledialog.h"
 #include "cookiesdialog.h"
 #include "desktopintegration.h"
@@ -923,6 +925,24 @@ void MainWindow::createKeyboardShortcuts()
     connect(switchRSSShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displayRSSTab));
     const auto *switchExecutionLogShortcut = new QShortcut((Qt::ALT | Qt::Key_4), this);
     connect(switchExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
+    // Accessibility: Ctrl+1..4 is the standard of the qBittorrentAccess family (Alt+1..4 kept)
+    const auto *accessTransferShortcut = new QShortcut((Qt::CTRL | Qt::Key_1), this);
+    connect(accessTransferShortcut, &QShortcut::activated, this, &MainWindow::displayTransferTab);
+    const auto *accessSearchShortcut = new QShortcut((Qt::CTRL | Qt::Key_2), this);
+    connect(accessSearchShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displaySearchTab));
+    const auto *accessRSSShortcut = new QShortcut((Qt::CTRL | Qt::Key_3), this);
+    connect(accessRSSShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displayRSSTab));
+    const auto *accessExecutionLogShortcut = new QShortcut((Qt::CTRL | Qt::Key_4), this);
+    connect(accessExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
+
+    auto *actionKeyboardShortcuts = new QAction(tr("&Keyboard Shortcuts"), this);
+    actionKeyboardShortcuts->setShortcut(Qt::CTRL | Qt::SHIFT | Qt::Key_H);
+    m_ui->menuHelp->insertAction(m_ui->actionCheckForUpdates, actionKeyboardShortcuts);
+    connect(actionKeyboardShortcuts, &QAction::triggered, this, [this]
+    {
+        auto *dialog = new Access::ShortcutsDialog(this);
+        dialog->open();
+    });
     const auto *switchSearchFilterShortcut = new QShortcut(QKeySequence::Find, m_transferListWidget);
     connect(switchSearchFilterShortcut, &QShortcut::activated, this, &MainWindow::toggleFocusBetweenLineEdits);
     const auto *switchSearchFilterShortcutAlternative = new QShortcut((Qt::CTRL | Qt::Key_E), m_transferListWidget);
@@ -961,6 +981,7 @@ void MainWindow::displaySearchTab()
     }
 
     m_tabs->setCurrentWidget(m_searchWidget);
+    Access::focusNamedChild(m_searchWidget, u"lineEditSearchPattern"_s);
 }
 
 void MainWindow::displayRSSTab()
@@ -972,6 +993,7 @@ void MainWindow::displayRSSTab()
     }
 
     m_tabs->setCurrentWidget(m_rssWidget);
+    Access::focusNamedChild(m_rssWidget, u"feedListWidget"_s);
 }
 
 void MainWindow::displayExecutionLogTab()
@@ -983,6 +1005,9 @@ void MainWindow::displayExecutionLogTab()
     }
 
     m_tabs->setCurrentWidget(m_executionLog);
+    // the message list of the current log tab, not the tab bar
+    const auto *logTabs = m_executionLog->findChild<QTabWidget *>(u"tabConsole"_s);
+    Access::focusFirstChild(logTabs ? logTabs->currentWidget() : m_executionLog.data());
 }
 
 // End of keyboard shortcuts slots

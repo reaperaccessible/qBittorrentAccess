@@ -1,0 +1,109 @@
+/*
+ * Bittorrent Client using Qt and libtorrent.
+ * Copyright (C) 2026  qBittorrentAccess
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ * In addition, as a special exception, the copyright holders give permission to
+ * link this program with the OpenSSL project's "OpenSSL" library (or with
+ * modified versions of it that use the same license as the "OpenSSL" library),
+ * and distribute the linked executables. You must obey the GNU General Public
+ * License in all respects for all of the code used other than "OpenSSL".  If you
+ * modify file(s), you may extend this exception to your version of the file(s),
+ * but you are not obligated to do so. If you do not wish to do so, delete this
+ * exception statement from your version.
+ */
+
+#include "shortcutsdialog.h"
+
+#include <QDialogButtonBox>
+#include <QKeyEvent>
+#include <QListWidget>
+#include <QVBoxLayout>
+
+#include "base/global.h"
+#include "accessibility.h"
+
+namespace
+{
+    class EdgeAwareListWidget final : public QListWidget
+    {
+    public:
+        using QListWidget::QListWidget;
+
+    protected:
+        void keyPressEvent(QKeyEvent *event) override
+        {
+            if (Access::announceListEdge(this, event))
+                return;
+            QListWidget::keyPressEvent(event);
+        }
+    };
+}
+
+Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
+    : QDialog(parent)
+{
+    const QString title = tr("Keyboard shortcuts");
+    setWindowTitle(title);
+    setAttribute(Qt::WA_DeleteOnClose);
+
+    const QList<std::pair<QString, QString>> shortcuts =
+    {
+        {u"Ctrl+1"_s, tr("Transfers, torrent list")},
+        {u"Ctrl+2"_s, tr("Search")},
+        {u"Ctrl+3"_s, tr("RSS")},
+        {u"Ctrl+4"_s, tr("Execution log")},
+        {u"Ctrl+Shift+H"_s, tr("Keyboard shortcuts")},
+        {u"Ctrl+O"_s, tr("Open torrent file")},
+        {u"Ctrl+Shift+O"_s, tr("Add torrent link, magnet")},
+        {u"Ctrl+N"_s, tr("Create new torrent")},
+        {u"Ctrl+S"_s, tr("Start selected torrents")},
+        {u"Ctrl+P"_s, tr("Stop selected torrents")},
+        {u"Ctrl+Shift+S"_s, tr("Resume session")},
+        {u"Ctrl+Shift+P"_s, tr("Pause session")},
+        {u"Ctrl+R"_s, tr("Force recheck, in the torrent list")},
+        {u"Ctrl+M"_s, tr("Force start, in the torrent list")},
+        {u"Enter"_s, tr("Double-click action, in the torrent list")},
+        {u"F2"_s, tr("Rename, in the torrent list")},
+        {u"Delete"_s, tr("Remove torrent")},
+        {u"Shift+Delete"_s, tr("Remove torrent and its files")},
+        {u"Ctrl+F"_s, tr("Filter torrents")},
+        {u"Ctrl+Plus"_s, tr("Move up in queue")},
+        {u"Ctrl+Minus"_s, tr("Move down in queue")},
+        {u"Ctrl+Shift+Plus"_s, tr("Move to top of queue")},
+        {u"Ctrl+Shift+Minus"_s, tr("Move to bottom of queue")},
+        {u"Ctrl+I"_s, tr("Statistics")},
+        {u"Alt+O"_s, tr("Options")},
+        {u"F1"_s, tr("Documentation")},
+        {u"Ctrl+Q"_s, tr("Exit")}
+    };
+
+    auto *list = new EdgeAwareListWidget(this);
+    list->setAccessibleName(title); // short and fixed: the braille line keeps the current row visible
+    for (const auto &[keys, action] : shortcuts)
+        list->addItem(keys + u": " + action);
+    list->setCurrentRow(0);
+
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+    auto *layout = new QVBoxLayout(this);
+    layout->addWidget(list);
+    layout->addWidget(buttons);
+
+    resize(480, 520);
+    list->setFocus(Qt::OtherFocusReason);
+}

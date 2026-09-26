@@ -90,6 +90,7 @@ namespace
 FeedListWidget::FeedListWidget(QWidget *parent)
     : QTreeWidget(parent)
 {
+    setAccessibleName(tr("RSS feeds")); // accessibility: the tree had no name
     setContextMenuPolicy(Qt::CustomContextMenu);
     setDragDropMode(QAbstractItemView::InternalMove);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
