@@ -39,6 +39,11 @@
 
 class LineEdit;
 
+namespace Access
+{
+    class ReadOnlyList;
+}
+
 namespace BitTorrent
 {
     class TorrentDescriptor;
@@ -97,6 +102,7 @@ private:
     void setupTreeview();
     void saveTorrentFile();
     void showContentFilterContextMenu();
+    void refreshInfoList();
     void setContentFilterPattern();
 
     Ui::AddNewTorrentDialog *m_ui = nullptr;
@@ -105,6 +111,7 @@ private:
     int m_downloadPathIndex = -1;
     bool m_useDownloadPath = false;
     LineEdit *m_filterLine = nullptr;
+    Access::ReadOnlyList *m_infoList = nullptr; // accessibility: torrent information as "Caption: value" rows
 
     std::shared_ptr<Context> m_currentContext;
 

@@ -37,7 +37,9 @@
 #include <QString>
 #include <QStringList>
 #include <QStringView>
+#include <QTimer>
 
+#include "access/accessibility.h"
 #include "base/net/downloadmanager.h"
 #include "ui_downloadfromurldialog.h"
 #include "utils.h"
@@ -95,7 +97,16 @@ DownloadFromURLDialog::DownloadFromURLDialog(QWidget *parent)
         m_ui->textUrls->setText(urls.join(u'\n') + u"\n");
         m_ui->textUrls->moveCursor(QTextCursor::End);
         m_ui->buttonBox->setFocus();
+        // accessibility: the focus lands on "Download"; say that the links are already there
+        QTimer::singleShot(300, this, [this, count = urls.size()]
+        {
+            Access::announce(this, ((count == 1) ? tr("1 link pasted") : tr("%1 links pasted").arg(count)));
+        });
     }
+
+    // accessibility: the links field is named after its label, the hint below is its description
+    m_ui->textUrls->setAccessibleName(Access::cleanLabel(m_ui->downloadURL_lbl->text()));
+    m_ui->textUrls->setAccessibleDescription(m_ui->label_infos->text());
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);

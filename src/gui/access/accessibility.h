@@ -28,9 +28,12 @@
 
 #pragma once
 
+#include <initializer_list>
+
 #include <QListWidget>
 
 class QAbstractItemView;
+class QGridLayout;
 class QKeyEvent;
 class QModelIndex;
 class QObject;
@@ -87,6 +90,12 @@ namespace Access
     // from data(Qt::AccessibleTextRole).
     void registerRowText(QTreeView *view, int primaryColumn);
     QVariant rowTextFor(const QModelIndex &index);
+
+    // "Caption: value" rows of grid layouts made of caption labels and value labels (value labels are
+    // the ones whose objectName ends with "Val" or "Data", possibly inside a scroll area), in reading
+    // order; empty values are skipped, hidden pairs too unless includeHidden (grids hidden because a
+    // list mirrors them)
+    QStringList captionValueRows(std::initializer_list<const QGridLayout *> grids, bool includeHidden = false);
 
     // Read-only list of "Label: value" rows: "First," / "Last," at the edges, Ctrl+C copies the value
     class ReadOnlyList final : public QListWidget

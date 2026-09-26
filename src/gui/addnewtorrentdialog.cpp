@@ -66,8 +66,10 @@
 #include "base/utils/fs.h"
 #include "base/utils/misc.h"
 #include "base/utils/string.h"
+#include "access/accessibility.h"
 #include "filterpatternformatmenu.h"
 #include "lineedit.h"
+#include "torrentcontentmodelitem.h"
 #include "torrenttagsdialog.h"
 
 #include "ui_addnewtorrentdialog.h"
@@ -382,7 +384,33 @@ AddNewTorrentDialog::AddNewTorrentDialog(const BitTorrent::TorrentDescriptor &to
         settings()->storeValue(KEY_SAVEPATHHISTORY, settings()->loadValue<QStringList>(KEY_SAVEPATHHISTORY).mid(0, length));
     });
 
+    // Accessibility
+    // - torrent information: static texts no key reaches; a read-only "Caption: value" list replaces them
+    m_infoList = new Access::ReadOnlyList(m_ui->infoGroup);
+    m_infoList->setAccessibleName(Access::cleanLabel(m_ui->infoGroup->title()));
+    for (int i = 0; i < m_ui->gridLayout_2->count(); ++i)
+    {
+        if (QWidget *widget = m_ui->gridLayout_2->itemAt(i)->widget())
+            widget->hide();
+    }
+    m_ui->gridLayout_2->addWidget(m_infoList, m_ui->gridLayout_2->rowCount(), 0, 1, m_ui->gridLayout_2->columnCount());
+    // - file list: named, read as whole rows, "First," / "Last," at the edges
+    m_ui->contentTreeView->setAccessibleName(QCoreApplication::translate("PropTabBar", "Content"));
+    Access::registerRowText(m_ui->contentTreeView, TorrentContentModelItem::COL_NAME);
+    Access::installListEdgeAnnouncer(m_ui->contentTreeView);
+    // - every field named after its own label; the "..." tags button says what it does
+    m_ui->tagsEditButton->setAccessibleName(tr("Edit tags"));
+    Access::labelControls(this);
+    // - Tab follows the reading order: options, torrent information, then the files and their filter
+    setTabOrder({m_ui->contentLayoutComboBox, m_infoList, m_ui->buttonSelectAll, m_ui->buttonSelectNone
+        , m_filterLine, m_ui->contentTreeView});
+
     setCurrentContext(std::make_shared<Context>(Context {torrentDescr, inParams}));
+}
+
+void AddNewTorrentDialog::refreshInfoList()
+{
+    m_infoList->setRows(Access::captionValueRows({m_ui->gridLayout_2}, true));
 }
 
 AddNewTorrentDialog::~AddNewTorrentDialog()
@@ -430,6 +458,7 @@ void AddNewTorrentDialog::showEvent(QShowEvent *event)
 
 void AddNewTorrentDialog::setCurrentContext(const std::shared_ptr<Context> context)
 {
+    QMetaObject::invokeMethod(this, &AddNewTorrentDialog::refreshInfoList, Qt::QueuedConnection); // accessibility
     Q_ASSERT(context);
     if (!context) [[unlikely]]
         return;
@@ -585,6 +614,7 @@ void AddNewTorrentDialog::updateCurrentContext()
 
 void AddNewTorrentDialog::updateDiskSpaceLabel()
 {
+    QMetaObject::invokeMethod(this, &AddNewTorrentDialog::refreshInfoList, Qt::QueuedConnection); // accessibility
     Q_ASSERT(m_currentContext);
     if (!m_currentContext) [[unlikely]]
         return;
@@ -845,6 +875,9 @@ void AddNewTorrentDialog::done(const int result)
 
 void AddNewTorrentDialog::updateMetadata(const BitTorrent::TorrentInfo &metadata)
 {
+    QMetaObject::invokeMethod(this, &AddNewTorrentDialog::refreshInfoList, Qt::QueuedConnection); // accessibility
+    // accessibility: a magnet link opens this dialog before the file list exists; say when it arrives
+    Access::announce(this, tr("Metadata received"));
     Q_ASSERT(m_currentContext);
     if (!m_currentContext) [[unlikely]]
         return;
@@ -894,6 +927,7 @@ void AddNewTorrentDialog::setMetadataProgressIndicator(bool visibleIndicator, co
 
 void AddNewTorrentDialog::setupTreeview()
 {
+    QMetaObject::invokeMethod(this, &AddNewTorrentDialog::refreshInfoList, Qt::QueuedConnection); // accessibility
     Q_ASSERT(m_currentContext);
     if (!m_currentContext) [[unlikely]]
         return;

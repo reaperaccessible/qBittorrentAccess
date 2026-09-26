@@ -40,7 +40,6 @@
 #include <QSplitter>
 #include <QShortcut>
 #include <QStackedWidget>
-#include <QTextDocumentFragment>
 #include <QUrl>
 
 #include "base/bittorrent/infohash.h"
@@ -181,34 +180,8 @@ PropertiesWidget::PropertiesWidget(QWidget *parent)
 
 void PropertiesWidget::refreshGeneralList()
 {
-    // Every "caption / value" pair of the General tab grids, in reading order, empty values skipped
-    QStringList rows;
-    for (const QGridLayout *grid : {m_ui->groupBarLayout, m_ui->gridLayout_2, m_ui->gridLayout})
-    {
-        for (int row = 0; row < grid->rowCount(); ++row)
-        {
-            QString caption;
-            for (int column = 0; column < grid->columnCount(); ++column)
-            {
-                const QLayoutItem *item = grid->itemAtPosition(row, column);
-                const auto *label = item ? qobject_cast<const QLabel *>(item->widget()) : nullptr;
-                if (!label || label->isHidden())
-                    continue;
-                if (!label->objectName().endsWith(u"Val"))
-                {
-                    caption = Access::cleanLabel(label->text());
-                    continue;
-                }
-                const QString value = Qt::mightBeRichText(label->text())
-                    ? QTextDocumentFragment::fromHtml(label->text()).toPlainText().simplified()
-                    : label->text().simplified();
-                if (!caption.isEmpty() && !value.isEmpty())
-                    rows.append(caption + u": " + value);
-                caption.clear();
-            }
-        }
-    }
-    m_generalList->setRows(rows);
+    // Every "caption / value" pair of the General tab grids, in reading order
+    m_generalList->setRows(Access::captionValueRows({m_ui->groupBarLayout, m_ui->gridLayout_2, m_ui->gridLayout}));
 }
 
 QWidget *PropertiesWidget::currentTabContent() const

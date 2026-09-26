@@ -522,6 +522,56 @@ QVariant Access::rowTextFor(const QModelIndex &index)
     return rowText(it->view, index, it->primaryColumn);
 }
 
+QStringList Access::captionValueRows(const std::initializer_list<const QGridLayout *> grids, const bool includeHidden)
+{
+    const auto isValue = [](const QLabel *label)
+    {
+        return label->objectName().endsWith(u"Val") || label->objectName().endsWith(u"Data");
+    };
+    const auto labelAt = [&isValue](const QLayoutItem *item) -> const QLabel *
+    {
+        QWidget *w = item ? item->widget() : nullptr;
+        if (const auto *scroll = qobject_cast<const QScrollArea *>(w))
+        {
+            // a long value (comment) sits in a scroll area of its own
+            for (const QLabel *inner : scroll->widget()->findChildren<QLabel *>())
+            {
+                if (isValue(inner))
+                    return inner;
+            }
+            return nullptr;
+        }
+        return qobject_cast<const QLabel *>(w);
+    };
+
+    QStringList rows;
+    for (const QGridLayout *grid : grids)
+    {
+        for (int row = 0; row < grid->rowCount(); ++row)
+        {
+            QString caption;
+            for (int column = 0; column < grid->columnCount(); ++column)
+            {
+                const QLabel *label = labelAt(grid->itemAtPosition(row, column));
+                if (!label || (label->isHidden() && !includeHidden))
+                    continue;
+                if (!isValue(label))
+                {
+                    caption = cleanLabel(label->text());
+                    continue;
+                }
+                const QString value = Qt::mightBeRichText(label->text())
+                    ? QTextDocumentFragment::fromHtml(label->text()).toPlainText().simplified()
+                    : label->text().simplified();
+                if (!caption.isEmpty() && !value.isEmpty())
+                    rows.append(caption + u": " + value);
+                caption.clear();
+            }
+        }
+    }
+    return rows;
+}
+
 Access::ReadOnlyList::ReadOnlyList(QWidget *parent)
     : QListWidget(parent)
 {
