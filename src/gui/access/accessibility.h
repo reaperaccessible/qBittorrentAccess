@@ -56,12 +56,24 @@ namespace Access
     // `owner` keeps the filter alive.
     void installDigitKeys(QObject *owner, Qt::KeyboardModifiers modifiers, std::function<bool (int digit)> handler);
 
+    // Give the focus to `widget`; when it already has it, send the screen reader the same focus event
+    // again (current item included), so a shortcut pressed twice speaks the same thing twice
+    void focusAndSpeak(QWidget *widget, Qt::FocusReason reason = Qt::ShortcutFocusReason);
+
+    // Keyboard shortcut to a place: exactly one screen reader message, the same whether the user comes
+    // from elsewhere or is already there. `showTarget` makes the target's page current (tab switch...);
+    // it runs after the target is remembered as the focus widget of its hidden page, so Qt gives it the
+    // focus directly, without stopping on the tab bar or on the page's previous widget. An item view gets
+    // a current item; an empty one says "Empty" unless sayEmpty is false (the name already has a count).
+    void goTo(QWidget *target, const std::function<void ()> &showTarget = {}, bool sayEmpty = true);
+
+    // First widget of `page` reachable with Tab (page shown or not), or `page` itself
+    QWidget *firstTabStop(QWidget *page);
+    // Child of `page` named `objectName` when it can take the focus, else the first Tab stop of `page`
+    QWidget *namedTabStop(QWidget *page, const QString &objectName);
+
     // Give the focus to the first widget of `page` reachable with Tab, as if the user tabbed into it
     void focusFirstChild(QWidget *page);
-
-    // Give the focus to the child of `page` whose objectName is `objectName` (the main control of a tab),
-    // or to its first Tab stop when that child is not found or cannot take the focus
-    void focusNamedChild(QWidget *page, const QString &objectName);
 
     // Application-wide: a popup menu opens with its first enabled item selected, as in Windows,
     // so the screen reader reads it at once (Qt opens it with nothing selected: silent).

@@ -131,6 +131,8 @@ private slots:
     void focusNextZone(int step);
     void showStatusFilter(int status);
     void announceGlobalStatus();
+    void updateTransferListName(const QString &viewText = {});
+    void showTabPage(QWidget *page) const;
     void loadSessionStats();
     void reloadTorrentStats(const QList<BitTorrent::Torrent *> &torrents);
     void loadPreferences();

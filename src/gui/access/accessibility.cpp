@@ -723,10 +723,48 @@ void Access::keepItemRowTexts(QTreeView *view, const int primaryColumn)
     update();
 }
 
-void Access::focusFirstChild(QWidget *page)
+void Access::focusAndSpeak(QWidget *widget, const Qt::FocusReason reason)
+{
+    if (!widget)
+        return;
+    if (auto *itemView = qobject_cast<QAbstractItemView *>(widget); itemView && !itemView->currentIndex().isValid()
+        && itemView->model() && (itemView->model()->rowCount(itemView->rootIndex()) > 0))
+    {
+        itemView->setCurrentIndex(itemView->model()->index(0, 0, itemView->rootIndex()));
+    }
+    if (!widget->hasFocus())
+    {
+        widget->setFocus(reason);
+        return;
+    }
+    if (!QAccessible::isActive())
+        return;
+
+    // Already focused: no focus change, so Qt says nothing; repeat the focus event it sends on arrival
+    QAccessibleEvent event {widget, QAccessible::Focus};
+    auto *view = qobject_cast<QAbstractItemView *>(widget);
+    const QModelIndex current = view ? view->currentIndex() : QModelIndex();
+    QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(widget);
+    if (current.isValid() && iface && iface->tableInterface())
+    {
+        // the accessible table counts rows in visible order (a tree: expanded items included)
+        int row = current.row();
+        if (const auto *tree = qobject_cast<const QTreeView *>(view))
+        {
+            row = 0;
+            for (QModelIndex above = tree->indexAbove(current); above.isValid(); above = tree->indexAbove(above))
+                ++row;
+        }
+        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(row, current.column()))
+            event.setChild(iface->indexOfChild(cell));
+    }
+    QAccessible::updateAccessibility(&event);
+}
+
+QWidget *Access::firstTabStop(QWidget *page)
 {
     if (!page)
-        return;
+        return nullptr;
 
     for (QWidget *w = page->nextInFocusChain(); w && (w != page); w = w->nextInFocusChain())
     {
@@ -736,28 +774,56 @@ void Access::focusFirstChild(QWidget *page)
         const QWidget *target = w;
         while (target->focusProxy())
             target = target->focusProxy();
-        // isVisibleTo: the page may be shown in this same event (stacked widget switch)
+        // isVisibleTo: the page may be hidden (another tab) or being shown
         if ((w->focusPolicy() & Qt::TabFocus) && (target->focusPolicy() & Qt::TabFocus) && w->isVisibleTo(page) && w->isEnabled())
-        {
-            w->setFocus(Qt::TabFocusReason);
-            return;
-        }
+            return w;
     }
-    page->setFocus(Qt::TabFocusReason);
+    return page;
 }
 
-void Access::focusNamedChild(QWidget *page, const QString &objectName)
+QWidget *Access::namedTabStop(QWidget *page, const QString &objectName)
 {
     if (!page)
-        return;
+        return nullptr;
 
     auto *child = page->findChild<QWidget *>(objectName);
-    if (child && child->isVisible() && child->isEnabled() && (child->focusPolicy() != Qt::NoFocus))
-    {
-        child->setFocus(Qt::TabFocusReason);
+    if (child && child->isVisibleTo(page) && child->isEnabled() && (child->focusPolicy() != Qt::NoFocus))
+        return child;
+    return firstTabStop(child ? child : page);
+}
+
+void Access::focusFirstChild(QWidget *page)
+{
+    focusAndSpeak(firstTabStop(page), Qt::TabFocusReason);
+}
+
+void Access::goTo(QWidget *target, const std::function<void ()> &showTarget, const bool sayEmpty)
+{
+    if (!target)
         return;
+
+    auto *view = qobject_cast<QAbstractItemView *>(target);
+    if (view && !view->currentIndex().isValid() && view->model() && (view->model()->rowCount(view->rootIndex()) > 0))
+        view->setCurrentIndex(view->model()->index(0, 0, view->rootIndex()));
+
+    if (target->isVisible() && target->hasFocus())
+    {
+        focusAndSpeak(target); // already there: the same message again
     }
-    focusFirstChild(child ? child : page);
+    else
+    {
+        // on a hidden page, setFocus only records the target as the page's focus widget; the page
+        // switch then hands it the focus in one step
+        target->setFocus(Qt::ShortcutFocusReason);
+        if (showTarget)
+            showTarget();
+        if (!target->hasFocus())
+            target->setFocus(Qt::ShortcutFocusReason);
+    }
+
+    // an empty list must not be silent
+    if (sayEmpty && view && view->model() && (view->model()->rowCount(view->rootIndex()) == 0))
+        announce(view, QCoreApplication::translate("Access", "Empty"), true);
 }
 
 bool Access::announceListEdge(QAbstractItemView *view, const QKeyEvent *event)

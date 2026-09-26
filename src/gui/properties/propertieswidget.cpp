@@ -189,7 +189,13 @@ QWidget *PropertiesWidget::currentTabContent() const
     if (m_state != VISIBLE)
         return nullptr;
 
-    switch (m_tabBar->currentIndex())
+    const int index = m_tabBar->currentIndex();
+    return (index < 0) ? nullptr : tabContent(index);
+}
+
+QWidget *PropertiesWidget::tabContent(const int index) const
+{
+    switch (index)
     {
     case PropTabBar::MainTab:
         return m_generalList;
@@ -208,29 +214,19 @@ QWidget *PropertiesWidget::currentTabContent() const
     }
 }
 
-void PropertiesWidget::focusTab(const int index)
+QWidget *PropertiesWidget::tabTarget(const int index) const
+{
+    QWidget *content = tabContent(index);
+    if (!content)
+        return nullptr;
+    return (content->focusPolicy() != Qt::NoFocus) ? content : Access::firstTabStop(content);
+}
+
+void PropertiesWidget::showTab(const int index)
 {
     // selecting the current tab again would hide the panel; a hidden panel has no current tab (-1)
     if (m_tabBar->currentIndex() != index)
         m_tabBar->setCurrentIndex(index);
-
-    QWidget *content = currentTabContent();
-    if (!content)
-        return;
-
-    if (auto *view = qobject_cast<QAbstractItemView *>(content); view && !view->currentIndex().isValid()
-        && view->model() && (view->model()->rowCount() > 0))
-    {
-        view->setCurrentIndex(view->model()->index(0, 0));
-    }
-    if (content->focusPolicy() != Qt::NoFocus)
-        content->setFocus(Qt::ShortcutFocusReason);
-    else
-        Access::focusFirstChild(content);
-
-    // an empty list must not be silent
-    if (auto *view = qobject_cast<QAbstractItemView *>(content); view && view->model() && (view->model()->rowCount() == 0))
-        Access::announce(view, tr("Empty"));
 }
 
 PropertiesWidget::~PropertiesWidget()

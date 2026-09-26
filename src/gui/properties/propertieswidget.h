@@ -82,8 +82,10 @@ public:
     PropTabBar *tabBar() const;
     LineEdit *contentFilterLine() const;
 
-    // Accessibility: show tab `index` (without toggling the panel off) and put the focus in its content
-    void focusTab(int index);
+    // Accessibility: the control a shortcut to tab `index` lands on (the tab's list, or its first Tab
+    // stop), for Access::goTo; showTab() makes that tab current without toggling the panel off
+    QWidget *tabTarget(int index) const;
+    void showTab(int index);
     // The main control of the current tab, nullptr when the panel is hidden
     QWidget *currentTabContent() const;
 
@@ -116,6 +118,7 @@ private:
     void showContentFilterContextMenu();
     void setContentFilterPattern();
     void refreshGeneralList();
+    QWidget *tabContent(int index) const;
 
     Ui::PropertiesWidget *m_ui = nullptr;
     BitTorrent::Torrent *m_torrent = nullptr;

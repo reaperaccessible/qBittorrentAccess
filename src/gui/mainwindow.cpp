@@ -962,8 +962,11 @@ void MainWindow::createKeyboardShortcuts()
         const auto *propertiesTabShortcut = new QShortcut((Qt::CTRL | Qt::SHIFT | static_cast<Qt::Key>(Qt::Key_1 + tab)), this);
         connect(propertiesTabShortcut, &QShortcut::activated, this, [this, tab]
         {
-            m_tabs->setCurrentWidget(m_splitter);
-            m_propertiesWidget->focusTab(tab);
+            Access::goTo(m_propertiesWidget->tabTarget(tab), [this, tab]
+            {
+                showTabPage(m_splitter);
+                m_propertiesWidget->showTab(tab);
+            });
         });
     }
 
@@ -1030,15 +1033,20 @@ void MainWindow::showStatusFilter(const int status)
 {
     // Through the Status list of the sidebar when it exists, so the list shows the same filter
     // and the choice is saved, as when the user picks it there
-    m_tabs->setCurrentWidget(m_splitter);
     auto *statusList = m_transferListFiltersWidget ? m_transferListFiltersWidget->findChild<StatusFilterWidget *>() : nullptr;
     if (statusList && statusList->item(status)->isHidden())
     {
         // "hide zero filters" option: the view is empty and cannot be selected; say so, keep the current one
-        m_transferListWidget->setFocus(Qt::ShortcutFocusReason);
+        Access::goTo(m_transferListWidget, [this] { showTabPage(m_splitter); });
         Access::announce(m_transferListWidget, statusList->item(status)->text(), true);
         return;
     }
+    // One message: the list name carries the new view before anything moves, and the focus event is sent
+    // once (Qt sends it itself when the filter changes the current torrent of a focused list)
+    const bool wasFocused = m_transferListWidget->isVisible() && m_transferListWidget->hasFocus();
+    const QPersistentModelIndex previousCurrent = m_transferListWidget->currentIndex();
+    if (statusList)
+        updateTransferListName(statusList->item(status)->text());
     if (statusList)
     {
         statusList->setCurrentRow(status, QItemSelectionModel::ClearAndSelect);
@@ -1048,13 +1056,34 @@ void MainWindow::showStatusFilter(const int status)
         m_transferListWidget->applyStatusFilter(status);
         Preferences::instance()->setTransSelFilter(status);
     }
-    m_transferListWidget->setFocus(Qt::ShortcutFocusReason);
+    // the list is named after the view ("Torrents, Completed (3)"): said on arrival, and again when the
+    // same key is pressed while already there
+    updateTransferListName();
+    const bool currentChanged = (QModelIndex(previousCurrent) != m_transferListWidget->currentIndex());
+    if (wasFocused && currentChanged)
+        return; // Qt already said the new current torrent, with the new list name
+    Access::goTo(m_transferListWidget, [this] { showTabPage(m_splitter); }, false); // "(0)" says it is empty
+}
 
-    // "Completed (3)": the filter and how many torrents it shows, after the focus change is spoken
-    const QString text = statusList
-        ? statusList->item(status)->text()
-        : QString::number(m_transferListWidget->model()->rowCount());
-    Access::announce(m_transferListWidget, text, true);
+void MainWindow::updateTransferListName(const QString &viewText)
+{
+    QString text = viewText;
+    if (text.isEmpty())
+    {
+        const auto *statusList = m_transferListFiltersWidget ? m_transferListFiltersWidget->findChild<StatusFilterWidget *>() : nullptr;
+        if (const QListWidgetItem *item = statusList ? statusList->currentItem() : nullptr)
+            text = item->text();
+    }
+    const QString base = QCoreApplication::translate("TransferListWidget", "Torrents");
+    const QString name = text.isEmpty() ? base : (base + u", " + text);
+    if (m_transferListWidget->accessibleName() != name)
+        m_transferListWidget->setAccessibleName(name);
+}
+
+void MainWindow::showTabPage(QWidget *page) const
+{
+    if (m_tabs->currentWidget() != page)
+        m_tabs->setCurrentWidget(page);
 }
 
 void MainWindow::focusNextZone(const int step)
@@ -1092,8 +1121,7 @@ void MainWindow::focusNextZone(const int step)
 
 void MainWindow::displayTransferTab() const
 {
-    m_tabs->setCurrentWidget(m_splitter);
-    m_transferListWidget->setFocus(Qt::ShortcutFocusReason); // accessibility: Alt+1 lands in the torrent list
+    Access::goTo(m_transferListWidget, [this] { showTabPage(m_splitter); }); // accessibility: lands in the torrent list
 }
 
 void MainWindow::displaySearchTab()
@@ -1104,8 +1132,7 @@ void MainWindow::displaySearchTab()
         displaySearchTab(true);
     }
 
-    m_tabs->setCurrentWidget(m_searchWidget);
-    Access::focusNamedChild(m_searchWidget, u"lineEditSearchPattern"_s);
+    Access::goTo(Access::namedTabStop(m_searchWidget, u"lineEditSearchPattern"_s), [this] { showTabPage(m_searchWidget); });
 }
 
 void MainWindow::displayRSSTab()
@@ -1116,8 +1143,7 @@ void MainWindow::displayRSSTab()
         displayRSSTab(true);
     }
 
-    m_tabs->setCurrentWidget(m_rssWidget);
-    Access::focusNamedChild(m_rssWidget, u"feedListWidget"_s);
+    Access::goTo(Access::namedTabStop(m_rssWidget, u"feedListWidget"_s), [this] { showTabPage(m_rssWidget); });
 }
 
 void MainWindow::displayExecutionLogTab()
@@ -1128,10 +1154,10 @@ void MainWindow::displayExecutionLogTab()
         on_actionExecutionLogs_triggered(true);
     }
 
-    m_tabs->setCurrentWidget(m_executionLog);
     // the message list of the current log tab, not the tab bar
     const auto *logTabs = m_executionLog->findChild<QTabWidget *>(u"tabConsole"_s);
-    Access::focusFirstChild(logTabs ? logTabs->currentWidget() : m_executionLog.data());
+    Access::goTo(Access::firstTabStop(logTabs ? logTabs->currentWidget() : m_executionLog.data())
+        , [this] { showTabPage(m_executionLog); });
 }
 
 // End of keyboard shortcuts slots
@@ -1532,6 +1558,13 @@ void MainWindow::showFiltersSidebar(const bool show)
         m_splitter->setStretchFactor(0, 0);
         m_splitter->setStretchFactor(1, 1);
         m_splitter->setSizes({Preferences::instance()->getFiltersSidebarWidth()});
+        // Accessibility: the torrent list name follows the Status view and its count
+        if (auto *statusList = m_transferListFiltersWidget->findChild<StatusFilterWidget *>())
+        {
+            connect(statusList, &QListWidget::currentRowChanged, this, [this] { updateTransferListName(); });
+            connect(statusList->model(), &QAbstractItemModel::dataChanged, this, [this] { updateTransferListName(); });
+        }
+        updateTransferListName();
     }
     else if (!show && m_transferListFiltersWidget)
     {
