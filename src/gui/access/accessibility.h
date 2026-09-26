@@ -28,6 +28,7 @@
 
 #pragma once
 
+#include <functional>
 #include <initializer_list>
 
 #include <QListWidget>
@@ -45,8 +46,14 @@ class QWidget;
 // Screen reader helpers shared by the accessibility work (qBittorrentAccess)
 namespace Access
 {
-    // Spoken by NVDA, JAWS and Narrator through the platform accessibility API (Qt 6.8+)
-    void announce(QObject *source, const QString &text);
+    // Spoken by NVDA, JAWS and Narrator through the platform accessibility API (Qt 6.8+).
+    // Assertive interrupts current speech; polite waits for it (after a focus change, for example).
+    void announce(QObject *source, const QString &text, bool polite = false);
+
+    // Application-wide Ctrl+Alt+<digit key> (physical digit key, any keyboard layout): `handler` gets
+    // the digit and returns true when it used it. When the focus is in a text field and the keys type
+    // a character (AltGr), the character is left alone. `owner` keeps the filter alive.
+    void installCtrlAltDigitKeys(QObject *owner, std::function<bool (int digit)> handler);
 
     // Give the focus to the first widget of `page` reachable with Tab, as if the user tabbed into it
     void focusFirstChild(QWidget *page);

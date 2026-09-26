@@ -311,6 +311,41 @@ namespace
         }
     };
 
+    class CtrlAltDigitFilter final : public QObject
+    {
+    public:
+        CtrlAltDigitFilter(QObject *parent, std::function<bool (int digit)> handler)
+            : QObject(parent)
+            , m_handler {std::move(handler)}
+        {
+        }
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() != QEvent::KeyPress)
+                return QObject::eventFilter(watched, event);
+
+            const auto *key = static_cast<QKeyEvent *>(event);
+            const Qt::KeyboardModifiers modifiers = key->modifiers() & ~Qt::KeypadModifier;
+            // the physical key: Windows virtual-key codes '0'..'9' whatever the layout (AZERTY included)
+            const quint32 vk = key->nativeVirtualKey();
+            if ((modifiers != (Qt::ControlModifier | Qt::AltModifier)) || (vk < '0') || (vk > '9') || key->isAutoRepeat())
+                return QObject::eventFilter(watched, event);
+
+            // AltGr+digit typing a character ("@", "#"...) in a text field: leave the character alone
+            QWidget *focus = QApplication::focusWidget();
+            const bool textField = qobject_cast<QLineEdit *>(focus) || qobject_cast<QTextEdit *>(focus)
+                || qobject_cast<QPlainTextEdit *>(focus) || qobject_cast<QAbstractSpinBox *>(focus);
+            if (textField && !key->text().isEmpty() && key->text().at(0).isPrint())
+                return QObject::eventFilter(watched, event);
+
+            return m_handler(static_cast<int>(vk - '0'));
+        }
+
+    private:
+        std::function<bool (int digit)> m_handler;
+    };
+
     class DialogLabelingFilter final : public QObject
     {
     public:
@@ -489,14 +524,19 @@ void Access::labelControls(QWidget *root)
 }
 
 
-void Access::announce(QObject *source, const QString &text)
+void Access::announce(QObject *source, const QString &text, const bool polite)
 {
     if (!source || text.isEmpty() || !QAccessible::isActive())
         return;
 
     QAccessibleAnnouncementEvent event {source, text};
-    event.setPoliteness(QAccessible::AnnouncementPoliteness::Assertive);
+    event.setPoliteness(polite ? QAccessible::AnnouncementPoliteness::Polite : QAccessible::AnnouncementPoliteness::Assertive);
     QAccessible::updateAccessibility(&event);
+}
+
+void Access::installCtrlAltDigitKeys(QObject *owner, std::function<bool (int digit)> handler)
+{
+    qApp->installEventFilter(new CtrlAltDigitFilter(owner, std::move(handler)));
 }
 
 void Access::installListEdgeAnnouncer(QAbstractItemView *view)

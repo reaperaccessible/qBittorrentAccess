@@ -70,6 +70,7 @@
 #include "base/preferences.h"
 #include "base/rss/rss_folder.h"
 #include "base/rss/rss_session.h"
+#include "base/torrentfilter.h"
 #include "base/utils/foreignapps.h"
 #include "base/utils/fs.h"
 #include "base/utils/misc.h"
@@ -98,6 +99,7 @@
 #include "statusbar.h"
 #include "torrentcreatordialog.h"
 #include "trackerlist/trackerlistwidget.h"
+#include "transferlistfilters/statusfilterwidget.h"
 #include "transferlistfilterswidget.h"
 #include "transferlistmodel.h"
 #include "transferlistwidget.h"
@@ -527,6 +529,15 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
 
     Access::installMenuFocusFix(this); // accessibility: menus open with their first item selected
     Access::installDialogLabeling(this); // accessibility: every dialog names its fields after their labels
+    // Accessibility: Ctrl+Alt+1..3 = status filter All, Downloading, Completed, with the focus in the list
+    Access::installCtrlAltDigitKeys(this, [this](const int digit)
+    {
+        const QList<int> statuses {TorrentFilter::All, TorrentFilter::Downloading, TorrentFilter::Completed};
+        if ((digit < 1) || (digit > statuses.size()) || (QApplication::activeWindow() != this))
+            return false;
+        showStatusFilter(statuses[digit - 1]);
+        return true;
+    });
 
     qDebug("GUI Built");
 }
@@ -986,6 +997,30 @@ void MainWindow::createKeyboardShortcuts()
 }
 
 // Keyboard shortcuts slots
+void MainWindow::showStatusFilter(const int status)
+{
+    // Through the Status list of the sidebar when it exists, so the list shows the same filter
+    // and the choice is saved, as when the user picks it there
+    m_tabs->setCurrentWidget(m_splitter);
+    auto *statusList = m_transferListFiltersWidget ? m_transferListFiltersWidget->findChild<StatusFilterWidget *>() : nullptr;
+    if (statusList)
+    {
+        statusList->setCurrentRow(status, QItemSelectionModel::ClearAndSelect);
+    }
+    else
+    {
+        m_transferListWidget->applyStatusFilter(status);
+        Preferences::instance()->setTransSelFilter(status);
+    }
+    m_transferListWidget->setFocus(Qt::ShortcutFocusReason);
+
+    // "Completed (3)": the filter and how many torrents it shows, after the focus change is spoken
+    const QString text = statusList
+        ? statusList->item(status)->text()
+        : QString::number(m_transferListWidget->model()->rowCount());
+    Access::announce(m_transferListWidget, text, true);
+}
+
 void MainWindow::focusNextZone(const int step)
 {
     // Zones of the Transfers tab, in F6 order; hidden ones are skipped
