@@ -43,13 +43,14 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
 
     const QList<std::pair<QString, QString>> shortcuts =
     {
-        {u"Ctrl+1"_s, tr("Transfers, torrent list")},
-        {u"Ctrl+2"_s, tr("Search")},
-        {u"Ctrl+3"_s, tr("RSS")},
-        {u"Ctrl+4"_s, tr("Execution log")},
-        {u"Ctrl+Alt+1"_s, tr("Show all torrents")},
-        {u"Ctrl+Alt+2"_s, tr("Show downloading torrents")},
-        {u"Ctrl+Alt+3"_s, tr("Show completed torrents")},
+        {u"Ctrl+1"_s, tr("Torrent list: all torrents")},
+        {u"Ctrl+2"_s, tr("Torrent list: downloading")},
+        {u"Ctrl+3"_s, tr("Torrent list: completed")},
+        {u"Ctrl+4"_s, tr("Torrent list: seeding")},
+        {u"Ctrl+5"_s, tr("Torrent list: errors")},
+        {u"Ctrl+6"_s, tr("Search")},
+        {u"Ctrl+7"_s, tr("RSS")},
+        {u"Ctrl+8"_s, tr("Execution log")},
         {u"Ctrl+Shift+G"_s, tr("Global status: speeds, connection, DHT")},
         {u"Ctrl+Shift+H"_s, tr("Keyboard shortcuts")},
         {u"F6, Shift+F6"_s, tr("Next, previous zone: torrent list, properties, filters, filter field")},

@@ -311,11 +311,12 @@ namespace
         }
     };
 
-    class CtrlAltDigitFilter final : public QObject
+    class DigitKeyFilter final : public QObject
     {
     public:
-        CtrlAltDigitFilter(QObject *parent, std::function<bool (int digit)> handler)
+        DigitKeyFilter(QObject *parent, const Qt::KeyboardModifiers modifiers, std::function<bool (int digit)> handler)
             : QObject(parent)
+            , m_modifiers {modifiers}
             , m_handler {std::move(handler)}
         {
         }
@@ -329,7 +330,7 @@ namespace
             const Qt::KeyboardModifiers modifiers = key->modifiers() & ~Qt::KeypadModifier;
             // the physical key: Windows virtual-key codes '0'..'9' whatever the layout (AZERTY included)
             const quint32 vk = key->nativeVirtualKey();
-            if ((modifiers != (Qt::ControlModifier | Qt::AltModifier)) || (vk < '0') || (vk > '9') || key->isAutoRepeat())
+            if ((modifiers != m_modifiers) || (vk < '0') || (vk > '9') || key->isAutoRepeat())
                 return QObject::eventFilter(watched, event);
 
             // AltGr+digit typing a character ("@", "#"...) in a text field: leave the character alone
@@ -343,6 +344,7 @@ namespace
         }
 
     private:
+        Qt::KeyboardModifiers m_modifiers;
         std::function<bool (int digit)> m_handler;
     };
 
@@ -534,9 +536,9 @@ void Access::announce(QObject *source, const QString &text, const bool polite)
     QAccessible::updateAccessibility(&event);
 }
 
-void Access::installCtrlAltDigitKeys(QObject *owner, std::function<bool (int digit)> handler)
+void Access::installDigitKeys(QObject *owner, const Qt::KeyboardModifiers modifiers, std::function<bool (int digit)> handler)
 {
-    qApp->installEventFilter(new CtrlAltDigitFilter(owner, std::move(handler)));
+    qApp->installEventFilter(new DigitKeyFilter(owner, modifiers, std::move(handler)));
 }
 
 void Access::installListEdgeAnnouncer(QAbstractItemView *view)

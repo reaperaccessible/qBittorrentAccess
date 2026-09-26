@@ -50,10 +50,11 @@ namespace Access
     // Assertive interrupts current speech; polite waits for it (after a focus change, for example).
     void announce(QObject *source, const QString &text, bool polite = false);
 
-    // Application-wide Ctrl+Alt+<digit key> (physical digit key, any keyboard layout): `handler` gets
-    // the digit and returns true when it used it. When the focus is in a text field and the keys type
-    // a character (AltGr), the character is left alone. `owner` keeps the filter alive.
-    void installCtrlAltDigitKeys(QObject *owner, std::function<bool (int digit)> handler);
+    // Application-wide <modifiers>+<digit key>, matched on the physical digit key (any keyboard layout,
+    // AZERTY included): `handler` gets the digit and returns true when it used it. When the focus is in
+    // a text field and the keys type a character (AltGr), the character is left alone.
+    // `owner` keeps the filter alive.
+    void installDigitKeys(QObject *owner, Qt::KeyboardModifiers modifiers, std::function<bool (int digit)> handler);
 
     // Give the focus to the first widget of `page` reachable with Tab, as if the user tabbed into it
     void focusFirstChild(QWidget *page);

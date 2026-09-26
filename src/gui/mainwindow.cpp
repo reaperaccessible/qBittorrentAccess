@@ -535,13 +535,25 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
     {
         Access::announce(m_transferListWidget, tr("Removed: %1").arg(torrent->name()), true);
     });
-    // Accessibility: Ctrl+Alt+1..3 = status filter All, Downloading, Completed, with the focus in the list
-    Access::installCtrlAltDigitKeys(this, [this](const int digit)
+    // Accessibility (chosen with Lee): Ctrl+1..5 = the torrent list showing All, Downloading, Completed,
+    // Seeding, Errors; Ctrl+6..8 = Search, RSS, Execution log. Alt+1..4 (qBittorrent) are kept.
+    Access::installDigitKeys(this, Qt::ControlModifier, [this](const int digit)
     {
-        const QList<int> statuses {TorrentFilter::All, TorrentFilter::Downloading, TorrentFilter::Completed};
-        if ((digit < 1) || (digit > statuses.size()) || (QApplication::activeWindow() != this))
+        if (QApplication::activeWindow() != this)
             return false;
-        showStatusFilter(statuses[digit - 1]);
+
+        const QList<int> statuses {TorrentFilter::All, TorrentFilter::Downloading, TorrentFilter::Completed
+            , TorrentFilter::Seeding, TorrentFilter::Errored};
+        if ((digit >= 1) && (digit <= statuses.size()))
+            showStatusFilter(statuses[digit - 1]);
+        else if (digit == 6)
+            displaySearchTab();
+        else if (digit == 7)
+            displayRSSTab();
+        else if (digit == 8)
+            displayExecutionLogTab();
+        else
+            return false;
         return true;
     });
 
@@ -946,16 +958,6 @@ void MainWindow::createKeyboardShortcuts()
     connect(switchRSSShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displayRSSTab));
     const auto *switchExecutionLogShortcut = new QShortcut((Qt::ALT | Qt::Key_4), this);
     connect(switchExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
-    // Accessibility: Ctrl+1..4 is the standard of the qBittorrentAccess family (Alt+1..4 kept)
-    const auto *accessTransferShortcut = new QShortcut((Qt::CTRL | Qt::Key_1), this);
-    connect(accessTransferShortcut, &QShortcut::activated, this, &MainWindow::displayTransferTab);
-    const auto *accessSearchShortcut = new QShortcut((Qt::CTRL | Qt::Key_2), this);
-    connect(accessSearchShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displaySearchTab));
-    const auto *accessRSSShortcut = new QShortcut((Qt::CTRL | Qt::Key_3), this);
-    connect(accessRSSShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displayRSSTab));
-    const auto *accessExecutionLogShortcut = new QShortcut((Qt::CTRL | Qt::Key_4), this);
-    connect(accessExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
-
     // Accessibility: F6 / Shift+F6 move between the zones of the Transfers tab,
     // Ctrl+Shift+1..6 open a properties tab (General .. Speed) with the focus in it
     const auto *nextZoneShortcut = new QShortcut(Qt::Key_F6, this);
@@ -1037,6 +1039,13 @@ void MainWindow::showStatusFilter(const int status)
     // and the choice is saved, as when the user picks it there
     m_tabs->setCurrentWidget(m_splitter);
     auto *statusList = m_transferListFiltersWidget ? m_transferListFiltersWidget->findChild<StatusFilterWidget *>() : nullptr;
+    if (statusList && statusList->item(status)->isHidden())
+    {
+        // "hide zero filters" option: the view is empty and cannot be selected; say so, keep the current one
+        m_transferListWidget->setFocus(Qt::ShortcutFocusReason);
+        Access::announce(m_transferListWidget, statusList->item(status)->text(), true);
+        return;
+    }
     if (statusList)
     {
         statusList->setCurrentRow(status, QItemSelectionModel::ClearAndSelect);
