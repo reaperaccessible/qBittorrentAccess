@@ -32,6 +32,7 @@
 #include <chrono>
 
 #include <QtEnvironmentVariables>
+#include <QApplication>
 #include <QMenu>
 #include <QTimer>
 
@@ -40,6 +41,7 @@
 #endif
 
 #include "base/preferences.h"
+#include "access/accessibility.h"
 #include "uithememanager.h"
 
 #ifdef Q_OS_MACOS
@@ -179,8 +181,18 @@ void DesktopIntegration::setNotificationTimeout(const int value)
 
 void DesktopIntegration::showNotification(const QString &title, const QString &msg) const
 {
+    // Accessibility: when no notification pops up (notifications off, no tray icon), the screen
+    // reader says it instead; when one pops up, the screen reader reads it (never both)
+    const auto speak = [&title, &msg]
+    {
+        if (QWidget *window = QApplication::activeWindow())
+            Access::announce(window, (title + u": " + msg), true);
+    };
     if (!isNotificationsEnabled())
+    {
+        speak();
         return;
+    }
 
 #ifdef Q_OS_MACOS
     MacUtils::displayNotification(title, msg);
@@ -190,6 +202,8 @@ void DesktopIntegration::showNotification(const QString &title, const QString &m
 #else
     if (m_systrayIcon && QSystemTrayIcon::supportsMessages())
         m_systrayIcon->showMessage(title, msg, QSystemTrayIcon::Information, notificationTimeout());
+    else
+        speak();
 #endif
 #endif
 }

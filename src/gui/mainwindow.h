@@ -130,6 +130,7 @@ private slots:
     void toggleFocusBetweenLineEdits();
     void focusNextZone(int step);
     void showStatusFilter(int status);
+    void announceGlobalStatus();
     void loadSessionStats();
     void reloadTorrentStats(const QList<BitTorrent::Torrent *> &torrents);
     void loadPreferences();

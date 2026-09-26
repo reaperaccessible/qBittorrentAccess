@@ -50,6 +50,7 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+Alt+1"_s, tr("Show all torrents")},
         {u"Ctrl+Alt+2"_s, tr("Show downloading torrents")},
         {u"Ctrl+Alt+3"_s, tr("Show completed torrents")},
+        {u"Ctrl+Shift+G"_s, tr("Global status: speeds, connection, DHT")},
         {u"Ctrl+Shift+H"_s, tr("Keyboard shortcuts")},
         {u"F6, Shift+F6"_s, tr("Next, previous zone: torrent list, properties, filters, filter field")},
         {u"Ctrl+Shift+1"_s, tr("Properties: General")},

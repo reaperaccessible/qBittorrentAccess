@@ -529,6 +529,12 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
 
     Access::installMenuFocusFix(this); // accessibility: menus open with their first item selected
     Access::installDialogLabeling(this); // accessibility: every dialog names its fields after their labels
+    // Accessibility: a removed torrent is said (Delete key, share limit reached...)
+    connect(BitTorrent::Session::instance(), &BitTorrent::Session::torrentAboutToBeRemoved, this
+        , [this](const BitTorrent::Torrent *torrent)
+    {
+        Access::announce(m_transferListWidget, tr("Removed: %1").arg(torrent->name()), true);
+    });
     // Accessibility: Ctrl+Alt+1..3 = status filter All, Downloading, Completed, with the focus in the list
     Access::installCtrlAltDigitKeys(this, [this](const int digit)
     {
@@ -966,6 +972,10 @@ void MainWindow::createKeyboardShortcuts()
         });
     }
 
+    // Accessibility: Ctrl+Shift+G says the global state (speeds, connection, DHT) without leaving the list
+    const auto *globalStatusShortcut = new QShortcut((Qt::CTRL | Qt::SHIFT | Qt::Key_G), this);
+    connect(globalStatusShortcut, &QShortcut::activated, this, &MainWindow::announceGlobalStatus);
+
     auto *actionKeyboardShortcuts = new QAction(tr("&Keyboard Shortcuts"), this);
     actionKeyboardShortcuts->setShortcut(Qt::CTRL | Qt::SHIFT | Qt::Key_H);
     m_ui->menuHelp->insertAction(m_ui->actionCheckForUpdates, actionKeyboardShortcuts);
@@ -997,6 +1007,30 @@ void MainWindow::createKeyboardShortcuts()
 }
 
 // Keyboard shortcuts slots
+void MainWindow::announceGlobalStatus()
+{
+    const BitTorrent::Session *session = BitTorrent::Session::instance();
+    const BitTorrent::SessionStatus &status = session->status();
+
+    QString connection;
+    if (!session->isListening())
+        connection = tr("Offline");
+    else if (status.hasIncomingConnections)
+        connection = tr("Online");
+    else
+        connection = tr("No direct connections");
+
+    QStringList parts {
+        tr("Download %1").arg(Utils::Misc::friendlyUnit(status.payloadDownloadRate, true)),
+        tr("Upload %1").arg(Utils::Misc::friendlyUnit(status.payloadUploadRate, true)),
+        connection,
+        tr("DHT %1 nodes").arg(status.dhtNodes)
+    };
+    if (session->isAltGlobalSpeedLimitEnabled())
+        parts.append(tr("Alternative speed limits"));
+    Access::announce(this, parts.join(u", "_s));
+}
+
 void MainWindow::showStatusFilter(const int status)
 {
     // Through the Status list of the sidebar when it exists, so the list shows the same filter
