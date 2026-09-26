@@ -80,6 +80,7 @@ TransferListFiltersWidgetItem::TransferListFiltersWidgetItem(const QString &capt
     layout->addWidget(m_filterWidget);
 
     m_filterWidget->setVisible(m_caption->isChecked());
+    m_filterWidget->setAccessibleName(caption); // accessibility: "Status list", not a nameless list
 
     connect(m_caption, &QCheckBox::toggled, m_filterWidget, &QWidget::setVisible);
     connect(m_caption, &QCheckBox::toggled, this, &TransferListFiltersWidgetItem::toggled);

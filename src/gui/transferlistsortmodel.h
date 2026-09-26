@@ -28,6 +28,8 @@
 
 #pragma once
 
+#include <functional>
+
 #include <QSortFilterProxyModel>
 
 #include "base/settingvalue.h"
@@ -45,9 +47,15 @@ class TransferListSortModel final : public QSortFilterProxyModel
     Q_DISABLE_COPY_MOVE(TransferListSortModel)
 
 public:
+    using AccessibleTextProvider = std::function<QString (const QModelIndex &index)>;
+
     explicit TransferListSortModel(QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
+
+    // Screen readers read Qt::AccessibleTextRole; the view provides the whole-row text
+    void setAccessibleTextProvider(AccessibleTextProvider provider);
 
     void setStatusFilter(TorrentFilter::Status status);
     void setCategoryFilter(const QString &category);
@@ -71,4 +79,5 @@ private:
     int m_lastSortOrder = 0;
 
     Utils::Compare::NaturalCompare<Qt::CaseInsensitive> m_naturalCompare;
+    AccessibleTextProvider m_accessibleTextProvider;
 };

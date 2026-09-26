@@ -152,6 +152,13 @@ TransferListWidget::TransferListWidget(IGUIApplication *app, QWidget *parent)
     header()->setStretchLastSection(false);
     header()->setTextElideMode(Qt::ElideRight);
 
+    // Accessibility: name the list and let screen readers read the whole row, not just one cell
+    setAccessibleName(tr("Torrents"));
+    m_sortFilterModel->setAccessibleTextProvider([this](const QModelIndex &index)
+    {
+        return accessibleRowText(index.row());
+    });
+
     // Default hidden columns
     if (!columnLoaded)
     {
@@ -1305,6 +1312,51 @@ void TransferListWidget::displayListMenu()
     listMenu->addAction(actionExportTorrent);
 
     listMenu->popup(QCursor::pos());
+}
+
+QString TransferListWidget::accessibleRowText(const int row) const
+{
+    // Name first, then every visible column in on-screen order as "Header value"
+    const auto cellText = [this, row](const int column)
+    {
+        return m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed();
+    };
+
+    QStringList parts {cellText(TransferListModel::TR_NAME)};
+    for (int visual = 0, count = header()->count(); visual < count; ++visual)
+    {
+        const int column = header()->logicalIndex(visual);
+        if ((column == TransferListModel::TR_NAME) || isColumnHidden(column))
+            continue;
+
+        const QString text = cellText(column);
+        if (text.isEmpty())
+            continue;
+
+        const QString title = m_sortFilterModel->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
+        parts.append(title.isEmpty() ? text : (title + u' ' + text));
+    }
+    return parts.join(u", "_s);
+}
+
+void TransferListWidget::focusInEvent(QFocusEvent *event)
+{
+    // Accessibility: arriving in the list by keyboard must land on a selected torrent,
+    // otherwise screen readers announce "not selected" and actions have no target
+    const Qt::FocusReason reason = event->reason();
+    if ((reason != Qt::MouseFocusReason) && (reason != Qt::PopupFocusReason) && (model()->rowCount() > 0))
+    {
+        QModelIndex current = currentIndex();
+        if (!current.isValid())
+        {
+            current = model()->index(0, TransferListModel::TR_NAME);
+            setCurrentIndex(current);
+        }
+        if (!selectionModel()->isRowSelected(current.row(), current.parent()))
+            selectionModel()->select(current, (QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows));
+    }
+
+    QTreeView::focusInEvent(event);
 }
 
 void TransferListWidget::currentChanged(const QModelIndex &current, const QModelIndex &previous)

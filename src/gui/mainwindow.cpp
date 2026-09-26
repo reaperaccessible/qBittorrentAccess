@@ -234,6 +234,9 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
     connect(m_columnFilterEdit, &QWidget::customContextMenuRequested, this, &MainWindow::showFilterContextMenu);
     auto *columnFilterLabel = new QLabel(tr("Filter by:"));
     m_columnFilterComboBox = new QComboBox;
+    columnFilterLabel->setBuddy(m_columnFilterComboBox);
+    // accessibility: the label is not read with the combo box, name it explicitly
+    m_columnFilterComboBox->setAccessibleName(columnFilterLabel->text().remove(u':').trimmed());
     QHBoxLayout *columnFilterLayout = new QHBoxLayout(m_columnFilterWidget);
     columnFilterLayout->setContentsMargins(0, 0, 0, 0);
     auto *columnFilterSpacer = new QWidget(this);
@@ -946,6 +949,7 @@ void MainWindow::createKeyboardShortcuts()
 void MainWindow::displayTransferTab() const
 {
     m_tabs->setCurrentWidget(m_splitter);
+    m_transferListWidget->setFocus(Qt::ShortcutFocusReason); // accessibility: Alt+1 lands in the torrent list
 }
 
 void MainWindow::displaySearchTab()

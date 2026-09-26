@@ -134,6 +134,7 @@ TransferListFiltersWidget::TransferListFiltersWidget(QWidget *parent, TransferLi
     scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     scroll->setFrameShape(QFrame::NoFrame);
     scroll->setWidget(mainWidget);
+    scroll->setFocusPolicy(Qt::NoFocus); // accessibility: a nameless Tab stop with nothing to operate
 
     auto *vLayout = new QVBoxLayout(this);
     vLayout->setContentsMargins(0, 0, 0, 0);

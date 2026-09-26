@@ -111,6 +111,19 @@ TransferListSortModel::TransferListSortModel(QObject *parent)
     setSortRole(TransferListModel::UnderlyingDataRole);
 }
 
+QVariant TransferListSortModel::data(const QModelIndex &index, const int role) const
+{
+    if ((role == Qt::AccessibleTextRole) && m_accessibleTextProvider && index.isValid())
+        return m_accessibleTextProvider(index);
+
+    return QSortFilterProxyModel::data(index, role);
+}
+
+void TransferListSortModel::setAccessibleTextProvider(AccessibleTextProvider provider)
+{
+    m_accessibleTextProvider = std::move(provider);
+}
+
 void TransferListSortModel::sort(const int column, const Qt::SortOrder order)
 {
     if ((m_lastSortColumn != column) && (m_lastSortColumn != -1))
