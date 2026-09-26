@@ -56,8 +56,8 @@ namespace Access
     // `owner` keeps the filter alive.
     void installDigitKeys(QObject *owner, Qt::KeyboardModifiers modifiers, std::function<bool (int digit)> handler);
 
-    // Give the focus to `widget`; when it already has it, send the screen reader the same focus event
-    // again (current item included), so a shortcut pressed twice speaks the same thing twice
+    // Give the focus to `widget`; when it already has it, announce what the screen reader says on arrival
+    // (name, then current item or value), so a shortcut pressed twice speaks the same thing twice
     void focusAndSpeak(QWidget *widget, Qt::FocusReason reason = Qt::ShortcutFocusReason);
 
     // Keyboard shortcut to a place: exactly one screen reader message, the same whether the user comes

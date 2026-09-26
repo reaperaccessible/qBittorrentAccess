@@ -740,25 +740,24 @@ void Access::focusAndSpeak(QWidget *widget, const Qt::FocusReason reason)
     if (!QAccessible::isActive())
         return;
 
-    // Already focused: no focus change, so Qt says nothing; repeat the focus event it sends on arrival
-    QAccessibleEvent event {widget, QAccessible::Focus};
-    auto *view = qobject_cast<QAbstractItemView *>(widget);
-    const QModelIndex current = view ? view->currentIndex() : QModelIndex();
+    // Already focused: no focus change, so nothing is said, and screen readers ignore a focus event for
+    // the object they already have. Say what they say on arrival: the name, then the current item
+    // (or the value of a field).
     QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(widget);
-    if (current.isValid() && iface && iface->tableInterface())
+    if (!iface)
+        return;
+    QStringList parts {iface->text(QAccessible::Name)};
+    if (qobject_cast<QAbstractItemView *>(widget))
     {
-        // the accessible table counts rows in visible order (a tree: expanded items included)
-        int row = current.row();
-        if (const auto *tree = qobject_cast<const QTreeView *>(view))
-        {
-            row = 0;
-            for (QModelIndex above = tree->indexAbove(current); above.isValid(); above = tree->indexAbove(above))
-                ++row;
-        }
-        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(row, current.column()))
-            event.setChild(iface->indexOfChild(cell));
+        if (QAccessibleInterface *item = iface->focusChild(); item && (item != iface))
+            parts.append(item->text(QAccessible::Name));
     }
-    QAccessible::updateAccessibility(&event);
+    else
+    {
+        parts.append(iface->text(QAccessible::Value));
+    }
+    parts.removeAll(QString());
+    announce(widget, parts.join(u", "_s));
 }
 
 QWidget *Access::firstTabStop(QWidget *page)
