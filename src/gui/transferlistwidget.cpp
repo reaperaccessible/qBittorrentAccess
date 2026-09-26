@@ -56,6 +56,7 @@
 #include "base/utils/fs.h"
 #include "base/utils/misc.h"
 #include "base/utils/string.h"
+#include "access/accessibility.h"
 #include "autoexpandabledialog.h"
 #include "deletionconfirmationdialog.h"
 #include "interfaces/iguiapplication.h"
@@ -1314,29 +1315,123 @@ void TransferListWidget::displayListMenu()
     listMenu->popup(QCursor::pos());
 }
 
-QString TransferListWidget::accessibleRowText(const int row) const
+QList<int> TransferListWidget::visibleColumnsInOrder() const
 {
-    // Name first, then every visible column in on-screen order as "Header value"
-    const auto cellText = [this, row](const int column)
-    {
-        return m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed();
-    };
-
-    QStringList parts {cellText(TransferListModel::TR_NAME)};
+    QList<int> columns;
     for (int visual = 0, count = header()->count(); visual < count; ++visual)
     {
-        const int column = header()->logicalIndex(visual);
-        if ((column == TransferListModel::TR_NAME) || isColumnHidden(column))
-            continue;
+        if (const int column = header()->logicalIndex(visual); !isColumnHidden(column))
+            columns.append(column);
+    }
+    return columns;
+}
 
-        const QString text = cellText(column);
-        if (text.isEmpty())
-            continue;
+QString TransferListWidget::accessibleCellText(const int row, const int column) const
+{
+    // "Header value"
+    const QString text = m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed();
+    const QString title = m_sortFilterModel->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
+    if (title.isEmpty())
+        return text;
+    return text.isEmpty() ? title : (title + u' ' + text);
+}
 
-        const QString title = m_sortFilterModel->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
-        parts.append(title.isEmpty() ? text : (title + u' ' + text));
+QString TransferListWidget::accessibleRowText(const int row) const
+{
+    // Name first, then every visible column in on-screen order as "Header value", empty ones skipped
+    QStringList parts {m_sortFilterModel->index(row, TransferListModel::TR_NAME).data(Qt::DisplayRole).toString().trimmed()};
+    for (const int column : asConst(visibleColumnsInOrder()))
+    {
+        if ((column == TransferListModel::TR_NAME)
+            || m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed().isEmpty())
+        {
+            continue;
+        }
+        parts.append(accessibleCellText(row, column));
     }
     return parts.join(u", "_s);
+}
+
+void TransferListWidget::announceColumn(const int step)
+{
+    // Left/Right: one column of the current row, without repeating the torrent name (two-axis rule)
+    const QModelIndex current = currentIndex();
+    const QList<int> columns = visibleColumnsInOrder();
+    if (!current.isValid() || columns.isEmpty())
+        return;
+
+    qsizetype position = columns.indexOf((m_readColumn >= 0) ? m_readColumn : TransferListModel::TR_NAME);
+    if (position < 0)
+        position = 0;
+
+    const qsizetype target = position + step;
+    if ((target < 0) || (target >= columns.size()))
+    {
+        // never a silent edge
+        const QString edge = (target < 0) ? QCoreApplication::translate("Access", "First") : QCoreApplication::translate("Access", "Last");
+        Access::announce(this, (edge + u", " + accessibleCellText(current.row(), columns[position])));
+        return;
+    }
+
+    m_readColumn = columns[target];
+    Access::announce(this, accessibleCellText(current.row(), m_readColumn));
+}
+
+void TransferListWidget::toggleCurrentTorrentsStartStop()
+{
+    const QList<BitTorrent::Torrent *> torrents = getSelectedTorrents();
+    if (torrents.isEmpty())
+        return;
+
+    const bool allStopped = std::all_of(torrents.cbegin(), torrents.cend(), [](const BitTorrent::Torrent *torrent)
+    {
+        return torrent->isStopped();
+    });
+    if (allStopped)
+    {
+        startSelectedTorrents();
+        Access::announce(this, tr("Started"));
+    }
+    else
+    {
+        stopSelectedTorrents();
+        Access::announce(this, tr("Stopped"));
+    }
+}
+
+void TransferListWidget::keyPressEvent(QKeyEvent *event)
+{
+    const Qt::KeyboardModifiers modifiers = event->modifiers() & ~Qt::KeypadModifier;
+    const int key = event->key();
+
+    if (modifiers == Qt::NoModifier)
+    {
+        if ((key == Qt::Key_Left) || (key == Qt::Key_Right))
+        {
+            announceColumn((key == Qt::Key_Left) ? -1 : 1);
+            return;
+        }
+        if (key == Qt::Key_Space)
+        {
+            toggleCurrentTorrentsStartStop();
+            return;
+        }
+        if (Access::announceListEdge(this, event))
+            return;
+    }
+    else if ((modifiers == Qt::ControlModifier) && ((key == Qt::Key_Return) || (key == Qt::Key_Enter)))
+    {
+        openSelectedTorrentsFolder();
+        return;
+    }
+    else if ((modifiers == (Qt::ControlModifier | Qt::ShiftModifier)) && (key == Qt::Key_C))
+    {
+        copySelectedMagnetURIs();
+        Access::announce(this, tr("Magnet link copied"));
+        return;
+    }
+
+    QTreeView::keyPressEvent(event);
 }
 
 void TransferListWidget::focusInEvent(QFocusEvent *event)
@@ -1368,6 +1463,8 @@ void TransferListWidget::currentChanged(const QModelIndex &current, const QModel
     // Without this call, users relying on assistive technologies cannot effectively
     // navigate the torrent list with keyboard arrow keys.
     QTreeView::currentChanged(current, previous);
+    if (current.row() != previous.row())
+        m_readColumn = -1; // a new row is read whole again
 
     BitTorrent::Torrent *torrent = nullptr;
     if (current.isValid())

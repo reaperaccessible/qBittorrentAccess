@@ -126,7 +126,12 @@ private:
     void dropEvent(QDropEvent *event) override;
     void wheelEvent(QWheelEvent *event) override;
     void focusInEvent(QFocusEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
     QString accessibleRowText(int row) const;
+    QString accessibleCellText(int row, int column) const;
+    QList<int> visibleColumnsInOrder() const;
+    void announceColumn(int step);
+    void toggleCurrentTorrentsStartStop();
     void openPreviewSelectDialog(const BitTorrent::Torrent *torrent);
     QModelIndex mapToSource(const QModelIndex &index) const;
     QModelIndexList mapToSource(const QModelIndexList &indexes) const;
@@ -144,4 +149,5 @@ private:
 
     TransferListModel *m_listModel = nullptr;
     TransferListSortModel *m_sortFilterModel = nullptr;
+    int m_readColumn = -1; // accessibility: column read with Left/Right on the current row, -1 = whole row
 };
