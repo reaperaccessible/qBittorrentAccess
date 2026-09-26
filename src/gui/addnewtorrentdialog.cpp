@@ -398,6 +398,14 @@ AddNewTorrentDialog::AddNewTorrentDialog(const BitTorrent::TorrentDescriptor &to
     m_ui->contentTreeView->setAccessibleName(QCoreApplication::translate("PropTabBar", "Content"));
     Access::registerRowText(m_ui->contentTreeView, TorrentContentModelItem::COL_NAME);
     Access::installListEdgeAnnouncer(m_ui->contentTreeView);
+    // - what NVDA says when the window opens (its title is the torrent name, which does not say what
+    //   the window is for); a magnet link gets its file list later
+    {
+        QString description = tr("Add a torrent. Enter: add with these settings. Tab: folder, options, information, then files. Escape: cancel.");
+        if (!torrentDescr.info().has_value())
+            description += u' ' + tr("The file list arrives when the metadata is received.");
+        setAccessibleDescription(description);
+    }
     // - every field named after its own label; the "..." tags button says what it does
     m_ui->tagsEditButton->setAccessibleName(tr("Edit tags"));
     Access::labelControls(this);

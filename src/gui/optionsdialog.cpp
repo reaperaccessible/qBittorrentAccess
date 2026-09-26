@@ -239,6 +239,8 @@ OptionsDialog::OptionsDialog(IGUIApplication *app, QWidget *parent)
     m_ui->tabSelection->setAccessibleName(tr("Pages"));
     m_advancedSettings->setAccessibleName(m_ui->tabSelection->item(TAB_ADVANCED)->text());
     Access::labelControls(this);
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Preferences. Up, Down: choose the page. Tab: settings of the page. Enter: save and close. Escape: cancel."));
 }
 
 OptionsDialog::~OptionsDialog()

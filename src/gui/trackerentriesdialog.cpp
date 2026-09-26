@@ -50,6 +50,8 @@ TrackerEntriesDialog::TrackerEntriesDialog(QWidget *parent)
     connect(m_ui->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     loadSettings();
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("One tracker address per line, an empty line between tiers. Tab: OK button. Escape: cancel."));
 }
 
 TrackerEntriesDialog::~TrackerEntriesDialog()

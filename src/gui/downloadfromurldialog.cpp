@@ -101,9 +101,19 @@ DownloadFromURLDialog::DownloadFromURLDialog(QWidget *parent)
         m_ui->buttonBox->setFocus();
     }
 
-    // accessibility: the links field is named after its label, the hint below is its description
+    // accessibility: the links field is named after its label; the dialog says what to do (not the hint
+    // below the field, which was read once as dialog text and again as the field description)
     m_ui->textUrls->setAccessibleName(Access::cleanLabel(m_ui->downloadURL_lbl->text()));
-    m_ui->textUrls->setAccessibleDescription(m_ui->label_infos->text());
+    if (urls.isEmpty())
+    {
+        setAccessibleDescription(tr("Paste one or more links, one per line. Tab: list of links, then Download. Escape: cancel."));
+    }
+    else
+    {
+        setAccessibleDescription(((urls.size() == 1)
+            ? tr("1 link found in the clipboard. Enter: download. Shift+Tab: edit the links. Escape: cancel.")
+            : tr("%1 links found in the clipboard. Enter: download. Shift+Tab: edit the links. Escape: cancel.").arg(urls.size())));
+    }
 
     // accessibility: long links cannot be reviewed in a multi-line field; a read-only "Links" list, next
     // Tab stop, shows each line (lines that are not links are marked), and a paste says how many links

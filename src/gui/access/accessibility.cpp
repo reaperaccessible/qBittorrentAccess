@@ -274,6 +274,22 @@ namespace
         return (w && isInput(w)) ? w : nullptr;
     }
 
+    // Short name for a control that has no label of its own
+    QString kindName(QWidget *control)
+    {
+        if (const auto *path = qobject_cast<const FileSystemPathEdit *>(control))
+        {
+            const bool directory = (path->mode() == FileSystemPathEdit::Mode::DirectoryOpen)
+                || (path->mode() == FileSystemPathEdit::Mode::DirectorySave);
+            return directory ? QCoreApplication::translate("Access", "Folder") : QCoreApplication::translate("Access", "File");
+        }
+        if (qobject_cast<const QAbstractItemView *>(control))
+            return QCoreApplication::translate("Access", "List");
+        if (qobject_cast<const QAbstractSpinBox *>(control) || qobject_cast<const QComboBox *>(control))
+            return QCoreApplication::translate("Access", "Value");
+        return QCoreApplication::translate("Access", "Text");
+    }
+
     QString nameOf(QWidget *control)
     {
         QWidget *holder = qobject_cast<FileSystemPathEdit *>(control) ? pathEditor(control) : control;
@@ -503,7 +519,12 @@ void Access::setControlName(QWidget *control, const QString &name)
     {
         QWidget *editor = pathEditor(control);
         if (editor)
+        {
             editor->setAccessibleName(name);
+            // the editor's tooltip is its path, which is already its value: without this, the path is
+            // read twice; the useful extra is the browse key
+            editor->setAccessibleDescription(QCoreApplication::translate("Access", "Ctrl+B: browse"));
+        }
         if (auto *browse = control->findChild<QToolButton *>(Qt::FindDirectChildrenOnly))
         {
             browse->setAccessibleName(QCoreApplication::translate("Access", "Browse"));
@@ -577,19 +598,18 @@ void Access::labelControls(QWidget *root)
             setControlName(control, nameOf(field));
     }
 
-    // 3. still nothing: the title of the enclosing group box, cleaned
+    // 3. still nothing: inside a group box, the screen reader already says the group title when the
+    // focus enters it, so the control gets a short name for its kind ("Folder", "List"...), not the title
+    // again; outside a group box, nothing better than Qt's default
     for (QWidget *control : controls)
     {
         if (!nameOf(control).isEmpty())
             continue;
+        bool inGroup = false;
         for (QWidget *p = control->parentWidget(); p && (p != root); p = p->parentWidget())
-        {
-            if (auto *group = qobject_cast<QGroupBox *>(p))
-            {
-                setControlName(control, cleanLabel(group->title()));
-                break;
-            }
-        }
+            inGroup = inGroup || (qobject_cast<QGroupBox *>(p) != nullptr);
+        if (inGroup)
+            setControlName(control, kindName(control));
     }
 }
 

@@ -384,6 +384,9 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QList<BitTorre
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Options of the selected torrents. Tab: go through the settings. Enter: apply. Escape: cancel."));
 }
 
 TorrentOptionsDialog::~TorrentOptionsDialog()

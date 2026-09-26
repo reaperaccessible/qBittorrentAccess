@@ -113,6 +113,8 @@ SpeedLimitDialog::SpeedLimitDialog(QWidget *parent)
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Global speed limits. Tab: go through the limits. Enter: apply. Escape: cancel."));
 }
 
 SpeedLimitDialog::~SpeedLimitDialog()

@@ -68,6 +68,8 @@ TorrentTagsDialog::TorrentTagsDialog(const TagSet &initialTags, QWidget *parent)
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Tags of the torrent: Space checks or unchecks a tag. Enter: apply. Escape: cancel."));
 }
 
 TorrentTagsDialog::~TorrentTagsDialog()

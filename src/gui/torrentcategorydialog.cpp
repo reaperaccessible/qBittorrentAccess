@@ -59,6 +59,8 @@ TorrentCategoryDialog::TorrentCategoryDialog(QWidget *parent)
     connect(m_ui->comboUseDownloadPath, &QComboBox::currentIndexChanged, this, &TorrentCategoryDialog::useDownloadPathChanged);
 
     resetShareLimitsWidgetDefaults();
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Category: name and save path. Enter: save. Escape: cancel."));
 }
 
 TorrentCategoryDialog::TorrentCategoryDialog(QWidget *parent, const QString &categoryName, const BitTorrent::CategoryOptions &categoryOptions)

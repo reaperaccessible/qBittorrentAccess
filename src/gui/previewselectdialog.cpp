@@ -117,6 +117,8 @@ PreviewSelectDialog::PreviewSelectDialog(QWidget *parent, const BitTorrent::Torr
     // Restore dialog state
     loadWindowState();
     m_ui->previewList->hideColumn(FILE_INDEX);
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Choose the file to preview. Enter: preview. Escape: cancel."));
 }
 
 PreviewSelectDialog::~PreviewSelectDialog()

@@ -30,6 +30,7 @@
 #include "deletionconfirmationdialog.h"
 
 #include <QPushButton>
+#include <QTextDocumentFragment>
 
 #include "base/bittorrent/session.h"
 #include "base/global.h"
@@ -62,6 +63,10 @@ DeletionConfirmationDialog::DeletionConfirmationDialog(QWidget *parent, const in
 
     connect(m_ui->buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(m_ui->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    // (the question is in a label: it goes first, plain text)
+    setAccessibleDescription(QTextDocumentFragment::fromHtml(m_ui->label->text()).toPlainText() + u' '
+        + tr("The focus is on Cancel. Tab: option to also remove the content files, then the Remove button. Escape: cancel."));
 }
 
 DeletionConfirmationDialog::~DeletionConfirmationDialog()

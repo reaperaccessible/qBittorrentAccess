@@ -132,7 +132,7 @@ AddTorrentParamsWidget::AddTorrentParamsWidget(BitTorrent::AddTorrentParams addT
 
     // Accessibility: the note above the save path is not its name; the incomplete-torrents path
     // is not "Save at"; the "..." button says what it does
-    Access::setControlName(m_ui->savePathEdit, Access::cleanLabel(m_ui->groupBoxSavePath->title()));
+    Access::setControlName(m_ui->savePathEdit, QCoreApplication::translate("Access", "Folder")); // in the "Save at" group
     Access::setControlName(m_ui->downloadPathEdit, tr("Path for incomplete torrents"));
     m_ui->tagsEditButton->setAccessibleName(Access::cleanLabel(m_ui->tagsEditButton->toolTip()));
 }

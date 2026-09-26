@@ -149,6 +149,8 @@ TorrentCreatorDialog::TorrentCreatorDialog(QWidget *parent, const Path &defaultP
 #else
     m_ui->widgetTorrentFormat->hide();
 #endif
+    // accessibility: what NVDA says when the dialog opens, instead of every static text in it
+    setAccessibleDescription(tr("Create a torrent from a file or a folder. Tab: go through the settings. Enter: create the torrent. Escape: cancel."));
 }
 
 TorrentCreatorDialog::~TorrentCreatorDialog()
