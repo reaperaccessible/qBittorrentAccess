@@ -40,6 +40,8 @@ class TrackerListSortModel final : public QSortFilterProxyModel
 public:
     explicit TrackerListSortModel(TrackerListModel *model, QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override; // accessibility: whole-row text
+
     void setSourceModel(TrackerListModel *model);
 
 private:

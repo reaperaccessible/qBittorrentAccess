@@ -29,6 +29,7 @@
 
 #include "torrentcontentfiltermodel.h"
 
+#include "access/accessibility.h"
 #include "torrentcontentmodel.h"
 
 TorrentContentFilterModel::TorrentContentFilterModel(QObject *parent)
@@ -40,6 +41,16 @@ TorrentContentFilterModel::TorrentContentFilterModel(QObject *parent)
     setDynamicSortFilter(true);
     setSortCaseSensitivity(Qt::CaseInsensitive);
     setSortRole(TorrentContentModel::UnderlyingDataRole);
+}
+
+QVariant TorrentContentFilterModel::data(const QModelIndex &index, const int role) const
+{
+    if (role == Qt::AccessibleTextRole)
+    {
+        if (const QVariant rowText = Access::rowTextFor(index); rowText.isValid())
+            return rowText;
+    }
+    return QSortFilterProxyModel::data(index, role);
 }
 
 void TorrentContentFilterModel::setSourceModel(TorrentContentModel *model)

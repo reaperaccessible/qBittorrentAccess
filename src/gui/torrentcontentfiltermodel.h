@@ -44,6 +44,8 @@ class TorrentContentFilterModel final : public QSortFilterProxyModel
 public:
     explicit TorrentContentFilterModel(QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override; // accessibility: whole-row text
+
     void setSourceModel(TorrentContentModel *model);
     TorrentContentModelItem::ItemType itemType(const QModelIndex &index) const;
     int getFileIndex(const QModelIndex &index) const;

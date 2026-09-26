@@ -45,6 +45,11 @@ class PieceAvailabilityBar;
 class PropTabBar;
 class TrackerListWidget;
 
+namespace Access
+{
+    class ReadOnlyList;
+}
+
 namespace BitTorrent
 {
     class Torrent;
@@ -77,6 +82,11 @@ public:
     PropTabBar *tabBar() const;
     LineEdit *contentFilterLine() const;
 
+    // Accessibility: show tab `index` (without toggling the panel off) and put the focus in its content
+    void focusTab(int index);
+    // The main control of the current tab, nullptr when the panel is hidden
+    QWidget *currentTabContent() const;
+
 public slots:
     void setVisibility(bool visible);
     void loadTorrentInfos(BitTorrent::Torrent *torrent);
@@ -105,6 +115,7 @@ private:
     QPushButton *getButtonFromIndex(int index);
     void showContentFilterContextMenu();
     void setContentFilterPattern();
+    void refreshGeneralList();
 
     Ui::PropertiesWidget *m_ui = nullptr;
     BitTorrent::Torrent *m_torrent = nullptr;
@@ -117,6 +128,7 @@ private:
     PieceAvailabilityBar *m_piecesAvailability = nullptr;
     PropTabBar *m_tabBar = nullptr;
     LineEdit *m_contentFilterLine = nullptr;
+    Access::ReadOnlyList *m_generalList = nullptr; // accessibility: the General tab as "Label: value" rows
     int m_handleWidth = -1;
 
     SettingValue<FilterPatternFormat> m_storeFilterPatternFormat;

@@ -28,12 +28,23 @@
 
 #include "peerlistsortmodel.h"
 
+#include "gui/access/accessibility.h"
 #include "peerlistwidget.h"
 
 PeerListSortModel::PeerListSortModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setSortRole(UnderlyingDataRole);
+}
+
+QVariant PeerListSortModel::data(const QModelIndex &index, const int role) const
+{
+    if (role == Qt::AccessibleTextRole)
+    {
+        if (const QVariant rowText = Access::rowTextFor(index); rowText.isValid())
+            return rowText;
+    }
+    return QSortFilterProxyModel::data(index, role);
 }
 
 bool PeerListSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

@@ -102,6 +102,7 @@ SpeedWidget::SpeedWidget(PropertiesWidget *parent)
 
     m_graphsButton = new ComboBoxMenuButton(this, m_graphsMenu);
     m_graphsButton->addItem(tr("Select Graphs"));
+    m_graphsButton->setAccessibleName(tr("Select Graphs")); // accessibility: a combo box look-alike without label
 
     m_hlayout->addWidget(m_periodLabel);
     m_hlayout->addWidget(m_periodCombobox);
@@ -113,6 +114,9 @@ SpeedWidget::SpeedWidget(PropertiesWidget *parent)
 
     m_layout->addLayout(m_hlayout);
     m_layout->addWidget(m_plot);
+    // accessibility: the period first, then the graph choice; the graph itself is a picture, not a Tab stop
+    m_plot->setFocusPolicy(Qt::NoFocus);
+    setTabOrder(m_periodCombobox, m_graphsButton);
 
     loadSettings();
 

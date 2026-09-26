@@ -34,6 +34,11 @@
 #include <QApplication>
 #include <QBoxLayout>
 #include <QCheckBox>
+#include <QClipboard>
+#include <QHash>
+#include <QHeaderView>
+#include <QPointer>
+#include <QTreeView>
 #include <QComboBox>
 #include <QCoreApplication>
 #include <QFormLayout>
@@ -304,6 +309,34 @@ namespace
         }
     };
 
+    class ListEdgeFilter final : public QObject
+    {
+    public:
+        using QObject::QObject;
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() == QEvent::KeyPress)
+            {
+                if (Access::announceListEdge(static_cast<QAbstractItemView *>(watched), static_cast<QKeyEvent *>(event)))
+                    return true;
+            }
+            return QObject::eventFilter(watched, event);
+        }
+    };
+
+    struct RowTextView
+    {
+        QPointer<QTreeView> view;
+        int primaryColumn = 0;
+    };
+
+    QHash<const QAbstractItemModel *, RowTextView> &rowTextRegistry()
+    {
+        static QHash<const QAbstractItemModel *, RowTextView> registry;
+        return registry;
+    }
+
     // Icon-only buttons: their tooltip is their name, and stays so when the tooltip changes
     class TooltipNameFilter final : public QObject
     {
@@ -442,6 +475,94 @@ void Access::announce(QObject *source, const QString &text)
     QAccessible::updateAccessibility(&event);
 }
 
+void Access::installListEdgeAnnouncer(QAbstractItemView *view)
+{
+    view->installEventFilter(new ListEdgeFilter(view));
+}
+
+QString Access::rowText(const QTreeView *view, const QModelIndex &index, const int primaryColumn)
+{
+    const QAbstractItemModel *model = index.model();
+    const auto cell = [&index](const int column)
+    {
+        const QVariant data = index.siblingAtColumn(column).data(Qt::DisplayRole);
+        return (data.typeId() == QMetaType::Double) ? QString::number(data.toDouble(), 'f', 1) : data.toString().trimmed();
+    };
+
+    QStringList parts {cell(primaryColumn)};
+    const QHeaderView *header = view->header();
+    for (int visual = 0, count = header->count(); visual < count; ++visual)
+    {
+        const int column = header->logicalIndex(visual);
+        if ((column == primaryColumn) || view->isColumnHidden(column))
+            continue;
+
+        const QString text = cell(column);
+        if (text.isEmpty())
+            continue;
+
+        const QString title = model->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
+        parts.append(title.isEmpty() ? text : (title + u' ' + text));
+    }
+    return parts.join(u", "_s);
+}
+
+void Access::registerRowText(QTreeView *view, const int primaryColumn)
+{
+    const QAbstractItemModel *model = view->model();
+    rowTextRegistry().insert(model, {view, primaryColumn});
+    QObject::connect(view, &QObject::destroyed, qApp, [model] { rowTextRegistry().remove(model); });
+}
+
+QVariant Access::rowTextFor(const QModelIndex &index)
+{
+    const auto it = rowTextRegistry().constFind(index.model());
+    if ((it == rowTextRegistry().cend()) || !it->view || !index.isValid())
+        return {};
+    return rowText(it->view, index, it->primaryColumn);
+}
+
+Access::ReadOnlyList::ReadOnlyList(QWidget *parent)
+    : QListWidget(parent)
+{
+    setSelectionMode(QAbstractItemView::SingleSelection);
+    setEditTriggers(QAbstractItemView::NoEditTriggers);
+}
+
+void Access::ReadOnlyList::setRows(const QStringList &rows)
+{
+    if (count() != rows.size())
+    {
+        const int current = currentRow();
+        clear();
+        addItems(rows);
+        if (count() > 0)
+            setCurrentRow(std::clamp(current, 0, (count() - 1)));
+        return;
+    }
+    for (int i = 0; i < rows.size(); ++i)
+    {
+        if (item(i)->text() != rows[i])
+            item(i)->setText(rows[i]);
+    }
+}
+
+void Access::ReadOnlyList::keyPressEvent(QKeyEvent *event)
+{
+    if (announceListEdge(this, event))
+        return;
+
+    if ((event->modifiers() == Qt::ControlModifier) && (event->key() == Qt::Key_C) && currentItem())
+    {
+        const QString text = currentItem()->text();
+        const qsizetype separator = text.indexOf(u": "_s);
+        QApplication::clipboard()->setText((separator >= 0) ? text.mid(separator + 2) : text);
+        announce(this, QCoreApplication::translate("Access", "Copied"));
+        return;
+    }
+    QListWidget::keyPressEvent(event);
+}
+
 void Access::installMenuFocusFix(QObject *owner)
 {
     qApp->installEventFilter(new MenuFocusFilter(owner));
@@ -456,7 +577,12 @@ void Access::focusFirstChild(QWidget *page)
     {
         if (!page->isAncestorOf(w))
             continue;
-        if ((w->focusPolicy() & Qt::TabFocus) && w->isVisible() && w->isEnabled())
+        // a focus proxy decides (a scroll area viewport forwards to its view, which may refuse Tab)
+        const QWidget *target = w;
+        while (target->focusProxy())
+            target = target->focusProxy();
+        // isVisibleTo: the page may be shown in this same event (stacked widget switch)
+        if ((w->focusPolicy() & Qt::TabFocus) && (target->focusPolicy() & Qt::TabFocus) && w->isVisibleTo(page) && w->isEnabled())
         {
             w->setFocus(Qt::TabFocusReason);
             return;
@@ -489,12 +615,17 @@ bool Access::announceListEdge(QAbstractItemView *view, const QKeyEvent *event)
     if (!up && !down)
         return false;
 
-    const int rows = view->model()->rowCount(view->rootIndex());
     const QModelIndex current = view->currentIndex();
-    if ((rows <= 0) || !current.isValid())
+    if (!current.isValid())
         return false;
 
-    if ((up && (current.row() == 0)) || (down && (current.row() == (rows - 1))))
+    bool atEdge = false;
+    if (const auto *tree = qobject_cast<const QTreeView *>(view))
+        atEdge = !(up ? tree->indexAbove(current) : tree->indexBelow(current)).isValid();
+    else
+        atEdge = up ? (current.row() == 0) : (current.row() == (view->model()->rowCount(current.parent()) - 1));
+
+    if (atEdge)
     {
         QString text = current.data(Qt::AccessibleTextRole).toString();
         if (text.isEmpty())

@@ -40,6 +40,7 @@
 #include <QSplitter>
 #include <QShortcut>
 #include <QStackedWidget>
+#include <QTextDocumentFragment>
 #include <QUrl>
 
 #include "base/bittorrent/infohash.h"
@@ -51,9 +52,12 @@
 #include "base/unicodestrings.h"
 #include "base/utils/misc.h"
 #include "base/utils/string.h"
+#include "gui/access/accessibility.h"
 #include "gui/autoexpandabledialog.h"
 #include "gui/filterpatternformatmenu.h"
 #include "gui/lineedit.h"
+#include "gui/torrentcontentmodelitem.h"
+#include "gui/trackerlist/trackerlistmodel.h"
 #include "gui/trackerlist/trackerlistwidget.h"
 #include "gui/uithememanager.h"
 #include "gui/utils.h"
@@ -143,8 +147,117 @@ PropertiesWidget::PropertiesWidget(QWidget *parent)
     connect(deleteWebSeedsHotkey, &QShortcut::activated, this, &PropertiesWidget::deleteSelectedUrlSeeds);
     connect(m_ui->listWebSeeds, &QListWidget::doubleClicked, this, &PropertiesWidget::editWebSeed);
 
+    // Accessibility
+    // - General tab: its captions and values are static texts that no key reaches; one read-only
+    //   "Label: value" list replaces the two text grids (the pieces bars stay)
+    m_generalList = new Access::ReadOnlyList(m_ui->scrollAreaWidgetContents);
+    m_generalList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::MainTab));
+    m_ui->verticalLayout_2->insertWidget((m_ui->verticalLayout_2->indexOf(m_ui->groupTransferBox)), m_generalList, 1);
+    m_ui->groupTransferBox->hide();
+    m_ui->groupInfosBox->hide();
+    m_ui->scrollArea->setWidgetResizable(true);
+    // - each list is named after its tab and read as a whole row, "First," / "Last," at the edges
+    m_trackerList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::TrackersTab));
+    m_peerList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::PeersTab));
+    m_ui->listWebSeeds->setAccessibleName(m_tabBar->tabTitle(PropTabBar::URLSeedsTab));
+    m_ui->filesList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::FilesTab));
+    Access::registerRowText(m_trackerList, TrackerListModel::COL_URL);
+    Access::registerRowText(m_peerList, PeerListWidget::IP);
+    Access::registerRowText(m_ui->filesList, TorrentContentModelItem::COL_NAME);
+    for (QAbstractItemView *view : {static_cast<QAbstractItemView *>(m_trackerList), static_cast<QAbstractItemView *>(m_peerList)
+            , static_cast<QAbstractItemView *>(m_ui->listWebSeeds), static_cast<QAbstractItemView *>(m_ui->filesList)})
+    {
+        Access::installListEdgeAnnouncer(view);
+    }
+    // - icon-only buttons (tracker tier up / down) and the other fields
+    m_ui->trackerUpButton->setToolTip(tr("Move up (tier)"));
+    m_ui->trackerDownButton->setToolTip(tr("Move down (tier)"));
+    Access::labelControls(this);
+    refreshGeneralList();
+
     configure();
     connect(Preferences::instance(), &Preferences::changed, this, &PropertiesWidget::configure);
+}
+
+void PropertiesWidget::refreshGeneralList()
+{
+    // Every "caption / value" pair of the General tab grids, in reading order, empty values skipped
+    QStringList rows;
+    for (const QGridLayout *grid : {m_ui->groupBarLayout, m_ui->gridLayout_2, m_ui->gridLayout})
+    {
+        for (int row = 0; row < grid->rowCount(); ++row)
+        {
+            QString caption;
+            for (int column = 0; column < grid->columnCount(); ++column)
+            {
+                const QLayoutItem *item = grid->itemAtPosition(row, column);
+                const auto *label = item ? qobject_cast<const QLabel *>(item->widget()) : nullptr;
+                if (!label || label->isHidden())
+                    continue;
+                if (!label->objectName().endsWith(u"Val"))
+                {
+                    caption = Access::cleanLabel(label->text());
+                    continue;
+                }
+                const QString value = Qt::mightBeRichText(label->text())
+                    ? QTextDocumentFragment::fromHtml(label->text()).toPlainText().simplified()
+                    : label->text().simplified();
+                if (!caption.isEmpty() && !value.isEmpty())
+                    rows.append(caption + u": " + value);
+                caption.clear();
+            }
+        }
+    }
+    m_generalList->setRows(rows);
+}
+
+QWidget *PropertiesWidget::currentTabContent() const
+{
+    if (m_state != VISIBLE)
+        return nullptr;
+
+    switch (m_tabBar->currentIndex())
+    {
+    case PropTabBar::MainTab:
+        return m_generalList;
+    case PropTabBar::TrackersTab:
+        return m_trackerList;
+    case PropTabBar::PeersTab:
+        return m_peerList;
+    case PropTabBar::URLSeedsTab:
+        return m_ui->listWebSeeds;
+    case PropTabBar::FilesTab:
+        return m_ui->filesList;
+    case PropTabBar::SpeedTab:
+        return m_speedWidget;
+    default:
+        return nullptr;
+    }
+}
+
+void PropertiesWidget::focusTab(const int index)
+{
+    // selecting the current tab again would hide the panel; a hidden panel has no current tab (-1)
+    if (m_tabBar->currentIndex() != index)
+        m_tabBar->setCurrentIndex(index);
+
+    QWidget *content = currentTabContent();
+    if (!content)
+        return;
+
+    if (auto *view = qobject_cast<QAbstractItemView *>(content); view && !view->currentIndex().isValid()
+        && view->model() && (view->model()->rowCount() > 0))
+    {
+        view->setCurrentIndex(view->model()->index(0, 0));
+    }
+    if (content->focusPolicy() != Qt::NoFocus)
+        content->setFocus(Qt::ShortcutFocusReason);
+    else
+        Access::focusFirstChild(content);
+
+    // an empty list must not be silent
+    if (auto *view = qobject_cast<QAbstractItemView *>(content); view && view->model() && (view->model()->rowCount() == 0))
+        Access::announce(view, tr("Empty"));
 }
 
 PropertiesWidget::~PropertiesWidget()
@@ -243,6 +356,7 @@ void PropertiesWidget::clear()
     m_piecesAvailability->clear();
     m_peerList->clear();
     m_contentFilterLine->clear();
+    refreshGeneralList();
 }
 
 BitTorrent::Torrent *PropertiesWidget::getCurrentTorrent() const
@@ -511,6 +625,7 @@ void PropertiesWidget::loadDynamicData()
             {
                 showPiecesAvailability(false);
             }
+            refreshGeneralList();
         }
         break;
     case PropTabBar::PeersTab:
@@ -591,6 +706,7 @@ void PropertiesWidget::configure()
 
             m_speedWidget = new SpeedWidget(this);
             m_ui->speedLayout->addWidget(m_speedWidget);
+            Access::labelControls(m_speedWidget); // accessibility: "Period" combo box
         }
     }
     else

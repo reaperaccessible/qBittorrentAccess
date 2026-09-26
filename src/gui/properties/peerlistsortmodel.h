@@ -45,6 +45,8 @@ public:
 
     explicit PeerListSortModel(QObject *parent = nullptr);
 
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override; // accessibility: whole-row text
+
 private:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 

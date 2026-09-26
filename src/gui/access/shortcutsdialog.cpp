@@ -29,29 +29,10 @@
 #include "shortcutsdialog.h"
 
 #include <QDialogButtonBox>
-#include <QKeyEvent>
-#include <QListWidget>
 #include <QVBoxLayout>
 
 #include "base/global.h"
 #include "accessibility.h"
-
-namespace
-{
-    class EdgeAwareListWidget final : public QListWidget
-    {
-    public:
-        using QListWidget::QListWidget;
-
-    protected:
-        void keyPressEvent(QKeyEvent *event) override
-        {
-            if (Access::announceListEdge(this, event))
-                return;
-            QListWidget::keyPressEvent(event);
-        }
-    };
-}
 
 Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
     : QDialog(parent)
@@ -67,6 +48,14 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+3"_s, tr("RSS")},
         {u"Ctrl+4"_s, tr("Execution log")},
         {u"Ctrl+Shift+H"_s, tr("Keyboard shortcuts")},
+        {u"F6, Shift+F6"_s, tr("Next, previous zone: torrent list, properties, filters, filter field")},
+        {u"Ctrl+Shift+1"_s, tr("Properties: General")},
+        {u"Ctrl+Shift+2"_s, tr("Properties: Trackers")},
+        {u"Ctrl+Shift+3"_s, tr("Properties: Peers")},
+        {u"Ctrl+Shift+4"_s, tr("Properties: HTTP sources")},
+        {u"Ctrl+Shift+5"_s, tr("Properties: Content, the files")},
+        {u"Ctrl+Shift+6"_s, tr("Properties: Speed")},
+        {u"Ctrl+C"_s, tr("Copy the value, in the General list")},
         {u"Ctrl+O"_s, tr("Open torrent file")},
         {u"Ctrl+Shift+O"_s, tr("Add torrent link, magnet")},
         {u"Ctrl+N"_s, tr("Create new torrent")},
@@ -95,7 +84,7 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+Q"_s, tr("Exit")}
     };
 
-    auto *list = new EdgeAwareListWidget(this);
+    auto *list = new ReadOnlyList(this);
     list->setAccessibleName(title); // short and fixed: the braille line keeps the current row visible
     for (const auto &[keys, action] : shortcuts)
         list->addItem(keys + u": " + action);

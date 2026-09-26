@@ -36,6 +36,7 @@
 
 #include <QAction>
 #include <QActionGroup>
+#include <QApplication>
 #include <QClipboard>
 #include <QCloseEvent>
 #include <QComboBox>
@@ -937,6 +938,22 @@ void MainWindow::createKeyboardShortcuts()
     const auto *accessExecutionLogShortcut = new QShortcut((Qt::CTRL | Qt::Key_4), this);
     connect(accessExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
 
+    // Accessibility: F6 / Shift+F6 move between the zones of the Transfers tab,
+    // Ctrl+Shift+1..6 open a properties tab (General .. Speed) with the focus in it
+    const auto *nextZoneShortcut = new QShortcut(Qt::Key_F6, this);
+    connect(nextZoneShortcut, &QShortcut::activated, this, [this] { focusNextZone(1); });
+    const auto *previousZoneShortcut = new QShortcut((Qt::SHIFT | Qt::Key_F6), this);
+    connect(previousZoneShortcut, &QShortcut::activated, this, [this] { focusNextZone(-1); });
+    for (int tab = PropTabBar::MainTab; tab <= PropTabBar::SpeedTab; ++tab)
+    {
+        const auto *propertiesTabShortcut = new QShortcut((Qt::CTRL | Qt::SHIFT | static_cast<Qt::Key>(Qt::Key_1 + tab)), this);
+        connect(propertiesTabShortcut, &QShortcut::activated, this, [this, tab]
+        {
+            m_tabs->setCurrentWidget(m_splitter);
+            m_propertiesWidget->focusTab(tab);
+        });
+    }
+
     auto *actionKeyboardShortcuts = new QAction(tr("&Keyboard Shortcuts"), this);
     actionKeyboardShortcuts->setShortcut(Qt::CTRL | Qt::SHIFT | Qt::Key_H);
     m_ui->menuHelp->insertAction(m_ui->actionCheckForUpdates, actionKeyboardShortcuts);
@@ -968,6 +985,39 @@ void MainWindow::createKeyboardShortcuts()
 }
 
 // Keyboard shortcuts slots
+void MainWindow::focusNextZone(const int step)
+{
+    // Zones of the Transfers tab, in F6 order; hidden ones are skipped
+    if (m_tabs->currentWidget() != m_splitter)
+        return;
+
+    QList<QWidget *> zones {m_transferListWidget};
+    if (QWidget *properties = m_propertiesWidget->currentTabContent(); properties && properties->isVisible())
+        zones.append(properties);
+    if (m_transferListFiltersWidget && m_transferListFiltersWidget->isVisible())
+        zones.append(m_transferListFiltersWidget);
+    if (m_columnFilterEdit->isVisible())
+        zones.append(m_columnFilterEdit);
+
+    const QWidget *focused = QApplication::focusWidget();
+    qsizetype current = -1;
+    for (qsizetype i = 0; i < zones.size(); ++i)
+    {
+        if ((zones[i] == focused) || zones[i]->isAncestorOf(focused))
+        {
+            current = i;
+            break;
+        }
+    }
+
+    const qsizetype next = (current < 0) ? 0 : ((current + step + zones.size()) % zones.size());
+    QWidget *zone = zones[next];
+    if (zone == m_transferListFiltersWidget)
+        Access::focusFirstChild(zone);
+    else
+        zone->setFocus(Qt::TabFocusReason);
+}
+
 void MainWindow::displayTransferTab() const
 {
     m_tabs->setCurrentWidget(m_splitter);

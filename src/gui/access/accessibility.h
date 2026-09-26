@@ -28,10 +28,15 @@
 
 #pragma once
 
+#include <QListWidget>
+
 class QAbstractItemView;
 class QKeyEvent;
+class QModelIndex;
 class QObject;
 class QString;
+class QTreeView;
+class QVariant;
 class QWidget;
 
 // Screen reader helpers shared by the accessibility work (qBittorrentAccess)
@@ -67,6 +72,32 @@ namespace Access
     void labelControls(QWidget *root);
 
     // Up on the first row / Down on the last row: announce "First, <row>" / "Last, <row>"
-    // instead of staying silent. Returns true when the key was handled.
+    // instead of staying silent. In a tree, the first / last VISIBLE item. Returns true when handled.
     bool announceListEdge(QAbstractItemView *view, const QKeyEvent *event);
+
+    // Same, as an event filter installed on `view` (for views we do not subclass)
+    void installListEdgeAnnouncer(QAbstractItemView *view);
+
+    // Whole-row text of a multi-column view: the primary column first, then every visible column
+    // in on-screen order as "Header value", empty ones skipped
+    QString rowText(const QTreeView *view, const QModelIndex &index, int primaryColumn);
+
+    // Screen readers read Qt::AccessibleTextRole of the focused cell. Register `view` so that
+    // rowTextFor() returns its whole-row text; the view's proxy model returns rowTextFor(index)
+    // from data(Qt::AccessibleTextRole).
+    void registerRowText(QTreeView *view, int primaryColumn);
+    QVariant rowTextFor(const QModelIndex &index);
+
+    // Read-only list of "Label: value" rows: "First," / "Last," at the edges, Ctrl+C copies the value
+    class ReadOnlyList final : public QListWidget
+    {
+    public:
+        explicit ReadOnlyList(QWidget *parent = nullptr);
+
+        // Replace the rows, keeping the current row (no screen reader noise when only values change)
+        void setRows(const QStringList &rows);
+
+    protected:
+        void keyPressEvent(QKeyEvent *event) override;
+    };
 }

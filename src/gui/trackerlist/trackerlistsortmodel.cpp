@@ -28,6 +28,7 @@
 
 #include "trackerlistsortmodel.h"
 
+#include "gui/access/accessibility.h"
 #include "trackerlistmodel.h"
 
 TrackerListSortModel::TrackerListSortModel(TrackerListModel *model, QObject *parent)
@@ -37,6 +38,16 @@ TrackerListSortModel::TrackerListSortModel(TrackerListModel *model, QObject *par
     setDynamicSortFilter(true);
     setSortCaseSensitivity(Qt::CaseInsensitive);
     setSortRole(TrackerListModel::SortRole);
+}
+
+QVariant TrackerListSortModel::data(const QModelIndex &index, const int role) const
+{
+    if (role == Qt::AccessibleTextRole)
+    {
+        if (const QVariant rowText = Access::rowTextFor(index); rowText.isValid())
+            return rowText;
+    }
+    return QSortFilterProxyModel::data(index, role);
 }
 
 void TrackerListSortModel::setSourceModel(TrackerListModel *model)

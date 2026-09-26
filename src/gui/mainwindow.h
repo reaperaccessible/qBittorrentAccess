@@ -128,6 +128,7 @@ private slots:
     void displayRSSTab();
     void displayExecutionLogTab();
     void toggleFocusBetweenLineEdits();
+    void focusNextZone(int step);
     void loadSessionStats();
     void reloadTorrentStats(const QList<BitTorrent::Torrent *> &torrents);
     void loadPreferences();

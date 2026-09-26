@@ -98,9 +98,20 @@ PropTabBar::PropTabBar(QWidget *parent)
     speedButton->setShortcut(Qt::ALT | Qt::Key_D);
     addWidget(speedButton);
     m_btnGroup->addButton(speedButton, SpeedTab);
+    // Accessibility: the current tab button is "checked", so screen readers say which tab is shown
+    m_btnGroup->setExclusive(false);
+    for (QAbstractButton *button : m_btnGroup->buttons())
+        button->setCheckable(true);
+
     // SIGNAL/SLOT
     connect(m_btnGroup, &QButtonGroup::idClicked
             , this, &PropTabBar::setCurrentIndex);
+}
+
+QString PropTabBar::tabTitle(const int index) const
+{
+    const QAbstractButton *button = m_btnGroup->button(index);
+    return button ? button->text() : QString();
 }
 
 int PropTabBar::currentIndex() const
@@ -118,6 +129,7 @@ void PropTabBar::setCurrentIndex(int index)
         if (m_currentIndex >= 0)
         {
           m_btnGroup->button(m_currentIndex)->setDown(false);
+          m_btnGroup->button(m_currentIndex)->setChecked(false);
           m_currentIndex = -1;
           emit visibilityToggled(false);
         }
@@ -127,6 +139,7 @@ void PropTabBar::setCurrentIndex(int index)
     if (m_currentIndex >= 0)
     {
         m_btnGroup->button(m_currentIndex)->setDown(false);
+        m_btnGroup->button(m_currentIndex)->setChecked(false);
     }
     else
     {
@@ -135,6 +148,7 @@ void PropTabBar::setCurrentIndex(int index)
     }
     // Select the new button
     m_btnGroup->button(index)->setDown(true);
+    m_btnGroup->button(index)->setChecked(true);
     m_currentIndex = index;
     // Emit the signal
     emit tabChanged(index);
