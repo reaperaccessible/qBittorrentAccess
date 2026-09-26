@@ -28,6 +28,9 @@
 
 #include "downloadfromurldialog.h"
 
+#include <algorithm>
+
+#include <QBoxLayout>
 #include <QClipboard>
 #include <QKeyEvent>
 #include <QMessageBox>
@@ -107,6 +110,40 @@ DownloadFromURLDialog::DownloadFromURLDialog(QWidget *parent)
     // accessibility: the links field is named after its label, the hint below is its description
     m_ui->textUrls->setAccessibleName(Access::cleanLabel(m_ui->downloadURL_lbl->text()));
     m_ui->textUrls->setAccessibleDescription(m_ui->label_infos->text());
+
+    // accessibility: long links cannot be reviewed in a multi-line field; a read-only "Links" list, next
+    // Tab stop, shows each line (lines that are not links are marked), and a paste says how many links
+    auto *linkList = new Access::ReadOnlyList(this);
+    linkList->setAccessibleName(tr("Links"));
+    if (auto *box = qobject_cast<QBoxLayout *>(layout()))
+        box->insertWidget((box->indexOf(m_ui->label_infos) + 1), linkList);
+    setTabOrder(m_ui->textUrls, linkList);
+    const auto lines = [this]
+    {
+        QStringList result;
+        for (const QString &line : m_ui->textUrls->toPlainText().split(u'\n'))
+        {
+            if (const QString url = line.trimmed(); !url.isEmpty())
+                result.append(url);
+        }
+        return result;
+    };
+    const auto refreshLinks = [linkList, lines]
+    {
+        QStringList rows;
+        for (const QString &url : lines())
+            rows.append(isDownloadable(url) ? url : tr("Not a link: %1").arg(url));
+        linkList->setRows(rows);
+    };
+    connect(m_ui->textUrls, &QTextEdit::textChanged, linkList, refreshLinks);
+    refreshLinks();
+    Access::onKeyboardPaste(m_ui->textUrls, [this, lines]
+    {
+        const QStringList urls = lines();
+        const qsizetype count = std::count_if(urls.cbegin(), urls.cend(), [](const QString &url) { return isDownloadable(url); });
+        const QString text = (count == 0) ? tr("No link") : ((count == 1) ? tr("1 link") : tr("%1 links").arg(count));
+        Access::announce(m_ui->textUrls, text);
+    });
 
     if (const QSize dialogSize = m_storeDialogSize; dialogSize.isValid())
         resize(dialogSize);

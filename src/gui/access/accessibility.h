@@ -67,6 +67,9 @@ namespace Access
     // a current item; an empty one says "Empty" unless sayEmpty is false (the name already has a count).
     void goTo(QWidget *target, const std::function<void ()> &showTarget = {}, bool sayEmpty = true);
 
+    // Call `afterPaste` once a paste by keyboard (Ctrl+V, Shift+Insert) into `edit` is done
+    void onKeyboardPaste(QWidget *edit, std::function<void ()> afterPaste);
+
     // First widget of `page` reachable with Tab (page shown or not), or `page` itself
     QWidget *firstTabStop(QWidget *page);
     // Child of `page` named `objectName` when it can take the focus, else the first Tab stop of `page`

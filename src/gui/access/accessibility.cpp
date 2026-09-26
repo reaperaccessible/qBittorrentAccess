@@ -348,6 +348,30 @@ namespace
         std::function<bool (int digit)> m_handler;
     };
 
+    class PasteFilter final : public QObject
+    {
+    public:
+        PasteFilter(QObject *parent, std::function<void ()> afterPaste)
+            : QObject(parent)
+            , m_afterPaste {std::move(afterPaste)}
+        {
+        }
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() == QEvent::KeyPress)
+            {
+                const auto *key = static_cast<QKeyEvent *>(event);
+                if (key->matches(QKeySequence::Paste))
+                    QTimer::singleShot(0, this, m_afterPaste); // after the edit has inserted the text
+            }
+            return QObject::eventFilter(watched, event);
+        }
+
+    private:
+        std::function<void ()> m_afterPaste;
+    };
+
     class DialogLabelingFilter final : public QObject
     {
     public:
@@ -758,6 +782,11 @@ void Access::focusAndSpeak(QWidget *widget, const Qt::FocusReason reason)
     }
     parts.removeAll(QString());
     announce(widget, parts.join(u", "_s));
+}
+
+void Access::onKeyboardPaste(QWidget *edit, std::function<void ()> afterPaste)
+{
+    edit->installEventFilter(new PasteFilter(edit, std::move(afterPaste)));
 }
 
 QWidget *Access::firstTabStop(QWidget *page)
