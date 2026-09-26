@@ -536,7 +536,7 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
         Access::announce(m_transferListWidget, tr("Removed: %1").arg(torrent->name()), true);
     });
     // Accessibility (chosen with Lee): Ctrl+1..5 = the torrent list showing All, Downloading, Completed,
-    // Seeding, Errors; Ctrl+6..8 = Search, RSS, Execution log. Alt+1..4 (qBittorrent) are kept.
+    // Seeding, Errors; Ctrl+6..8 = Search, RSS, Execution log.
     Access::installDigitKeys(this, Qt::ControlModifier, [this](const int digit)
     {
         if (QApplication::activeWindow() != this)
@@ -950,14 +950,7 @@ void MainWindow::createKeyboardShortcuts()
     m_ui->actionCloseWindow->setVisible(false);
 #endif
 
-    const auto *switchTransferShortcut = new QShortcut((Qt::ALT | Qt::Key_1), this);
-    connect(switchTransferShortcut, &QShortcut::activated, this, &MainWindow::displayTransferTab);
-    const auto *switchSearchShortcut = new QShortcut((Qt::ALT | Qt::Key_2), this);
-    connect(switchSearchShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displaySearchTab));
-    const auto *switchRSSShortcut = new QShortcut((Qt::ALT | Qt::Key_3), this);
-    connect(switchRSSShortcut, &QShortcut::activated, this, qOverload<>(&MainWindow::displayRSSTab));
-    const auto *switchExecutionLogShortcut = new QShortcut((Qt::ALT | Qt::Key_4), this);
-    connect(switchExecutionLogShortcut, &QShortcut::activated, this, &MainWindow::displayExecutionLogTab);
+    // Accessibility: Alt+1..4 removed, duplicates of Ctrl+1 and Ctrl+6..8 (see the constructor)
     // Accessibility: F6 / Shift+F6 move between the zones of the Transfers tab,
     // Ctrl+Shift+1..6 open a properties tab (General .. Speed) with the focus in it
     const auto *nextZoneShortcut = new QShortcut(Qt::Key_F6, this);
