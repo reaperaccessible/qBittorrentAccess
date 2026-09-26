@@ -524,6 +524,8 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
 
     connect(pref, &Preferences::changed, this, &MainWindow::optionsSaved);
 
+    Access::installMenuFocusFix(this); // accessibility: menus open with their first item selected
+
     qDebug("GUI Built");
 }
 

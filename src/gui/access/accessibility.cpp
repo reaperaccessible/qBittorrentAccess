@@ -31,6 +31,7 @@
 #include <QAbstractItemView>
 #include <QAbstractSpinBox>
 #include <QAccessible>
+#include <QApplication>
 #include <QBoxLayout>
 #include <QCheckBox>
 #include <QComboBox>
@@ -42,11 +43,13 @@
 #include <QKeySequenceEdit>
 #include <QLabel>
 #include <QLineEdit>
+#include <QMenu>
 #include <QPlainTextEdit>
 #include <QRadioButton>
 #include <QScrollArea>
 #include <QTextDocumentFragment>
 #include <QTextEdit>
+#include <QTimer>
 #include <QToolButton>
 #include <QWidget>
 
@@ -270,6 +273,37 @@ namespace
         return holder ? holder->accessibleName() : QString();
     }
 
+    class MenuFocusFilter final : public QObject
+    {
+    public:
+        using QObject::QObject;
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() == QEvent::Show)
+            {
+                if (auto *menu = qobject_cast<QMenu *>(watched))
+                {
+                    // after popup() has finished positioning and possibly selecting an action itself
+                    QTimer::singleShot(0, menu, [menu]
+                    {
+                        if (!menu->isVisible() || menu->activeAction())
+                            return;
+                        for (QAction *action : menu->actions())
+                        {
+                            if (!action->isSeparator() && action->isVisible() && action->isEnabled())
+                            {
+                                menu->setActiveAction(action);
+                                break;
+                            }
+                        }
+                    });
+                }
+            }
+            return QObject::eventFilter(watched, event);
+        }
+    };
+
     // Icon-only buttons: their tooltip is their name, and stays so when the tooltip changes
     class TooltipNameFilter final : public QObject
     {
@@ -406,6 +440,11 @@ void Access::announce(QObject *source, const QString &text)
     QAccessibleAnnouncementEvent event {source, text};
     event.setPoliteness(QAccessible::AnnouncementPoliteness::Assertive);
     QAccessible::updateAccessibility(&event);
+}
+
+void Access::installMenuFocusFix(QObject *owner)
+{
+    qApp->installEventFilter(new MenuFocusFilter(owner));
 }
 
 void Access::focusFirstChild(QWidget *page)

@@ -47,6 +47,11 @@ namespace Access
     // or to its first Tab stop when that child is not found or cannot take the focus
     void focusNamedChild(QWidget *page, const QString &objectName);
 
+    // Application-wide: a popup menu opens with its first enabled item selected, as in Windows,
+    // so the screen reader reads it at once (Qt opens it with nothing selected: silent).
+    // `owner` keeps the filter alive.
+    void installMenuFocusFix(QObject *owner);
+
     // Label text as a screen reader should say it: no '&' mnemonic, no HTML, no trailing ':'
     QString cleanLabel(const QString &text);
 
