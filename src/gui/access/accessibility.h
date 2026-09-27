@@ -88,6 +88,10 @@ namespace Access
     // never touched are named after their labels too. `owner` keeps the filter alive.
     void installDialogLabeling(QObject *owner);
 
+    // Application-wide: a tooltip written in HTML becomes a plain-text accessible description (screen
+    // readers read Qt's tooltip fallback tag by tag). `owner` keeps the filter alive.
+    void installPlainTooltipDescriptions(QObject *owner);
+
     // QTreeWidget / QListWidget own their model: set the whole-row text on every item
     // (Qt::AccessibleTextRole), and again whenever items change
     void keepItemRowTexts(QTreeView *view, int primaryColumn);

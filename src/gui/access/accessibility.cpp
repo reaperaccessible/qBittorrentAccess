@@ -55,6 +55,7 @@
 #include <QRadioButton>
 #include <QScrollArea>
 #include <QRegularExpression>
+#include <QTextDocument>
 #include <QTextDocumentFragment>
 #include <QTextEdit>
 #include <QTimer>
@@ -1069,6 +1070,55 @@ void Access::installMenuFocusFix(QObject *owner)
 void Access::installDialogLabeling(QObject *owner)
 {
     qApp->installEventFilter(new DialogLabelingFilter(owner));
+}
+
+namespace
+{
+    // A widget's tooltip is its accessible description when it has none of its own: an HTML tooltip
+    // ("<html><head/><body><p>...") was then read tag by tag by screen readers and on braille displays
+    const char AUTO_DESCRIPTION[] = "qbtaccessAutoDescription";
+
+    void plainTooltipDescription(QWidget *widget)
+    {
+        const bool autoSet = widget->property(AUTO_DESCRIPTION).toBool();
+        if (!autoSet && !widget->accessibleDescription().isEmpty())
+            return; // a description of our own wins
+
+        const QString tip = widget->toolTip();
+        if (tip.isEmpty() || !Qt::mightBeRichText(tip))
+        {
+            if (autoSet) // the HTML tooltip is gone: let Qt use the new one again
+            {
+                widget->setAccessibleDescription({});
+                widget->setProperty(AUTO_DESCRIPTION, false);
+            }
+            return;
+        }
+        QString text = QTextDocumentFragment::fromHtml(tip).toPlainText();
+        text.replace(QChar::LineSeparator, u' ').replace(QChar::ParagraphSeparator, u' ').replace(u'\n', u' ');
+        widget->setAccessibleDescription(text.simplified());
+        widget->setProperty(AUTO_DESCRIPTION, true);
+    }
+
+    class PlainTooltipFilter final : public QObject
+    {
+    public:
+        using QObject::QObject;
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (((event->type() == QEvent::Polish) || (event->type() == QEvent::ToolTipChange)) && watched->isWidgetType())
+                plainTooltipDescription(static_cast<QWidget *>(watched));
+            return QObject::eventFilter(watched, event);
+        }
+    };
+}
+
+void Access::installPlainTooltipDescriptions(QObject *owner)
+{
+    qApp->installEventFilter(new PlainTooltipFilter(owner));
+    for (QWidget *widget : QApplication::allWidgets()) // widgets already created
+        plainTooltipDescription(widget);
 }
 
 void Access::keepItemRowTexts(QTreeView *view, const int primaryColumn)

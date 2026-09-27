@@ -551,6 +551,7 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
 
     Access::installMenuFocusFix(this); // accessibility: menus open with their first item selected
     Access::installDialogLabeling(this); // accessibility: every dialog names its fields after their labels
+    Access::installPlainTooltipDescriptions(this); // accessibility: no HTML read out from tooltips
     // Accessibility: a removed torrent is said (Delete key, share limit reached...)
     connect(BitTorrent::Session::instance(), &BitTorrent::Session::torrentAboutToBeRemoved, this
         , [this](const BitTorrent::Torrent *torrent)
