@@ -1026,7 +1026,7 @@ void MainWindow::announceGlobalStatus()
     };
     if (session->isAltGlobalSpeedLimitEnabled())
         parts.append(tr("Alternative speed limits"));
-    Access::announce(this, parts.join(u", "_s));
+    Access::announce(this, Access::spellOut(parts.join(u", "_s)));
 }
 
 void MainWindow::showStatusFilter(const int status)

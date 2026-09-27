@@ -1333,8 +1333,10 @@ QList<int> TransferListWidget::visibleColumnsInOrder() const
 
 QString TransferListWidget::accessibleCellText(const int row, const int column) const
 {
-    // "Header value"
-    const QString text = m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed();
+    // "Header value", units and durations spelled out for the screen reader (the torrent name as is)
+    QString text = m_sortFilterModel->index(row, column).data(Qt::DisplayRole).toString().trimmed();
+    if (column != TransferListModel::TR_NAME)
+        text = Access::spellOut(text);
     const QString title = m_sortFilterModel->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
     if (title.isEmpty())
         return text;

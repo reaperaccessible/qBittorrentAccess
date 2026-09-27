@@ -54,6 +54,7 @@
 #include <QPlainTextEdit>
 #include <QRadioButton>
 #include <QScrollArea>
+#include <QRegularExpression>
 #include <QTextDocumentFragment>
 #include <QTextEdit>
 #include <QTimer>
@@ -494,6 +495,139 @@ namespace
     };
 }
 
+namespace
+{
+    // Singular or plural for a value: French keeps the singular below 2 ("1,5 mébioctet"), English only
+    // for exactly 1. The rule follows the interface language through its translation.
+    bool isPlural(const QString &number)
+    {
+        QString digits = number;
+        digits.remove(u' ').remove(QChar::Nbsp).remove(QChar(0x202F)).replace(u',', u'.');
+        const double value = digits.toDouble();
+        //: Plural rule of the interface language: "2" if the singular covers every value below 2 (French), "1" if only 1 is singular (English)
+        const bool fromTwo = (QCoreApplication::translate("Access", "1") == u"2");
+        return fromTwo ? (value >= 2) : (value != 1);
+    }
+
+    QString word(const char *singular, const char *plural, const QString &number)
+    {
+        return QCoreApplication::translate("Access", (isPlural(number) ? plural : singular));
+    }
+
+    struct SpellOutRules
+    {
+        QRegularExpression sizes;
+        QList<QString> unitSymbols;
+        QString perSecond;
+        QList<std::pair<QRegularExpression, QList<std::pair<const char *, const char *>>>> durations;
+        QString lessThanOneMinute;
+    };
+
+    const SpellOutRules &spellOutRules()
+    {
+        // built from qBittorrent's own translated unit and duration formats (Utils::Misc), so the same
+        // rules work in any interface language
+        static const SpellOutRules rules = []
+        {
+            SpellOutRules r;
+            const char *const unitSources[][2] = {
+                {"B", "bytes"}, {"KiB", "kibibytes (1024 bytes)"}, {"MiB", "mebibytes (1024 kibibytes)"},
+                {"GiB", "gibibytes (1024 mibibytes)"}, {"TiB", "tebibytes (1024 gibibytes)"},
+                {"PiB", "pebibytes (1024 tebibytes)"}, {"EiB", "exbibytes (1024 pebibytes)"}};
+            for (const auto &unit : unitSources)
+                r.unitSymbols.append(QCoreApplication::translate("misc", unit[0], unit[1]));
+            r.perSecond = QCoreApplication::translate("misc", "/s", "per second");
+
+            QStringList alternatives;
+            for (const QString &symbol : r.unitSymbols)
+                alternatives.append(QRegularExpression::escape(symbol));
+            std::sort(alternatives.begin(), alternatives.end(), [](const QString &a, const QString &b) { return a.size() > b.size(); });
+            r.sizes.setPattern(u"(?<![\\p{L}\\d])(\\d[\\d\\x{00A0}\\x{202F} ]*(?:[.,]\\d+)?)[\\x{00A0}\\x{202F} ]?("_s
+                + alternatives.join(u'|') + u")("_s + QRegularExpression::escape(r.perSecond) + u")?(?!\\p{L})"_s);
+
+            const auto duration = [&r](const char *source, const char *comment, QList<std::pair<const char *, const char *>> units)
+            {
+                QString pattern = QRegularExpression::escape(QCoreApplication::translate("misc", source, comment));
+                // QRegularExpression::escape turns "%" into "\%"
+                pattern.replace(u"\\%1"_s, u"(\\d+)"_s).replace(u"\\%2"_s, u"(\\d+)"_s);
+                r.durations.append({QRegularExpression(u"(?<![\\p{L}\\d])"_s + pattern + u"(?!\\p{L})"_s), units});
+            };
+            // longest formats first: "%1h %2m" before "%1m"
+            duration("%1y %2d", "e.g: 2 years 10 days", {{QT_TRANSLATE_NOOP("Access", "year"), QT_TRANSLATE_NOOP("Access", "years")}, {QT_TRANSLATE_NOOP("Access", "day"), QT_TRANSLATE_NOOP("Access", "days")}});
+            duration("%1d %2h", "e.g: 2 days 10 hours", {{QT_TRANSLATE_NOOP("Access", "day"), QT_TRANSLATE_NOOP("Access", "days")}, {QT_TRANSLATE_NOOP("Access", "hour"), QT_TRANSLATE_NOOP("Access", "hours")}});
+            duration("%1h %2m", "e.g: 3 hours 5 minutes", {{QT_TRANSLATE_NOOP("Access", "hour"), QT_TRANSLATE_NOOP("Access", "hours")}, {QT_TRANSLATE_NOOP("Access", "minute"), QT_TRANSLATE_NOOP("Access", "minutes")}});
+            duration("%1m", "e.g: 10 minutes", {{QT_TRANSLATE_NOOP("Access", "minute"), QT_TRANSLATE_NOOP("Access", "minutes")}});
+            duration("%1s", "e.g: 10 seconds", {{QT_TRANSLATE_NOOP("Access", "second"), QT_TRANSLATE_NOOP("Access", "seconds")}});
+            r.lessThanOneMinute = QCoreApplication::translate("misc", "< 1m", "< 1 minute");
+            return r;
+        }();
+        return rules;
+    }
+}
+
+QString Access::spellOut(const QString &text)
+{
+    if (text.isEmpty())
+        return text;
+
+    const SpellOutRules &rules = spellOutRules();
+    static const char *const unitWords[][2] = {
+        QT_TRANSLATE_NOOP("Access", "byte"), QT_TRANSLATE_NOOP("Access", "bytes"),
+        QT_TRANSLATE_NOOP("Access", "kibibyte"), QT_TRANSLATE_NOOP("Access", "kibibytes"),
+        QT_TRANSLATE_NOOP("Access", "mebibyte"), QT_TRANSLATE_NOOP("Access", "mebibytes"),
+        QT_TRANSLATE_NOOP("Access", "gibibyte"), QT_TRANSLATE_NOOP("Access", "gibibytes"),
+        QT_TRANSLATE_NOOP("Access", "tebibyte"), QT_TRANSLATE_NOOP("Access", "tebibytes"),
+        QT_TRANSLATE_NOOP("Access", "pebibyte"), QT_TRANSLATE_NOOP("Access", "pebibytes"),
+        QT_TRANSLATE_NOOP("Access", "exbibyte"), QT_TRANSLATE_NOOP("Access", "exbibytes")};
+
+    QString result;
+    // sizes and speeds: "5,8 Mio/s" -> "5,8 mébioctets par seconde"
+    {
+        qsizetype last = 0;
+        QRegularExpressionMatchIterator it = rules.sizes.globalMatch(text);
+        while (it.hasNext())
+        {
+            const QRegularExpressionMatch m = it.next();
+            result += text.mid(last, (m.capturedStart() - last));
+            const QString number = m.captured(1).trimmed();
+            const qsizetype unit = rules.unitSymbols.indexOf(m.captured(2));
+            result += number + u' ' + word(unitWords[unit][0], unitWords[unit][1], number);
+            if (!m.captured(3).isEmpty())
+                result += u' ' + QCoreApplication::translate("Access", "per second");
+            last = m.capturedEnd();
+        }
+        result += text.mid(last);
+    }
+    // durations: "1 h 5 min" -> "1 heure 5 minutes"
+    result.replace(rules.lessThanOneMinute, QCoreApplication::translate("Access", "less than 1 minute"));
+    for (const auto &[expression, units] : rules.durations)
+    {
+        QString expanded;
+        qsizetype last = 0;
+        QRegularExpressionMatchIterator it = expression.globalMatch(result);
+        while (it.hasNext())
+        {
+            const QRegularExpressionMatch m = it.next();
+            expanded += result.mid(last, (m.capturedStart() - last));
+            QStringList parts;
+            for (qsizetype i = 0; i < units.size(); ++i)
+            {
+                const QString number = m.captured(i + 1);
+                parts.append(number + u' ' + word(units[i].first, units[i].second, number));
+            }
+            expanded += parts.join(u' ');
+            last = m.capturedEnd();
+        }
+        expanded += result.mid(last);
+        result = expanded;
+    }
+    // symbols
+    result.replace(u"∞"_s, QCoreApplication::translate("Access", "infinity"));
+    static const QRegularExpression notAvailable {u"(?<!\\p{L})N/[AD](?!\\p{L})"_s};
+    result.replace(notAvailable, QCoreApplication::translate("Access", "not available"));
+    return result;
+}
+
 QString Access::cleanLabel(const QString &text)
 {
     QString result = Qt::mightBeRichText(text) ? QTextDocumentFragment::fromHtml(text).toPlainText() : text;
@@ -637,10 +771,12 @@ void Access::installListEdgeAnnouncer(QAbstractItemView *view)
 QString Access::rowText(const QTreeView *view, const QModelIndex &index, const int primaryColumn)
 {
     const QAbstractItemModel *model = index.model();
-    const auto cell = [&index](const int column)
+    // values spelled out for the screen reader (units, durations); the primary column (a name) as is
+    const auto cell = [&index, primaryColumn](const int column) -> QString
     {
         const QVariant data = index.siblingAtColumn(column).data(Qt::DisplayRole);
-        return (data.typeId() == QMetaType::Double) ? QString::number(data.toDouble(), 'f', 1) : data.toString().trimmed();
+        const QString text = (data.typeId() == QMetaType::Double) ? QString::number(data.toDouble(), 'f', 1) : data.toString().trimmed();
+        return (column == primaryColumn) ? text : spellOut(text);
     };
 
     QStringList parts {cell(primaryColumn)};
@@ -721,7 +857,7 @@ QStringList Access::captionValueRows(const std::initializer_list<const QGridLayo
                     ? QTextDocumentFragment::fromHtml(label->text()).toPlainText().simplified()
                     : label->text().simplified();
                 if (!caption.isEmpty() && !value.isEmpty())
-                    rows.append(caption + u": " + value);
+                    rows.append(caption + u": " + spellOut(value));
                 caption.clear();
             }
         }

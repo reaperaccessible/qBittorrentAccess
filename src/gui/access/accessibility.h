@@ -92,6 +92,11 @@ namespace Access
     // (Qt::AccessibleTextRole), and again whenever items change
     void keepItemRowTexts(QTreeView *view, int primaryColumn);
 
+    // Values as a screen reader should say them, in the interface language, no abbreviation:
+    // "5.8 MiB/s" -> "5.8 mebibytes per second", "1h 5m" -> "1 hour 5 minutes", "∞" -> "infinity",
+    // "N/A" -> "not available". Applied to what screen readers read, never to what is on screen.
+    QString spellOut(const QString &text);
+
     // Label text as a screen reader should say it: no '&' mnemonic, no HTML, no trailing ':'
     QString cleanLabel(const QString &text);
 
