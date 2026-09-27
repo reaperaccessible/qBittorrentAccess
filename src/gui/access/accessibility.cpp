@@ -862,7 +862,12 @@ namespace
         QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(view);
         if (!current.isValid() || !iface || !iface->tableInterface())
             return;
-        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(current.row(), current.column()))
+        // the accessible table counts the rows shown on screen: in a tree, a file inside a folder is not
+        // at its model row
+        int visualRow = 0;
+        for (QModelIndex above = view->indexAbove(current); above.isValid(); above = view->indexAbove(above))
+            ++visualRow;
+        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(visualRow, current.column()))
         {
             QAccessibleEvent event {view, QAccessible::NameChanged};
             event.setChild(iface->indexOfChild(cell));

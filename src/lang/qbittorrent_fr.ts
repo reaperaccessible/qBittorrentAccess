@@ -377,26 +377,26 @@
         <translation>Parcourir</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="1053"/>
+        <location filename="../gui/access/accessibility.cpp" line="1058"/>
         <source>Copied</source>
         <translation>Copié</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="1207"/>
+        <location filename="../gui/access/accessibility.cpp" line="1212"/>
         <source>Empty</source>
         <translation>Vide</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="937"/>
-        <location filename="../gui/access/accessibility.cpp" line="1236"/>
+        <location filename="../gui/access/accessibility.cpp" line="942"/>
+        <location filename="../gui/access/accessibility.cpp" line="1241"/>
         <location filename="../gui/transferlistwidget.cpp" line="1378"/>
         <source>First</source>
         <extracomment>Screen reader announcement when the first row of a list is already reached</extracomment>
         <translation>Premier</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="937"/>
-        <location filename="../gui/access/accessibility.cpp" line="1236"/>
+        <location filename="../gui/access/accessibility.cpp" line="942"/>
+        <location filename="../gui/access/accessibility.cpp" line="1241"/>
         <location filename="../gui/transferlistwidget.cpp" line="1378"/>
         <source>Last</source>
         <translation>Dernier</translation>
@@ -582,71 +582,80 @@
     </message>
     <message>
         <location filename="../gui/access/shortcutsdialog.cpp" line="82"/>
-        <source>Read the columns, in the search results, as in the torrent list</source>
-        <translation>Lire les colonnes, dans les résultats de recherche, comme dans la liste des torrents</translation>
+        <source>Read the columns, in the search results, trackers, peers and content, as in the torrent list</source>
+        <translation>Lire les colonnes, dans les résultats de recherche, les trackers, les pairs et le contenu, comme dans la liste des torrents</translation>
     </message>
     <message>
         <location filename="../gui/access/shortcutsdialog.cpp" line="83"/>
+        <source>Open, close a folder, in the content and the trackers</source>
+        <translation>Ouvrir, fermer un dossier, dans le contenu et les trackers</translation>
+    </message>
+    <message>
+        <source>Read the columns, in the search results, as in the torrent list</source>
+        <translation type="vanished">Lire les colonnes, dans les résultats de recherche, comme dans la liste des torrents</translation>
+    </message>
+    <message>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="84"/>
         <source>Context menu of the selected item</source>
         <translation>Menu contextuel de l’élément sélectionné</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="84"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="85"/>
         <source>Open, close a submenu, in menus</source>
         <translation>Ouvrir, fermer un sous-menu, dans les menus</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="85"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="86"/>
         <source>Remove torrent</source>
         <translation>Retirer le torrent</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="86"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="87"/>
         <source>Remove torrent and its files</source>
         <translation>Retirer le torrent et ses fichiers</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="87"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="88"/>
         <source>Filter torrents</source>
         <translation>Filtrer les torrents</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="88"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="89"/>
         <source>Move up in queue</source>
         <translation>Monter dans la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="89"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="90"/>
         <source>Move down in queue</source>
         <translation>Descendre dans la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="90"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="91"/>
         <source>Move to top of queue</source>
         <translation>Déplacer au haut de la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="91"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="92"/>
         <source>Move to bottom of queue</source>
         <translation>Déplacer au bas de la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="92"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="93"/>
         <source>Statistics</source>
         <translation>Statistiques</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="93"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="94"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="94"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="95"/>
         <source>User manual</source>
         <translation>Manuel d&apos;utilisation</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="95"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="96"/>
         <source>Changelog</source>
         <translation>Journal des modifications</translation>
     </message>
@@ -655,7 +664,7 @@
         <translation type="vanished">Documentation</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="96"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="97"/>
         <source>Exit</source>
         <translation>Quitter</translation>
     </message>
@@ -9421,89 +9430,89 @@ Ces derniers ont été désactivés.</translation>
         <translation>Chemin de sauvegarde&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="551"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="553"/>
         <source>Never</source>
         <translation>Jamais</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="559"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="561"/>
         <source>%1 x %2 (have %3)</source>
         <comment>(torrent pieces) eg 152 x 4MB (have 25)</comment>
         <translation>%1 × %2 (a %3)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="494"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="497"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="496"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="499"/>
         <source>%1 (%2 this session)</source>
         <translation>%1 (%2 cette session)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="172"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="174"/>
         <source>Move up (tier)</source>
         <translation>Monter (niveau)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="173"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="175"/>
         <source>Move down (tier)</source>
         <translation>Descendre (niveau)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="409"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="410"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="429"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="411"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="412"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="431"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="425"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="427"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="425"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="427"/>
         <source>No</source>
         <translation>Non</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="507"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="509"/>
         <source>%1 (seeded for %2)</source>
         <comment>e.g. 4m39s (seeded for 3m10s)</comment>
         <translation>%1 (partagé pendant %2)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="517"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="519"/>
         <source>%1 (%2 max)</source>
         <comment>%1 and %2 are numbers, e.g. 3 (10 max)</comment>
         <translation>%1 (%2 maximum)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="533"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="537"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="535"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="539"/>
         <source>%1 (%2 total)</source>
         <comment>%1 and %2 are numbers, e.g. 3 (10 total)</comment>
         <translation>%1 (%2 total)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="543"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="548"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="545"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="550"/>
         <source>%1 (%2 avg.)</source>
         <comment>%1 and %2 are speed rates, e.g. 200KiB/s (100KiB/s avg.)</comment>
         <translation>%1 (%2 en moyenne)</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="705"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="707"/>
         <source>Add web seed</source>
         <comment>Add HTTP source</comment>
         <translation>Ajouter une source Web</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="706"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="708"/>
         <source>Add web seed:</source>
         <translation>Ajouter une source Web :</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="712"/>
-        <location filename="../gui/properties/propertieswidget.cpp" line="765"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="714"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="767"/>
         <source>This web seed is already in the list.</source>
         <translation>Cette source Web est déjà dans la liste.</translation>
     </message>
@@ -9513,42 +9522,42 @@ Ces derniers ont été désactivés.</translation>
         <translation>Filtrer les fichiers…</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="642"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="644"/>
         <source>Add web seed...</source>
         <translation>Ajouter une source Web…</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="646"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="648"/>
         <source>Remove web seed</source>
         <translation>Supprimer la source Web</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="649"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="651"/>
         <source>Copy web seed URL</source>
         <translation>Copier l&apos;URL de la source Web</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="651"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="653"/>
         <source>Edit web seed URL...</source>
         <translation>Modifier l&apos;URL de la source Web</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="692"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="694"/>
         <source>Speed graphs are disabled</source>
         <translation>Les graphiques de vitesse sont désactivés</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="692"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="694"/>
         <source>You can enable it in Advanced Options</source>
         <translation>Vous pouvez l&apos;activer sous Options Avancées</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="757"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="759"/>
         <source>Web seed editing</source>
         <translation>Modification de la source web</translation>
     </message>
     <message>
-        <location filename="../gui/properties/propertieswidget.cpp" line="758"/>
+        <location filename="../gui/properties/propertieswidget.cpp" line="760"/>
         <source>Web seed URL:</source>
         <translation>URL de la source web :</translation>
     </message>

@@ -155,14 +155,16 @@ PropertiesWidget::PropertiesWidget(QWidget *parent)
     m_ui->groupTransferBox->hide();
     m_ui->groupInfosBox->hide();
     m_ui->scrollArea->setWidgetResizable(true);
-    // - each list is named after its tab and read as a whole row, "First," / "Last," at the edges
+    // - each list is named after its tab and read as a whole row, "First," / "Last," at the edges;
+    //   trackers, peers and content read column by column like the torrent list (Left/Right, Home/End;
+    //   in the trees, Plus and Minus open and close a branch)
     m_trackerList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::TrackersTab));
     m_peerList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::PeersTab));
     m_ui->listWebSeeds->setAccessibleName(m_tabBar->tabTitle(PropTabBar::URLSeedsTab));
     m_ui->filesList->setAccessibleName(m_tabBar->tabTitle(PropTabBar::FilesTab));
-    Access::registerRowText(m_trackerList, TrackerListModel::COL_URL);
-    Access::registerRowText(m_peerList, PeerListWidget::IP);
-    Access::registerRowText(m_ui->filesList, TorrentContentModelItem::COL_NAME);
+    Access::installColumnReading(m_trackerList, TrackerListModel::COL_URL);
+    Access::installColumnReading(m_peerList, PeerListWidget::IP);
+    Access::installColumnReading(m_ui->filesList, TorrentContentModelItem::COL_NAME);
     for (QAbstractItemView *view : {static_cast<QAbstractItemView *>(m_trackerList), static_cast<QAbstractItemView *>(m_peerList)
             , static_cast<QAbstractItemView *>(m_ui->listWebSeeds), static_cast<QAbstractItemView *>(m_ui->filesList)})
     {

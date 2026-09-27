@@ -394,9 +394,9 @@ AddNewTorrentDialog::AddNewTorrentDialog(const BitTorrent::TorrentDescriptor &to
             widget->hide();
     }
     m_ui->gridLayout_2->addWidget(m_infoList, m_ui->gridLayout_2->rowCount(), 0, 1, m_ui->gridLayout_2->columnCount());
-    // - file list: named, read as whole rows, "First," / "Last," at the edges
+    // - file list: named, read as whole rows or column by column like the torrent list, "First," / "Last," at the edges
     m_ui->contentTreeView->setAccessibleName(QCoreApplication::translate("PropTabBar", "Content"));
-    Access::registerRowText(m_ui->contentTreeView, TorrentContentModelItem::COL_NAME);
+    Access::installColumnReading(m_ui->contentTreeView, TorrentContentModelItem::COL_NAME);
     Access::installListEdgeAnnouncer(m_ui->contentTreeView);
     // - what NVDA says when the window opens (its title is the torrent name, which does not say what
     //   the window is for); a magnet link gets its file list later
