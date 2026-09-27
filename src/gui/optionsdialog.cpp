@@ -331,8 +331,8 @@ void OptionsDialog::loadBehaviorTabOptions()
 #if !(defined(Q_OS_WIN) || defined(Q_OS_MACOS))
     m_ui->groupFileAssociation->setVisible(false);
 #endif
-#ifndef Q_OS_MACOS
-    m_ui->checkProgramUpdates->setVisible(false); // qBittorrentAccess: updates come from the Installer Manager
+#if !(defined(Q_OS_WIN) || defined(Q_OS_MACOS))
+    m_ui->checkProgramUpdates->setVisible(false);
 #endif
 
 #ifndef Q_OS_MACOS

@@ -42,6 +42,7 @@
 #include <QComboBox>
 #include <QDebug>
 #include <QDesktopServices>
+#include <QDialogButtonBox>
 #include <QDir>
 #include <QFileDialog>
 #include <QFileInfo>
@@ -51,13 +52,16 @@
 #include <QMessageBox>
 #include <QMetaObject>
 #include <QMimeData>
+#include <QPlainTextEdit>
 #include <QProcess>
+#include <QProgressDialog>
 #include <QPushButton>
 #include <QShortcut>
 #include <QSplitter>
 #include <QStatusBar>
 #include <QString>
 #include <QTimer>
+#include <QVBoxLayout>
 
 #ifdef Q_OS_WIN
 #include <QCryptographicHash>
@@ -349,9 +353,8 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
     connect(m_ui->actionMinimize, &QAction::triggered, this, &MainWindow::minimizeWindow);
     connect(m_ui->actionUseAlternativeSpeedLimits, &QAction::triggered, this, &MainWindow::toggleAlternativeSpeeds);
 
-    // qBittorrentAccess: on Windows, updates come from the ReaperAccessible Installer Manager,
-    // qBittorrent's own update check would offer qBittorrent's installer instead
-#if defined(Q_OS_MACOS)
+    // qBittorrentAccess: the update check asks the qBittorrentAccess releases (ProgramUpdater), never qBittorrent's
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     connect(m_ui->actionCheckForUpdates, &QAction::triggered, this, [this]() { checkProgramUpdate(true); });
 
     // trigger an early check on startup
@@ -1660,7 +1663,7 @@ void MainWindow::loadPreferences()
     // Torrent properties
     m_propertiesWidget->reloadPreferences();
 
-#if defined(Q_OS_MACOS) // qBittorrentAccess: see the update check in the constructor
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     if (pref->isUpdateCheckEnabled())
     {
         if (!m_programUpdateTimer)
@@ -1899,45 +1902,117 @@ void MainWindow::handleUpdateCheckFinished(ProgramUpdater *updater, const bool i
         updater->deleteLater();
     };
 
-    const ProgramUpdater::Version newVersion = updater->getNewVersion();
-    if (newVersion.isValid())
+    if (!updater->newVersion().isEmpty())
     {
-        const QString msg {tr("A new version is available.") + u"<br/>"
-            + tr("Do you want to download %1?").arg(newVersion.toString()) + u"<br/><br/>"
-            + u"<a href=\"https://www.qbittorrent.org/news\">%1</a>"_s.arg(tr("Open changelog..."))};
-        auto *msgBox = new QMessageBox {QMessageBox::Question, tr("qBittorrentAccess Update Available"), msg
-            , (QMessageBox::Yes | QMessageBox::No), this};
-        msgBox->setAttribute(Qt::WA_DeleteOnClose);
-        msgBox->setAttribute(Qt::WA_ShowWithoutActivating);
-        msgBox->setDefaultButton(QMessageBox::Yes);
-        msgBox->setWindowModality(Qt::NonModal);
-        connect(msgBox, &QMessageBox::buttonClicked, this, [msgBox, updater](QAbstractButton *button)
-        {
-            if (msgBox->buttonRole(button) == QMessageBox::YesRole)
-            {
-                updater->updateProgram();
-            }
-        });
-        connect(msgBox, &QDialog::finished, this, cleanup);
-        msgBox->show();
+        showUpdateDialog(updater);
+        return;
     }
-    else
+
+    if (!invokedByUser)
     {
-        if (invokedByUser)
-        {
-            auto *msgBox = new QMessageBox {QMessageBox::Information, u"qBittorrentAccess"_s
-                , tr("No updates available.\nYou are already using the latest version.")
-                , QMessageBox::Ok, this};
-            msgBox->setAttribute(Qt::WA_DeleteOnClose);
-            msgBox->setWindowModality(Qt::NonModal);
-            connect(msgBox, &QDialog::finished, this, cleanup);
-            msgBox->show();
-        }
-        else
+        cleanup(); // at start-up and once a day: silent when there is nothing new
+        return;
+    }
+
+    const QString message = updater->checkFailed()
+        ? tr("Could not check for updates.") + u'\n' + updater->errorString()
+        : tr("No updates available.\nYou are already using the latest version.");
+    auto *msgBox = new QMessageBox {(updater->checkFailed() ? QMessageBox::Warning : QMessageBox::Information)
+        , u"qBittorrentAccess"_s, message, QMessageBox::Ok, this};
+    msgBox->setAttribute(Qt::WA_DeleteOnClose);
+    msgBox->setWindowModality(Qt::NonModal);
+    connect(msgBox, &QDialog::finished, this, cleanup);
+    msgBox->show();
+}
+
+// qBittorrentAccess: like MediaAccess - what's new in the interface language, "Update" or "Later"; Update
+// downloads our installer (progress window), checks it, runs it silently and quits: the installer
+// updates the program and starts it again
+void MainWindow::showUpdateDialog(ProgramUpdater *updater)
+{
+    const auto cleanup = [this, updater]()
+    {
+        if (m_programUpdateTimer)
+            m_programUpdateTimer->start();
+        updater->deleteLater();
+    };
+
+    auto *dialog = new QDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setWindowTitle(tr("qBittorrentAccess Update Available"));
+    const QString intro = tr("qBittorrentAccess %1 is available. You have version %2.")
+        .arg(updater->newVersion(), QStringLiteral(QBTACCESS_VERSION));
+    auto *label = new QLabel(intro, dialog);
+    auto *notes = new QPlainTextEdit(updater->releaseNotes(), dialog);
+    notes->setReadOnly(true);
+    notes->setTextInteractionFlags(Qt::TextSelectableByKeyboard | Qt::TextSelectableByMouse);
+    notes->setAccessibleName(tr("What's new"));
+    auto *buttons = new QDialogButtonBox(dialog);
+    QPushButton *updateButton = buttons->addButton(tr("&Update"), QDialogButtonBox::AcceptRole);
+    buttons->addButton(tr("&Later"), QDialogButtonBox::RejectRole);
+    updateButton->setDefault(true);
+    auto *layout = new QVBoxLayout(dialog);
+    layout->addWidget(label);
+    layout->addWidget(notes, 1);
+    layout->addWidget(buttons);
+    dialog->resize(600, 400);
+    dialog->setAccessibleDescription(intro + u' '
+        + tr("Up, Down: read what's new. Tab: the Update and Later buttons. Escape: later."));
+    connect(buttons, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    connect(dialog, &QDialog::finished, this, [this, updater, cleanup](const int result)
+    {
+        if (result != QDialog::Accepted)
         {
             cleanup();
+            return;
         }
-    }
+
+        auto *progress = new QProgressDialog(tr("Downloading the update..."), tr("Cancel"), 0, 100, this);
+        progress->setAttribute(Qt::WA_DeleteOnClose);
+        progress->setWindowTitle(tr("qBittorrentAccess Update"));
+        progress->setAutoClose(false);
+        progress->setAutoReset(false);
+        progress->setMinimumDuration(0);
+        progress->setValue(0);
+        progress->setAccessibleDescription(tr("Downloading the update. Escape: cancel."));
+        connect(updater, &ProgramUpdater::downloadProgress, progress, [progress](const qint64 received, const qint64 total)
+        {
+            if (total > 0)
+                progress->setValue(static_cast<int>((received * 100) / total));
+        });
+        connect(progress, &QProgressDialog::canceled, this, [updater, progress, cleanup]()
+        {
+            updater->cancelDownload();
+            progress->close();
+            cleanup();
+        });
+        connect(updater, &ProgramUpdater::installerFailed, this, [this, progress, cleanup](const QString &reason)
+        {
+            progress->close();
+            QMessageBox::warning(this, tr("qBittorrentAccess Update")
+                , tr("The update could not be downloaded.") + u'\n' + reason + u"\n\n"
+                    + tr("You can install the latest version by hand from: %1")
+                    .arg(u"https://github.com/reaperaccessible/qBittorrentAccess/releases/latest"_s));
+            cleanup();
+        });
+        connect(updater, &ProgramUpdater::installerReady, this, [this, updater, progress, cleanup]()
+        {
+            progress->close();
+            if (!updater->runInstaller())
+            {
+                QMessageBox::warning(this, tr("qBittorrentAccess Update"), tr("The installer could not be started."));
+                cleanup();
+                return;
+            }
+            // the installer replaces the program files: leave now, it starts qBittorrentAccess again
+            QCoreApplication::exit(0);
+        });
+        progress->show();
+        updater->downloadInstaller();
+    });
+    dialog->show();
+    notes->setFocus(Qt::OtherFocusReason);
 }
 #endif
 

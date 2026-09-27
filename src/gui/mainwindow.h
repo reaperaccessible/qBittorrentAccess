@@ -263,6 +263,7 @@ private:
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     void checkProgramUpdate(bool invokedByUser);
     void handleUpdateCheckFinished(ProgramUpdater *updater, bool invokedByUser);
+    void showUpdateDialog(ProgramUpdater *updater);
 
     QTimer *m_programUpdateTimer = nullptr;
 #endif

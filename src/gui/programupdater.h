@@ -2,6 +2,7 @@
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2021  Mike Tzou (Chocobo1)
  * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * qBittorrentAccess: rewritten to update from the qBittorrentAccess releases.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -30,50 +31,54 @@
 #pragma once
 
 #include <QObject>
-#include <QUrl>
+#include <QString>
 
-#include "base/utils/version.h"
+class QNetworkAccessManager;
+class QNetworkReply;
 
-namespace Net
-{
-    struct DownloadResult;
-}
-
+// qBittorrentAccess: the program updates itself from its own GitHub releases (never from qBittorrent's
+// servers). The latest release is compared with this version; the installer ("qBittorrentAccessInstaller.exe"
+// asset) is downloaded, checked, then run silently: it closes the program and starts it again afterwards.
 class ProgramUpdater final : public QObject
 {
     Q_OBJECT
     Q_DISABLE_COPY_MOVE(ProgramUpdater)
 
 public:
-    using Version = Utils::Version<4, 3>;
-
-    using QObject::QObject;
+    explicit ProgramUpdater(QObject *parent = nullptr);
 
     void checkForUpdates();
-    Version getNewVersion() const;
-    bool updateProgram() const;
+
+    // after updateCheckFinished(): the newer version ("1.01"), empty when this one is the latest
+    QString newVersion() const;
+    bool checkFailed() const;
+    QString errorString() const;
+    // the release notes in the interface language (the release text has "[lang=fr]" / "[lang=en]" parts)
+    QString releaseNotes() const;
+
+    // downloads the installer: downloadProgress(), then installerReady() or installerFailed()
+    void downloadInstaller();
+    void cancelDownload();
+    // runs the downloaded installer silently; false if it could not start
+    bool runInstaller() const;
 
 signals:
     void updateCheckFinished();
-
-private slots:
-    void rssDownloadFinished(const Net::DownloadResult &result);
-    void fallbackDownloadFinished(const Net::DownloadResult &result, Version &version);
+    void downloadProgress(qint64 received, qint64 total);
+    void installerReady();
+    void installerFailed(const QString &reason);
 
 private:
-    enum class RemoteSource
-    {
-        Fosshub,
-        QbtMain,
-        QbtBackup
-    };
+    void releaseInfoReceived(QNetworkReply *reply);
+    void installerReceived(QNetworkReply *reply);
 
-    void handleFinishedRequest();
-    RemoteSource getLatestRemoteSource() const;
-
-    int m_pendingRequestCount = 0;
-    Version m_fosshubVersion;
-    Version m_qbtMainVersion;
-    Version m_qbtBackupVersion;
-    QUrl m_updateURL;
+    QNetworkAccessManager *m_network = nullptr;
+    QNetworkReply *m_downloadReply = nullptr;
+    QString m_newVersion;
+    bool m_checkFailed = false;
+    QString m_errorString;
+    QString m_releaseBody;
+    QString m_installerUrl;
+    qint64 m_installerSize = -1;
+    QString m_installerPath;
 };
