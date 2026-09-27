@@ -20,7 +20,7 @@ qBittorrentAccess is a free BitTorrent client for Windows, fully usable with a s
 The latest installer is always at the same address:
 https://github.com/reaperaccessible/qBittorrentAccess/releases/latest/download/qBittorrentAccessInstaller.exe
 
-It is also available in the ReaperAccessible Installer Manager. The first time it starts, qBittorrentAccess takes a copy of the torrents and settings of qBittorrent if it is installed; qBittorrent itself is left untouched.
+qBittorrentAccess updates itself: it checks for a new version at start-up and offers to install it. The first time it starts, qBittorrentAccess takes a copy of the torrents and settings of qBittorrent if it is installed; qBittorrent itself is left untouched.
 
 ### Credits
 
@@ -49,7 +49,7 @@ qBittorrentAccess est un client BitTorrent gratuit pour Windows, entièrement ut
 Le dernier installateur est toujours à la même adresse :
 https://github.com/reaperaccessible/qBittorrentAccess/releases/latest/download/qBittorrentAccessInstaller.exe
 
-Il est aussi disponible dans le ReaperAccessible Installer Manager. Au premier démarrage, qBittorrentAccess prend une copie des torrents et réglages de qBittorrent s'il est installé ; qBittorrent lui-même n'est pas touché.
+qBittorrentAccess se met à jour tout seul : il vérifie au démarrage s'il existe une nouvelle version et propose de l'installer. Au premier démarrage, qBittorrentAccess prend une copie des torrents et réglages de qBittorrent s'il est installé ; qBittorrent lui-même n'est pas touché.
 
 ### Mentions
 
