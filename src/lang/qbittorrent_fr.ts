@@ -635,11 +635,20 @@
     </message>
     <message>
         <location filename="../gui/access/shortcutsdialog.cpp" line="93"/>
-        <source>Documentation</source>
-        <translation>Documentation</translation>
+        <source>User manual</source>
+        <translation>Manuel d&apos;utilisation</translation>
     </message>
     <message>
         <location filename="../gui/access/shortcutsdialog.cpp" line="94"/>
+        <source>Changelog</source>
+        <translation>Journal des modifications</translation>
+    </message>
+    <message>
+        <source>Documentation</source>
+        <translation type="vanished">Documentation</translation>
+    </message>
+    <message>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="95"/>
         <source>Exit</source>
         <translation>Quitter</translation>
     </message>
@@ -4342,6 +4351,11 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
         <translation>&amp;Créateur de torrent</translation>
     </message>
     <message>
+        <location filename="../gui/mainwindow.ui" line="233"/>
+        <source>&amp;User Manual</source>
+        <translation>&amp;Manuel d&apos;utilisation</translation>
+    </message>
+    <message>
         <location filename="../gui/mainwindow.ui" line="290"/>
         <location filename="../gui/mainwindow.ui" line="293"/>
         <source>Alternative Speed Limits</source>
@@ -4573,9 +4587,8 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
         <translation>Ouvrir URL</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.ui" line="233"/>
         <source>&amp;Documentation</source>
-        <translation>&amp;Documentation</translation>
+        <translation type="vanished">&amp;Documentation</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="355"/>
@@ -4585,12 +4598,12 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
     <message>
         <location filename="../gui/mainwindow.ui" line="419"/>
         <location filename="../gui/mainwindow.ui" line="453"/>
-        <location filename="../gui/mainwindow.cpp" line="1709"/>
+        <location filename="../gui/mainwindow.cpp" line="1735"/>
         <source>Show</source>
         <translation>Afficher</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1867"/>
+        <location filename="../gui/mainwindow.cpp" line="1893"/>
         <source>Check for program updates</source>
         <translation>Vérifier la disponibilité de mises à jour du logiciel</translation>
     </message>
@@ -4605,433 +4618,443 @@ Les formats supportés : S01E01, 1x1, 2017.12.31 et 31.12.2017 (les formats date
         <translation>Si vous aimez qBittorrent, faites un don !</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1947"/>
-        <location filename="../gui/mainwindow.cpp" line="1949"/>
+        <location filename="../gui/mainwindow.cpp" line="1973"/>
+        <location filename="../gui/mainwindow.cpp" line="1975"/>
         <source>Execution Log</source>
         <translation>Journal d&apos;exécution</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="723"/>
+        <location filename="../gui/mainwindow.cpp" line="740"/>
         <source>Clear the password</source>
         <translation>Effacer le mot de passe</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="214"/>
+        <location filename="../gui/mainwindow.cpp" line="231"/>
         <source>&amp;Set Password</source>
         <translation>&amp;Définir le mot de pass</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="166"/>
+        <location filename="../gui/mainwindow.cpp" line="183"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="215"/>
+        <location filename="../gui/mainwindow.cpp" line="146"/>
+        <source>File not found: %1</source>
+        <translation>Fichier introuvable : %1</translation>
+    </message>
+    <message>
+        <location filename="../gui/mainwindow.cpp" line="232"/>
         <source>&amp;Clear Password</source>
         <translation>&amp;Supprimer le mot de pass</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="273"/>
+        <location filename="../gui/mainwindow.cpp" line="290"/>
         <source>Transfers</source>
         <translation>Transferts</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="356"/>
+        <location filename="../gui/mainwindow.cpp" line="373"/>
         <source>&amp;Window</source>
         <translation>&amp;Fenêtre</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="482"/>
-        <location filename="../gui/mainwindow.cpp" line="1469"/>
+        <location filename="../gui/mainwindow.cpp" line="499"/>
+        <location filename="../gui/mainwindow.cpp" line="1495"/>
         <source>qBittorrentAccess is minimized to tray</source>
         <translation>qBittorrentAccess est réduit dans la barre des tâches</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="482"/>
-        <location filename="../gui/mainwindow.cpp" line="1376"/>
-        <location filename="../gui/mainwindow.cpp" line="1469"/>
+        <location filename="../gui/mainwindow.cpp" line="499"/>
+        <location filename="../gui/mainwindow.cpp" line="1402"/>
+        <location filename="../gui/mainwindow.cpp" line="1495"/>
         <source>This behavior can be changed in the settings. You won&apos;t be reminded again.</source>
         <translation>Ce comportement peut être modifié dans les réglages. Il n&apos;y aura plus de rappel.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="538"/>
+        <location filename="../gui/mainwindow.cpp" line="555"/>
         <source>Removed: %1</source>
         <translation>Retiré : %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="621"/>
+        <location filename="../gui/mainwindow.cpp" line="638"/>
         <source>Icons Only</source>
         <translation>Icônes seulement</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="622"/>
+        <location filename="../gui/mainwindow.cpp" line="639"/>
         <source>Text Only</source>
         <translation>Texte seulement</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="623"/>
+        <location filename="../gui/mainwindow.cpp" line="640"/>
         <source>Text Alongside Icons</source>
         <translation>Texte à côté des Icônes</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="624"/>
+        <location filename="../gui/mainwindow.cpp" line="641"/>
         <source>Text Under Icons</source>
         <translation>Texte sous les Icônes</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="625"/>
+        <location filename="../gui/mainwindow.cpp" line="642"/>
         <source>Follow System Style</source>
         <translation>Suivre le style du système</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="706"/>
-        <location filename="../gui/mainwindow.cpp" line="1217"/>
+        <location filename="../gui/mainwindow.cpp" line="723"/>
+        <location filename="../gui/mainwindow.cpp" line="1243"/>
         <source>UI lock password</source>
         <translation>Mot de passe de verrouillage</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="707"/>
-        <location filename="../gui/mainwindow.cpp" line="1218"/>
+        <location filename="../gui/mainwindow.cpp" line="724"/>
+        <location filename="../gui/mainwindow.cpp" line="1244"/>
         <source>Please type the UI lock password:</source>
         <translation>Veuillez entrer le mot de passe de verrouillage :</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="724"/>
+        <location filename="../gui/mainwindow.cpp" line="741"/>
         <source>Are you sure you want to clear the password?</source>
         <translation>Êtes vous sûr de vouloir effacer le mot de passe&#x202f;?</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="783"/>
+        <location filename="../gui/mainwindow.cpp" line="800"/>
         <source>Use regular expressions</source>
         <translation>Utiliser les expressions régulières</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="806"/>
-        <location filename="../gui/mainwindow.cpp" line="808"/>
+        <location filename="../gui/mainwindow.cpp" line="823"/>
+        <location filename="../gui/mainwindow.cpp" line="825"/>
         <source>Search Engine</source>
         <translation>Moteur de recherche</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="806"/>
+        <location filename="../gui/mainwindow.cpp" line="823"/>
         <source>Search has failed</source>
         <translation>La recherche a échoué</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="808"/>
+        <location filename="../gui/mainwindow.cpp" line="825"/>
         <source>Search has finished</source>
         <translation>La recherche est terminée</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="815"/>
+        <location filename="../gui/mainwindow.cpp" line="832"/>
         <source>Search</source>
         <translation>Recherche</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="840"/>
+        <location filename="../gui/mainwindow.cpp" line="857"/>
         <source>Transfers (%1)</source>
         <translation>Transferts (%1)</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="979"/>
+        <location filename="../gui/mainwindow.cpp" line="997"/>
+        <source>&amp;Changelog</source>
+        <translation>&amp;Journal des modifications</translation>
+    </message>
+    <message>
+        <location filename="../gui/mainwindow.cpp" line="1002"/>
         <source>&amp;Keyboard Shortcuts</source>
         <translation>Raccourcis &amp;clavier</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1017"/>
+        <location filename="../gui/mainwindow.cpp" line="1040"/>
         <source>Offline</source>
         <translation>Hors ligne</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1019"/>
+        <location filename="../gui/mainwindow.cpp" line="1042"/>
         <source>Online</source>
         <translation>Connecté</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1021"/>
+        <location filename="../gui/mainwindow.cpp" line="1044"/>
         <source>No direct connections</source>
         <translation>Aucune connexion directe</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1024"/>
+        <location filename="../gui/mainwindow.cpp" line="1047"/>
         <source>Download %1</source>
         <translation>Réception %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1025"/>
+        <location filename="../gui/mainwindow.cpp" line="1048"/>
         <source>Upload %1</source>
         <translation>Envoi %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1027"/>
+        <location filename="../gui/mainwindow.cpp" line="1050"/>
         <source>DHT %1 nodes</source>
         <translation>DHT %1 nœuds</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1030"/>
+        <location filename="../gui/mainwindow.cpp" line="1053"/>
         <source>Alternative speed limits</source>
         <translation>Limites de vitesse alternatives</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1240"/>
+        <location filename="../gui/mainwindow.cpp" line="1266"/>
         <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
         <translation>qBittorrentAccess vient d&apos;être mis à jour et doit être redémarré pour que les changements soient pris en compte.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1376"/>
+        <location filename="../gui/mainwindow.cpp" line="1402"/>
         <source>qBittorrentAccess is closed to tray</source>
         <translation>qBittorrentAccess est fermé dans la barre des tâches</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1396"/>
+        <location filename="../gui/mainwindow.cpp" line="1422"/>
         <source>Some files are currently transferring.</source>
         <translation>Certains fichiers sont en cours de transfert.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1396"/>
+        <location filename="../gui/mainwindow.cpp" line="1422"/>
         <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>Êtes-vous sûr de vouloir quitter qBittorrentAccess ?</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1398"/>
+        <location filename="../gui/mainwindow.cpp" line="1424"/>
         <source>&amp;No</source>
         <translation>&amp;Non</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1399"/>
+        <location filename="../gui/mainwindow.cpp" line="1425"/>
         <source>&amp;Yes</source>
         <translation>&amp;Oui</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1400"/>
+        <location filename="../gui/mainwindow.cpp" line="1426"/>
         <source>&amp;Always Yes</source>
         <translation>&amp;Oui, toujours</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1529"/>
+        <location filename="../gui/mainwindow.cpp" line="1555"/>
         <source>Options saved.</source>
         <translation>Options enregistrées.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2058"/>
+        <location filename="../gui/mainwindow.cpp" line="2084"/>
         <source>[PAUSED] %1</source>
         <comment>%1 is the rest of the window title</comment>
         <translation>[EN PAUSE] %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2065"/>
+        <location filename="../gui/mainwindow.cpp" line="2091"/>
         <source>[D: %1, U: %2] %3</source>
         <comment>D = Download; U = Upload; %3 is the rest of the window title</comment>
         <translation>[R : %1, E : %2] %3</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2177"/>
+        <location filename="../gui/mainwindow.cpp" line="2203"/>
         <source>Python installer could not be downloaded. Error: %1.
 Please install it manually.</source>
         <translation>L’installateur de Python n&apos;a pas pu être téléchargé. Erreur : %1.
 Veuillez l’installer manuellement.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2185"/>
+        <location filename="../gui/mainwindow.cpp" line="2211"/>
         <source>Rename Python installer failed. Source: &quot;%1&quot;. Destination: &quot;%2&quot;.</source>
         <translation>Le renommage de l&apos;installateur de Python a échoué. Source : « %1 ». Destination : « %2 ».</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2202"/>
+        <location filename="../gui/mainwindow.cpp" line="2228"/>
         <source>Python installation success.</source>
         <translation>Installation de Python réussie.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2217"/>
+        <location filename="../gui/mainwindow.cpp" line="2243"/>
         <source>Exit code: %1.</source>
         <translation>Code de fin d’exécution: %1.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2218"/>
+        <location filename="../gui/mainwindow.cpp" line="2244"/>
         <source>Reason: installer crashed.</source>
         <translation>Raison : l&apos;installateur a planté.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2219"/>
+        <location filename="../gui/mainwindow.cpp" line="2245"/>
         <source>Python installation failed.</source>
         <translation>Échec de l&apos;installation de Python.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2222"/>
+        <location filename="../gui/mainwindow.cpp" line="2248"/>
         <source>Launching Python installer. File: &quot;%1&quot;.</source>
         <translation>Lancement de l&apos;installateur de Python. Fichier : « %1 ».</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1809"/>
-        <location filename="../gui/mainwindow.cpp" line="1815"/>
+        <location filename="../gui/mainwindow.cpp" line="1835"/>
+        <location filename="../gui/mainwindow.cpp" line="1841"/>
         <source>Missing Python Runtime</source>
         <translation>L&apos;environnement d&apos;exécution Python est manquant</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1882"/>
+        <location filename="../gui/mainwindow.cpp" line="1908"/>
         <source>qBittorrentAccess Update Available</source>
         <translation>Mise à jour de qBittorrentAccess disponible</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1810"/>
+        <location filename="../gui/mainwindow.cpp" line="1836"/>
         <source>Python is required to use the search engine but it does not seem to be installed.
 Do you want to install it now?</source>
         <translation>Python est nécessaire afin d&apos;utiliser le moteur de recherche mais il ne semble pas être installé.
 Voulez-vous l&apos;installer maintenant&#x202f;?</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1816"/>
+        <location filename="../gui/mainwindow.cpp" line="1842"/>
         <source>Python is required to use the search engine but it does not seem to be installed.</source>
         <translation>Python est nécessaire afin d&apos;utiliser le moteur de recherche mais il ne semble pas être installé.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1828"/>
-        <location filename="../gui/mainwindow.cpp" line="1835"/>
+        <location filename="../gui/mainwindow.cpp" line="1854"/>
+        <location filename="../gui/mainwindow.cpp" line="1861"/>
         <source>Old Python Runtime</source>
         <translation>L&apos;environnement d&apos;exécution Python est obsolète</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1879"/>
+        <location filename="../gui/mainwindow.cpp" line="1905"/>
         <source>A new version is available.</source>
         <translation>Une nouvelle version est disponible.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1880"/>
+        <location filename="../gui/mainwindow.cpp" line="1906"/>
         <source>Do you want to download %1?</source>
         <translation>Voulez-vous télécharger %1 ?</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1881"/>
+        <location filename="../gui/mainwindow.cpp" line="1907"/>
         <source>Open changelog...</source>
         <translation>Ouvrir le journal des modifications…</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1903"/>
+        <location filename="../gui/mainwindow.cpp" line="1929"/>
         <source>No updates available.
 You are already using the latest version.</source>
         <translation>Pas de mises à jour disponibles.
 Vous utilisez déjà la dernière version.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1866"/>
+        <location filename="../gui/mainwindow.cpp" line="1892"/>
         <source>&amp;Check for Updates</source>
         <translation>&amp;Vérifier les mises à jour</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1829"/>
+        <location filename="../gui/mainwindow.cpp" line="1855"/>
         <source>Your Python version (%1) is outdated. Minimum requirement: %2.
 Do you want to install a newer version now?</source>
         <translation>Votre version de Python (%1) est obsolète. Configuration minimale requise : %2.
 Voulez-vous installer une version plus récente maintenant ?</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1836"/>
+        <location filename="../gui/mainwindow.cpp" line="1862"/>
         <source>Your Python version (%1) is outdated. Please upgrade to latest version for search engines to work.
 Minimum requirement: %2.</source>
         <translation>Votre version de Python (%1) est obsolète. Veuillez la mettre à niveau à la dernière version pour que les moteurs de recherche fonctionnent.
 Configuration minimale requise&#xa0;:&#xa0;%2.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2088"/>
+        <location filename="../gui/mainwindow.cpp" line="2114"/>
         <source>Paused</source>
         <translation>En pause</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2099"/>
+        <location filename="../gui/mainwindow.cpp" line="2125"/>
         <source>Checking for Updates...</source>
         <translation>Vérification des mises à jour…</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2100"/>
+        <location filename="../gui/mainwindow.cpp" line="2126"/>
         <source>Already checking for program updates in the background</source>
         <translation>Recherche de mises à jour déjà en cours en tâche de fond</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2116"/>
+        <location filename="../gui/mainwindow.cpp" line="2142"/>
         <source>Python installation in progress...</source>
         <translation>Installation de Python en cours…</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2135"/>
+        <location filename="../gui/mainwindow.cpp" line="2161"/>
         <source>Failed to open Python installer. File: &quot;%1&quot;.</source>
         <translation>Échec à l&apos;ouverture de l&apos;installateur de Python. Fichier : &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2143"/>
+        <location filename="../gui/mainwindow.cpp" line="2169"/>
         <source>Failed MD5 hash check for Python installer. File: &quot;%1&quot;. Result hash: &quot;%2&quot;. Expected hash: &quot;%3&quot;.</source>
         <translation>Échec de la vérification du hachage MD5 pour l&apos;installateur de Python. Fichier : « %1 ». Résultat du hachage : « %2 ». Hachage attendu : « %3 ».</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2155"/>
+        <location filename="../gui/mainwindow.cpp" line="2181"/>
         <source>Failed SHA3-512 hash check for Python installer. File: &quot;%1&quot;. Result hash: &quot;%2&quot;. Expected hash: &quot;%3&quot;.</source>
         <translation>Échec de la vérification du hachage SHA3-512 pour l&apos;installateur de Python. Fichier : « %1 ». Résultat du hachage : « %2 ». Hachage attendu : « %3 ».</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2176"/>
+        <location filename="../gui/mainwindow.cpp" line="2202"/>
         <source>Download error</source>
         <translation>Erreur de téléchargement</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="713"/>
-        <location filename="../gui/mainwindow.cpp" line="1226"/>
+        <location filename="../gui/mainwindow.cpp" line="730"/>
+        <location filename="../gui/mainwindow.cpp" line="1252"/>
         <source>Invalid password</source>
         <translation>Mot de passe invalide</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="235"/>
+        <location filename="../gui/mainwindow.cpp" line="252"/>
         <source>Filter torrents...</source>
         <translation>Filtrer les torrents…</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="240"/>
+        <location filename="../gui/mainwindow.cpp" line="257"/>
         <source>Filter by:</source>
         <translation>Filtrer par:</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="713"/>
+        <location filename="../gui/mainwindow.cpp" line="730"/>
         <source>The password must be at least 3 characters long</source>
         <translation>Le mot de passe doit comporter au moins 3 caractères</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="749"/>
-        <location filename="../gui/mainwindow.cpp" line="762"/>
-        <location filename="../gui/mainwindow.cpp" line="764"/>
+        <location filename="../gui/mainwindow.cpp" line="766"/>
+        <location filename="../gui/mainwindow.cpp" line="779"/>
+        <location filename="../gui/mainwindow.cpp" line="781"/>
         <source>RSS (%1)</source>
         <translation>RSS (%1)</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1226"/>
+        <location filename="../gui/mainwindow.cpp" line="1252"/>
         <source>The password is invalid</source>
         <translation>Le mot de passe fourni est invalide</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2082"/>
+        <location filename="../gui/mainwindow.cpp" line="2108"/>
         <source>DL speed: %1</source>
         <comment>e.g: Download speed: 10 KiB/s</comment>
         <translation>Vitesse de réception : %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="2083"/>
+        <location filename="../gui/mainwindow.cpp" line="2109"/>
         <source>UP speed: %1</source>
         <comment>e.g: Upload speed: 10 KiB/s</comment>
         <translation>Vitesse d&apos;envoi : %1</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1709"/>
+        <location filename="../gui/mainwindow.cpp" line="1735"/>
         <source>Hide</source>
         <translation>Cacher</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1394"/>
+        <location filename="../gui/mainwindow.cpp" line="1420"/>
         <source>Exiting qBittorrentAccess</source>
         <translation>Fermeture de qBittorrentAccess</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1502"/>
+        <location filename="../gui/mainwindow.cpp" line="1528"/>
         <source>Open Torrent Files</source>
         <translation>Ouvrir fichiers torrent</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1503"/>
+        <location filename="../gui/mainwindow.cpp" line="1529"/>
         <source>Torrent Files</source>
         <translation>Fichiers torrent</translation>
     </message>
@@ -13530,7 +13553,7 @@ Veuillez en choisir un autre.</translation>
         <translation>Mode de super-partage</translation>
     </message>
     <message>
-        <location filename="../gui/mainwindow.cpp" line="1079"/>
+        <location filename="../gui/mainwindow.cpp" line="1102"/>
         <location filename="../gui/transferlistwidget.cpp" line="158"/>
         <source>Torrents</source>
         <translation>Torrents</translation>

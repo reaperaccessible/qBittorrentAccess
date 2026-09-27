@@ -42,7 +42,9 @@
 #include <QComboBox>
 #include <QDebug>
 #include <QDesktopServices>
+#include <QDir>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QFileSystemWatcher>
 #include <QLabel>
 #include <QMenu>
@@ -131,6 +133,21 @@ namespace
     const QByteArray PYTHON_INSTALLER_MD5 = QByteArrayLiteral("c887e19e66e66e6961c444283dafaa33");
     const QByteArray PYTHON_INSTALLER_SHA3_512 = QByteArrayLiteral("b5d83ec914dcb0c3892a521d0cbd96bf9bcb267bdee36ea4ee48a54c53fabd0aea98531eda81d1c1db31be8830f7b94430e0c838f5c2f2f8999a273f2833e450");
 #endif
+
+    // qBittorrentAccess: the user manual or the changelog installed next to the program ("docs" folder),
+    // in the interface language (French, otherwise English), opened in the default web browser
+    void openAccessDocument(QWidget *parent, const QString &baseName)
+    {
+        const QString language = Preferences::instance()->getLocale().startsWith(u"fr") ? u"fr"_s : u"en"_s;
+        const QString filePath = QCoreApplication::applicationDirPath() + u"/docs/"_s + baseName + u'_' + language + u".html"_s;
+        if (!QFileInfo::exists(filePath))
+        {
+            QMessageBox::warning(parent, u"qBittorrentAccess"_s
+                , QCoreApplication::translate("MainWindow", "File not found: %1").arg(QDir::toNativeSeparators(filePath)));
+            return;
+        }
+        QDesktopServices::openUrl(QUrl::fromLocalFile(filePath));
+    }
 }
 
 MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, const QString &titleSuffix)
@@ -842,7 +859,7 @@ void MainWindow::updateNbTorrents()
 
 void MainWindow::on_actionDocumentation_triggered() const
 {
-    QDesktopServices::openUrl(QUrl(u"https://doc.qbittorrent.org"_s));
+    openAccessDocument(const_cast<MainWindow *>(this), u"manual"_s);
 }
 
 void MainWindow::tabChanged([[maybe_unused]] const int newTab)
@@ -975,6 +992,12 @@ void MainWindow::createKeyboardShortcuts()
     // Accessibility: Ctrl+Shift+G says the global state (speeds, connection, DHT) without leaving the list
     const auto *globalStatusShortcut = new QShortcut((Qt::CTRL | Qt::SHIFT | Qt::Key_G), this);
     connect(globalStatusShortcut, &QShortcut::activated, this, &MainWindow::announceGlobalStatus);
+
+    // qBittorrentAccess: F1 opens the user manual (actionDocumentation), Ctrl+F1 the changelog
+    auto *actionChangelog = new QAction(tr("&Changelog"), this);
+    actionChangelog->setShortcut(Qt::CTRL | Qt::Key_F1);
+    m_ui->menuHelp->insertAction(m_ui->actionCheckForUpdates, actionChangelog);
+    connect(actionChangelog, &QAction::triggered, this, [this] { openAccessDocument(this, u"changelog"_s); });
 
     auto *actionKeyboardShortcuts = new QAction(tr("&Keyboard Shortcuts"), this);
     actionKeyboardShortcuts->setShortcut(Qt::CTRL | Qt::SHIFT | Qt::Key_H);
@@ -1130,8 +1153,11 @@ void MainWindow::displaySearchTab()
 {
     if (!m_searchWidget)
     {
+        // same path as View > Search Engine: checks Python first and offers to install it
         m_ui->actionSearchWidget->setChecked(true);
-        displaySearchTab(true);
+        on_actionSearchWidget_triggered();
+        if (!m_searchWidget)
+            return;
     }
 
     Access::goTo(Access::namedTabStop(m_searchWidget, u"lineEditSearchPattern"_s), [this] { showTabPage(m_searchWidget); });

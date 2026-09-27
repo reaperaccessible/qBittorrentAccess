@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qBittorrentAccess User Manual</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1a1a1a; --muted: #555; --accent: #0b5394; --accent-bg: #e8f0fe; --border: #cccccc; --code-bg: #f4f4f4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1a1a1a; --fg: #f0f0f0; --muted: #b0b0b0; --accent: #6fb1ff; --accent-bg: #1f2d40; --border: #444; --code-bg: #2a2a2a; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; font-size: 17px; line-height: 1.6; color: var(--fg); background: var(--bg); margin: 0; padding: 0; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--accent); color: #fff; padding: 0.5rem 1rem; z-index: 100; }
+  .skip:focus { left: 1rem; top: 1rem; }
+  header { background: var(--accent-bg); border-bottom: 2px solid var(--accent); padding: 1.5rem 2rem; }
+  header h1 { margin: 0 0 0.5rem 0; }
+  header p { margin: 0.25rem 0; color: var(--muted); }
+  .lang-switch a { display: inline-block; margin-left: 1rem; padding: 0.25rem 0.75rem; background: var(--accent); color: #fff; text-decoration: none; border-radius: 4px; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; max-width: 1400px; margin: 0 auto; padding: 2rem; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; padding: 1rem; } nav.toc { position: static !important; max-height: none !important; } }
+  nav.toc { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; background: var(--accent-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+  nav.toc h2 { margin-top: 0; font-size: 1.1rem; }
+  nav.toc ol { padding-left: 1.5rem; margin: 0; }
+  nav.toc li { margin: 0.3rem 0; }
+  nav.toc a { color: var(--accent); text-decoration: none; }
+  nav.toc a:hover, nav.toc a:focus { text-decoration: underline; }
+  main { min-width: 0; }
+  main h2 { margin-top: 2.5rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); scroll-margin-top: 1rem; }
+  main h3 { margin-top: 2rem; color: var(--accent); }
+  main p, main li { max-width: 70ch; }
+  kbd { display: inline-block; font-family: "Cascadia Code", Consolas, monospace; font-size: 0.9em; background: var(--code-bg); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 3px; padding: 0.1em 0.4em; margin: 0 0.1em; white-space: nowrap; }
+  .note { border-left: 4px solid var(--accent); background: var(--accent-bg); padding: 0.7rem 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+  .note strong { color: var(--accent); }
+  footer { margin-top: 3rem; padding: 1.5rem 2rem; border-top: 1px solid var(--border); color: var(--muted); text-align: center; }
+  a { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to main content</a>
+<header>
+  <h1>qBittorrentAccess User Manual</h1>
+  <p>BitTorrent client accessible to screen readers, based on qBittorrent</p>
+  <p class="lang-switch">
+    <span lang="fr">Langue :</span>
+    <a href="manual_fr.html" lang="fr" hreflang="fr">Version française</a>
+  </p>
+</header>
+<div class="layout">
+<nav class="toc" aria-labelledby="toc-title">
+  <h2 id="toc-title">Table of contents</h2>
+  <ol>
+    <li><a href="#intro">Overview</a></li>
+    <li><a href="#installation">Installation and first start</a></li>
+    <li><a href="#window">The main window</a></li>
+    <li><a href="#adding">Adding a download</a></li>
+    <li><a href="#list">Reading the torrent list</a></li>
+    <li><a href="#managing">Managing torrents</a></li>
+    <li><a href="#properties">Torrent properties</a></li>
+    <li><a href="#status">Status, statistics and log</a></li>
+    <li><a href="#search">Searching for torrents</a></li>
+    <li><a href="#rss">RSS feeds</a></li>
+    <li><a href="#create">Creating a torrent</a></li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#files">Where are my files?</a></li>
+    <li><a href="#shortcuts">All keyboard shortcuts</a></li>
+    <li><a href="#updates">Updates and help</a></li>
+    <li><a href="#credits">Credits and licence</a></li>
+  </ol>
+</nav>
+<main id="main-content">
+
+<h2 id="intro">Overview</h2>
+<p>qBittorrentAccess lets you download torrent files and magnet links on your own with your screen reader (NVDA, JAWS, Narrator), using the keyboard only. It is qBittorrent, a well-known free program, fast and ad-free, with every screen reviewed for screen readers:</p>
+<ul>
+  <li>every list, button, option and menu has a clear name;</li>
+  <li>every window says what it is for and which keys to use when it opens;</li>
+  <li>shortcuts take you straight to each part of the program;</li>
+  <li>values are spelled out (sizes, speeds, durations), never abbreviated;</li>
+  <li>the value you read stays on your braille display.</li>
+</ul>
+<p>At any time, <kbd>Ctrl+Shift+H</kbd> shows the list of all shortcuts, <kbd>F1</kbd> opens this manual and <kbd>Ctrl+F1</kbd> the changelog.</p>
+<div class="note"><strong>BitTorrent in a nutshell:</strong> a torrent file (or a magnet link) does not contain the film or the music, only the description of the files. qBittorrentAccess downloads these files piece by piece from other people who have them, and at the same time uploads the pieces it already has. When the download is complete, the torrent keeps being shared ("seeding") until you stop or remove it.</div>
+
+<h2 id="installation">Installation and first start</h2>
+<p>The installer offers four choices: a desktop icon, not checked, and the following three, checked by default:</p>
+<ul>
+  <li><strong>.torrent files</strong>: they open in qBittorrentAccess when you press Enter on them in File Explorer;</li>
+  <li><strong>Magnet links</strong>: a magnet link activated in your web browser opens in qBittorrentAccess;</li>
+  <li><strong>Allow qBittorrentAccess through the Windows firewall</strong>: recommended, so that other users can connect to you and your downloads go faster. Without it, Windows shows a security window on the first start.</li>
+</ul>
+<p>On the first start, if qBittorrent is already installed on the computer, qBittorrentAccess <strong>takes a copy</strong> of its torrents and settings. Your qBittorrent is left unchanged. The log (<kbd>Ctrl+8</kbd>) shows it with a line starting with "Torrents and settings imported from qBittorrent".</p>
+<p>The program follows the Windows language. To change it: <kbd>Ctrl+Comma</kbd>, <strong>Behavior</strong> page, <strong>Language</strong> list, then restart qBittorrentAccess.</p>
+
+<h2 id="window">The main window</h2>
+<p>The main window has tabs and, in the transfers tab, several areas. <kbd>F6</kbd> moves to the next area, <kbd>Shift+F6</kbd> to the previous one:</p>
+<ol>
+  <li><strong>the torrent list</strong>, the heart of the program;</li>
+  <li><strong>the properties</strong> of the selected torrent (general, trackers, peers, HTTP sources, content, speed);</li>
+  <li><strong>the filters</strong>: by status, category, tag and tracker;</li>
+  <li><strong>the filter field</strong>, to find a torrent by its name (<kbd>Ctrl+F</kbd> goes there directly).</li>
+</ol>
+<p>The shortcuts <kbd>Ctrl+1</kbd> to <kbd>Ctrl+8</kbd> take you straight where you want to go, from anywhere:</p>
+<ul>
+  <li><kbd>Ctrl+1</kbd>: all torrents;</li>
+  <li><kbd>Ctrl+2</kbd>: downloading torrents;</li>
+  <li><kbd>Ctrl+3</kbd>: completed torrents;</li>
+  <li><kbd>Ctrl+4</kbd>: seeding torrents;</li>
+  <li><kbd>Ctrl+5</kbd>: torrents with errors;</li>
+  <li><kbd>Ctrl+6</kbd>: search;</li>
+  <li><kbd>Ctrl+7</kbd>: RSS feeds;</li>
+  <li><kbd>Ctrl+8</kbd>: execution log.</li>
+</ul>
+<p>When you reach the list, the screen reader says the view and the number of torrents, for example "Torrents, Downloading (3)", then the selected torrent. If you are already there, the shortcut simply repeats the announcement.</p>
+<p>The menu bar (<kbd>Alt</kbd>) holds the File, Edit, View, Tools and Help menus. In menus, <kbd>Right Arrow</kbd> opens a submenu and <kbd>Left Arrow</kbd> closes it; the screen reader tells you which items have a submenu.</p>
+
+<h2 id="adding">Adding a download</h2>
+<h3>From a torrent file</h3>
+<p><kbd>Ctrl+O</kbd> opens the file selection box: choose one or more .torrent files. If the association was checked during installation, you can also just press Enter on a .torrent file in File Explorer.</p>
+<h3>From a magnet link or an address</h3>
+<p><kbd>Ctrl+Shift+O</kbd> opens the <strong>Add torrent links</strong> window. First copy the link in your browser, then:</p>
+<ul>
+  <li>if the clipboard already holds links, they are taken automatically and the focus is on the <strong>Links</strong> list, which you can browse with the arrows;</li>
+  <li>otherwise, paste with <kbd>Ctrl+V</kbd>: the number of pasted links is announced. You can put one link per line.</li>
+</ul>
+<p>Confirm with the <strong>Download</strong> button. A magnet link activated in the browser also opens directly in qBittorrentAccess if the association was checked during installation.</p>
+<h3>The add window</h3>
+<p>Before the download starts, a window lets you set:</p>
+<ul>
+  <li>the save <strong>folder</strong> (<kbd>Ctrl+B</kbd> in this field opens the folder selection box);</li>
+  <li>the category, tags and other torrent options;</li>
+  <li>the <strong>torrent information</strong> (size, free disk space, date…): a list to browse with the arrows;</li>
+  <li>the <strong>content</strong>: the list of files, to download only the ones you want.</li>
+</ul>
+<p>For a magnet link, the information and the file list arrive after a few seconds; "Metadata received" is announced at that moment. <kbd>Enter</kbd> on the OK button starts the download.</p>
+
+<h2 id="list">Reading the torrent list</h2>
+<p>The list shows one torrent per row, with several columns: name, size, progress, status, seeds, peers, download speed, upload speed, time left, ratio, and more.</p>
+<ul>
+  <li><kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> move from one torrent to another;</li>
+  <li><kbd>Right Arrow</kbd> and <kbd>Left Arrow</kbd> read the next or previous column of the torrent, for example "Progress 45.3%" or "ETA 12 minutes";</li>
+  <li>once on a column, <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> stay in it: you read the progress of each torrent, one after the other, without the names being repeated;</li>
+  <li><kbd>Home</kbd> goes back to the Name column, <kbd>End</kbd> goes to the last column;</li>
+  <li><kbd>Ctrl+Home</kbd> and <kbd>Ctrl+End</kbd> go to the first and last torrent.</li>
+</ul>
+<p>At the ends of the list, the screen reader says "First" or "Last" before the value.</p>
+<div class="note"><strong>Braille:</strong> the value of the column you read stays on your braille display. To refresh it (a progress that moves on, for example), simply press <kbd>Left Arrow</kbd> then <kbd>Right Arrow</kbd>.</div>
+
+<h2 id="managing">Managing torrents</h2>
+<p>In the torrent list, on the selected torrent:</p>
+<ul>
+  <li><kbd>Space</kbd> starts or stops the torrent; "Started" or "Stopped" is announced;</li>
+  <li><kbd>Enter</kbd> does the double-click action: by default, start or stop a downloading torrent, and open the folder of a completed torrent (can be changed in the Options, Behavior page);</li>
+  <li><kbd>Ctrl+Enter</kbd> opens the folder where the torrent is saved;</li>
+  <li><kbd>Ctrl+Shift+C</kbd> copies the magnet link of the torrent, to share it;</li>
+  <li><kbd>F2</kbd> renames the torrent;</li>
+  <li><kbd>Ctrl+M</kbd> forces the start (ignoring the queue);</li>
+  <li><kbd>Ctrl+R</kbd> forces a recheck of the files already downloaded.</li>
+</ul>
+<p>Anywhere in the window:</p>
+<ul>
+  <li><kbd>Ctrl+S</kbd> starts and <kbd>Ctrl+P</kbd> stops the selected torrents;</li>
+  <li><kbd>Ctrl+Shift+P</kbd> pauses the whole session, <kbd>Ctrl+Shift+S</kbd> resumes it;</li>
+  <li><kbd>Ctrl+Plus</kbd> and <kbd>Ctrl+Minus</kbd> on the numeric keypad move the torrent up or down the queue; with <kbd>Shift</kbd> added, it goes to the very top or bottom. Use the numeric keypad: on the main row, the plus sign already needs the Shift key.</li>
+</ul>
+<h3>Removing a torrent</h3>
+<p><kbd>Del</kbd> removes the torrent from the list and keeps the downloaded files; <kbd>Shift+Del</kbd> also offers to delete the files. A confirmation opens with the focus on <strong>Cancel</strong>, for safety: <kbd>Tab</kbd> leads to the <strong>Also remove the content files</strong> check box, then to the <strong>Remove</strong> button. <kbd>Escape</kbd> cancels.</p>
+<h3>The context menu</h3>
+<p>The <kbd>Applications</kbd> key (or <kbd>Shift+F10</kbd>) opens the menu of the selected torrent: start, stop, remove, set location, rename, edit trackers, category, tags, download in sequential order, torrent options, copy, export .torrent, and more. Some items are check boxes, announced checked, not checked or partially checked (when several selected torrents do not all have the same setting); <kbd>Enter</kbd> toggles them.</p>
+<h3>Several torrents at once</h3>
+<p><kbd>Shift+Down Arrow</kbd> extends the selection, <kbd>Ctrl+A</kbd> selects everything. Commands then apply to all selected torrents, except <kbd>Enter</kbd> and <kbd>F2</kbd>, which only act on a single torrent.</p>
+
+<h2 id="properties">Torrent properties</h2>
+<p>The properties describe the selected torrent. Each tab has its shortcut, usable from the list:</p>
+<ul>
+  <li><kbd>Ctrl+Shift+1</kbd> <strong>General</strong>: a list of all the information (time active, downloaded, uploaded, speed, ratio, folder, date added, hash…), one per line, to read with the arrows. <kbd>Ctrl+C</kbd> copies the value of the line;</li>
+  <li><kbd>Ctrl+Shift+2</kbd> <strong>Trackers</strong>: the servers that put participants in touch, and their status;</li>
+  <li><kbd>Ctrl+Shift+3</kbd> <strong>Peers</strong>: the connected people, with their address, their program and their speeds;</li>
+  <li><kbd>Ctrl+Shift+4</kbd> <strong>HTTP Sources</strong>: the web sources of the torrent, if any;</li>
+  <li><kbd>Ctrl+Shift+5</kbd> <strong>Content</strong>: the files and folders of the torrent. You can change the priority of a file or choose not to download it, from the context menu;</li>
+  <li><kbd>Ctrl+Shift+6</kbd> <strong>Speed</strong>: the speed history.</li>
+</ul>
+<p>In these lists, each row is read in full: the name, then each column with its title. <kbd>Shift+F6</kbd> (or <kbd>Ctrl+1</kbd>) takes you back to the torrent list.</p>
+
+<h2 id="status">Status, statistics and log</h2>
+<ul>
+  <li><kbd>Ctrl+Shift+G</kbd> says the overall status without leaving where you are: total download and upload speeds, connection status, number of DHT nodes;</li>
+  <li><kbd>Ctrl+I</kbd> opens the <strong>Statistics</strong>: all-time download and upload, global ratio, connected peers, and more, in a list to read with the arrows. <kbd>Escape</kbd> closes it;</li>
+  <li><kbd>Ctrl+8</kbd> opens the <strong>Execution Log</strong>: the messages of the program (start, errors, completed torrents…).</li>
+</ul>
+<p>When a download completes, a Windows notification appears. If notifications are turned off and the qBittorrentAccess window is active, the screen reader announces the completed download.</p>
+
+<h2 id="search">Searching for torrents</h2>
+<p><kbd>Ctrl+6</kbd> opens the <strong>Search</strong> tab, with the focus in the search field. Search works through <strong>plugins</strong>, small programs that each query one site. It has two requirements:</p>
+<ul>
+  <li><strong>Python</strong> must be installed on the computer. If it is missing, qBittorrentAccess offers to install it for you;</li>
+  <li>at least one plugin must be installed: <strong>Search plugins...</strong> button, then <strong>Install a new one</strong>, which accepts the address of a plugin or a file. qBittorrentAccess comes with no plugin: you choose the sites.</li>
+</ul>
+<p>Type your keywords and press <kbd>Enter</kbd>. In the results, <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> browse the list, each result is read in full (name, size, seeders, engine…), and <kbd>Enter</kbd> downloads the result. The context menu also offers <strong>Open download window</strong> to choose the folder and the files. Filters (minimum and maximum seeds, size) let you refine the results.</p>
+
+<h2 id="rss">RSS feeds</h2>
+<p>An RSS feed is a list of new items published by a site (for example the new episodes of a show). <kbd>Ctrl+7</kbd> opens the <strong>RSS</strong> tab, with the focus on the feed list:</p>
+<ul>
+  <li><strong>New subscription</strong> adds a feed from its address;</li>
+  <li>the feed list shows the number of unread articles; the article list shows the new items of the chosen feed, and the article content is shown next to it;</li>
+  <li>the <strong>RSS Downloader...</strong> creates rules that automatically download new items whose title contains certain words.</li>
+</ul>
+
+<h2 id="create">Creating a torrent</h2>
+<p><kbd>Ctrl+N</kbd> opens the <strong>Torrent Creator</strong>: choose the file or folder to share, add tracker addresses if you have some, then create the .torrent file. You can start sharing it right away.</p>
+
+<h2 id="options">Options</h2>
+<p><kbd>Ctrl+Comma</kbd> opens the options. The <strong>Pages</strong> list shows the sections: Behavior, Downloads, Connection, Speed, BitTorrent, Search, RSS, WebUI and Advanced. Choose a page with the arrows, then <kbd>Tab</kbd> goes through its settings. Every setting has a name, and the settings of a group are announced with the name of the group. The <strong>OK</strong>, <strong>Cancel</strong> and <strong>Apply</strong> buttons are at the bottom of the window.</p>
+<p>Useful settings:</p>
+<ul>
+  <li><strong>Downloads</strong>, <strong>Default Save Path</strong>: the folder where your downloads go;</li>
+  <li><strong>Speed</strong>: limit the download and upload speed, so as not to saturate your connection;</li>
+  <li><strong>Behavior</strong>: the language, starting with Windows, the icon in the notification area, the Enter (double-click) action in the list;</li>
+  <li><strong>BitTorrent</strong>: the seeding limits (stop a torrent after a given ratio or time).</li>
+</ul>
+<p>In the <strong>Tools</strong> menu, <strong>On Downloads Done</strong> lets you exit the program, put the computer to sleep or shut it down when everything is downloaded.</p>
+
+<h2 id="files">Where are my files?</h2>
+<ul>
+  <li>Downloaded files go to your <strong>Downloads</strong> folder by default; the add window lets you choose another one for each torrent. <kbd>Ctrl+Enter</kbd> on a torrent opens its folder.</li>
+  <li>Your settings and your list of torrents are in your Windows profile (<strong>qBittorrentAccess</strong> folders in AppData).</li>
+  <li>Uninstalling qBittorrentAccess deletes neither your downloads nor your settings: if you install it again, you get everything back.</li>
+</ul>
+
+<h2 id="shortcuts">All keyboard shortcuts</h2>
+<p>This list is also in the program: <kbd>Ctrl+Shift+H</kbd>.</p>
+<h3>Going somewhere</h3>
+<ul>
+  <li><kbd>Ctrl+1</kbd> to <kbd>Ctrl+5</kbd>: torrent list, all, downloading, completed, seeding, errors</li>
+  <li><kbd>Ctrl+6</kbd>: search</li>
+  <li><kbd>Ctrl+7</kbd>: RSS</li>
+  <li><kbd>Ctrl+8</kbd>: execution log</li>
+  <li><kbd>Ctrl+Shift+1</kbd> to <kbd>Ctrl+Shift+6</kbd>: properties, General, Trackers, Peers, HTTP Sources, Content, Speed</li>
+  <li><kbd>F6</kbd>, <kbd>Shift+F6</kbd>: next, previous area</li>
+  <li><kbd>Ctrl+F</kbd>: filter torrents by name</li>
+</ul>
+<h3>In the torrent list</h3>
+<ul>
+  <li><kbd>Left Arrow</kbd>, <kbd>Right Arrow</kbd>: read one column; Up and Down then stay in it</li>
+  <li><kbd>Home</kbd>, <kbd>End</kbd>: Name column, last column</li>
+  <li><kbd>Ctrl+Home</kbd>, <kbd>Ctrl+End</kbd>: first torrent, last torrent</li>
+  <li><kbd>Space</kbd>: start or stop the torrent</li>
+  <li><kbd>Enter</kbd>: double-click action</li>
+  <li><kbd>Ctrl+Enter</kbd>: open destination folder</li>
+  <li><kbd>Ctrl+Shift+C</kbd>: copy magnet link</li>
+  <li><kbd>F2</kbd>: rename</li>
+  <li><kbd>Ctrl+M</kbd>: force start</li>
+  <li><kbd>Ctrl+R</kbd>: force recheck</li>
+  <li><kbd>Del</kbd>: remove torrent; <kbd>Shift+Del</kbd>: remove torrent and its files</li>
+  <li><kbd>Applications</kbd>: context menu</li>
+</ul>
+<h3>General commands</h3>
+<ul>
+  <li><kbd>Ctrl+O</kbd>: open torrent file</li>
+  <li><kbd>Ctrl+Shift+O</kbd>: add torrent link, magnet</li>
+  <li><kbd>Ctrl+N</kbd>: create new torrent</li>
+  <li><kbd>Ctrl+S</kbd>, <kbd>Ctrl+P</kbd>: start, stop the selected torrents</li>
+  <li><kbd>Ctrl+Shift+S</kbd>, <kbd>Ctrl+Shift+P</kbd>: resume, pause the session</li>
+  <li><kbd>Ctrl+Plus</kbd>, <kbd>Ctrl+Minus</kbd> (numeric keypad): move up, down in the queue</li>
+  <li><kbd>Ctrl+Shift+Plus</kbd>, <kbd>Ctrl+Shift+Minus</kbd> (numeric keypad): top, bottom of the queue</li>
+  <li><kbd>Ctrl+Shift+G</kbd>: global status, speeds, connection, DHT</li>
+  <li><kbd>Ctrl+I</kbd>: statistics</li>
+  <li><kbd>Ctrl+Comma</kbd>: options</li>
+  <li><kbd>Ctrl+C</kbd>: copy the value, in the General list</li>
+  <li><kbd>Right Arrow</kbd>, <kbd>Left Arrow</kbd>: open, close a submenu, in menus</li>
+  <li><kbd>Ctrl+Shift+H</kbd>: list of shortcuts</li>
+  <li><kbd>F1</kbd>: this manual</li>
+  <li><kbd>Ctrl+F1</kbd>: changelog</li>
+  <li><kbd>Ctrl+Q</kbd>: exit</li>
+</ul>
+
+<h2 id="updates">Updates and help</h2>
+<p>Updates of qBittorrentAccess are offered by the <strong>ReaperAccessible Installer Manager</strong>. You can also download the latest installer, always at the same address:<br>
+<a href="https://github.com/reaperaccessible/qBittorrentAccess/releases/latest/download/qBittorrentAccessInstaller.exe">https://github.com/reaperaccessible/qBittorrentAccess/releases/latest/download/qBittorrentAccessInstaller.exe</a></p>
+<p>The <strong>Help</strong> menu holds this manual (<kbd>F1</kbd>), the changelog (<kbd>Ctrl+F1</kbd>), the list of shortcuts (<kbd>Ctrl+Shift+H</kbd>) and the <strong>About</strong> window.</p>
+<p>To report a problem: <a href="https://github.com/reaperaccessible/qBittorrentAccess/issues">https://github.com/reaperaccessible/qBittorrentAccess/issues</a>, or through the <a href="https://reaperaccessible.fr">reaperaccessible.fr</a> website. Please do not report qBittorrentAccess problems to the qBittorrent project.</p>
+
+<h2 id="credits">Credits and licence</h2>
+<p>qBittorrentAccess is based on <a href="https://www.qbittorrent.org">qBittorrent</a>, by the qBittorrent project and its authors, who deserve all the credit for the program; you can support them from the Help menu, <strong>Donate!</strong>. qBittorrent uses the libtorrent library by Arvid Norberg and the Qt toolkit. The accessibility work is by <a href="https://reaperaccessible.fr">ReaperAccessible</a>.</p>
+<p>qBittorrentAccess is free. Like qBittorrent, it is free software distributed under the GNU General Public License, version 2 or any later version. Its source code is available at <a href="https://github.com/reaperaccessible/qBittorrentAccess">github.com/reaperaccessible/qBittorrentAccess</a>.</p>
+<p>Sharing files is your responsibility: when you download a torrent, its data is also uploaded to the other participants.</p>
+
+</main>
+</div>
+<footer>qBittorrentAccess, by ReaperAccessible, based on qBittorrent.</footer>
+</body>
+</html>

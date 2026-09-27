@@ -1455,6 +1455,20 @@ void TransferListWidget::keyPressEvent(QKeyEvent *event)
         if (Access::announceListEdge(this, event))
             return;
     }
+    else if ((modifiers == Qt::ControlModifier) && ((key == Qt::Key_Home) || (key == Qt::Key_End)))
+    {
+        // first / last torrent, selected: Qt only moves the cursor with Ctrl in a multi-selection list,
+        // so Space, Del or Ctrl+S would act on the torrent selected before
+        const int rowCount = model()->rowCount();
+        if (rowCount > 0)
+        {
+            const int row = (key == Qt::Key_Home) ? 0 : (rowCount - 1);
+            const QModelIndex target = model()->index(row, (currentIndex().isValid() ? currentIndex().column() : 0));
+            selectionModel()->setCurrentIndex(target, (QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows));
+            scrollTo(target);
+        }
+        return;
+    }
     else if ((modifiers == Qt::ControlModifier) && ((key == Qt::Key_Return) || (key == Qt::Key_Enter)))
     {
         openSelectedTorrentsFolder();

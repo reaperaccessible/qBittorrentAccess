@@ -90,7 +90,8 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+Shift+-"_s, tr("Move to bottom of queue")},
         {u"Ctrl+I"_s, tr("Statistics")},
         {u"Ctrl+,"_s, tr("Options")},
-        {u"F1"_s, tr("Documentation")},
+        {u"F1"_s, tr("User manual")},
+        {u"Ctrl+F1"_s, tr("Changelog")},
         {u"Ctrl+Q"_s, tr("Exit")}
     };
 
