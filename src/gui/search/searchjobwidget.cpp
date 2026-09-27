@@ -189,7 +189,7 @@ SearchJobWidget::SearchJobWidget(const QString &id, IGUIApplication *app, QWidge
 
     connect(UIThemeManager::instance(), &UIThemeManager::themeChanged, this, &SearchJobWidget::onUIThemeChanged);
 
-    // Accessibility: results named and read as whole rows, "First," / "Last," at the edges,
+    // Accessibility: results named, read as whole rows or column by column (Left/Right), "First," / "Last," at the edges,
     // filter fields named after their labels
     m_ui->resultsBrowser->setAccessibleName(tr("Search results"));
     m_ui->minSeeds->setAccessibleName(tr("Minimum seeds"));
@@ -199,7 +199,7 @@ SearchJobWidget::SearchJobWidget(const QString &id, IGUIApplication *app, QWidge
     m_ui->maxSize->setAccessibleName(tr("Maximum size"));
     m_ui->maxSizeUnit->setAccessibleName(tr("Maximum size unit"));
     m_lineEditSearchResultsFilter->setAccessibleName(Access::cleanLabel(m_lineEditSearchResultsFilter->placeholderText()));
-    Access::registerRowText(m_ui->resultsBrowser, SearchSortModel::NAME);
+    Access::installColumnReading(m_ui->resultsBrowser, SearchSortModel::NAME); // same keys as the torrent list
     Access::installListEdgeAnnouncer(m_ui->resultsBrowser);
     Access::labelControls(this);
 }

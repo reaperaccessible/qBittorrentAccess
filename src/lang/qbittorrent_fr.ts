@@ -215,186 +215,188 @@
         <translation>sous-menu, flèche droite pour ouvrir</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="508"/>
+        <location filename="../gui/access/accessibility.cpp" line="513"/>
         <source>1</source>
         <extracomment>Plural rule of the interface language: &quot;2&quot; if the singular covers every value below 2 (French), &quot;1&quot; if only 1 is singular (English)</extracomment>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="556"/>
+        <location filename="../gui/access/accessibility.cpp" line="561"/>
         <source>year</source>
         <translation>an</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="556"/>
+        <location filename="../gui/access/accessibility.cpp" line="561"/>
         <source>years</source>
         <translation>ans</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="556"/>
-        <location filename="../gui/access/accessibility.cpp" line="557"/>
+        <location filename="../gui/access/accessibility.cpp" line="561"/>
+        <location filename="../gui/access/accessibility.cpp" line="562"/>
         <source>day</source>
         <translation>jour</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="556"/>
-        <location filename="../gui/access/accessibility.cpp" line="557"/>
+        <location filename="../gui/access/accessibility.cpp" line="561"/>
+        <location filename="../gui/access/accessibility.cpp" line="562"/>
         <source>days</source>
         <translation>jours</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="557"/>
-        <location filename="../gui/access/accessibility.cpp" line="558"/>
+        <location filename="../gui/access/accessibility.cpp" line="562"/>
+        <location filename="../gui/access/accessibility.cpp" line="563"/>
         <source>hour</source>
         <translation>heure</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="557"/>
-        <location filename="../gui/access/accessibility.cpp" line="558"/>
+        <location filename="../gui/access/accessibility.cpp" line="562"/>
+        <location filename="../gui/access/accessibility.cpp" line="563"/>
         <source>hours</source>
         <translation>heures</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="558"/>
-        <location filename="../gui/access/accessibility.cpp" line="559"/>
+        <location filename="../gui/access/accessibility.cpp" line="563"/>
+        <location filename="../gui/access/accessibility.cpp" line="564"/>
         <source>minute</source>
         <translation>minute</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="558"/>
-        <location filename="../gui/access/accessibility.cpp" line="559"/>
+        <location filename="../gui/access/accessibility.cpp" line="563"/>
+        <location filename="../gui/access/accessibility.cpp" line="564"/>
         <source>minutes</source>
         <translation>minutes</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="560"/>
+        <location filename="../gui/access/accessibility.cpp" line="565"/>
         <source>second</source>
         <translation>seconde</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="560"/>
+        <location filename="../gui/access/accessibility.cpp" line="565"/>
         <source>seconds</source>
         <translation>secondes</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="575"/>
+        <location filename="../gui/access/accessibility.cpp" line="580"/>
         <source>byte</source>
         <translation>octet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="575"/>
+        <location filename="../gui/access/accessibility.cpp" line="580"/>
         <source>bytes</source>
         <translation>octets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="576"/>
+        <location filename="../gui/access/accessibility.cpp" line="581"/>
         <source>kibibyte</source>
         <translation>kibioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="576"/>
+        <location filename="../gui/access/accessibility.cpp" line="581"/>
         <source>kibibytes</source>
         <translation>kibioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="577"/>
+        <location filename="../gui/access/accessibility.cpp" line="582"/>
         <source>mebibyte</source>
         <translation>mébioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="577"/>
+        <location filename="../gui/access/accessibility.cpp" line="582"/>
         <source>mebibytes</source>
         <translation>mébioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="578"/>
+        <location filename="../gui/access/accessibility.cpp" line="583"/>
         <source>gibibyte</source>
         <translation>gibioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="578"/>
+        <location filename="../gui/access/accessibility.cpp" line="583"/>
         <source>gibibytes</source>
         <translation>gibioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="579"/>
+        <location filename="../gui/access/accessibility.cpp" line="584"/>
         <source>tebibyte</source>
         <translation>tébioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="579"/>
+        <location filename="../gui/access/accessibility.cpp" line="584"/>
         <source>tebibytes</source>
         <translation>tébioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="580"/>
+        <location filename="../gui/access/accessibility.cpp" line="585"/>
         <source>pebibyte</source>
         <translation>pébioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="580"/>
+        <location filename="../gui/access/accessibility.cpp" line="585"/>
         <source>pebibytes</source>
         <translation>pébioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="581"/>
+        <location filename="../gui/access/accessibility.cpp" line="586"/>
         <source>exbibyte</source>
         <translation>exbioctet</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="581"/>
+        <location filename="../gui/access/accessibility.cpp" line="586"/>
         <source>exbibytes</source>
         <translation>exbioctets</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="596"/>
+        <location filename="../gui/access/accessibility.cpp" line="601"/>
         <source>per second</source>
         <translation>par seconde</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="602"/>
+        <location filename="../gui/access/accessibility.cpp" line="607"/>
         <source>less than 1 minute</source>
         <translation>moins d’une minute</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="625"/>
+        <location filename="../gui/access/accessibility.cpp" line="630"/>
         <source>infinity</source>
         <translation>infini</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="627"/>
+        <location filename="../gui/access/accessibility.cpp" line="632"/>
         <source>not available</source>
         <translation>non disponible</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="660"/>
+        <location filename="../gui/access/accessibility.cpp" line="665"/>
         <source>Ctrl+B: browse</source>
         <translation>Ctrl+B : parcourir</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="664"/>
+        <location filename="../gui/access/accessibility.cpp" line="669"/>
         <source>Browse</source>
         <translation>Parcourir</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="903"/>
+        <location filename="../gui/access/accessibility.cpp" line="1053"/>
         <source>Copied</source>
         <translation>Copié</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="1057"/>
+        <location filename="../gui/access/accessibility.cpp" line="1207"/>
         <source>Empty</source>
         <translation>Vide</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="1086"/>
+        <location filename="../gui/access/accessibility.cpp" line="937"/>
+        <location filename="../gui/access/accessibility.cpp" line="1236"/>
         <location filename="../gui/transferlistwidget.cpp" line="1378"/>
         <source>First</source>
         <extracomment>Screen reader announcement when the first row of a list is already reached</extracomment>
         <translation>Premier</translation>
     </message>
     <message>
-        <location filename="../gui/access/accessibility.cpp" line="1086"/>
+        <location filename="../gui/access/accessibility.cpp" line="937"/>
+        <location filename="../gui/access/accessibility.cpp" line="1236"/>
         <location filename="../gui/transferlistwidget.cpp" line="1378"/>
         <source>Last</source>
         <translation>Dernier</translation>
@@ -580,66 +582,71 @@
     </message>
     <message>
         <location filename="../gui/access/shortcutsdialog.cpp" line="82"/>
+        <source>Read the columns, in the search results, as in the torrent list</source>
+        <translation>Lire les colonnes, dans les résultats de recherche, comme dans la liste des torrents</translation>
+    </message>
+    <message>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="83"/>
         <source>Context menu of the selected item</source>
         <translation>Menu contextuel de l’élément sélectionné</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="83"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="84"/>
         <source>Open, close a submenu, in menus</source>
         <translation>Ouvrir, fermer un sous-menu, dans les menus</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="84"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="85"/>
         <source>Remove torrent</source>
         <translation>Retirer le torrent</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="85"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="86"/>
         <source>Remove torrent and its files</source>
         <translation>Retirer le torrent et ses fichiers</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="86"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="87"/>
         <source>Filter torrents</source>
         <translation>Filtrer les torrents</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="87"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="88"/>
         <source>Move up in queue</source>
         <translation>Monter dans la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="88"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="89"/>
         <source>Move down in queue</source>
         <translation>Descendre dans la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="89"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="90"/>
         <source>Move to top of queue</source>
         <translation>Déplacer au haut de la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="90"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="91"/>
         <source>Move to bottom of queue</source>
         <translation>Déplacer au bas de la file d’attente</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="91"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="92"/>
         <source>Statistics</source>
         <translation>Statistiques</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="92"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="93"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="93"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="94"/>
         <source>User manual</source>
         <translation>Manuel d&apos;utilisation</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="94"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="95"/>
         <source>Changelog</source>
         <translation>Journal des modifications</translation>
     </message>
@@ -648,7 +655,7 @@
         <translation type="vanished">Documentation</translation>
     </message>
     <message>
-        <location filename="../gui/access/shortcutsdialog.cpp" line="95"/>
+        <location filename="../gui/access/shortcutsdialog.cpp" line="96"/>
         <source>Exit</source>
         <translation>Quitter</translation>
     </message>
@@ -10048,42 +10055,42 @@ Ces derniers ont été désactivés.</translation>
 <context>
     <name>SearchHandler</name>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="70"/>
+        <location filename="../base/search/searchhandler.cpp" line="192"/>
         <source>Process failed to start</source>
         <translation>Échec du démarrage du processus.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="72"/>
+        <location filename="../base/search/searchhandler.cpp" line="194"/>
         <source>Process crashed</source>
         <translation>Le processus a planté</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="74"/>
+        <location filename="../base/search/searchhandler.cpp" line="196"/>
         <source>Process timed out</source>
         <translation>Délai d&apos;attente du processus dépassé</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="76"/>
+        <location filename="../base/search/searchhandler.cpp" line="198"/>
         <source>Process write error</source>
         <translation>Erreur d&apos;écriture du processus</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="78"/>
+        <location filename="../base/search/searchhandler.cpp" line="200"/>
         <source>Process read error</source>
         <translation>Erreur de lecture du processus</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="80"/>
+        <location filename="../base/search/searchhandler.cpp" line="202"/>
         <source>Process unknown error</source>
         <translation>Erreur inconnue du processus</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="117"/>
+        <location filename="../base/search/searchhandler.cpp" line="239"/>
         <source>Search process failed. Search query: &quot;%1&quot;. Category: &quot;%2&quot;. Engines: &quot;%3&quot;. Error: &quot;%4&quot;.</source>
         <translation>Échec de la recherche. Requête : « %1 ». Catégorie : « %2 ». Moteurs : « %3 ». Erreur : « %4 ».</translation>
     </message>
     <message>
-        <location filename="../base/search/searchhandler.cpp" line="166"/>
+        <location filename="../base/search/searchhandler.cpp" line="288"/>
         <source>Error occurred in search engine. Search query: &quot;%1&quot;. Category: &quot;%2&quot;. Engines: &quot;%3&quot;. Error: &quot;%4&quot;.</source>
         <translation>Une erreur s&apos;est produite lors de la recherche. Requête : « %1 ». Catégorie : « %2 ». Moteurs : « %3 ». Erreur : « %4 ».</translation>
     </message>
@@ -10363,109 +10370,109 @@ Ces derniers ont été désactivés.</translation>
 <context>
     <name>SearchPluginManager</name>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="246"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="248"/>
         <source>Unknown search engine plugin file format.</source>
         <translation>Format de fichier du greffon de recherche inconnu.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="257"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="259"/>
         <source>Plugin already at version %1, which is greater than %2</source>
         <translation>Le greffon est déjà à la version %1, qui est plus récente que la %2</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="258"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="260"/>
         <source>A more recent version of this plugin is already installed.</source>
         <translation>Une version plus récente de ce greffon est déjà installée.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="282"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="284"/>
         <source>Plugin %1 is not supported.</source>
         <translation>Le greffon %1 n&apos;est pas supporté.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="290"/>
-        <location filename="../base/search/searchpluginmanager.cpp" line="294"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="292"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="296"/>
         <source>Plugin is not supported.</source>
         <translation>Greffon non supporté.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="302"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="304"/>
         <source>Plugin %1 has been successfully updated.</source>
         <translation>Le greffon %1 a été correctement mis à jour.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="376"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="378"/>
         <source>All categories</source>
         <translation>Toutes les catégories</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="380"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="382"/>
         <source>Movies</source>
         <translation>Films</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="384"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="386"/>
         <source>TV shows</source>
         <translation>Émissions de télévision</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="381"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="383"/>
         <source>Music</source>
         <translation>Musique</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="379"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="381"/>
         <source>Games</source>
         <translation>Jeux</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="377"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="379"/>
         <source>Anime</source>
         <translation>Animes</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="383"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="385"/>
         <source>Software</source>
         <translation>Logiciels</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="382"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="384"/>
         <source>Pictures</source>
         <translation>Photos</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="378"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="380"/>
         <source>Books</source>
         <translation>Livres</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="484"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="486"/>
         <source>Update server is temporarily unavailable. %1</source>
         <translation>Serveur de mise à jour temporairement indisponible. %1</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="504"/>
         <location filename="../base/search/searchpluginmanager.cpp" line="506"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="508"/>
         <source>Failed to download the plugin file. %1</source>
         <translation>Échec du téléchargement du fichier du greffon. %1</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="568"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="606"/>
         <source>Error occurred when fetching search engine capabilities. Error: &quot;%1&quot;.</source>
         <translation>Une erreur s&apos;est produite lors de la récupération des fonctionnalités du moteur de recherche. Erreur : « %1 ».</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="663"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="701"/>
         <source>Plugin &quot;%1&quot; is outdated, updating to version %2</source>
         <translation>Le greffon « %1 » est obsolète, mise à jour vers la version %2</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="670"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="708"/>
         <source>Incorrect update info received for %1 out of %2 plugins.</source>
         <translation>Informations de mise à jour incorrectes reçues de %1 greffons sur %2.</translation>
     </message>
     <message>
-        <location filename="../base/search/searchpluginmanager.cpp" line="712"/>
+        <location filename="../base/search/searchpluginmanager.cpp" line="750"/>
         <source>Search plugin &apos;%1&apos; contains invalid version string (&apos;%2&apos;)</source>
         <translation>Le numéro de version (&apos;%2&apos;) du greffon de recherche &apos;%1&apos; est invalide</translation>
     </message>
@@ -13489,7 +13496,7 @@ Veuillez en choisir un autre.</translation>
         <translation>Arrêté</translation>
     </message>
     <message>
-        <location filename="../gui/transferlistwidget.cpp" line="1466"/>
+        <location filename="../gui/transferlistwidget.cpp" line="1480"/>
         <source>Magnet link copied</source>
         <translation>Lien magnet copié</translation>
     </message>
@@ -13706,12 +13713,12 @@ Veuillez en choisir un autre.</translation>
         <translation>Exécutable de Python introuvable. Chemin : « %1 ».</translation>
     </message>
     <message>
-        <location filename="../base/utils/foreignapps.cpp" line="282"/>
+        <location filename="../base/utils/foreignapps.cpp" line="288"/>
         <source>Failed to find `%1` executable in PATH environment variable. PATH: &quot;%2&quot;</source>
         <translation>Échec afin de trouver l&apos;exécutable `%1` dans la variable d&apos;environnement PATH. PATH : « %2 »</translation>
     </message>
     <message>
-        <location filename="../base/utils/foreignapps.cpp" line="301"/>
+        <location filename="../base/utils/foreignapps.cpp" line="307"/>
         <source>Failed to find Python executable</source>
         <translation>Exécutable de Python introuvable</translation>
     </message>
@@ -13970,7 +13977,7 @@ Veuillez en choisir un autre.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="101"/>
-        <location filename="../gui/access/accessibility.cpp" line="539"/>
+        <location filename="../gui/access/accessibility.cpp" line="544"/>
         <source>/s</source>
         <comment>per second</comment>
         <translation>/s</translation>
@@ -14024,7 +14031,7 @@ Veuillez en choisir un autre.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>
-        <location filename="../gui/access/accessibility.cpp" line="561"/>
+        <location filename="../gui/access/accessibility.cpp" line="566"/>
         <source>&lt; 1m</source>
         <comment>&lt; 1 minute</comment>
         <translation>&lt; 1min</translation>

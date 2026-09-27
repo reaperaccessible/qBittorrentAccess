@@ -469,6 +469,11 @@ namespace
     {
         QPointer<QTreeView> view;
         int primaryColumn = 0;
+        // column reading (installColumnReading): the column chosen with Left/Right, Home, End, -1 = whole
+        // row; the primary column only for the row where it was chosen, then whole rows again
+        bool columnReading = false;
+        int readColumn = -1;
+        QPersistentModelIndex readRow;
     };
 
     QHash<const QAbstractItemModel *, RowTextView> &rowTextRegistry()
@@ -809,7 +814,152 @@ QVariant Access::rowTextFor(const QModelIndex &index)
     const auto it = rowTextRegistry().constFind(index.model());
     if ((it == rowTextRegistry().cend()) || !it->view || !index.isValid())
         return {};
+
+    if (it->columnReading && (it->readColumn >= 0))
+    {
+        const QModelIndex current = it->view->currentIndex();
+        const bool isCurrentRow = current.isValid() && (index.row() == current.row()) && (index.parent() == current.parent());
+        const bool primaryElsewhere = (it->readColumn == it->primaryColumn)
+            && (!it->readRow.isValid() || (it->readRow.row() != current.row()) || (it->readRow.parent() != current.parent()));
+        if (isCurrentRow && !primaryElsewhere)
+            return cellText(it->view, index, it->readColumn, it->primaryColumn);
+    }
     return rowText(it->view, index, it->primaryColumn);
+}
+
+QString Access::cellText(const QTreeView *view, const QModelIndex &index, const int column, const int primaryColumn)
+{
+    // "Header value", units and durations spelled out; the primary column (a name) as is
+    const QVariant data = index.siblingAtColumn(column).data(Qt::DisplayRole);
+    QString text = (data.typeId() == QMetaType::Double) ? QString::number(data.toDouble(), 'f', 1) : data.toString().trimmed();
+    if (column != primaryColumn)
+        text = spellOut(text);
+    const QString title = view->model()->headerData(column, Qt::Horizontal, Qt::DisplayRole).toString();
+    if (title.isEmpty())
+        return text;
+    return text.isEmpty() ? title : (title + u' ' + text);
+}
+
+namespace
+{
+    QList<int> visibleColumns(const QTreeView *view)
+    {
+        QList<int> columns;
+        const QHeaderView *header = view->header();
+        for (int visual = 0, count = header->count(); visual < count; ++visual)
+        {
+            if (const int column = header->logicalIndex(visual); !view->isColumnHidden(column))
+                columns.append(column);
+        }
+        return columns;
+    }
+
+    // the current item takes the chosen column as its name and says so: the screen reader speaks the
+    // change and keeps it on the braille display (an announcement would only be a flash message)
+    void notifyCurrentNameChanged(QTreeView *view)
+    {
+        const QModelIndex current = view->currentIndex();
+        QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(view);
+        if (!current.isValid() || !iface || !iface->tableInterface())
+            return;
+        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(current.row(), current.column()))
+        {
+            QAccessibleEvent event {view, QAccessible::NameChanged};
+            event.setChild(iface->indexOfChild(cell));
+            QAccessible::updateAccessibility(&event);
+        }
+    }
+
+    // Left/Right: one column of the current row (Up/Down then stay in it), Home: the primary column,
+    // End: the last one, Ctrl+Home/Ctrl+End: first/last row, selected - the torrent list's keys
+    class ColumnReadingFilter final : public QObject
+    {
+    public:
+        using QObject::QObject;
+
+        bool eventFilter(QObject *watched, QEvent *event) override
+        {
+            if (event->type() != QEvent::KeyPress)
+                return QObject::eventFilter(watched, event);
+
+            auto *view = static_cast<QTreeView *>(watched);
+            const auto *keyEvent = static_cast<QKeyEvent *>(event);
+            const Qt::KeyboardModifiers modifiers = keyEvent->modifiers() & ~Qt::KeypadModifier;
+            const int key = keyEvent->key();
+            auto it = rowTextRegistry().find(view->model());
+            if (it == rowTextRegistry().end())
+                return QObject::eventFilter(watched, event);
+            RowTextView &entry = *it;
+            const QModelIndex current = view->currentIndex();
+
+            if ((modifiers == Qt::ControlModifier) && ((key == Qt::Key_Home) || (key == Qt::Key_End)))
+            {
+                const int rowCount = view->model()->rowCount();
+                if (rowCount > 0)
+                {
+                    const QModelIndex target = view->model()->index(((key == Qt::Key_Home) ? 0 : (rowCount - 1))
+                        , (current.isValid() ? current.column() : 0));
+                    view->selectionModel()->setCurrentIndex(target, (QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows));
+                    view->scrollTo(target);
+                }
+                return true;
+            }
+            if (modifiers != Qt::NoModifier)
+                return QObject::eventFilter(watched, event);
+
+            const QList<int> columns = visibleColumns(view);
+            if ((key == Qt::Key_Home) || (key == Qt::Key_End))
+            {
+                if (current.isValid() && !columns.isEmpty())
+                {
+                    entry.readColumn = (key == Qt::Key_Home) ? entry.primaryColumn : columns.last();
+                    entry.readRow = current;
+                    notifyCurrentNameChanged(view);
+                }
+                return true;
+            }
+            if ((key == Qt::Key_Left) || (key == Qt::Key_Right))
+            {
+                if (!current.isValid() || columns.isEmpty())
+                    return true;
+
+                // the primary column chosen on another row counts as "whole row": start from the primary column
+                const bool primaryElsewhere = (entry.readColumn == entry.primaryColumn)
+                    && (!entry.readRow.isValid() || (entry.readRow.row() != current.row()));
+                qsizetype position = columns.indexOf(((entry.readColumn >= 0) && !primaryElsewhere) ? entry.readColumn : entry.primaryColumn);
+                if (position < 0)
+                    position = 0;
+
+                const qsizetype target = position + ((key == Qt::Key_Left) ? -1 : 1);
+                if ((target < 0) || (target >= columns.size()))
+                {
+                    // never a silent edge
+                    const QString edge = (target < 0) ? QCoreApplication::translate("Access", "First") : QCoreApplication::translate("Access", "Last");
+                    Access::announce(view, (edge + u", " + Access::cellText(view, current, columns[position], entry.primaryColumn)));
+                    return true;
+                }
+                entry.readColumn = columns[target];
+                entry.readRow = current;
+                notifyCurrentNameChanged(view);
+                return true;
+            }
+            return QObject::eventFilter(watched, event);
+        }
+    };
+}
+
+void Access::installColumnReading(QTreeView *view, const int primaryColumn)
+{
+    registerRowText(view, primaryColumn);
+    rowTextRegistry()[view->model()].columnReading = true;
+    view->installEventFilter(new ColumnReadingFilter(view));
+    // the primary column chosen with Home only holds for its row: leaving it means whole rows again
+    QObject::connect(view->selectionModel(), &QItemSelectionModel::currentRowChanged, view, [view]
+    {
+        auto it = rowTextRegistry().find(view->model());
+        if ((it != rowTextRegistry().end()) && (it->readColumn == it->primaryColumn))
+            it->readColumn = -1;
+    });
 }
 
 QStringList Access::captionValueRows(const std::initializer_list<const QGridLayout *> grids, const bool includeHidden

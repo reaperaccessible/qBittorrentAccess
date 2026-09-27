@@ -79,6 +79,7 @@ Access::ShortcutsDialog::ShortcutsDialog(QWidget *parent)
         {u"Ctrl+Enter"_s, tr("Open destination folder, in the torrent list")},
         {u"Ctrl+Shift+C"_s, tr("Copy magnet link, in the torrent list")},
         {u"F2"_s, tr("Rename, in the torrent list")},
+        {u"Left, Right, Home, End"_s, tr("Read the columns, in the search results, as in the torrent list")},
         {u"Applications"_s, tr("Context menu of the selected item")},
         {u"Right, Left"_s, tr("Open, close a submenu, in menus")},
         {u"Del"_s, tr("Remove torrent")},

@@ -128,6 +128,14 @@ namespace Access
     void registerRowText(QTreeView *view, int primaryColumn);
     QVariant rowTextFor(const QModelIndex &index);
 
+    // One cell as "Header value" (values spelled out, the primary column as is)
+    QString cellText(const QTreeView *view, const QModelIndex &index, int column, int primaryColumn);
+
+    // The torrent list's reading keys for another multi-column view (registers its row text too):
+    // Left/Right read one column of the current row and Up/Down then stay in it (kept on the braille
+    // display), Home the primary column, End the last one, Ctrl+Home/Ctrl+End the first/last row, selected
+    void installColumnReading(QTreeView *view, int primaryColumn);
+
     // "Caption: value" rows of grid layouts made of caption labels and value labels (value labels are
     // the ones whose objectName ends with "Val" or "Data", possibly inside a scroll area), in reading
     // order; empty values are skipped, hidden pairs too unless includeHidden (grids hidden because a
