@@ -531,7 +531,9 @@ void SearchPluginManager::updateNova()
         const Path filePathBundled = Path(u":/searchengine/nova3"_s) / filename;
         const Path filePathDisk = enginePath / filename;
 
-        if (getPluginVersion(filePathBundled) <= getPluginVersion(filePathDisk))
+        // qBittorrentAccess: the files must be exactly the ones this program talks to. A newer nova left by
+        // another qBittorrent version (imported profile) prints percent-encoded names that 5.2.3 does not decode.
+        if (getPluginVersion(filePathBundled) == getPluginVersion(filePathDisk))
             return;
 
         Utils::Fs::removeFile(filePathDisk);

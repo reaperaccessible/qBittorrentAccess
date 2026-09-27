@@ -29,13 +29,17 @@
 
 #include "searchhandler.h"
 
+#include <algorithm>
 #include <chrono>
+#include <iterator>
 
 #include <QtLogging>
 #include <QList>
 #include <QMetaObject>
 #include <QProcess>
+#include <QRegularExpression>
 #include <QTimer>
+#include <QUrl>
 
 #include "base/global.h"
 #include "base/logger.h"
@@ -49,6 +53,124 @@ using namespace std::chrono_literals;
 
 namespace
 {
+    // qBittorrentAccess: result names as sites give them are often hard to read with a screen reader or a
+    // braille display ("Casino.1995.1080p.BluRay", "( )-Casino-1995-BD", "ÐšÐ°Ð·Ð¸Ð½Ð¾", runs of spaces).
+    // Only the displayed name changes; the torrent itself keeps its own name.
+
+    // text in UTF-8 that a plugin decoded as Windows-1252 (or Latin-1): turned back into the real text
+    QString repairMisdecodedUtf8(const QString &name)
+    {
+        // Windows-1252 characters 0x80..0x9F that are not Latin-1
+        static const char16_t cp1252High[32] = {
+            0x20AC, 0x81, 0x201A, 0x0192, 0x201E, 0x2026, 0x2020, 0x2021, 0x02C6, 0x2030, 0x0160, 0x2039, 0x0152, 0x8D, 0x017D, 0x8F,
+            0x90, 0x2018, 0x2019, 0x201C, 0x201D, 0x2022, 0x2013, 0x2014, 0x02DC, 0x2122, 0x0161, 0x203A, 0x0153, 0x9D, 0x017E, 0x0178};
+
+        bool hasHigh = false;
+        QByteArray bytes;
+        bytes.reserve(name.size());
+        for (const QChar ch : name)
+        {
+            const char16_t c = ch.unicode();
+            if (c < 0x80)
+            {
+                bytes.append(static_cast<char>(c));
+                continue;
+            }
+            hasHigh = true;
+            if (c == 0xFFFD) // a byte the plugin could not decode: keep a place for it
+            {
+                bytes.append('\xFF');
+                continue;
+            }
+            const char16_t *found = std::find(std::begin(cp1252High), std::end(cp1252High), c);
+            if (found != std::end(cp1252High))
+                bytes.append(static_cast<char>(0x80 + (found - std::begin(cp1252High))));
+            else if (c <= 0xFF)
+                bytes.append(static_cast<char>(c));
+            else
+                return name; // a character Windows-1252 cannot hold: the text was not misdecoded
+        }
+        if (!hasHigh)
+            return name;
+
+        // really UTF-8: at least one character decoded, and no invalid byte except a character cut off
+        // at the end of a truncated name ("...é.."); a real "Café" gives nothing but an invalid byte
+        QString repaired = QString::fromUtf8(bytes);
+        const bool decodedSomething = std::any_of(repaired.cbegin(), repaired.cend()
+            , [](const QChar c) { return (c.unicode() >= 0x80) && (c.unicode() != 0xFFFD); });
+        if (!decodedSomething)
+            return name;
+        qsizetype end = repaired.size();
+        while ((end > 0) && ((repaired.at(end - 1) == u'.') || repaired.at(end - 1).isSpace()))
+            --end;
+        qsizetype cut = end;
+        while ((cut > 0) && (repaired.at(cut - 1) == QChar(0xFFFD)) && ((end - cut) < 3))
+            --cut;
+        if (repaired.left(cut).contains(QChar(0xFFFD)))
+            return name;
+        repaired.remove(cut, (end - cut));
+        return repaired;
+    }
+
+    QString readableResultName(QString name)
+    {
+        // percent-encoded names ("Casino %281995%29", "%D0%9A%D0%B0...") printed by some plugins or nova versions
+        static const QRegularExpression percentCode {u"%[0-9A-Fa-f]{2}"_s};
+        if (name.contains(percentCode))
+        {
+            const QString decoded = QUrl::fromPercentEncoding(name.toUtf8());
+            if (!decoded.contains(QChar(0xFFFD)))
+                name = decoded;
+        }
+
+        name = repairMisdecodedUtf8(name);
+
+        // HTML entities left by some plugins
+        name.replace(u"&amp;"_s, u"&"_s).replace(u"&quot;"_s, u"\""_s).replace(u"&#39;"_s, u"'"_s)
+            .replace(u"&apos;"_s, u"'"_s).replace(u"&lt;"_s, u"<"_s).replace(u"&gt;"_s, u">"_s)
+            .replace(u"&nbsp;"_s, u" "_s);
+
+        // "_" never separates anything but words
+        name.replace(u'_', u' ');
+
+        // "." between words is a space ("Casino.1995.BluRay"), but not inside a number ("5.1", "2.0")
+        // nor in "..", the mark of a truncated name
+        QString out;
+        out.reserve(name.size());
+        for (qsizetype i = 0; i < name.size(); ++i)
+        {
+            const QChar ch = name.at(i);
+            if (ch == u'.')
+            {
+                const QChar before = (i > 0) ? name.at(i - 1) : QChar();
+                const QChar after = ((i + 1) < name.size()) ? name.at(i + 1) : QChar();
+                const bool inNumber = before.isDigit() && after.isDigit();
+                const bool inDots = (before == u'.') || (after == u'.');
+                if (!inNumber && !inDots && before.isLetterOrNumber() && after.isLetterOrNumber())
+                {
+                    out.append(u' ');
+                    continue;
+                }
+            }
+            out.append(ch);
+        }
+        name = out;
+
+        // "-" joining most words ("Casino-1995-REMASTERED-BD-1080p") is a space too; a few ("WEB-DL") stay
+        static const QRegularExpression hyphenJoin {u"(?<=[\\p{L}\\p{N}\\)\\]])-(?=[\\p{L}\\p{N}\\(\\[])"_s};
+        const qsizetype joins = name.count(hyphenJoin);
+        if ((joins >= 3) && (joins >= name.count(u' ')))
+            name.replace(hyphenJoin, u" "_s);
+
+        // runs of spaces, empty brackets, a leading dash
+        static const QRegularExpression emptyBrackets {u"\\(\\s*\\)|\\[\\s*\\]"_s};
+        name.replace(emptyBrackets, QString());
+        name = name.simplified();
+        static const QRegularExpression leadingDash {u"^[-–—\\s]+"_s};
+        name.remove(leadingDash);
+        return name;
+    }
+
     enum SearchResultColumn
     {
         PL_DL_LINK,
@@ -214,7 +336,7 @@ bool SearchHandler::parseSearchResult(const QByteArrayView line, SearchResult &s
 
     searchResult = SearchResult();
     searchResult.fileUrl = QString::fromUtf8(parts.at(PL_DL_LINK).trimmed()); // download URL
-    searchResult.fileName = QString::fromUtf8(parts.at(PL_NAME).trimmed()); // Name
+    searchResult.fileName = readableResultName(QString::fromUtf8(parts.at(PL_NAME).trimmed())); // Name
     searchResult.fileSize = parts.at(PL_SIZE).trimmed().toLongLong(); // Size
 
     bool ok = false;
