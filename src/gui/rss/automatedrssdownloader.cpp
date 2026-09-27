@@ -178,7 +178,6 @@ AutomatedRssDownloader::AutomatedRssDownloader(QWidget *parent)
     m_ui->addRuleBtn->setAccessibleName(tr("Add new rule"));
     m_ui->removeRuleBtn->setAccessibleName(tr("Delete rule"));
     m_ui->renameRuleBtn->setAccessibleName(tr("Rename rule"));
-    m_ui->cloneRuleBtn->setAccessibleName(tr("Clone rule"));
     m_ui->ruleList->setAccessibleName(Access::cleanLabel(m_ui->ruleListLabel->text()));
     Access::installListEdgeAnnouncer(m_ui->ruleList);
 }
