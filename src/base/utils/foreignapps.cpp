@@ -265,6 +265,12 @@ PythonInfo Utils::ForeignApps::pythonInfo()
 
         if (!pyInfo.isValid())
         {
+            // qBittorrentAccess: the Python shipped with the program ("python" folder) comes first,
+            // the search works without installing anything
+            const Path bundledPython = Path(QCoreApplication::applicationDirPath()) / Path(u"python/python.exe"_s);
+            if (bundledPython.exists() && testPythonInstallation(bundledPython, pyInfo) && pyInfo.isSupportedVersion())
+                return pyInfo;
+
             // search in `PATH` environment variable
             const QString exeNames[] = {u"python3"_s, u"python"_s};
             for (const QString &exeName : exeNames)

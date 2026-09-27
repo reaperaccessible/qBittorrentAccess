@@ -32,6 +32,7 @@
 #include <memory>
 
 #include <QtLogging>
+#include <QCoreApplication>
 #include <QDir>
 #include <QDirIterator>
 #include <QDomDocument>
@@ -48,6 +49,7 @@
 #include "base/net/proxyconfigurationmanager.h"
 #include "base/preferences.h"
 #include "base/profile.h"
+#include "base/settingvalue.h"
 #include "base/utils/bytearray.h"
 #include "base/utils/foreignapps.h"
 #include "base/utils/fs.h"
@@ -541,6 +543,40 @@ void SearchPluginManager::updateNova()
     updateFile(Path(u"nova2dl.py"_s));
     updateFile(Path(u"novaprinter.py"_s));
     updateFile(Path(u"socks.py"_s));
+
+    installBundledPlugins();
+}
+
+// qBittorrentAccess: the search plugins shipped in the program's "searchplugins" folder. Each one is
+// installed once (one the user uninstalls does not come back) and updated when a newer version ships.
+void SearchPluginManager::installBundledPlugins()
+{
+    const Path bundledDir = Path(QCoreApplication::applicationDirPath()) / Path(u"searchplugins"_s);
+    if (!bundledDir.exists())
+        return;
+
+    SettingValue<QStringList> offeredSetting {u"Search/BundledPluginsOffered"_s};
+    QStringList offered = offeredSetting;
+    const Path enginesDir = engineLocation() / Path(u"engines"_s);
+
+    QDirIterator it {bundledDir.data(), {u"*.py"_s}, QDir::Files};
+    while (it.hasNext())
+    {
+        const Path bundledPath {it.next()};
+        const QString fileName = bundledPath.filename();
+        const Path installedPath = enginesDir / Path(fileName);
+        const bool firstOffer = !offered.contains(fileName);
+        const bool installed = installedPath.exists();
+
+        if ((firstOffer && !installed) || (installed && (getPluginVersion(bundledPath) > getPluginVersion(installedPath))))
+        {
+            Utils::Fs::removeFile(installedPath);
+            Utils::Fs::copyFile(bundledPath, installedPath);
+        }
+        if (firstOffer)
+            offered.append(fileName);
+    }
+    offeredSetting = offered;
 }
 
 void SearchPluginManager::update()

@@ -193,11 +193,13 @@
 <p>Quand un téléchargement se termine, une notification Windows apparaît. Si les notifications sont désactivées et que la fenêtre de qBittorrentAccess est active, le lecteur d'écran annonce la fin du téléchargement.</p>
 
 <h2 id="recherche">Rechercher des torrents</h2>
-<p><kbd>Ctrl+6</kbd> ouvre l'onglet <strong>Recherche</strong>, le focus dans le champ de recherche. La recherche passe par des <strong>greffons</strong>, de petits programmes qui interrogent chacun un site. Elle a deux conditions :</p>
+<p><kbd>Ctrl+6</kbd> ouvre l'onglet <strong>Recherche</strong>, le focus dans le champ de recherche. La recherche passe par des <strong>greffons</strong>, de petits programmes qui interrogent chacun un site. Tout est prêt dès l'installation : rien d'autre à installer.</p>
 <ul>
-  <li><strong>Python</strong> doit être installé sur l'ordinateur. S'il manque, qBittorrentAccess propose de l'installer pour vous ;</li>
-  <li>au moins un greffon doit être installé : bouton <strong>Greffons de recherche...</strong>, puis <strong>Installer un nouveau</strong>, qui accepte l'adresse d'un greffon ou un fichier. qBittorrentAccess n'est livré avec aucun greffon : c'est vous qui choisissez les sites.</li>
+  <li>qBittorrentAccess est livré avec une quinzaine de greffons publics, vérifiés avant la publication, installés au premier démarrage : films, séries, logiciels libres, animation japonaise, et des sites généralistes ;</li>
+  <li>le bouton <strong>Greffons de recherche...</strong> ouvre la liste des greffons : vous pouvez en désactiver, en désinstaller (un greffon désinstallé ne revient pas), vérifier leurs mises à jour, ou en ajouter d'autres avec <strong>Installer un nouveau</strong> ;</li>
+  <li>les greffons sont des programmes écrits dans le langage Python ; qBittorrentAccess contient sa propre copie de Python pour les faire fonctionner.</li>
 </ul>
+<p>Un site peut fermer ou changer du jour au lendemain : si un greffon ne donne plus de résultats, c'est généralement le site qui est en cause, pas qBittorrentAccess.</p>
 <p>Tapez vos mots-clés et appuyez sur <kbd>Entrée</kbd>. Dans les résultats, <kbd>Flèche haut</kbd> et <kbd>Flèche bas</kbd> parcourent la liste, chaque résultat est lu en entier (nom, taille, sources complètes, moteur…), et <kbd>Entrée</kbd> télécharge le résultat. Le menu contextuel propose aussi <strong>Ouvrir la fenêtre de téléchargement</strong> pour choisir le dossier et les fichiers. Des filtres (sources minimum et maximum, taille) permettent d'affiner.</p>
 
 <h2 id="rss">Les flux RSS</h2>
