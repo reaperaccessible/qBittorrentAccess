@@ -598,7 +598,9 @@ void SearchWidget::fillPluginComboBox()
     m_ui->selectPlugin->clear();
     m_ui->selectPlugin->addItem(tr("Only enabled"), u"enabled"_s);
     m_ui->selectPlugin->addItem(tr("All plugins"), u"all"_s);
-    m_ui->selectPlugin->addItem(tr("Select..."), u"multi"_s);
+    // qBittorrentAccess: no "Select..." item (browsing the list with the arrows opened the plugin window
+    // when passing over it; the "Search plugins..." button next to it does the same) and no separator
+    // (read as an empty item)
 
     using QStrPair = std::pair<QString, QString>;
     QList<QStrPair> tmpList;
@@ -609,8 +611,6 @@ void SearchWidget::fillPluginComboBox()
     for (const QStrPair &p : asConst(tmpList))
         m_ui->selectPlugin->addItem(p.first, p.second);
 
-    if (m_ui->selectPlugin->count() > 3)
-        m_ui->selectPlugin->insertSeparator(3);
 }
 
 QString SearchWidget::selectedCategory() const

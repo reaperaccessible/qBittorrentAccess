@@ -34,6 +34,7 @@
 #include <QFileDialog>
 #include <QHeaderView>
 #include <QImageReader>
+#include <QKeyEvent>
 #include <QMenu>
 #include <QMessageBox>
 #include <QMimeData>
@@ -94,8 +95,51 @@ PluginSelectDialog::PluginSelectDialog(SearchPluginManager *pluginManager, QWidg
 
     // Accessibility: the plugin list is named and read as whole rows, "First," / "Last," at the edges
     m_ui->pluginsTree->setAccessibleName(windowTitle());
+    // enabled or not, right after the name (rows are read in on-screen column order)
+    m_ui->pluginsTree->header()->moveSection(m_ui->pluginsTree->header()->visualIndex(PLUGIN_STATE), 1);
     Access::keepItemRowTexts(m_ui->pluginsTree, PLUGIN_NAME);
     Access::installListEdgeAnnouncer(m_ui->pluginsTree);
+    // - the list works from the keyboard: Space enables or disables, Del uninstalls (the mouse had a
+    //   double-click and a context menu only); the window says so when it opens
+    m_ui->pluginsTree->installEventFilter(this);
+    setAccessibleDescription(tr("Up, Down: the search plugins. Space: enable or disable. Del: uninstall. "
+        "Applications: menu. Tab: install a new one, check for updates, close."));
+    if (m_ui->pluginsTree->topLevelItemCount() > 0)
+        m_ui->pluginsTree->setCurrentItem(m_ui->pluginsTree->topLevelItem(0));
+    m_ui->pluginsTree->setFocus(Qt::OtherFocusReason);
+}
+
+bool PluginSelectDialog::eventFilter(QObject *watched, QEvent *event)
+{
+    if ((watched == m_ui->pluginsTree) && (event->type() == QEvent::KeyPress))
+    {
+        const auto *keyEvent = static_cast<QKeyEvent *>(event);
+        QTreeWidgetItem *current = m_ui->pluginsTree->currentItem();
+        if ((keyEvent->modifiers() == Qt::NoModifier) && current)
+        {
+            if (keyEvent->key() == Qt::Key_Space)
+            {
+                togglePluginState(current, 0);
+                const PluginInfo *plugin = m_pluginManager->pluginInfo(current->text(PLUGIN_ID));
+                Access::announce(m_ui->pluginsTree, ((plugin && plugin->enabled) ? tr("Enabled") : tr("Disabled")));
+                return true;
+            }
+            if (keyEvent->key() == Qt::Key_Delete)
+            {
+                const QMessageBox::StandardButton answer = QMessageBox::question(this, tr("Uninstall")
+                    , tr("Uninstall the search plugin \"%1\"?").arg(current->text(PLUGIN_NAME))
+                    , (QMessageBox::Yes | QMessageBox::No), QMessageBox::No);
+                if (answer == QMessageBox::Yes)
+                {
+                    m_ui->pluginsTree->clearSelection();
+                    current->setSelected(true);
+                    on_actionUninstall_triggered();
+                }
+                return true;
+            }
+        }
+    }
+    return QDialog::eventFilter(watched, event);
 }
 
 PluginSelectDialog::~PluginSelectDialog()

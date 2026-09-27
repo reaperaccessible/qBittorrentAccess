@@ -9026,6 +9026,7 @@ readme[0-9].txt : filtre &apos;readme1.txt&apos; et &apos;readme2.txt&apos;, mai
     <message>
         <location filename="../gui/search/pluginselectdialog.ui" line="67"/>
         <location filename="../gui/search/pluginselectdialog.ui" line="133"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="124"/>
         <source>Enabled</source>
         <translation>Activé</translation>
     </message>
@@ -9056,113 +9057,129 @@ readme[0-9].txt : filtre &apos;readme1.txt&apos; et &apos;readme2.txt&apos;, mai
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.ui" line="138"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="129"/>
         <source>Uninstall</source>
         <translation>Désinstaller</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="166"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="237"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="302"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="105"/>
+        <source>Up, Down: the search plugins. Space: enable or disable. Del: uninstall. Applications: menu. Tab: install a new one, check for updates, close.</source>
+        <translation>Haut, Bas : les greffons de recherche. Espace : activer ou désactiver. Suppr : désinstaller. Applications : menu. Tab : installer un nouveau, vérifier les mises à jour, fermer.</translation>
+    </message>
+    <message>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="124"/>
+        <source>Disabled</source>
+        <translation>Désactivé</translation>
+    </message>
+    <message>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="130"/>
+        <source>Uninstall the search plugin &quot;%1&quot;?</source>
+        <translation>Désinstaller le greffon de recherche « %1 » ?</translation>
+    </message>
+    <message>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="210"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="281"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="346"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="171"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="242"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="307"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="215"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="260"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="286"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="351"/>
         <source>No</source>
         <translation>Non</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="222"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="266"/>
         <source>Uninstall warning</source>
         <translation>Avertissement de désinstallation</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="222"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="266"/>
         <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>Certains greffons n&apos;ont pas pu être désinstallés car ils sont inclus dans qBittorrentAccess. Seulement ceux que vous avez vous-même ajoutés peuvent être désinstallés.
 Ces derniers ont été désactivés.</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="224"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="268"/>
         <source>Uninstall success</source>
         <translation>Désinstallation réussie</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="224"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="268"/>
         <source>All selected plugins were uninstalled successfully</source>
         <translation>Tous les greffons sélectionnés ont été désinstallés avec succès</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="347"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="454"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="469"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="501"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="391"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="498"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="513"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="545"/>
         <source>Search plugin update</source>
         <translation>Mise à jour du greffon de recherche</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="347"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="391"/>
         <source>Plugins installed or updated: %1</source>
         <translation>Greffons installés ou mis à jour : %1</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="369"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="377"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="413"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="421"/>
         <source>New search engine plugin URL</source>
         <translation>URL du nouveau greffon du moteur de recherche</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="370"/>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="378"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="414"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="422"/>
         <source>URL:</source>
         <translation>URL :</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="375"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="419"/>
         <source>Invalid link</source>
         <translation>Lien invalide</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="375"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="419"/>
         <source>The link doesn&apos;t seem to point to a search engine plugin.</source>
         <translation>Le lien ne semble pas pointer sur un greffon de moteur de recherche.</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="392"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="436"/>
         <source>Select search plugins</source>
         <translation>Sélectionner les greffons de recherche</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="393"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="437"/>
         <source>qBittorrent search plugin</source>
         <translation>Greffon de recherche de qBittorrent</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="454"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="498"/>
         <source>All your plugins are already up to date.</source>
         <translation>Tous vos greffons sont déjà à jour.</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="469"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="513"/>
         <source>Sorry, couldn&apos;t check for plugin updates. %1</source>
         <translation>Désolé, impossible de vérifier les mises à jour du greffon. %1</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="483"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="527"/>
         <source>Search plugin install</source>
         <translation>Installation du greffon de recherche</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="484"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="528"/>
         <source>Couldn&apos;t install &quot;%1&quot; search engine plugin. %2</source>
         <translation>Impossible d&apos;installer le greffon de recherche « %1 ». %2</translation>
     </message>
     <message>
-        <location filename="../gui/search/pluginselectdialog.cpp" line="502"/>
+        <location filename="../gui/search/pluginselectdialog.cpp" line="546"/>
         <source>Couldn&apos;t update &quot;%1&quot; search engine plugin. %2</source>
         <translation>Impossible de mettre à jour le greffon de recherche « %1 ». %2</translation>
     </message>
@@ -10663,9 +10680,8 @@ Cliquez sur le bouton « Recherche de greffons… » en bas à droite de la fen�
         <translation>Fermer tous les onglets</translation>
     </message>
     <message>
-        <location filename="../gui/search/searchwidget.cpp" line="601"/>
         <source>Select...</source>
-        <translation>Sélectionner…</translation>
+        <translation type="vanished">Sélectionner…</translation>
     </message>
     <message>
         <location filename="../gui/search/searchwidget.cpp" line="847"/>
