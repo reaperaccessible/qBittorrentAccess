@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>Par qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Par qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent sadaļa</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess sadaļa</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Paldies, ka izmantojāt qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Paldies, ka izmantojāt qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@ Iemesls: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 palaists. Darbības ID: %2</translation>
+        <translation>qBittorrentAccess %1 palaists. Darbības ID: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@ Iemesls: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>Lai piekļūtu qBittorrent tālvadības panelim, atveriet: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>Lai piekļūtu qBittorrentAccess tālvadības panelim, atveriet: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@ Iemesls: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>qBittorrent izslēgšana aizsākta</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>qBittorrentAccess izslēgšana aizsākta</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent tiek izslēgts...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess tiek izslēgts...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@ Iemesls: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent ir gatavs izslēgšanai</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess ir gatavs izslēgšanai</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent ir failu koplietošanas programma. Katra aktīvi koplietotā torrenta saturs caur augšupielādi būs pieejams citiem lietotājiem internetā. Katrs fails, kuru jūs dalāt ir uz jūsu pašu atbildību. </translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess ir failu koplietošanas programma. Katra aktīvi koplietotā torrenta saturs caur augšupielādi būs pieejams citiem lietotājiem internetā. Katrs fails, kuru jūs dalāt ir uz jūsu pašu atbildību. </translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent ir saskāries ar neatgūstamu kļūdu.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess ir saskāries ar neatgūstamu kļūdu.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Tu nevari atvērt %1: qBittorrent ir jau atvērts.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Tu nevari atvērt %1: qBittorrentAccess ir jau atvērts.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Cita qBittorrent instance jau ir atvērta.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Cita qBittorrentAccess instance jau ir atvērta.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Atrasta negaidīta qBittorrent instance. Notiek iziešana no šīs instances. Pašreizējais procesa ID: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Atrasta negaidīta qBittorrentAccess instance. Notiek iziešana no šīs instances. Pašreizējais procesa ID: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>Aizslēgt qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>Aizslēgt qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>Aizvērt qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>Aizvērt qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent ir samazināts tray ikonā</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess ir samazināts tray ikonā</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent nupat tika atjaunināts un ir nepieciešams restarts, lai izmaiņas stātos spēkā.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess nupat tika atjaunināts un ir nepieciešams restarts, lai izmaiņas stātos spēkā.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent ir samazināts tray ikonā</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess ir samazināts tray ikonā</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Lūdzu, uzstādiet to paši.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Pieejams qBittorrent atjauninājums</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Pieejams qBittorrentAccess atjauninājums</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ Vecākā atļautā: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>Aizvērt qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>Aizvērt qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Vecākā atļautā: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Ieslēgt qBittorrent reizē ar Datorsistēmu</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Ieslēgt qBittorrentAccess reizē ar Datorsistēmu</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ Vecākā atļautā: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lai iestatītu qBittorrent kā noklusējuma programmu .torrent datņu un/vai Magnet saišu atvēršanai,&lt;br/&gt;var izmantot &lt;span style=&quot; font-weight:600;&quot;&gt;vadības paneļa&lt;/span&gt; logu &lt;span style=&quot; font-weight:600;&quot;&gt;Noklusējuma programmas&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lai iestatītu qBittorrentAccess kā noklusējuma programmu .torrent datņu un/vai Magnet saišu atvēršanai,&lt;br/&gt;var izmantot &lt;span style=&quot; font-weight:600;&quot;&gt;vadības paneļa&lt;/span&gt; logu &lt;span style=&quot; font-weight:600;&quot;&gt;Noklusējuma programmas&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,7 +6121,7 @@ Vecākā atļautā: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
+        <source>Show qBittorrentAccess in menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6606,8 +6606,8 @@ Izmantojiet &apos;;&apos; lai atdalītu vairākus vārdus. Varat izmantot viettu
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Ar samazināšanas pogu, novietot qBittorrent paziņojumu joslā</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Ar samazināšanas pogu, novietot qBittorrentAccess paziņojumu joslā</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,7 +6679,7 @@ Izmantojiet &apos;;&apos; lai atdalītu vairākus vārdus. Varat izmantot viettu
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6700,13 +6700,13 @@ Izmantojiet &apos;;&apos; lai atdalītu vairākus vārdus. Varat izmantot viettu
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Lietot qBittorrent .torrent failiem </translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Lietot qBittorrentAccess .torrent failiem </translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Lietot qBittorrent Magnētsaitēm</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Lietot qBittorrentAccess Magnētsaitēm</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ Izmantojiet &apos;;&apos; lai atdalītu vairākus vārdus. Varat izmantot viettu
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Rādīt &amp;qBittorrent paziņojumu joslā</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Rādīt &amp;qBittorrentAccess paziņojumu joslā</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ Izmantojiet &apos;;&apos; lai atdalītu vairākus vārdus. Varat izmantot viettu
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Ar aizvēršanas pogu, novietot qBittorrent paziņojumu joslā</translation>
+        <translation>Ar aizvēršanas pogu, novietot qBittorrentAccess paziņojumu joslā</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Manuāli: Nozīmē, ka torrenta uzstādījumi (piem. saglabāšanas vieta) būs 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>qBittorrent loga stāvoklis palaišanas brīdī</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>qBittorrentAccess loga stāvoklis palaišanas brīdī</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,7 +7758,7 @@ readme[0-9].txt: neatļaus &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, bet
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7849,7 +7849,7 @@ readme[0-9].txt: neatļaus &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, bet
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
         <translation>Ja šīs opcijas ir iespējotas, qBittorent &lt;strong&gt;dzēsīs&lt;/strong&gt; .torrent failus pēc tam, kad tie tiks veiksmīgi (pirmais variants) vai ne (otrais variants) pievienoti lejupielādes sarakstam. Tas tiks piemērots &lt;strong&gt;ne tikai&lt;/strong&gt; failiem, kas atvērti, izmantojot &amp;ldquo;Pievienot Torrentu failus&amp;rdquo; izvēlnes darbību, bet arī, to atverot, izmantojot &lt;strong&gt;failu tipu piesaistes&lt;/strong&gt;</translation>
     </message>
     <message>
@@ -8358,9 +8358,9 @@ readme[0-9].txt: neatļaus &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, bet
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Dažus spraudņus nav iespējams atinstalēt, jo tie ir iekļauti qBittorrent. Jūs varat atinstalēt tikai tos spraudņus, kurus pats ieinstalējāt.
+        <translation>Dažus spraudņus nav iespējams atinstalēt, jo tie ir iekļauti qBittorrentAccess. Jūs varat atinstalēt tikai tos spraudņus, kurus pats ieinstalējāt.
 Esošie spraudņi tika atslēgti. </translation>
     </message>
     <message>
@@ -9945,8 +9945,8 @@ Spiediet uz &quot;Meklētāju spraudņi...&quot; pogas, lai kādu uzinstalētu. 
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent klients tagad tiks aizvērts.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess klients tagad tiks aizvērts.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10350,8 +10350,8 @@ Spiediet uz &quot;Meklētāju spraudņi...&quot; pogas, lai kādu uzinstalētu. 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent ir nepieciešams restarts!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess ir nepieciešams restarts!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10362,8 +10362,8 @@ Spiediet uz &quot;Meklētāju spraudņi...&quot; pogas, lai kādu uzinstalētu. 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Atslēdzies. Tas parasti nozīmē to, ka qBittorrent neizdevās izveidot kontaktu ar ienākošo savienojumu portu. </translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Atslēdzies. Tas parasti nozīmē to, ka qBittorrentAccess neizdevās izveidot kontaktu ar ienākošo savienojumu portu. </translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13234,12 +13234,12 @@ Lūdzu izvēlieties citu nosaukumu.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
         <translation>qBittorent tagad izslēgs datoru, jo visas lejupielādes ir pabeigtas.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

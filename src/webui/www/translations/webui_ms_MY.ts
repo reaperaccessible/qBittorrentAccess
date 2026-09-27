@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Keluar qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Keluar qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Simpan</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Klien qBittorrent tidak dapat dicapai</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Klien qBittorrentAccess tidak dapat dicapai</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Had Kelajuan Muat Turun Sejagat</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Anda pasti mahu keluar dari qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Anda pasti mahu keluar dari qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Buang torrent dan fail-failnya</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>Seskyen qBittorent</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Guna ';' untuk asingkan masukan berbilang. Boleh guna kad liar '*'.</translation
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Guna ';' untuk asingkan masukan berbilang. Boleh guna kad liar '*'.</translation
         <translation>Nama:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Perihal qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Perihal qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ Guna ';' untuk asingkan masukan berbilang. Boleh guna kad liar '*'.</translation
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -4878,7 +4878,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5166,7 +5166,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

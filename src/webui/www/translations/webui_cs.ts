@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Ukončit qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Ukončit qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Uložit</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Klient qBittorrent není dostupný</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Klient qBittorrentAccess není dostupný</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Příklady nastavení reverzní proxy</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Nepodařilo se kontaktovat qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Nepodařilo se kontaktovat qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Nevyřízená paměť při kontrole torrentů musí být více než 0 a méně než 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nelze načíst předvolby programu, qBittorrent je pravděpodobně nedosažitelný.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nelze načíst předvolby programu, qBittorrentAccess je pravděpodobně nedosažitelný.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>Peer DSCP musí být mezi 0 a 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nepodařilo se uložit předvolby, qBittorrent je pravděpodobně nedosažitelný.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nepodařilo se uložit předvolby, qBittorrentAccess je pravděpodobně nedosažitelný.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Celkový limit rychlosti stahování</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Určitě chcete ukončit qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Určitě chcete ukončit qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Odstranit torrent a jeho soubory</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>Sekce qBittorrentu</translation>
     </message>
     <message>
@@ -2243,8 +2243,8 @@ Použijte ';' pro oddělení více položek. Můžete použít masku '*'.</trans
         <translation>Hustota zobrazení:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Přidá text na konec titulku okna, kvůli rozlišení jednotlivých instancí qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Přidá text na konec titulku okna, kvůli rozlišení jednotlivých instancí qBittorrentAccess</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,7 +4040,7 @@ Použijte ';' pro oddělení více položek. Můžete použít masku '*'.</trans
         <translation>Jméno:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>O qBittorrentu</translation>
     </message>
     <message>
@@ -4080,8 +4080,8 @@ Použijte ';' pro oddělení více položek. Můžete použít masku '*'.</trans
         <translation>qBittorrent Mascot</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>ikona qBittorrent</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>ikona qBittorrentAccess</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Podporuje formáty: S01E01, 1x1, 2017.12.31 a 31.12.2017 (Formáty dat také pod
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Podporuje formáty: S01E01, 1x1, 2017.12.31 a 31.12.2017 (Formáty dat také pod
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Vytvořit API klíč? Klíč bude možné použít pro komunikaci s qBittorrent's API.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Vytvořit API klíč? Klíč bude možné použít pro komunikaci s qBittorrentAccess's API.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Avslutt qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Avslutt qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Lagre</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent er ikke oppnåelig</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess er ikke oppnåelig</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Eksempler på oppsett av reversert mellomtjener</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Klarte ikke kontakte qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Klarte ikke kontakte qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Global grense for nedlastingshastighet</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Er du sikker på at du vil avslutte qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Er du sikker på at du vil avslutte qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Fjern torrent og dens filer</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorrent-seksjon</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Bruk ";" for å splitte flerfoldige oppføringer. Jokertegnet "*" kan brukes.</t
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Bruk ";" for å splitte flerfoldige oppføringer. Jokertegnet "*" kan brukes.</t
         <translation>Navn:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Om qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Om qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ Bruk ";" for å splitte flerfoldige oppføringer. Jokertegnet "*" kan brukes.</t
         <translation>qBittorrent-maskot</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>qBittorrent-ikon</translation>
     </message>
 </context>
@@ -4879,8 +4879,8 @@ Støtter de følgende formatene: S01E01, 1x1, 2017.12.31, og 31.12.2017 (Datofor
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>Nettgrensesnitt for qBittorrent</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>Nettgrensesnitt for qBittorrentAccess</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,7 +5172,7 @@ Støtter de følgende formatene: S01E01, 1x1, 2017.12.31, og 31.12.2017 (Datofor
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

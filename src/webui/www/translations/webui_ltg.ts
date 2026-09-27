@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Aiztaiseit qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Aiztaiseit qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Izglobuot</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent navā dasnēdzuoms</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess navā dasnēdzuoms</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Kūpeigā atsasyuteišonas dreizuma rūbežs</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Voi drūši zini, ka gribi nūgrīzt qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Voi drūši zini, ka gribi nūgrīzt qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Nūjimt torrentu i failus</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorent izdola</translation>
     </message>
     <message>
@@ -2239,7 +2239,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4036,8 +4036,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Vuords:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Par qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Par qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4076,7 +4076,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -4875,7 +4875,7 @@ Formats: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Datam škiramsimbola "." vītā v
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5163,7 +5163,7 @@ Formats: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Datam škiramsimbola "." vītā v
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

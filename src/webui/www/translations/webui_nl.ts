@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent afsluiten</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess afsluiten</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,7 +367,7 @@
         <translation>Opslaan</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation>qBittorrent-client is niet bereikbaar</translation>
     </message>
     <message>
@@ -459,8 +459,8 @@
         <translation>Voorbeelden van reverse proxy-configuraties</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Kon geen contact opnemen met qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Kon geen contact opnemen met qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Het beschikbare geheugen bij het controleren van torrents moet groter zijn dan 0 en kleiner dan 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Kan programmavoorkeuren niet laden. qBittorrent is waarschijnlijk niet bereikbaar.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Kan programmavoorkeuren niet laden. qBittorrentAccess is waarschijnlijk niet bereikbaar.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>Peer DSCP moet tussen 0 en 255 liggen.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Kan programmavoorkeuren niet opslaan, qBittorrent is waarschijnlijk onbereikbaar.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Kan programmavoorkeuren niet opslaan, qBittorrentAccess is waarschijnlijk onbereikbaar.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Algemene downloadsnelheidbegrenzing</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Weet u zeker dat u qBittorrent wilt afsluiten?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Weet u zeker dat u qBittorrentAccess wilt afsluiten?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Torrent en zijn bestanden verwijderen</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorrent-sectie</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <translation>Weergavedichtheid:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>Het voegt de tekst toe aan de venstertitel om qBittorrent-instanties te helpen onderscheiden</translation>
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <translation>Naam:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Over qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Over qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ Gebruik ';' om meerdere items te splitsen. Jokerteken '*' kan gebruikt worden.</
         <translation>qBittorrent-mascotte</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>qBittorrent-pictogram</translation>
     </message>
 </context>
@@ -4879,7 +4879,7 @@ Ondersteunt de formaten:  S01E01, 1x1, 2017.12.31 en 31.12.2017 (datumformaten o
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation>qBittorrent-WebUI</translation>
     </message>
     <message>
@@ -5167,8 +5167,8 @@ Ondersteunt de formaten:  S01E01, 1x1, 2017.12.31 en 31.12.2017 (datumformaten o
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Een API-sleutel genereren? Deze sleutel kan worden gebruikt om te communiceren met de API van qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Een API-sleutel genereren? Deze sleutel kan worden gebruikt om te communiceren met de API van qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

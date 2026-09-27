@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent 종료</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess 종료</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>저장</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent 클라이언트에 접근할 수 없습니다</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess 클라이언트에 접근할 수 없습니다</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation>역방향 프록시 설정 예시</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation>qBittorrent에 연결할 수 없음</translation>
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation>토렌트 확인 시, 필요한 메모리 용량은 0보다 크고 1024보다 작아야 합니다.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation>프로그램 설정을 불러올 수 없습니다. qBittorrent에 연결할 수 없는 것 같습니다.</translation>
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation>피어 DSCP는 0에서 255 사이여야 합니다.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation>기본 설정을 저장할 수 없어서 qBittorrent에 도달할 수 없을 것 같습니다.</translation>
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>전역 다운로드 속도 제한</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>qBittorrent를 종료하시겠습니까?</translation>
     </message>
     <message>
@@ -1371,8 +1371,8 @@
         <translation>토렌트 및 파일 제거</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 부분</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess 부분</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ DNS 재결합 공격을 방어하기 위해
         <translation>표시 밀도:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>텍스트를 창 제목에 추가하여 qBittorrent 인스턴스를 구별하는 데 도움을 줍니다</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>텍스트를 창 제목에 추가하여 qBittorrentAccess 인스턴스를 구별하는 데 도움을 줍니다</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ DNS 재결합 공격을 방어하기 위해
         <translation>이름:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent 정보</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess 정보</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ DNS 재결합 공격을 방어하기 위해
         <translation>qBittorrent 마스코트</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent 아이콘</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess 아이콘</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5171,7 +5171,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation>API 키를 생성하시겠습니까? 이 키는 qBittorrent의 API와 상호 작용하는 데 사용할 수 있습니다.</translation>
     </message>
     <message>

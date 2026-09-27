@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Aizvērt qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Aizvērt qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Saglabāt</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klients nav sasniedzams</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess klients nav sasniedzams</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Atļautais kopējais lejupielādes ātrums</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Izdzēst torrentu un failus</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent sadaļa</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess sadaļa</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,7 +2243,7 @@ Izmantojiet ';' lai atdalītu vairākus vārdus. Varat izmantot vietturi '*'.</t
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Izmantojiet ';' lai atdalītu vairākus vārdus. Varat izmantot vietturi '*'.</t
         <translation>Vārds:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Par qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Par qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Izmantojiet ';' lai atdalītu vairākus vārdus. Varat izmantot vietturi '*'.</t
         <translation>qBittorrent talismans</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikona</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess ikona</translation>
     </message>
 </context>
 <context>
@@ -4879,7 +4879,7 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5167,7 +5167,7 @@ Atbalsta formātus: S01E01, 1x1, 2017.12.31 un 31.12.2017 (Datumu formātos kā 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

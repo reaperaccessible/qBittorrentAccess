@@ -481,7 +481,7 @@
                   <string>Replaces multi-selection (hold Alt key to invert)</string>
                  </property>
                  <property name="text">
-                  <string>Drag content from qBittorrent</string>
+                  <string>Drag content from qBittorrentAccess</string>
                  </property>
                 </widget>
                </item>
@@ -497,7 +497,7 @@
                <item>
                 <widget class="QCheckBox" name="checkStartup">
                  <property name="text">
-                  <string>Start qBittorrent on Windows start up</string>
+                  <string>Start qBittorrentAccess on Windows start up</string>
                  </property>
                 </widget>
                </item>
@@ -523,7 +523,7 @@
                  <item>
                   <widget class="QComboBox" name="windowStateComboBox">
                    <property name="toolTip">
-                    <string>qBittorrent window state on start up</string>
+                    <string>qBittorrentAccess window state on start up</string>
                    </property>
                   </widget>
                  </item>
@@ -568,7 +568,7 @@
                <item>
                 <widget class="QGroupBox" name="checkShowSystray">
                  <property name="title">
-                  <string>Show &amp;qBittorrent in notification area</string>
+                  <string>Show &amp;qBittorrentAccess in notification area</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
@@ -580,7 +580,7 @@
                      <string>When minimizing, the main window is closed and must be reopened from the systray icon</string>
                     </property>
                     <property name="text">
-                     <string>Minimize qBittorrent to notification area</string>
+                     <string>Minimize qBittorrentAccess to notification area</string>
                     </property>
                     <property name="checked">
                      <bool>false</bool>
@@ -593,7 +593,7 @@
                      <string>The systray icon will still be visible when closing the main window</string>
                     </property>
                     <property name="text">
-                     <string extracomment="The systray icon will still be visible when closing the main window">Close qBittorrent to notification area</string>
+                     <string extracomment="The systray icon will still be visible when closing the main window">Close qBittorrentAccess to notification area</string>
                     </property>
                    </widget>
                   </item>
@@ -667,14 +667,14 @@
                      <item>
                       <widget class="QCheckBox" name="checkAssociateTorrents">
                        <property name="text">
-                        <string>Use qBittorrent for .torrent files</string>
+                        <string>Use qBittorrentAccess for .torrent files</string>
                        </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QCheckBox" name="checkAssociateMagnetLinks">
                        <property name="text">
-                        <string>Use qBittorrent for magnet links</string>
+                        <string>Use qBittorrentAccess for magnet links</string>
                        </property>
                       </widget>
                      </item>
@@ -699,7 +699,7 @@
                      <item>
                       <widget class="QLabel" name="labelSetAssoc">
                        <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                       </widget>
                      </item>
@@ -726,7 +726,7 @@
                <item>
                 <widget class="QCheckBox" name="checkShowMenuBarIcon">
                  <property name="text">
-                  <string>Show qBittorrent in menu bar</string>
+                  <string>Show qBittorrentAccess in menu bar</string>
                  </property>
                 </widget>
                </item>

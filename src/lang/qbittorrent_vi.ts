@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>Thông tin qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Thông tin qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>Phần qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Phần qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Nó thêm chữ vào tiêu đề cửa sổ để giúp phân biệt các tiến trình qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Nó thêm chữ vào tiêu đề cửa sổ để giúp phân biệt các tiến trình qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Cảm ơn bạn đã sử dụng qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Cảm ơn bạn đã sử dụng qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 đã bắt đầu. ID tiến trình: %2</translation>
+        <translation>qBittorrentAccess %1 đã bắt đầu. ID tiến trình: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>Để điều khiển qBittorrent, hãy truy cập WebUI tại: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>Để điều khiển qBittorrentAccess, hãy truy cập WebUI tại: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>Đã bắt đầu thoát qBittorrent</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>Đã bắt đầu thoát qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent đang tắt...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess đang tắt...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent đã sẵn sàng để thoát</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess đã sẵn sàng để thoát</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent là một chương trình chia sẻ tệp. Khi bạn chạy một torrent, dữ liệu của nó sẽ được cung cấp cho người khác bằng cách tải lên. Mọi nội dung bạn chia sẻ là trách nhiệm duy nhất của bạn.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess là một chương trình chia sẻ tệp. Khi bạn chạy một torrent, dữ liệu của nó sẽ được cung cấp cho người khác bằng cách tải lên. Mọi nội dung bạn chia sẻ là trách nhiệm duy nhất của bạn.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent đã gặp lỗi không thể khôi phục.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess đã gặp lỗi không thể khôi phục.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Bạn không thể sử dụng %1: qBittorrent đang chạy.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Bạn không thể sử dụng %1: qBittorrentAccess đang chạy.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Một phiên bản qBittorrent khác đang chạy.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Một phiên bản qBittorrentAccess khác đang chạy.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Đã tìm thấy phiên bản qBittorrent không mong muốn. Thoát khỏi trường hợp này. ID tiến trình hiện tại: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Đã tìm thấy phiên bản qBittorrentAccess không mong muốn. Thoát khỏi trường hợp này. ID tiến trình hiện tại: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>Kh&amp;óa qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>Kh&amp;óa qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>&amp;Thoát qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>&amp;Thoát qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent được thu nhỏ xuống khay hệ thống</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess được thu nhỏ xuống khay hệ thống</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent vừa được cập nhật và cần được khởi động lại để các thay đổi có hiệu lực.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess vừa được cập nhật và cần được khởi động lại để các thay đổi có hiệu lực.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent đã đóng xuống khay</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess đã đóng xuống khay</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Bạn có chắc mình muốn thoát qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Bạn có chắc mình muốn thoát qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Vui lòng cài đặt nó theo cách thủ công.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Cập Nhật qBittorrent Có Sẵn</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Cập Nhật qBittorrentAccess Có Sẵn</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ Yêu cầu tối thiểu: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>Thoát qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>Thoát qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Yêu cầu tối thiểu: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Chạy qBittorrent lúc Windows khởi động</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Chạy qBittorrentAccess lúc Windows khởi động</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ Yêu cầu tối thiểu: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Để đặt qBittorrent mặc định cho tệp .torrent và liên kết Magnet&lt;br/&gt;bạn có thể dùng hộp thoại &lt;span style=&quot; font-weight:600;&quot;&gt;Chương Trình Mặc Định&lt;/span&gt; từ &lt;span style=&quot; font-weight:600;&quot;&gt;Bảng Điều Khiển&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Để đặt qBittorrentAccess mặc định cho tệp .torrent và liên kết Magnet&lt;br/&gt;bạn có thể dùng hộp thoại &lt;span style=&quot; font-weight:600;&quot;&gt;Chương Trình Mặc Định&lt;/span&gt; từ &lt;span style=&quot; font-weight:600;&quot;&gt;Bảng Điều Khiển&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,8 +6121,8 @@ Yêu cầu tối thiểu: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>Hiển thị qBittorrent trong thanh menu</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>Hiển thị qBittorrentAccess trong thanh menu</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,8 +6606,8 @@ Sử dụng &apos;;&apos; để chia nhiều mục nhập. Có thể sử dụng
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Thu nhỏ qBittorrent vào vùng thông báo</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Thu nhỏ qBittorrentAccess vào vùng thông báo</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,8 +6679,8 @@ Sử dụng &apos;;&apos; để chia nhiều mục nhập. Có thể sử dụng
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
-        <translation>Kéo nội dung từ qBittorrent</translation>
+        <source>Drag content from qBittorrentAccess</source>
+        <translation>Kéo nội dung từ qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="605"/>
@@ -6700,13 +6700,13 @@ Sử dụng &apos;;&apos; để chia nhiều mục nhập. Có thể sử dụng
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Sử dụng qBittorrent cho các tệp .torrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Sử dụng qBittorrentAccess cho các tệp .torrent</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Sử dụng qBittorrent cho các liên kết nam châm</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Sử dụng qBittorrentAccess cho các liên kết nam châm</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ Sử dụng &apos;;&apos; để chia nhiều mục nhập. Có thể sử dụng
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Hiển thị &amp;qBittorrent trong khu vực thông báo</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Hiển thị &amp;qBittorrentAccess trong khu vực thông báo</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ Sử dụng &apos;;&apos; để chia nhiều mục nhập. Có thể sử dụng
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Đóng lại qBittorrent vào khay hệ thống</translation>
+        <translation>Đóng lại qBittorrentAccess vào khay hệ thống</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Thủ công: Các thuộc tính torrent khác nhau (ví dụ: đường dẫn l�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>Trạng thái cửa sổ qBittorrent khi khởi động</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>Trạng thái cửa sổ qBittorrentAccess khi khởi động</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,8 +7758,8 @@ readme[0-9].txt: lọc &apos;readme1.txt&apos;, &apos;readme2.txt&apos; nhưng k
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation>Tạo khóa API? Khóa này có thể được sử dụng để tương tác với API của qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation>Tạo khóa API? Khóa này có thể được sử dụng để tương tác với API của qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7849,8 +7849,8 @@ readme[0-9].txt: lọc &apos;readme1.txt&apos;, &apos;readme2.txt&apos; nhưng k
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Khi bật các tùy chọn này, qBittorrent sẽ &lt;strong&gt;xóa&lt;/strong&gt; tệp .torrent sau khi đã thêm vào hàng đợi tải về thành công (tùy chọn 1) hoặc thất bại (tùy chọn 2). Nó sẽ được áp dụng &lt;strong&gt;không chỉ&lt;/strong&gt; các tập tin mở với thao tác menu &amp;ldquo;Thêm torrent&amp;rdquo; mà còn với những thứ được mở bằng &lt;strong&gt;tệp liên kết&lt;/strong&gt;</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Khi bật các tùy chọn này, qBittorrentAccess sẽ &lt;strong&gt;xóa&lt;/strong&gt; tệp .torrent sau khi đã thêm vào hàng đợi tải về thành công (tùy chọn 1) hoặc thất bại (tùy chọn 2). Nó sẽ được áp dụng &lt;strong&gt;không chỉ&lt;/strong&gt; các tập tin mở với thao tác menu &amp;ldquo;Thêm torrent&amp;rdquo; mà còn với những thứ được mở bằng &lt;strong&gt;tệp liên kết&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8358,9 +8358,9 @@ readme[0-9].txt: lọc &apos;readme1.txt&apos;, &apos;readme2.txt&apos; nhưng k
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Không thể gỡ bỏ một số plugin vì chúng được bao gồm trong qBittorrent. Chỉ có thể gỡ bỏ những cái bạn đã tự thêm vào.
+        <translation>Không thể gỡ bỏ một số plugin vì chúng được bao gồm trong qBittorrentAccess. Chỉ có thể gỡ bỏ những cái bạn đã tự thêm vào.
 Các plugin đó đã bị vô hiệu hóa.</translation>
     </message>
     <message>
@@ -9948,8 +9948,8 @@ Nhấp vào nút &quot;Tìm kiếm plugin ...&quot; ở dưới cùng bên phả
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent bây giờ sẽ thoát.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess bây giờ sẽ thoát.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10353,8 +10353,8 @@ Nhấp vào nút &quot;Tìm kiếm plugin ...&quot; ở dưới cùng bên phả
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent buộc khởi động lại!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess buộc khởi động lại!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10365,8 +10365,8 @@ Nhấp vào nút &quot;Tìm kiếm plugin ...&quot; ở dưới cùng bên phả
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Ngoại tuyến. Điều này có nghĩa rằng qBittorrent không thể tiếp nhận các tín hiệu từ cổng kết nối được chọn dành cho những kết nối đầu vào.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Ngoại tuyến. Điều này có nghĩa rằng qBittorrentAccess không thể tiếp nhận các tín hiệu từ cổng kết nối được chọn dành cho những kết nối đầu vào.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13237,13 +13237,13 @@ Vui lòng chọn một tên khác và thử lại.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>qBittorrent sẽ tắt máy tính lập tức bởi vì toàn bộ các tải xuống đều đã hoàn tất.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess sẽ tắt máy tính lập tức bởi vì toàn bộ các tải xuống đều đã hoàn tất.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent sẽ khởi động lại máy tính ngay bây giờ vì tất cả quá trình tải xuống đã hoàn tất.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess sẽ khởi động lại máy tính ngay bây giờ vì tất cả quá trình tải xuống đã hoàn tất.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

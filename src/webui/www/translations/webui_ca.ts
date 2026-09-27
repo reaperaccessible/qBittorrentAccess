@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Surt del qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Surt del qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Desa</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>El client qBittorrent no és accessible</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>El client qBittorrentAccess no és accessible</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -460,8 +460,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Exemples de configuració d'intermediari invers</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>No s'ha pogut contactar amb qBittorrent.</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>No s'ha pogut contactar amb qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -556,8 +556,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>La memòria restant en comprovar torrents ha de ser superior a 0 i inferior a 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>No es poden carregar les preferències del programa, probablement no es pot accedir al qBittorrent.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>No es poden carregar les preferències del programa, probablement no es pot accedir al qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -568,8 +568,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>El DSCP del client ha de ser entre 0 i 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>No es poden desar les preferències, probablement no es pot accedir a qBittorrent.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>No es poden desar les preferències, probablement no es pot accedir a qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -659,8 +659,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Velocitat límit global de baixada</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Segur que voleu sortir del qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Segur que voleu sortir del qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1372,8 +1372,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Suprimeix el torrent i els fitxers</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Secció de qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Secció de qBittorrentAccess</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2244,8 +2244,8 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <translation>Densitat de visualització:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Afegeix el text al títol de la finestra per ajudar a distingir les instàncies de qBittorrent.</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Afegeix el text al títol de la finestra per ajudar a distingir les instàncies de qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4041,8 +4041,8 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <translation>Nom:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Quant al qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Quant al qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4081,8 +4081,8 @@ Useu ";" per separar les entrades. Podeu usar el comodí "*".</translation>
         <translation>Mascota del qBittorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Icona del qBittorrent</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>Icona del qBittorrentAccess</translation>
     </message>
 </context>
 <context>
@@ -4880,8 +4880,8 @@ Admet els formats S01E01, 1x1, 2017.12.31 i 31.12.2017 (Els formats de data tamb
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>Interfície d'usuari web del qBittorrent</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>Interfície d'usuari web del qBittorrentAccess</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5173,8 +5173,8 @@ Admet els formats S01E01, 1x1, 2017.12.31 i 31.12.2017 (Els formats de data tamb
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Voleu generar una clau d'API? Aquesta clau es pot usar per interactuar amb l'API de qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Voleu generar una clau d'API? Aquesta clau es pot usar per interactuar amb l'API de qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

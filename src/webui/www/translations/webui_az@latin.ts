@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent'dən çıxmaq</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess'dən çıxmaq</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Saxlamaq</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent müştərisi əlçatan deyil</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess müştərisi əlçatan deyil</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation>Əks proksi ayarları nümunələri</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation>qBitorent ilə əlaqə mümkün olmadı</translation>
     </message>
     <message>
@@ -555,8 +555,8 @@
         <translation>Torrentləri yoxlayarkən yaddaş 0-dan böyük və 1024-dən az olmalıdır.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Proqram xüsusiyyətlərini yükləmək mümkün olmadı. Ola bilsin ki qBittorrent əlçatan deyil.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Proqram xüsusiyyətlərini yükləmək mümkün olmadı. Ola bilsin ki qBittorrentAccess əlçatan deyil.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,7 +567,7 @@
         <translation>İştirakçı DSCP 0 ilə 255 arasında olmalıdır.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>Ümumi yükləmə sürəti limiti</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>qBittorent'dən çıxmaq istədiyinizə əminsiniz?</translation>
     </message>
     <message>
@@ -1371,8 +1371,8 @@
         <translation>Torrenti və fayllarını silmək</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Bölməsi</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Bölməsi</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,7 +2243,7 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>Bu, qBittorent nümunələrini fərqləndirmək üçün pəncərə başlığına mətn əlavə edir.</translation>
     </message>
     <message>
@@ -4040,8 +4040,8 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <translation>Adı:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent haqqında</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess haqqında</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ serveri tərəfindən istifadə olunan domen adını göstərməlisiniz.
         <translation>qBittorrent talismanı</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent nişanı</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess nişanı</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Bu formatlar dəstəklənir: S01E01, 1x1, 2017.12.31 və 31.12.2017 (Həmçinin 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent İİ</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess İİ</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Bu formatlar dəstəklənir: S01E01, 1x1, 2017.12.31 və 31.12.2017 (Həmçinin 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Bir API açarı yaradaq? Bu açar qBittorrent ilə işləmək üçün istifadə oluna bilər.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Bir API açarı yaradaq? Bu açar qBittorrentAccess ilə işləmək üçün istifadə oluna bilər.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

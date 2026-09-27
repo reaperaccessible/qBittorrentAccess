@@ -90,13 +90,13 @@ void Utils::OS::shutdownComputer([[maybe_unused]] const ShutdownDialogAction &ac
     else if (action == ShutdownDialogAction::Shutdown)
     {
         std::wstring msg = QCoreApplication::translate("misc"
-            , "qBittorrent will shutdown the computer now because all downloads are complete.").toStdWString();
+            , "qBittorrentAccess will shutdown the computer now because all downloads are complete.").toStdWString();
         ::InitiateSystemShutdownW(nullptr, msg.data(), 10, TRUE, FALSE);
     }
     else if (action == ShutdownDialogAction::Reboot)
     {
         std::wstring msg = QCoreApplication::translate("misc"
-            , "qBittorrent will reboot the computer now because all downloads are complete.").toStdWString();
+            , "qBittorrentAccess will reboot the computer now because all downloads are complete.").toStdWString();
         ::InitiateSystemShutdownW(nullptr, msg.data(), 10, TRUE, TRUE);
     }
 

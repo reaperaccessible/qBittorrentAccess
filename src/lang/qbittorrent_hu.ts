@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>A qBittorrent névjegye</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>A qBittorrentAccess névjegye</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent beállítások</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess beállítások</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>A qBittorent példányok megkülönböztetésének megkönnyítése érdekében a szöveget az ablak címéhez csatolja</translation>
     </message>
     <message>
@@ -1471,7 +1471,7 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
+        <source>Thank you for using qBittorrentAccess.</source>
         <translation>Köszönjük, hogy a qBittorentet használja.</translation>
     </message>
     <message>
@@ -1573,9 +1573,9 @@ Indok: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 elindult. Folyamat azonosítója: %2</translation>
+        <translation>qBittorrentAccess %1 elindult. Folyamat azonosítója: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@ Indok: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>qBittorrent irányításához nyissa meg a Web UI-t itt: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>qBittorrentAccess irányításához nyissa meg a Web UI-t itt: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@ Indok: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>qBittorrent leállítása kezdeményezve</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>qBittorrentAccess leállítása kezdeményezve</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>A qBittorrent leáll...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>A qBittorrentAccess leáll...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@ Indok: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>A qBittorrent készen áll a kilépésre</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>A qBittorrentAccess készen áll a kilépésre</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>A qBittorrent egy fájlmegosztó program. Amikor egy torrentet futtat, annak adatai feltöltés útján mások számára is elérhetővé válnak. A megosztott tartalomért kizárólag Ön felel.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>A qBittorrentAccess egy fájlmegosztó program. Amikor egy torrentet futtat, annak adatai feltöltés útján mások számára is elérhetővé válnak. A megosztott tartalomért kizárólag Ön felel.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>A qBittorrent helyrehozhatatlan hibába ütközött.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>A qBittorrentAccess helyrehozhatatlan hibába ütközött.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>A %1 nem használható: a qBittorrent már fut.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>A %1 nem használható: a qBittorrentAccess már fut.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Egy másik qBittorrent példány már fut.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Egy másik qBittorrentAccess példány már fut.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Váratlan qBittorrent példányt találtunk. Kilépés ebből a példányból. Jelenlegi folyamat azonosítója: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Váratlan qBittorrentAccess példányt találtunk. Kilépés ebből a példányból. Jelenlegi folyamat azonosítója: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>qBittorrent &amp;lezárása</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>qBittorrentAccess &amp;lezárása</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>&amp;qBittorrent bezárása</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>&amp;qBittorrentAccess bezárása</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent lekerül a tálcára</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess lekerül a tálcára</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>A qBittorrent frissült, és újra kell indítani a változások életbe lépéséhez.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>A qBittorrentAccess frissült, és újra kell indítani a változások életbe lépéséhez.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent bezáráskor a tálcára</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess bezáráskor a tálcára</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,7 +4182,7 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>Biztosan ki akar lépni a qBittorrentből?</translation>
     </message>
     <message>
@@ -4262,8 +4262,8 @@ Kérlek telepítsd fel kézzel.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Elérhető qBittorrent frissítés</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Elérhető qBittorrentAccess frissítés</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4415,8 +4415,8 @@ Minimális követelmény: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>qBittorrent bezárása</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>qBittorrentAccess bezárása</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6090,8 +6090,8 @@ Minimális követelmény: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>qBittorrent indítása a rendszer indulásakor</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>qBittorrentAccess indítása a rendszer indulásakor</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6110,8 +6110,8 @@ Minimális követelmény: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A qBittorrent beállításához a .torrent fájlok és/vagy Magnet linkek&lt;br/&gt; alapértelmezett programjaként, használhatja a &lt;span style=&quot; font-weight:600;&quot;&gt;Vezérlőpult&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Alapértelmezett programok&lt;/span&gt; részét.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A qBittorrentAccess beállításához a .torrent fájlok és/vagy Magnet linkek&lt;br/&gt; alapértelmezett programjaként, használhatja a &lt;span style=&quot; font-weight:600;&quot;&gt;Vezérlőpult&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Alapértelmezett programok&lt;/span&gt; részét.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6120,8 +6120,8 @@ Minimális követelmény: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>qBittorrent megjelenítése a menüsávban</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>qBittorrentAccess megjelenítése a menüsávban</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6605,8 +6605,8 @@ Használja a &apos;;&apos; karaktert az elválasztásra, ha több is van. A &apo
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>qBittorrent értesítési területre helyezése tálcára helyezéskor</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>qBittorrentAccess értesítési területre helyezése tálcára helyezéskor</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6678,7 +6678,7 @@ Használja a &apos;;&apos; karaktert az elválasztásra, ha több is van. A &apo
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation>Tartalom kihúzása a qBittorrentből</translation>
     </message>
     <message>
@@ -6699,13 +6699,13 @@ Használja a &apos;;&apos; karaktert az elválasztásra, ha több is van. A &apo
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>qBittorrent használata a .torrent fájlokhoz</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>qBittorrentAccess használata a .torrent fájlokhoz</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>qBittorrent használata a magnet linkekhez</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>qBittorrentAccess használata a magnet linkekhez</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6841,8 +6841,8 @@ Használja a &apos;;&apos; karaktert az elválasztásra, ha több is van. A &apo
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>&amp;qBittorrent megjelenítése az értesítési területen</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>&amp;qBittorrentAccess megjelenítése az értesítési területen</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6907,9 +6907,9 @@ Használja a &apos;;&apos; karaktert az elválasztásra, ha több is van. A &apo
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>A qBittorrent értesítési területre helyezése bezáráskor</translation>
+        <translation>A qBittorrentAccess értesítési területre helyezése bezáráskor</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7029,8 +7029,8 @@ Kézi: A különböző torrenttulajdonságokat (például a mentési útvonalat)
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>qBittorrent ablak állapota induláskor</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>qBittorrentAccess ablak állapota induláskor</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7757,8 +7757,8 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos; szűrő, de ne
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation>Generál egy API kulcsot? Ez a kulcs a qBittorrent API-val történő kommunikációra használható.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation>Generál egy API kulcsot? Ez a kulcs a qBittorrentAccess API-val történő kommunikációra használható.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7848,8 +7848,8 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos; szűrő, de ne
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Ha ezek a beállítások be vannak kapcsolva, akkor a qBittorrent &lt;strong&gt;törli&lt;/strong&gt; a .torrent fájlokat, ha a sikeresen hozzáadta (első lehetőség) vagy nem adta hozzá (második lehetőség) a letöltési sorhoz. Ez &lt;strong&gt;nem csak&lt;/strong&gt; a &amp;ldquo;Torrent hozzáadása&amp;rdquo; menüművelettel megnyitott fájlokra érvényes, hanem a &lt;strong&gt;fájltípus társításokon&lt;/strong&gt; keresztül megnyitottakra is</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Ha ezek a beállítások be vannak kapcsolva, akkor a qBittorrentAccess &lt;strong&gt;törli&lt;/strong&gt; a .torrent fájlokat, ha a sikeresen hozzáadta (első lehetőség) vagy nem adta hozzá (második lehetőség) a letöltési sorhoz. Ez &lt;strong&gt;nem csak&lt;/strong&gt; a &amp;ldquo;Torrent hozzáadása&amp;rdquo; menüművelettel megnyitott fájlokra érvényes, hanem a &lt;strong&gt;fájltípus társításokon&lt;/strong&gt; keresztül megnyitottakra is</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8357,7 +8357,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos; szűrő, de ne
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>Néhány modult nem lehet eltávolítani, mivel a program részét képezik. Csak azokat lehet letörölni, amelyeket a felhasználó telepített.
 Azok a modulok letiltásra kerültek.</translation>
@@ -9947,8 +9947,8 @@ Az ablak jobb alsó sarkában található „Modulok keresése…” gomb megnyo
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent most kilép.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess most kilép.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10352,7 +10352,7 @@ Az ablak jobb alsó sarkában található „Modulok keresése…” gomb megnyo
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
+        <source>qBittorrentAccess needs to be restarted!</source>
         <translation>qBittorrentet újra kell indítani!</translation>
     </message>
     <message>
@@ -10364,8 +10364,8 @@ Az ablak jobb alsó sarkában található „Modulok keresése…” gomb megnyo
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Offline. Ez általában azt jelenti, hogy a qBittorrent nem tudja használni a bejövő kapcsolatokhoz a megadott portot.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Offline. Ez általában azt jelenti, hogy a qBittorrentAccess nem tudja használni a bejövő kapcsolatokhoz a megadott portot.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13236,13 +13236,13 @@ Válasszon egy másik nevet és próbálja újra. </translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>A qBittorrent most leállítja a számítógépet, mert az összes letöltés elkészült.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>A qBittorrentAccess most leállítja a számítógépet, mert az összes letöltés elkészült.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>A qBittorrent most újra fogja indítani a számítógépet, mert az összes letöltés befejeződött.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>A qBittorrentAccess most újra fogja indítani a számítógépet, mert az összes letöltés befejeződött.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

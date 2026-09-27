@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>क्यूबिटटॉरेंट बंद करें</translation>
     </message>
     <message>
@@ -367,7 +367,7 @@
         <translation>सहेंजें</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation>क्यूबिटटाॅरेंट प्रयोक्ता पहुंच योग्य नहीं है</translation>
     </message>
     <message>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>सार्वभौम डाउनलोड गति सीमा</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>क्या आप निश्चित ही क्यूबिटटाॅरेंट बंद करना चाहते हैं?</translation>
     </message>
     <message>
@@ -1371,7 +1371,7 @@
         <translation>टौरेंट और उसकी फाइलों को हटायें</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>क्यूबिटटाॅरेंट खण्ड</translation>
     </message>
     <message>
@@ -2239,7 +2239,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4036,7 +4036,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>नाम:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>क्यूबिटटौरेंट के बारे में</translation>
     </message>
     <message>
@@ -4076,7 +4076,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -4875,7 +4875,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5163,7 +5163,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

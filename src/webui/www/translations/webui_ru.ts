@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Выйти из qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Выйти из qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Сохранить</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Клиент qBittorrent недоступен</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Клиент qBittorrentAccess недоступен</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Примеры настройки обратного прокси</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Не удалось связаться с qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Не удалось связаться с qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Накладная память при проверке торрентов должна быть больше 0 и меньше 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Не удалось загрузить настройки программы, возможно, qBittorrent недоступен.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Не удалось загрузить настройки программы, возможно, qBittorrentAccess недоступен.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>Поле DSCP для пиров должно быть в диапазоне от 0 до 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Не удалось сохранить настройки, возможно, qBittorrent недоступен.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Не удалось сохранить настройки, возможно, qBittorrentAccess недоступен.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Ограничение скорости загрузки</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Уверены, что хотите выйти из qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Уверены, что хотите выйти из qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Удалить торрент и его файлы</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Раздел qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Раздел qBittorrentAccess</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Плотность отображения:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Добавляет текст к заголовку окна с целью различения экземпляров qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Добавляет текст к заголовку окна с целью различения экземпляров qBittorrentAccess</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Имя:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>О qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>О qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Талисман qBittorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Значок qBittorrent</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>Значок qBittorrentAccess</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>Веб-интерфейс qBittorrent</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>Веб-интерфейс qBittorrentAccess</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Создать ключ API? Этот ключ можно использовать для взаимодействия с API qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Создать ключ API? Этот ключ можно использовать для взаимодействия с API qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

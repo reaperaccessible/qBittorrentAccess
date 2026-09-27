@@ -332,7 +332,9 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
     connect(m_ui->actionMinimize, &QAction::triggered, this, &MainWindow::minimizeWindow);
     connect(m_ui->actionUseAlternativeSpeedLimits, &QAction::triggered, this, &MainWindow::toggleAlternativeSpeeds);
 
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    // qBittorrentAccess: on Windows, updates come from the ReaperAccessible Installer Manager,
+    // qBittorrent's own update check would offer qBittorrent's installer instead
+#if defined(Q_OS_MACOS)
     connect(m_ui->actionCheckForUpdates, &QAction::triggered, this, [this]() { checkProgramUpdate(true); });
 
     // trigger an early check on startup
@@ -477,7 +479,7 @@ MainWindow::MainWindow(IGUIApplication *app, const WindowState initialState, con
                 hide();
                 if (!pref->minimizeToTrayNotified())
                 {
-                    app->desktopIntegration()->showNotification(tr("qBittorrent is minimized to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
+                    app->desktopIntegration()->showNotification(tr("qBittorrentAccess is minimized to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
                     pref->setMinimizeToTrayNotified(true);
                 }
             }
@@ -602,7 +604,7 @@ void MainWindow::setTitleSuffix(const QString &suffix)
 {
     const auto emDash = QChar(0x2014);
     const QString separator = u' ' + emDash + u' ';
-    m_windowTitle = QStringLiteral("qBittorrent " QBT_VERSION)
+    m_windowTitle = QStringLiteral("qBittorrentAccess " QBTACCESS_VERSION)
         + (!suffix.isEmpty() ? (separator + suffix) : QString());
 
     refreshWindowTitle();
@@ -1235,7 +1237,7 @@ void MainWindow::notifyOfUpdate(const QString &)
 {
     // Show restart message
     m_statusBar->showRestartRequired();
-    LogMsg(tr("qBittorrent was just updated and needs to be restarted for the changes to be effective.")
+    LogMsg(tr("qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.")
                                    , Log::CRITICAL);
     // Delete the executable watcher
     delete m_executableWatcher;
@@ -1371,7 +1373,7 @@ void MainWindow::closeEvent(QCloseEvent *e)
         QMetaObject::invokeMethod(this, &QWidget::hide, Qt::QueuedConnection);
         if (!pref->closeToTrayNotified())
         {
-            app()->desktopIntegration()->showNotification(tr("qBittorrent is closed to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
+            app()->desktopIntegration()->showNotification(tr("qBittorrentAccess is closed to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
             pref->setCloseToTrayNotified(true);
         }
         return;
@@ -1389,9 +1391,9 @@ void MainWindow::closeEvent(QCloseEvent *e)
         {
             if (!isVisible())
                 show();
-            QMessageBox confirmBox(QMessageBox::Question, tr("Exiting qBittorrent"),
+            QMessageBox confirmBox(QMessageBox::Question, tr("Exiting qBittorrentAccess"),
                                    // Split it because the last sentence is used in the WebUI
-                                   tr("Some files are currently transferring.") + u'\n' + tr("Are you sure you want to quit qBittorrent?"),
+                                   tr("Some files are currently transferring.") + u'\n' + tr("Are you sure you want to quit qBittorrentAccess?"),
                                    QMessageBox::NoButton, this);
             QPushButton *noBtn = confirmBox.addButton(tr("&No"), QMessageBox::NoRole);
             confirmBox.addButton(tr("&Yes"), QMessageBox::YesRole);
@@ -1464,7 +1466,7 @@ bool MainWindow::event(QEvent *e)
                     QMetaObject::invokeMethod(this, &QWidget::hide, Qt::QueuedConnection);
                     if (!pref->minimizeToTrayNotified())
                     {
-                        app()->desktopIntegration()->showNotification(tr("qBittorrent is minimized to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
+                        app()->desktopIntegration()->showNotification(tr("qBittorrentAccess is minimized to tray"), tr("This behavior can be changed in the settings. You won't be reminded again."));
                         pref->setMinimizeToTrayNotified(true);
                     }
                     return true;
@@ -1632,7 +1634,7 @@ void MainWindow::loadPreferences()
     // Torrent properties
     m_propertiesWidget->reloadPreferences();
 
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#if defined(Q_OS_MACOS) // qBittorrentAccess: see the update check in the constructor
     if (pref->isUpdateCheckEnabled())
     {
         if (!m_programUpdateTimer)
@@ -1877,7 +1879,7 @@ void MainWindow::handleUpdateCheckFinished(ProgramUpdater *updater, const bool i
         const QString msg {tr("A new version is available.") + u"<br/>"
             + tr("Do you want to download %1?").arg(newVersion.toString()) + u"<br/><br/>"
             + u"<a href=\"https://www.qbittorrent.org/news\">%1</a>"_s.arg(tr("Open changelog..."))};
-        auto *msgBox = new QMessageBox {QMessageBox::Question, tr("qBittorrent Update Available"), msg
+        auto *msgBox = new QMessageBox {QMessageBox::Question, tr("qBittorrentAccess Update Available"), msg
             , (QMessageBox::Yes | QMessageBox::No), this};
         msgBox->setAttribute(Qt::WA_DeleteOnClose);
         msgBox->setAttribute(Qt::WA_ShowWithoutActivating);
@@ -1897,7 +1899,7 @@ void MainWindow::handleUpdateCheckFinished(ProgramUpdater *updater, const bool i
     {
         if (invokedByUser)
         {
-            auto *msgBox = new QMessageBox {QMessageBox::Information, u"qBittorrent"_s
+            auto *msgBox = new QMessageBox {QMessageBox::Information, u"qBittorrentAccess"_s
                 , tr("No updates available.\nYou are already using the latest version.")
                 , QMessageBox::Ok, this};
             msgBox->setAttribute(Qt::WA_DeleteOnClose);

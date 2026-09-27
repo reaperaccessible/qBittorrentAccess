@@ -48,7 +48,7 @@
 void showLegalNotice(const bool isInteractive)
 {
     const QString noticeTitle = QCoreApplication::translate("LegalNotice", "Legal Notice");
-    const QString noticeBody = QCoreApplication::translate("LegalNotice", "qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.");
+    const QString noticeBody = QCoreApplication::translate("LegalNotice", "qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.");
     const QString noticeEnd = QCoreApplication::translate("LegalNotice", "No further notices will be issued.");
 
     if (!isInteractive)

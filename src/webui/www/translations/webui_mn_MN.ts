@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>qBittorrent-г хаах</translation>
     </message>
     <message>
@@ -367,8 +367,8 @@
         <translation>Хадгалах</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent татагчид хандах боломжгүй байна</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess татагчид хандах боломжгүй байна</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>Татах хурдны ерөнхий хязгаар</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>qBittorrent-ийг хаахдаа итгэлтэй байна уу?</translation>
     </message>
     <message>
@@ -1371,8 +1371,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Хэсэг</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Хэсэг</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2239,7 +2239,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4036,7 +4036,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Нэр:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>qBittorrent-ийн тухай</translation>
     </message>
     <message>
@@ -4076,7 +4076,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -4875,7 +4875,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5163,7 +5163,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

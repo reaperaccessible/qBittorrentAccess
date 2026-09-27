@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent 정보</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess 정보</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 부분</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess 부분</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>텍스트를 창 제목에 추가하여 qBittorrent 인스턴스를 구별하는 데 도움을 줍니다</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>텍스트를 창 제목에 추가하여 qBittorrentAccess 인스턴스를 구별하는 데 도움을 줍니다</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,7 +1471,7 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
+        <source>Thank you for using qBittorrentAccess.</source>
         <translation>qBittorrent를 사용해 주셔서 감사합니다.</translation>
     </message>
     <message>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1이(가) 시작되었습니다. 프로세스 ID : %2</translation>
+        <translation>qBittorrentAccess %1이(가) 시작되었습니다. 프로세스 ID : %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,7 +1605,7 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
         <translation>qBittorrent를 제어하려면 다음에서 웹 UI에 접속: %1</translation>
     </message>
     <message>
@@ -1645,12 +1645,12 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>qBittorrent 종료가 시작되었습니다</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>qBittorrentAccess 종료가 시작되었습니다</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
+        <source>qBittorrentAccess is shutting down...</source>
         <translation>qBittorrent가 종료되고 있습니다...</translation>
     </message>
     <message>
@@ -1660,7 +1660,7 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
+        <source>qBittorrentAccess is now ready to exit</source>
         <translation>qBittorrent가 이제 종료할 준비가 되었습니다.</translation>
     </message>
 </context>
@@ -3644,7 +3644,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
         <translation>qBittorrent는 파일 공유 프로그램입니다. 토렌트를 실행하면 업로드를 통해 해당 데이터를 다른 사람이 사용할 수 있습니다. 당신이 공유하는 모든 콘텐츠는 전적으로 당신의 책임입니다.</translation>
     </message>
     <message>
@@ -3709,23 +3709,23 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
         <translation>qBittorrent에 복구할 수 없는 오류가 발생했습니다.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
         <translation>%1를 사용할 수 없습니다: qBittorrent가 이미 실행 중입니다.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>다른 qBittorrent 인스턴스가 이미 실행 중입니다.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>다른 qBittorrentAccess 인스턴스가 이미 실행 중입니다.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>예기치 못한 qBittorrent 인스턴스가 발견되었습니다. 이 인스턴스를 종료합니다. 현재 프로세스 ID: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>예기치 못한 qBittorrentAccess 인스턴스가 발견되었습니다. 이 인스턴스를 종료합니다. 현재 프로세스 ID: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>qBittorrent 잠금(&amp;O)</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>qBittorrentAccess 잠금(&amp;O)</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>qBittorrent 종료(&amp;E)</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess 종료(&amp;E)</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,7 +4082,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
+        <source>qBittorrentAccess is minimized to tray</source>
         <translation>알림 영역으로 최소화</translation>
     </message>
     <message>
@@ -4167,12 +4167,12 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
         <translation>qBittorrent가 방금 업데이트되었으며 변경 사항을 적용하려면 다시 시작해야 합니다.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
+        <source>qBittorrentAccess is closed to tray</source>
         <translation>종료하지 않고 알림 영역으로 최소화</translation>
     </message>
     <message>
@@ -4182,7 +4182,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>qBittorrent를 종료하시겠습니까?</translation>
     </message>
     <message>
@@ -4262,8 +4262,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>qBittorrent 업데이트 사용 가능</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>qBittorrentAccess 업데이트 사용 가능</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>qBittorrent 종료 중</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>qBittorrentAccess 종료 중</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Windows 시작 시 qBittorrent 시작</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Windows 시작 시 qBittorrentAccess 시작</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,7 +6111,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;qBittorrent를 .torrent 파일 및/또는 자석 링크에 대한 기본 프로그램으로 설정하려면 &lt;span style=&quot; font-weight:600;&quot;&gt;제어판&lt;/span&gt;에서 &lt;span style=&quot; font-weight:600;&quot;&gt;기본 프로그램&lt;/span&gt; 대화 상자를 사용할 수 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -6121,8 +6121,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>메뉴 표시줄에 qBittorrent 표시</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>메뉴 표시줄에 qBittorrentAccess 표시</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,7 +6606,7 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
+        <source>Minimize qBittorrentAccess to notification area</source>
         <translation>알림 영역으로 최소화</translation>
     </message>
     <message>
@@ -6679,7 +6679,7 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation>qBittorrent에서 콘텐츠 드래그</translation>
     </message>
     <message>
@@ -6700,13 +6700,13 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>.torrent 파일에 qBittorrent  사용</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>.torrent 파일에 qBittorrentAccess  사용</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>마그넷 링크에 qBittorrent 사용</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>마그넷 링크에 qBittorrentAccess 사용</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>알림 영역에 qBittorrent 아이콘 표시(&amp;Q)</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>알림 영역에 qBittorrentAccess 아이콘 표시(&amp;Q)</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,7 +6908,7 @@ DNS 재결합 공격을 방어하기 위해
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
         <translation>닫을 때 알림 영역으로 최소화</translation>
     </message>
@@ -7030,8 +7030,8 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>시작 시 qBittorrent 창 상태</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>시작 시 qBittorrentAccess 창 상태</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,7 +7758,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;를 필터링�
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation>API 키를 생성하시겠습니까? 이 키는 qBittorrent의 API와 상호 작용하는 데 사용할 수 있습니다.</translation>
     </message>
     <message>
@@ -7849,7 +7849,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;를 필터링�
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
         <translation>이 옵션이 활성화되면, qBittorrent는 .torrent 파일이 다운로드 대기열에 성공적으로 추가되거나(첫 번째 옵션) 추가되지 않았을 때(두 번째 옵션) 해당 파일을 &lt;strong&gt;삭제&lt;/strong&gt;합니다. 이 옵션은 &amp;ldquo;토렌트 추가&amp;rdquo; 메뉴를 통해 연 파일&lt;strong&gt;뿐만 아니라&lt;/strong&gt; &lt;strong&gt;파일 유형 연계&lt;/strong&gt;를 통해 연 파일에도 적용됩니다.</translation>
     </message>
     <message>
@@ -8358,7 +8358,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;를 필터링�
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>일부 플러그인은 qBittorrent에 포함되어 있기 때문에 제거할 수 없습니다. 직접 추가한 항목만 제거할 수 있습니다.
 해당 플러그인을 사용 중지합니다.</translation>
@@ -9948,7 +9948,7 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
+        <source>qBittorrentAccess will now exit.</source>
         <translation>qBittorrent가 지금 종료됩니다.</translation>
     </message>
     <message>
@@ -10353,7 +10353,7 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
+        <source>qBittorrentAccess needs to be restarted!</source>
         <translation>qBittorrent를 다시 시작해야 합니다!</translation>
     </message>
     <message>
@@ -10365,7 +10365,7 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
         <translation>오프라인입니다. 보통 qBittorrent가 들어오는 연결을 위해 선택한 포트를 수신 대기하지 못했을 수 있습니다.</translation>
     </message>
     <message>
@@ -13237,12 +13237,12 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
         <translation>모든 다운로드가 완료되었기 때문에 qBittorrent가 지금 컴퓨터의 전원을 끕니다.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation>모든 다운로드가 완료되었으므로 qBittorrent가 이제 컴퓨터를 재부팅합니다.</translation>
     </message>
     <message>

@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Zapri qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Zapri qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Shrani</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Odjemalec qBittorrent ni dosegljiv</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Odjemalec qBittorrentAccess ni dosegljiv</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Splošna omejitev hitrosti prejemanja</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Ali ste prepričani, da želite zapreti qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Ali ste prepričani, da želite zapreti qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Odstrani torrent in njegove datoteke</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent profil</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess profil</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,7 +2243,7 @@ Uporabi ';' da razčleniš vnose. Lahko uporbiš nadomestni znak '*'.</translati
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,7 +4040,7 @@ Uporabi ';' da razčleniš vnose. Lahko uporbiš nadomestni znak '*'.</translati
         <translation>Ime:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>O programu qBittorent</translation>
     </message>
     <message>
@@ -4080,8 +4080,8 @@ Uporabi ';' da razčleniš vnose. Lahko uporbiš nadomestni znak '*'.</translati
         <translation>qBittorrent Maskota</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikona</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess ikona</translation>
     </message>
 </context>
 <context>
@@ -4880,7 +4880,7 @@ Podprti formati: S01E01, 1x1, 2017.12.31 and 31.12.2017
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5168,7 +5168,7 @@ Podprti formati: S01E01, 1x1, 2017.12.31 and 31.12.2017
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

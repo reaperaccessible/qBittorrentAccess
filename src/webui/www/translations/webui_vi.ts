@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Thoát qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Thoát qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,7 +367,7 @@
         <translation>Lưu</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation>Ứng dụng khách QbittTorrent không thể truy cập được</translation>
     </message>
     <message>
@@ -459,8 +459,8 @@
         <translation>Ví dụ thiết lập proxy ngược</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Không thể liên hệ với qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Không thể liên hệ với qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Bộ nhớ vượt trội khi kiểm tra torrent phải lớn hơn 0 và nhỏ hơn 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Không thể tải tùy chọn chương trình, qBittorrent có thể không truy cập được.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Không thể tải tùy chọn chương trình, qBittorrentAccess có thể không truy cập được.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>DSCP ngang hàng phải nằm trong khoảng từ 0 đến 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Không thể lưu cài đặt, có thể do qBittorrent không thể truy cập được.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Không thể lưu cài đặt, có thể do qBittorrentAccess không thể truy cập được.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Giới Hạn Tốc Độ Tải Xuống Chung</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Bạn có chắc muốn thoát qBittorrent không?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Bạn có chắc muốn thoát qBittorrentAccess không?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Xóa torrent và các tệp của nó</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Phần qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Phần qBittorrentAccess</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <translation>Mật độ hiển thị:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Nó thêm chữ vào tiêu đề cửa sổ để giúp phân biệt các tiến trình qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Nó thêm chữ vào tiêu đề cửa sổ để giúp phân biệt các tiến trình qBittorrentAccess</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <translation>Tên:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Thông tin qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Thông tin qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Sử dụng ';' để chia nhiều mục nhập. Có thể sử dụng ký tự 
         <translation>Linh Vật qBittorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>biểu tượng qBittorrent</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>biểu tượng qBittorrentAccess</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Hỗ trợ định dạng: S01E01, 1x1, 2017.12.31 và 31.12.2017 (Hỗ trợ đ
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Hỗ trợ định dạng: S01E01, 1x1, 2017.12.31 và 31.12.2017 (Hỗ trợ đ
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Tạo khóa API? Khóa này có thể được sử dụng để tương tác với API của qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Tạo khóa API? Khóa này có thể được sử dụng để tương tác với API của qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Ukončiť qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Ukončiť qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Uložiť</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Klient qBittorrent nie je dostupný</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Klient qBittorrentAccess nie je dostupný</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Príklady nastavenia reverznej proxy</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Nepodarilo sa pripojiť na qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Nepodarilo sa pripojiť na qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nepodarilo sa načítať nastavenia programu, qBittorrent je pravdepodobne nedostupný.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nepodarilo sa načítať nastavenia programu, qBittorrentAccess je pravdepodobne nedostupný.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nepodarilo sa uložiť nastavenia, qBittorrent je pravdepodobne nedostupný.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nepodarilo sa uložiť nastavenia, qBittorrentAccess je pravdepodobne nedostupný.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Globálne rýchlostné obmedzenie sťahovania</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Ste si istý, že chcete ukončiť qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Ste si istý, že chcete ukončiť qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Zmazať torrent a jeho súbory</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>Sekcia qBittorent</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <translation>Hustota zobrazenia:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>Pridá text do záhlavia okna, kvôli rozlíšeniu jednotlivých inštancií qBittorrentu</translation>
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <translation>Meno:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>O qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ Použite ';' pre oddelenie viacerých položiek. Môžete použiť masku '*'.</t
         <translation>qBittorrent maskot</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>Ikona qBittorrentu</translation>
     </message>
 </context>
@@ -4879,8 +4879,8 @@ Podporuje formáty: S01E01, 1x1, 2017.12.31 a 31.12.2017 (podporuje aj formáty 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5170,8 +5170,8 @@ Podporuje formáty: S01E01, 1x1, 2017.12.31 a 31.12.2017 (podporuje aj formáty 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Vygenerovať API kľúč? Tento kľúč bude možné použiť na komunikáciu s qBittorrent API.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Vygenerovať API kľúč? Tento kľúč bude možné použiť na komunikáciu s qBittorrentAccess API.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

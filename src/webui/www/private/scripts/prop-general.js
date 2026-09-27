@@ -108,7 +108,7 @@ window.qBittorrent.PropGeneral ??= (() => {
             })
             .then(async (response) => {
                 if (!response.ok) {
-                    document.getElementById("error_div").textContent = "QBT_TR(qBittorrent client is not reachable)QBT_TR[CONTEXT=HttpServer]";
+                    document.getElementById("error_div").textContent = "QBT_TR(qBittorrentAccess client is not reachable)QBT_TR[CONTEXT=HttpServer]";
                     clearTimeout(loadTorrentDataTimer);
                     loadTorrentDataTimer = loadTorrentData.delay(10000);
                     return;
@@ -259,7 +259,7 @@ window.qBittorrent.PropGeneral ??= (() => {
             }, (error) => {
                 console.error(error);
 
-                document.getElementById("error_div").textContent = "QBT_TR(qBittorrent client is not reachable)QBT_TR[CONTEXT=HttpServer]";
+                document.getElementById("error_div").textContent = "QBT_TR(qBittorrentAccess client is not reachable)QBT_TR[CONTEXT=HttpServer]";
                 clearTimeout(loadTorrentDataTimer);
                 loadTorrentDataTimer = loadTorrentData.delay(10000);
             });
@@ -274,7 +274,7 @@ window.qBittorrent.PropGeneral ??= (() => {
             })
             .then(async (response) => {
                 if (!response.ok) {
-                    document.getElementById("error_div").textContent = "QBT_TR(qBittorrent client is not reachable)QBT_TR[CONTEXT=HttpServer]";
+                    document.getElementById("error_div").textContent = "QBT_TR(qBittorrentAccess client is not reachable)QBT_TR[CONTEXT=HttpServer]";
                     clearTimeout(loadTorrentDataTimer);
                     loadTorrentDataTimer = loadTorrentData.delay(10000);
                     return;
@@ -293,7 +293,7 @@ window.qBittorrent.PropGeneral ??= (() => {
             }, (error) => {
                 console.error(error);
 
-                document.getElementById("error_div").textContent = "QBT_TR(qBittorrent client is not reachable)QBT_TR[CONTEXT=HttpServer]";
+                document.getElementById("error_div").textContent = "QBT_TR(qBittorrentAccess client is not reachable)QBT_TR[CONTEXT=HttpServer]";
                 clearTimeout(loadTorrentDataTimer);
                 loadTorrentDataTimer = loadTorrentData.delay(10000);
             });

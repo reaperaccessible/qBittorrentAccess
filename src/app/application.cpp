@@ -91,6 +91,7 @@
 #include "base/version.h"
 #include "applicationinstancemanager.h"
 #include "filelogger.h"
+#include "profileimport.h"
 #include "upgrade.h"
 
 #ifndef DISABLE_GUI
@@ -272,7 +273,7 @@ Application::Application(int &argc, char **argv)
     qRegisterMetaType<Log::Msg>("Log::Msg");
     qRegisterMetaType<Log::Peer>("Log::Peer");
 
-    setApplicationName(u"qBittorrent"_s);
+    setApplicationName(u"qBittorrentAccess"_s);
     setOrganizationDomain(u"qbittorrent.org"_s);
 #if !defined(DISABLE_GUI)
     setDesktopFileName(u"org.qbittorrent.qBittorrent"_s);
@@ -288,6 +289,9 @@ Application::Application(int &argc, char **argv)
     const auto portableProfilePath = Path(QCoreApplication::applicationDirPath()) / DEFAULT_PORTABLE_MODE_PROFILE_DIR;
     const bool portableModeEnabled = m_commandLineArgs.profileDir.isEmpty() && Utils::Fs::isDir(portableProfilePath);
     const Path profileDir = portableModeEnabled ? portableProfilePath : m_commandLineArgs.profileDir;
+    // qBittorrentAccess: first launch, take over the torrents and settings of qBittorrent (a copy)
+    const QString importedFrom = profileDir.isEmpty()
+        ? ProfileImport::importFromQBittorrent(m_commandLineArgs.configurationName) : QString();
     Profile::initInstance(profileDir, m_commandLineArgs.configurationName,
                         (m_commandLineArgs.relativeFastresumePaths || portableModeEnabled));
 
@@ -317,8 +321,10 @@ Application::Application(int &argc, char **argv)
     connect(this, &QGuiApplication::commitDataRequest, this, &Application::shutdownCleanup, Qt::DirectConnection);
 #endif
 
-    LogMsg(tr("qBittorrent %1 started. Process ID: %2", "qBittorrent v3.2.0alpha started")
-        .arg(QStringLiteral(QBT_VERSION), QString::number(QCoreApplication::applicationPid())));
+    LogMsg(tr("qBittorrentAccess %1 started. Process ID: %2", "qBittorrent v3.2.0alpha started")
+        .arg(QStringLiteral(QBTACCESS_VERSION), QString::number(QCoreApplication::applicationPid())));
+    if (!importedFrom.isEmpty())
+        LogMsg(tr("Torrents and settings imported from qBittorrent: %1").arg(Path(importedFrom).toString()));
     if (portableModeEnabled)
     {
         LogMsg(tr("Running in portable mode. Auto detected profile folder at: %1").arg(profileDir.toString()));
@@ -705,7 +711,7 @@ void Application::sendNotificationEmail(const BitTorrent::Torrent *torrent)
         + tr("Save path: %1").arg(torrent->savePath().toString()) + u"\n\n"
         + tr("The torrent was downloaded in %1.", "The torrent was downloaded in 1 hour and 20 seconds")
             .arg(Utils::Misc::userFriendlyDuration(torrent->activeTime())) + u"\n\n\n"
-        + tr("Thank you for using qBittorrent.") + u'\n';
+        + tr("Thank you for using qBittorrentAccess.") + u'\n';
 
     // Send the notification email
     const Preferences *pref = Preferences::instance();
@@ -723,7 +729,7 @@ void Application::sendTestEmail() const
     {
         // Prepare mail content
         const QString content = tr("This is a test email.") + u'\n'
-            + tr("Thank you for using qBittorrent.") + u'\n';
+            + tr("Thank you for using qBittorrentAccess.") + u'\n';
 
         // Send the notification email
         auto *smtp = new Net::Smtp();
@@ -988,7 +994,7 @@ int Application::exec()
             const QString url = u"%1://%2:%3"_s.arg((m_webui->isHttps() ? u"https"_s : u"http"_s)
                     , (address.isEqual(QHostAddress::Any, QHostAddress::ConvertUnspecifiedAddress) ? u"localhost"_s : address.toString())
                     , QString::number(m_webui->port()));
-            printf("%s\n", qUtf8Printable(tr("To control qBittorrent, access the WebUI at: %1").arg(url)));
+            printf("%s\n", qUtf8Printable(tr("To control qBittorrentAccess, access the WebUI at: %1").arg(url)));
 
             if (!tempPassword.isEmpty())
             {
@@ -1362,13 +1368,13 @@ void Application::cleanup()
     if (m_isCleanupRun.exchange(true, std::memory_order_acquire))
         return;
 
-    LogMsg(tr("qBittorrent termination initiated"));
+    LogMsg(tr("qBittorrentAccess termination initiated"));
 
 #ifndef DISABLE_GUI
     if (m_desktopIntegration)
     {
         m_desktopIntegration->disconnect();
-        m_desktopIntegration->setToolTip(tr("qBittorrent is shutting down..."));
+        m_desktopIntegration->setToolTip(tr("qBittorrentAccess is shutting down..."));
         if (m_desktopIntegration->menu())
             m_desktopIntegration->menu()->setEnabled(false);
     }
@@ -1433,7 +1439,7 @@ void Application::cleanup()
     SearchPluginManager::freeInstance();
     Utils::Fs::removeDirRecursively(Utils::Fs::tempPath());
 
-    LogMsg(tr("qBittorrent is now ready to exit"));
+    LogMsg(tr("qBittorrentAccess is now ready to exit"));
     Logger::freeInstance();
     delete m_fileLogger;
 

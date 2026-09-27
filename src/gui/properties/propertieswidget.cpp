@@ -709,7 +709,7 @@ void PropertiesWidget::askWebSeed()
     qDebug("Adding %s web seed", qUtf8Printable(urlSeed));
     if (!m_ui->listWebSeeds->findItems(urlSeed, Qt::MatchFixedString).empty())
     {
-        QMessageBox::warning(this, u"qBittorrent"_s, tr("This web seed is already in the list."), QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, tr("This web seed is already in the list."), QMessageBox::Ok);
         return;
     }
     if (m_torrent)
@@ -761,7 +761,7 @@ void PropertiesWidget::editWebSeed()
 
     if (!m_ui->listWebSeeds->findItems(newSeed, Qt::MatchFixedString).empty())
     {
-        QMessageBox::warning(this, u"qBittorrent"_s,
+        QMessageBox::warning(this, u"qBittorrentAccess"_s,
                              tr("This web seed is already in the list."),
                              QMessageBox::Ok);
         return;

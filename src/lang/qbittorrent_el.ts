@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>Σχετικά με το qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Σχετικά με το qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>Ενότητα qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Ενότητα qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Σας ευχαριστούμε που χρησιμοποιείτε το qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Σας ευχαριστούμε που χρησιμοποιείτε το qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>Το qBittorrent %1 ξεκίνησε. ID διεργασίας: %2</translation>
+        <translation>Το qBittorrentAccess %1 ξεκίνησε. ID διεργασίας: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>Για τον έλεγχο του qBittorrent, αποκτήστε πρόσβαση στο WebUI στη : %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>Για τον έλεγχο του qBittorrentAccess, αποκτήστε πρόσβαση στο WebUI στη : %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>Ξεκίνησε ο τερματισμός του qBittorrent</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>Ξεκίνησε ο τερματισμός του qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>Το qBittorrent τερματίζεται...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>Το qBittorrentAccess τερματίζεται...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>Το qBittorrent είναι έτοιμο να πραγματοποιήσει έξοδο</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>Το qBittorrentAccess είναι έτοιμο να πραγματοποιήσει έξοδο</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>Το qBittorrent είναι ένα πρόγραμμα κοινής χρήσης αρχείων. Όταν εκτελείτε ένα torrent, τα δεδομένα του θα είναι διαθέσιμα σε άλλους μέσω αποστολής. Οποιοδήποτε περιεχόμενο μοιράζεστε είναι αποκλειστικά δική σας ευθύνη.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>Το qBittorrentAccess είναι ένα πρόγραμμα κοινής χρήσης αρχείων. Όταν εκτελείτε ένα torrent, τα δεδομένα του θα είναι διαθέσιμα σε άλλους μέσω αποστολής. Οποιοδήποτε περιεχόμενο μοιράζεστε είναι αποκλειστικά δική σας ευθύνη.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>Το qBittorrent αντιμετώπισε ένα μη ανακτήσιμο σφάλμα.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>Το qBittorrentAccess αντιμετώπισε ένα μη ανακτήσιμο σφάλμα.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Δεν μπορείτε να χρησιμοποιήσετε το %1: το qBittorrent εκτελείται ήδη.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Δεν μπορείτε να χρησιμοποιήσετε το %1: το qBittorrentAccess εκτελείται ήδη.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Μια άλλη υπόσταση του qBittorrent εκτελείται ήδη.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Μια άλλη υπόσταση του qBittorrentAccess εκτελείται ήδη.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Βρέθηκε απροσδόκητη υπόσταση qBittorrent. Γίνεται έξοδος από αυτήν την υπόσταση. Αναγνωριστικό τρέχουσας διεργασίας: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Βρέθηκε απροσδόκητη υπόσταση qBittorrentAccess. Γίνεται έξοδος από αυτήν την υπόσταση. Αναγνωριστικό τρέχουσας διεργασίας: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>&amp;Κλείδωμα qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>&amp;Κλείδωμα qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>Έ&amp;ξοδος qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>Έ&amp;ξοδος qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>Το qBittorrent ελαχιστοποιήθηκε στη γραμμή εργασιών</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>Το qBittorrentAccess ελαχιστοποιήθηκε στη γραμμή εργασιών</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>Το qBittorrent μόλις ενημερώθηκε και χρειάζεται επανεκκίνηση για να ισχύσουν οι αλλαγές.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>Το qBittorrentAccess μόλις ενημερώθηκε και χρειάζεται επανεκκίνηση για να ισχύσουν οι αλλαγές.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>Το qBittorrent έκλεισε στη γραμμή εργασιών</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>Το qBittorrentAccess έκλεισε στη γραμμή εργασιών</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Είστε σίγουροι ότι θέλετε να κλείσετε το qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Είστε σίγουροι ότι θέλετε να κλείσετε το qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4261,8 +4261,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Διαθέσιμη Ενημέρωση του qBittorrent </translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Διαθέσιμη Ενημέρωση του qBittorrentAccess </translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4415,8 +4415,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>Γίνεται έξοδος του qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>Γίνεται έξοδος του qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6090,8 +6090,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Έναρξη του qBittorrent κατά την εκκίνηση των Windows</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Έναρξη του qBittorrentAccess κατά την εκκίνηση των Windows</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6110,8 +6110,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Για να ορίσετε το qBittorrent ως προεπιλεγμένο πρόγραμμα για αρχεία .torrent ή/και συνδέσμους Magnet&lt;br/&gt;μπορείτε να αλλάξετε τα&lt;span style=&quot; font-weight:600;&quot;&gt;Προεπιλεγμένα προγράμματα&lt;/span&gt; από τον &lt;span style=&quot; font-weight:600;&quot;&gt;Πίνακα ελέγχου&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Για να ορίσετε το qBittorrentAccess ως προεπιλεγμένο πρόγραμμα για αρχεία .torrent ή/και συνδέσμους Magnet&lt;br/&gt;μπορείτε να αλλάξετε τα&lt;span style=&quot; font-weight:600;&quot;&gt;Προεπιλεγμένα προγράμματα&lt;/span&gt; από τον &lt;span style=&quot; font-weight:600;&quot;&gt;Πίνακα ελέγχου&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6120,7 +6120,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
+        <source>Show qBittorrentAccess in menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6605,8 +6605,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Ελαχιστοποίηση του qBittorrent στην περιοχή ειδοποιήσεων</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Ελαχιστοποίηση του qBittorrentAccess στην περιοχή ειδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6678,7 +6678,7 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6699,13 +6699,13 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Χρήση qBittorrent για τα αρχεία torrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Χρήση qBittorrentAccess για τα αρχεία torrent</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Χρήση του qBittorrent για συνδέσμους magnet</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Χρήση του qBittorrentAccess για συνδέσμους magnet</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6841,8 +6841,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Εμφάνιση του &amp;qBittorrent στην περιοχή ειδοποιήσεων</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Εμφάνιση του &amp;qBittorrentAccess στην περιοχή ειδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6907,9 +6907,9 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Κλείσιμο του qBittorrent στην περιοχή ειδοποιήσεων</translation>
+        <translation>Κλείσιμο του qBittorrentAccess στην περιοχή ειδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7029,8 +7029,8 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>Κατάσταση παραθύρου qBittorrent κατά την εκκίνηση</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>Κατάσταση παραθύρου qBittorrentAccess κατά την εκκίνηση</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7757,7 +7757,7 @@ readme[0-9].txt: φίλτρο για «readme1.txt», «readme2.txt» αλλά �
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7848,7 +7848,7 @@ readme[0-9].txt: φίλτρο για «readme1.txt», «readme2.txt» αλλά �
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
         <translation>Όταν αυτές οι επιλογές είναι ενεργοποιημένες, το qBittorent θα &lt;strong&gt;διαγράψει&lt;/strong&gt; τα αρχεία .torrent μετά την επιτυχή προσθήκη τους (η πρώτη επιλογή) ή όχι (η δεύτερη επιλογή) στην ουρά λήψεών του. Αυτό θα εφαρμοστεί &lt;strong&gt;όχι μόνο&lt;/strong&gt; σε αρχεία που ανοίχτηκαν μέσω της ενέργειας του μενού «Προσθήκη αρχείου torrent» αλλά και σε αυτά που ανοίχτηκαν μέσω &lt;strong&gt;συσχέτισης τύπου αρχείων&lt;/strong&gt;</translation>
     </message>
     <message>
@@ -8357,9 +8357,9 @@ readme[0-9].txt: φίλτρο για «readme1.txt», «readme2.txt» αλλά �
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Μερικές προσθήκες δεν μπόρεσαν να απεγκατασταθούν γιατί συμπεριλαμβάνονται στο qBittorrent. Μόνο αυτές που προσθέσατε μόνοι σας μπορούν να απεγκατασταθούν.
+        <translation>Μερικές προσθήκες δεν μπόρεσαν να απεγκατασταθούν γιατί συμπεριλαμβάνονται στο qBittorrentAccess. Μόνο αυτές που προσθέσατε μόνοι σας μπορούν να απεγκατασταθούν.
 Αυτές οι προσθήκες απενεργοποιήθηκαν.</translation>
     </message>
     <message>
@@ -9944,8 +9944,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>Το qBittorrent θα πραγματοποιήσει έξοδο τώρα.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>Το qBittorrentAccess θα πραγματοποιήσει έξοδο τώρα.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10349,8 +10349,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>Το qBittorrent χρειάζεται επανεκκίνηση!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>Το qBittorrentAccess χρειάζεται επανεκκίνηση!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10361,8 +10361,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Εκτός σύνδεσης. Αυτό συνήθως σημαίνει ότι το qBittorrent απέτυχε να λειτουργήσει στην επιλεγμένη θύρα για εισερχόμενες συνδέσεις.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Εκτός σύνδεσης. Αυτό συνήθως σημαίνει ότι το qBittorrentAccess απέτυχε να λειτουργήσει στην επιλεγμένη θύρα για εισερχόμενες συνδέσεις.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13233,12 +13233,12 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>Το qBittorrent θα απενεργοποιήσει τον υπολογιστή τώρα καθώς έχουν ολοκληρωθεί όλες οι λήψεις.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>Το qBittorrentAccess θα απενεργοποιήσει τον υπολογιστή τώρα καθώς έχουν ολοκληρωθεί όλες οι λήψεις.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

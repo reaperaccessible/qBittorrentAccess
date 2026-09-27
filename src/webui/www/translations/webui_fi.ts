@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Lopeta qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Lopeta qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Tallenna</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent ei vastaa</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess ei vastaa</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation>Käänteisen välityspalvelimen määritysesimerkkejä</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation>qBittorrentiin ei saatu yhteyttä</translation>
     </message>
     <message>
@@ -555,8 +555,8 @@
         <translation>Outstanding muisti when tarkistus torrents täytyy olla suurempi kuin 0 and pienempi kuin 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Toimintoa ei voitu suorittaa: load program preferences, qBittorrent is probably unreachable.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Toimintoa ei voitu suorittaa: load program preferences, qBittorrentAccess is probably unreachable.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>vertainen DSCP täytyy olla välillä 0 and 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Toimintoa ei voitu suorittaa: save preferences, qBittorrent is probably unreachable.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Toimintoa ei voitu suorittaa: save preferences, qBittorrentAccess is probably unreachable.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,7 +658,7 @@
         <translation>Yleinen latausnopeusrajoitus</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>Haluatko varmasti lopettaa qBittorrentin?</translation>
     </message>
     <message>
@@ -1371,7 +1371,7 @@
         <translation>Poista torrent ja sen tiedostot</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorrentin asetukset</translation>
     </message>
     <message>
@@ -2243,8 +2243,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <translation>Näyttötiheys:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>It appends the text to the window title to help distinguish qBittorrent instances</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>It appends the text to the window title to help distinguish qBittorrentAccess instances</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,7 +4040,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <translation>Nimi:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>Tietoa qBittorrentista</translation>
     </message>
     <message>
@@ -4080,7 +4080,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</translation>
         <translation>qBittorrent-maskotti</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>qBittorrent-kuvake</translation>
     </message>
 </context>
@@ -4879,7 +4879,7 @@ Nämä muodot ovat tuetut: S01E01, 1x1, 2017.12.31 ja 31.12.2017 (päiväysmuodo
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation>qBittorrentin WebUI</translation>
     </message>
     <message>
@@ -5172,7 +5172,7 @@ Nämä muodot ovat tuetut: S01E01, 1x1, 2017.12.31 ja 31.12.2017 (päiväysmuodo
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation>Luodaanko API-avain? Tätä avainta voidaan käyttää qBittorrentin API-rajapinnan käyttämiseen.</translation>
     </message>
     <message>

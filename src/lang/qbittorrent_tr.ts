@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent Hakkında</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess Hakkında</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Bölümü</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Bölümü</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>qBittorrent örneklerini ayırt etmeye yardımcı olmak için metni pencere başlığına ekler</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>qBittorrentAccess örneklerini ayırt etmeye yardımcı olmak için metni pencere başlığına ekler</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>qBittorrent&apos;i kullandığınız için teşekkür ederiz.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>qBittorrentAccess&apos;i kullandığınız için teşekkür ederiz.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 başladı. İşlem kimliği: %2</translation>
+        <translation>qBittorrentAccess %1 başladı. İşlem kimliği: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>qBittorrent&apos;i denetlemek için şu Web Arayüzü adresine erişin: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>qBittorrentAccess&apos;i denetlemek için şu Web Arayüzü adresine erişin: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>qBittorrent sonlandırması başlatıldı</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>qBittorrentAccess sonlandırması başlatıldı</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent kapatılıyor...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess kapatılıyor...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent artık çıkmaya hazır</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess artık çıkmaya hazır</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent bir dosya paylaşım programıdır. Bir torrent çalıştırdığınızda, veriler gönderme yoluyla başkalarının kullanımına sunulacaktır. Paylaştığınız herhangi bir içerik tamamen sizin sorumluluğunuzdadır.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess bir dosya paylaşım programıdır. Bir torrent çalıştırdığınızda, veriler gönderme yoluyla başkalarının kullanımına sunulacaktır. Paylaştığınız herhangi bir içerik tamamen sizin sorumluluğunuzdadır.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent kurtarılamaz bir hatayla karşılaştı.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess kurtarılamaz bir hatayla karşılaştı.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>%1&apos;i kullanamazsınız: qBittorrent zaten çalışıyor.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>%1&apos;i kullanamazsınız: qBittorrentAccess zaten çalışıyor.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Başka bir qBittorrent örneği zaten çalışıyor.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Başka bir qBittorrentAccess örneği zaten çalışıyor.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Beklenmeyen qBittorrent örneği bulundu. Bu örnekten çıkılıyor. Şu anki işlem kimliği: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Beklenmeyen qBittorrentAccess örneği bulundu. Bu örnekten çıkılıyor. Şu anki işlem kimliği: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>qBittorrent&apos;i Kili&amp;tle</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>qBittorrentAccess&apos;i Kili&amp;tle</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>qBittorrent&apos;ten Çı&amp;k</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess&apos;ten Çı&amp;k</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent tepsiye simge durumuna küçültüldü</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess tepsiye simge durumuna küçültüldü</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent henüz güncellendi ve değişikliklerin etkili olması için yeniden başlatılması gerek.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess henüz güncellendi ve değişikliklerin etkili olması için yeniden başlatılması gerek.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent tepsiye kapatıldı</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess tepsiye kapatıldı</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent&apos;ten çıkmak istediğinize emin misiniz?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>qBittorrentAccess&apos;ten çıkmak istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Lütfen el ile yükleyin.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>qBittorrent Güncellemesi Mevcut</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>qBittorrentAccess Güncellemesi Mevcut</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ En düşük gereksinim: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>qBittorrent&apos;ten çıkılıyor</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>qBittorrentAccess&apos;ten çıkılıyor</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ En düşük gereksinim: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Windows başlangıcında qBittorrent&apos;i başlat</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Windows başlangıcında qBittorrentAccess&apos;i başlat</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ En düşük gereksinim: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;qBittorrent&apos;i .torrent dosyaları ve/veya Magnet bağlantıları için varsayılan program&lt;br/&gt;olarak ayarlamak amacıyla &lt;span style=&quot; font-weight:600;&quot;&gt;Denetim Masası&lt;/span&gt;&apos;ndaki &lt;span style=&quot; font-weight:600;&quot;&gt;Varsayılan Programlar&lt;/span&gt; ileti öğesini kullanabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;qBittorrentAccess&apos;i .torrent dosyaları ve/veya Magnet bağlantıları için varsayılan program&lt;br/&gt;olarak ayarlamak amacıyla &lt;span style=&quot; font-weight:600;&quot;&gt;Denetim Masası&lt;/span&gt;&apos;ndaki &lt;span style=&quot; font-weight:600;&quot;&gt;Varsayılan Programlar&lt;/span&gt; ileti öğesini kullanabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,8 +6121,8 @@ En düşük gereksinim: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>Menü çubuğunda qBittorrent&apos;i göster</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>Menü çubuğunda qBittorrentAccess&apos;i göster</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,8 +6606,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>qBittorrent&apos;i bildirim alanına küçült</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>qBittorrentAccess&apos;i bildirim alanına küçült</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,8 +6679,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
-        <translation>İçeriği qBittorrent&apos;ten sürükle</translation>
+        <source>Drag content from qBittorrentAccess</source>
+        <translation>İçeriği qBittorrentAccess&apos;ten sürükle</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="605"/>
@@ -6700,13 +6700,13 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>.torrent dosyaları için qBittorrent&apos;i kullan</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>.torrent dosyaları için qBittorrentAccess&apos;i kullan</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Magnet bağlantıları için qBittorrent&apos;i kullan</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Magnet bağlantıları için qBittorrentAccess&apos;i kullan</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>&amp;qBittorrent&apos;i bildirim alanında göster</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>&amp;qBittorrentAccess&apos;i bildirim alanında göster</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>qBittorrent&apos;i bildirim alanına kapat</translation>
+        <translation>qBittorrentAccess&apos;i bildirim alanına kapat</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Elle: Çeşitli torrent özellikleri (örn. kaydetme yolu) el ile atanmak zorund
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>Başlangıçta qBittorrent pencere durumu</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>Başlangıçta qBittorrentAccess pencere durumu</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,8 +7758,8 @@ benioku[0-9].txt: &apos;benioku1.txt&apos;, &apos;benioku2.txt&apos; dosyasını
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation>API anahtarı oluşturulsun mu? Bu anahtar, qBittorrent&apos;in API&apos;si ile etkileşimde bulunmak için kullanılabilir.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation>API anahtarı oluşturulsun mu? Bu anahtar, qBittorrentAccess&apos;in API&apos;si ile etkileşimde bulunmak için kullanılabilir.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7849,8 +7849,8 @@ benioku[0-9].txt: &apos;benioku1.txt&apos;, &apos;benioku2.txt&apos; dosyasını
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Bu seçenekler etkinleştirildiğinde, dosyalar başarılı olarak indirme kuyruğuna eklendikten (ilk seçenek) ya da eklenmedikten (ikinci seçenek) sonra qBittorrent .torrent dosyalarını &lt;strong&gt;silecek&lt;/strong&gt;. Bu, sadece &amp;ldquo;Torrent ekle&amp;rdquo; menüsü eylemi aracılığıyla açılan dosyalara &lt;strong&gt;değil&lt;/strong&gt; ayrıca &lt;strong&gt;dosya türü ilişkilendirmesi&lt;/strong&gt; aracılığıyla açılanlara da uygulanacaktır</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Bu seçenekler etkinleştirildiğinde, dosyalar başarılı olarak indirme kuyruğuna eklendikten (ilk seçenek) ya da eklenmedikten (ikinci seçenek) sonra qBittorrentAccess .torrent dosyalarını &lt;strong&gt;silecek&lt;/strong&gt;. Bu, sadece &amp;ldquo;Torrent ekle&amp;rdquo; menüsü eylemi aracılığıyla açılan dosyalara &lt;strong&gt;değil&lt;/strong&gt; ayrıca &lt;strong&gt;dosya türü ilişkilendirmesi&lt;/strong&gt; aracılığıyla açılanlara da uygulanacaktır</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8358,9 +8358,9 @@ benioku[0-9].txt: &apos;benioku1.txt&apos;, &apos;benioku2.txt&apos; dosyasını
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Bazı eklentiler kaldırılamadı çünkü bunlar qBittorrent&apos;e dahil edilmiş durumda. Sadece kendi ekledikleriniz kaldırılabilir.
+        <translation>Bazı eklentiler kaldırılamadı çünkü bunlar qBittorrentAccess&apos;e dahil edilmiş durumda. Sadece kendi ekledikleriniz kaldırılabilir.
 Bu eklentiler etkisizleştirildi.</translation>
     </message>
     <message>
@@ -9948,8 +9948,8 @@ Bazılarını yüklemek için pencerenin sağ altındaki &quot;Arama eklentileri
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent&apos;ten şimdi çıkılacak.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess&apos;ten şimdi çıkılacak.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10353,8 +10353,8 @@ Bazılarını yüklemek için pencerenin sağ altındaki &quot;Arama eklentileri
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent&apos;in yeniden başlatılması gerek!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess&apos;in yeniden başlatılması gerek!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10365,8 +10365,8 @@ Bazılarını yüklemek için pencerenin sağ altındaki &quot;Arama eklentileri
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Çevrimdışı. Bu genellikle qBittorrent&apos;in gelen bağlantılar için seçilen bağlantı noktasını dinlemede başarısız olduğu anlamına gelir.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Çevrimdışı. Bu genellikle qBittorrentAccess&apos;in gelen bağlantılar için seçilen bağlantı noktasını dinlemede başarısız olduğu anlamına gelir.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13237,13 +13237,13 @@ Lütfen farklı bir isim seçin ve tekrar deneyin.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>qBittorrent bilgisayarı şimdi kapatacak çünkü tüm indirmeler tamamlandı.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess bilgisayarı şimdi kapatacak çünkü tüm indirmeler tamamlandı.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent, tüm indirmeler tamamlandığından bilgisayarı şimdi yeniden başlatacak.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess, tüm indirmeler tamamlandığından bilgisayarı şimdi yeniden başlatacak.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

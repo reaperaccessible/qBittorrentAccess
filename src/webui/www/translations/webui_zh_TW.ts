@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>結束 qbittorrent</translation>
     </message>
     <message>
@@ -367,8 +367,8 @@
         <translation>儲存</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>無法連線到 qBittorrent 用戶端</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>無法連線到 qBittorrentAccess 用戶端</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>反向代理設定範例</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>無法聯絡 qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>無法聯絡 qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>檢查 torrent 時的可用記憶體必須大於 0 且小於 1024。</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>無法載入程式偏好設定，可能無法連線至 qBittorrent。</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>無法載入程式偏好設定，可能無法連線至 qBittorrentAccess。</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>對等 DSCP 必須介於 0 至 255 之間。</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>無法儲存偏好設定。qBittorrent 可能無法存取。</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>無法儲存偏好設定。qBittorrentAccess 可能無法存取。</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>全域下載速率限制</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>您確定要退出 qBittorrent 嗎？</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>您確定要退出 qBittorrentAccess 嗎？</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>移除 torrent 與其檔案</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 小節</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess 小節</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>顯示密度：</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>其將文字附加到視窗標題以協助區分 qBittorrent 實體</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>其將文字附加到視窗標題以協助區分 qBittorrentAccess 實體</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>名稱：</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>關於 qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>關於 qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>qBittorrent 吉祥物</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent 圖示</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess 圖示</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>產生 API 金鑰？這把金鑰可用於與 qBittorrent 的 API 互動。</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>產生 API 金鑰？這把金鑰可用於與 qBittorrentAccess 的 API 互動。</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

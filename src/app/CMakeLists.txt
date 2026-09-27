@@ -39,6 +39,7 @@ target_sources(qbt_app PRIVATE
     cmdoptions.h
     filelogger.h
     legalnotice.h
+    profileimport.h
     qtlocalpeer/qtlocalpeer.h
     signalhandler.h
     upgrade.h
@@ -50,6 +51,7 @@ target_sources(qbt_app PRIVATE
     filelogger.cpp
     legalnotice.cpp
     main.cpp
+    profileimport.cpp
     qtlocalpeer/qtlocalpeer.cpp
     signalhandler.cpp
     upgrade.cpp
@@ -67,7 +69,7 @@ target_link_libraries(qbt_app PRIVATE
 
 set_target_properties(qbt_app PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 if (GUI)
-    set_target_properties(qbt_app PROPERTIES OUTPUT_NAME qbittorrent)
+    set_target_properties(qbt_app PROPERTIES OUTPUT_NAME qBittorrentAccess)
 else()
     set_target_properties(qbt_app PROPERTIES OUTPUT_NAME qbittorrent-nox)
 endif()

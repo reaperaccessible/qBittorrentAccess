@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent'ten Çık</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess'ten Çık</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Kaydet</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent istemcisi ulaşılabilir değil</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess istemcisi ulaşılabilir değil</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Ters proksi kurulum örnekleri</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>qBittorrent’le bağlantı kurulamadı</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>qBittorrentAccess’le bağlantı kurulamadı</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Torrent'leri denetlerken bekleyen bellek 0'dan büyük ve 1024'ten küçük olmak zorundadır.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Program tercihleri ​​yüklenemiyor, qBittorrent'e muhtemelen ulaşılamıyor.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Program tercihleri ​​yüklenemiyor, qBittorrentAccess'e muhtemelen ulaşılamıyor.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>Kişi DSCP, 0 ile 255 arasında olmak zorundadır.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Tercihler kaydedilemiyor, qBittorrent'e muhtemelen ulaşılamıyor.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Tercihler kaydedilemiyor, qBittorrentAccess'e muhtemelen ulaşılamıyor.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Genel İndirme Hızı Sınırı</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent uygulamasından çıkmak istediğinize emin misiniz?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>qBittorrentAccess uygulamasından çıkmak istediğinize emin misiniz?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Torrent'i ve dosyalarını kaldır</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Bölümü</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Bölümü</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <translation>Görüntü yoğunluğu:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>qBittorrent örneklerini ayırt etmeye yardımcı olmak için metni pencere başlığına ekler</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>qBittorrentAccess örneklerini ayırt etmeye yardımcı olmak için metni pencere başlığına ekler</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <translation>Ad:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent Hakkında</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess Hakkında</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ sunucusu tarafından kullanılan etki alanı adlarına eklemelisiniz.
         <translation>qBittorrent Maskotu</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent simgesi</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess simgesi</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent Web Arayüzü</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess Web Arayüzü</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Desteklenen biçimler: S01E01, 1x1, 2017.12.31 ve 31.12.2017 (Tarih biçimleri d
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>API anahtarı oluşturulsun mu? Bu anahtar, qBittorrent'in API'si ile etkileşimde bulunmak için kullanılabilir.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>API anahtarı oluşturulsun mu? Bu anahtar, qBittorrentAccess'in API'si ile etkileşimde bulunmak için kullanılabilir.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

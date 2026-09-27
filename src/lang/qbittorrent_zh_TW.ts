@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>關於 qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>關於 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 小節</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess 小節</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>其將文字附加到視窗標題以協助區分 qBittorrent 實體</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>其將文字附加到視窗標題以協助區分 qBittorrentAccess 實體</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>感謝您使用 qBittorrent。</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>感謝您使用 qBittorrentAccess。</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 已啟動。處理程序 ID：%2</translation>
+        <translation>qBittorrentAccess %1 已啟動。處理程序 ID：%2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>要控制 qBittorrent，請從 %1 造訪 WebUI</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>要控制 qBittorrentAccess，請從 %1 造訪 WebUI</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>qBittorrent 中止操作</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>qBittorrentAccess 中止操作</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent 正在關閉……</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess 正在關閉……</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent 已準備好關閉</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess 已準備好關閉</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent 是檔案分享程式。當您執行 torrent 時，它的資料將會透過上傳的方式分享給其他人。您分享任何內容都必須自行負責。</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess 是檔案分享程式。當您執行 torrent 時，它的資料將會透過上傳的方式分享給其他人。您分享任何內容都必須自行負責。</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent 遇到無法還原的錯誤。</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess 遇到無法還原的錯誤。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
         <translation>您無法使用 %1：qBittorent 正在執行。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>已有其他 qBittorrent 實體正在執行。</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>已有其他 qBittorrentAccess 實體正在執行。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>找到預料之外的 qBittorrent 實體。正在結束此實體。目前處理程序 ID：%1。</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>找到預料之外的 qBittorrentAccess 實體。正在結束此實體。目前處理程序 ID：%1。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>鎖定 qBittorrent (&amp;O)</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>鎖定 qBittorrentAccess (&amp;O)</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,7 +3958,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
+        <source>&amp;Exit qBittorrentAccess</source>
         <translation>結束 qbittorrent (&amp;E)</translation>
     </message>
     <message>
@@ -4082,8 +4082,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent 最小化到系統匣</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess 最小化到系統匣</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent 已經更新了並且需要重新啟動。</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess 已經更新了並且需要重新啟動。</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent 關閉到系統匣</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess 關閉到系統匣</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>您確定要退出 qBittorrent 嗎？</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>您確定要退出 qBittorrentAccess 嗎？</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>有新版本的 qBittorrent 可用</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>有新版本的 qBittorrentAccess 可用</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>退出 qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>退出 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>在 Windows 啟動時啟動 qBittorrent</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>在 Windows 啟動時啟動 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要設定 qBittorrent 為 .torrent 檔案及/或磁力連結的預設程式&lt;br/&gt;您可以使用來自&lt;span style=&quot; font-weight:600;&quot;&gt;控制台&lt;/span&gt;的&lt;span style=&quot; font-weight:600;&quot;&gt;預設程式&lt;/span&gt;對話方塊。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要設定 qBittorrentAccess 為 .torrent 檔案及/或磁力連結的預設程式&lt;br/&gt;您可以使用來自&lt;span style=&quot; font-weight:600;&quot;&gt;控制台&lt;/span&gt;的&lt;span style=&quot; font-weight:600;&quot;&gt;預設程式&lt;/span&gt;對話方塊。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,8 +6121,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>在選單列中顯示 qBittorrent</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>在選單列中顯示 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,8 +6606,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>最小化 qBittorrent 到通知區域</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>最小化 qBittorrentAccess 到通知區域</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,8 +6679,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
-        <translation>從 qBittorrent 拖曳內容</translation>
+        <source>Drag content from qBittorrentAccess</source>
+        <translation>從 qBittorrentAccess 拖曳內容</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="605"/>
@@ -6700,13 +6700,13 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Torrent 檔案使用 qBittorrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Torrent 檔案使用 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>磁力連結使用 qBittorrent</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>磁力連結使用 qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>在通知區域顯示 qBittorrent (&amp;Q)</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>在通知區域顯示 qBittorrentAccess (&amp;Q)</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>將 qBittorrent 關閉到通知區域</translation>
+        <translation>將 qBittorrentAccess 關閉到通知區域</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>啟動時的 qBittorrent 視窗狀態</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>啟動時的 qBittorrentAccess 視窗狀態</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,8 +7758,8 @@ readme[0-9].txt：過濾「readme1.txt」、「readme2.txt」但不包含「read
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation>產生 API 金鑰？這把金鑰可用於與 qBittorrent 的 API 互動。</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation>產生 API 金鑰？這把金鑰可用於與 qBittorrentAccess 的 API 互動。</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7849,8 +7849,8 @@ readme[0-9].txt：過濾「readme1.txt」、「readme2.txt」但不包含「read
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>當這些選項啟用時，qBittorrent 將會在它們成功（第一個選項）或是未（第二個選項）加入其下載佇列時&lt;strong&gt;刪除&lt;/strong&gt; .torrent 檔案。這將&lt;strong&gt;不僅是套用於&lt;/strong&gt;透過「新增 torrent」選單動作開啟的檔案，也會套用於透過&lt;strong&gt;檔案類型關聯&lt;/strong&gt;開啟的檔案。</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>當這些選項啟用時，qBittorrentAccess 將會在它們成功（第一個選項）或是未（第二個選項）加入其下載佇列時&lt;strong&gt;刪除&lt;/strong&gt; .torrent 檔案。這將&lt;strong&gt;不僅是套用於&lt;/strong&gt;透過「新增 torrent」選單動作開啟的檔案，也會套用於透過&lt;strong&gt;檔案類型關聯&lt;/strong&gt;開啟的檔案。</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8358,9 +8358,9 @@ readme[0-9].txt：過濾「readme1.txt」、「readme2.txt」但不包含「read
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>有些附加元件不能被解除安裝，因為它們包含在 qBittorrent 裡面。只有您自己安裝的附加元件，才可以被解除安裝。
+        <translation>有些附加元件不能被解除安裝，因為它們包含在 qBittorrentAccess 裡面。只有您自己安裝的附加元件，才可以被解除安裝。
 這些附加元件已經被停用了。</translation>
     </message>
     <message>
@@ -9948,8 +9948,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent 現在關閉。</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess 現在關閉。</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10353,8 +10353,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent 需要重新啟動！</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess 需要重新啟動！</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10365,8 +10365,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>離線。這通常表示 qBittorrent 監聽進來連線的埠失敗。</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>離線。這通常表示 qBittorrentAccess 監聽進來連線的埠失敗。</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13237,13 +13237,13 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>因為所有下載已經完成，qBittorrent 現在會將電腦關機。</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>因為所有下載已經完成，qBittorrentAccess 現在會將電腦關機。</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent 將立即重新啟動電腦，因為所有下載已完成。</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess 將立即重新啟動電腦，因為所有下載已完成。</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

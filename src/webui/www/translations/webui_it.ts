@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Chiudi qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>Chiudi qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>Salva</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Il client qBittorrent non è raggiungibile</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>Il client qBittorrentAccess non è raggiungibile</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Esempi di configurazione proxy inverso</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Impossibile contattare qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Impossibile contattare qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>La memoria disponibile durante il controllo dei torrent deve essere maggiore di 0 e minore di 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Impossibile caricare le preferenze del programma, qBittorrent probabilmente non è raggiungibile.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Impossibile caricare le preferenze del programma, qBittorrentAccess probabilmente non è raggiungibile.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>DSCP peer deve essere compreso tra 0 e 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Impossibile salvare le preferenze, qBittorrent probabilmente non è raggiungibile.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Impossibile salvare le preferenze, qBittorrentAccess probabilmente non è raggiungibile.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Limite globale download</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Sei sicuro di voler uscire da qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Sei sicuro di voler uscire da qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>Rimuovi torrent e file relativi</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Sezione qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Sezione qBittorrentAccess</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2244,8 +2244,8 @@ Controlla la posta in arrivo per confermare la ricezione</translation>
         <translation>Densità schermo:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Aggiungi il testo al titolo della finestra per aiutare a distinguere le istanze di qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Aggiungi il testo al titolo della finestra per aiutare a distinguere le istanze di qBittorrentAccess</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4041,8 +4041,8 @@ Controlla la posta in arrivo per confermare la ricezione</translation>
         <translation>Nome:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Info su qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Info su qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4082,8 +4082,8 @@ Il database è concesso in licenza con la licenza internazionale Creative Common
         <translation>Mascotte qBittorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Icona qBittorrent</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>Icona qBittorrentAccess</translation>
     </message>
 </context>
 <context>
@@ -4882,8 +4882,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>WebUI qBittorrent</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>WebUI qBittorrentAccess</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5175,9 +5175,9 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation>Vuoi generare una chiave API? 
-Questa chiave può essere usata per interagire con l'API di qBittorrent.</translation>
+Questa chiave può essere usata per interagire con l'API di qBittorrentAccess.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

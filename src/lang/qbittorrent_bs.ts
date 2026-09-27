@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>O qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,7 +735,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorent sekcija</translation>
     </message>
     <message>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>Dodaje tekst naslovu prozora kako bi se lakše razlikovale instance qBittorent-a</translation>
     </message>
     <message>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Hvala vam što koristite qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Hvala vam što koristite qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@ Razlog: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 spokrenut. ID procesa: %2</translation>
+        <translation>qBittorrentAccess %1 spokrenut. ID procesa: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,7 +1605,7 @@ Razlog: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
         <translation>Za kontrolu qBittorrent-a, pristupite WebUI-ju na: %1</translation>
     </message>
     <message>
@@ -1645,13 +1645,13 @@ Razlog: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
+        <source>qBittorrentAccess termination initiated</source>
         <translation>Započeto je gašenje qBittorrent-a</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent se gasi...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess se gasi...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@ Razlog: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent je sada spreman za izlazak</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess je sada spreman za izlazak</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent je program za dijeljenje datoteka. Kada pokrenete torrent, njegovi podaci će biti dostupni drugima putem upload-a. Sav sadržaj koji dijelite je isključivo vaša odgovornost.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess je program za dijeljenje datoteka. Kada pokrenete torrent, njegovi podaci će biti dostupni drugima putem upload-a. Sav sadržaj koji dijelite je isključivo vaša odgovornost.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,22 +3709,22 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent je naišao na nepopravljivu grešku.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess je naišao na nepopravljivu grešku.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Ne možete koristiti %1: qBittorrent je već pokrenut.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Ne možete koristiti %1: qBittorrentAccess je već pokrenut.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
+        <source>Another qBittorrentAccess instance is already running.</source>
         <translation>Druga instanca qBittorrent-a je već pokrenuta.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
         <translation>Pronađena je neočekivana instanca qBittorrent-a. Izlaz iz instance. Trenutni ID procesa: %1.</translation>
     </message>
     <message>
@@ -3828,8 +3828,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>Za&amp;ključaj qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>Za&amp;ključaj qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,7 +3958,7 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
+        <source>&amp;Exit qBittorrentAccess</source>
         <translation>&amp;Izlaz iz qBittorrenta</translation>
     </message>
     <message>
@@ -4082,8 +4082,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent je minimiziran u sistemsku paletu</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess je minimiziran u sistemsku paletu</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent je upravo ažuriran i potrebno ga je ponovo pokrenuti da bi promjene stupile na snagu.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess je upravo ažuriran i potrebno ga je ponovo pokrenuti da bi promjene stupile na snagu.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent je zatvoren u sistemskoj paleti</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess je zatvoren u sistemskoj paleti</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Jeste li sigurni da želite zatvoriti qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Jeste li sigurni da želite zatvoriti qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Molimo vas da ga instalirate ručno.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Dostupno ažuriranje za qBittorrent</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Dostupno ažuriranje za qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4415,7 +4415,7 @@ Minimalni zahtjev: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
+        <source>Exiting qBittorrentAccess</source>
         <translation>Izlazak iz qBittorrent-a</translation>
     </message>
     <message>
@@ -6090,8 +6090,8 @@ Minimalni zahtjev: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Pokrenite qBittorrent pri pokretanju Windowsa</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Pokrenite qBittorrentAccess pri pokretanju Windowsa</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6110,7 +6110,7 @@ Minimalni zahtjev: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Postavljanje qBittorrent-a kao zadanog programa za .torrent datoteke i/ili Magnet linkove&lt;br/&gt; Možete koristiti dijalog &lt;span style=&quot; font-weight:600;&quot;&gt;Zadani programi&lt;/span&gt; iz &lt;span style=&quot; font-weight:600;&quot;&gt;Kontrolne ploče&lt;/span&gt; .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -6120,8 +6120,8 @@ Minimalni zahtjev: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>Prikaži qBittorrent u traci izbornika</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>Prikaži qBittorrentAccess u traci izbornika</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6605,8 +6605,8 @@ Koristite &apos;;&apos; za razdvajanje više unosa. Možete koristiti džoker &a
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Minimiziraj qBittorrent u područje za obavještenja</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Minimiziraj qBittorrentAccess u područje za obavještenja</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6678,7 +6678,7 @@ Koristite &apos;;&apos; za razdvajanje više unosa. Možete koristiti džoker &a
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation>Prevucite sadržaj iz qBittorrenta</translation>
     </message>
     <message>
@@ -6699,13 +6699,13 @@ Koristite &apos;;&apos; za razdvajanje više unosa. Možete koristiti džoker &a
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Koristite qBittorrent za .torrent datoteke</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Koristite qBittorrentAccess za .torrent datoteke</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Koristite qBittorrent za magnet linkove</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Koristite qBittorrentAccess za magnet linkove</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6841,8 +6841,8 @@ Koristite &apos;;&apos; za razdvajanje više unosa. Možete koristiti džoker &a
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Prikaži &amp;qBittorrent u području za obavještenja</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Prikaži &amp;qBittorrentAccess u području za obavještenja</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6907,9 +6907,9 @@ Koristite &apos;;&apos; za razdvajanje više unosa. Možete koristiti džoker &a
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Zatvori qBittorrent u područje za obavještenja</translation>
+        <translation>Zatvori qBittorrentAccess u područje za obavještenja</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7029,7 +7029,7 @@ Ručno: Različita svojstva torrenta (npr. putanja spremanja) moraju se dodijeli
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
+        <source>qBittorrentAccess window state on start up</source>
         <translation>Stanje prozora qBittorrent-a pri pokretanju</translation>
     </message>
     <message>
@@ -7757,8 +7757,8 @@ readme[0-9].txt: filtrira &apos;readme1.txt&apos;, &apos;readme2.txt&apos; ali n
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation>Generišete li API ključ? Ovaj ključ možete koristiti za interakciju s qBittorrent API-jem.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation>Generišete li API ključ? Ovaj ključ možete koristiti za interakciju s qBittorrentAccess API-jem.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7848,8 +7848,8 @@ readme[0-9].txt: filtrira &apos;readme1.txt&apos;, &apos;readme2.txt&apos; ali n
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Kada su ove opcije omogućene, qBittorrent će &lt;strong&gt;izbrisati&lt;/strong&gt; .torrent datoteke nakon što su uspješno (prva opcija) ili ne (druga opcija) dodane u red za preuzimanje. Ovo će se primijeniti &lt;strong&gt;ne samo&lt;/strong&gt; na datoteke otvorene putem akcije menija &amp;quot;Dodaj torrent&amp;quot;, već i na one otvorene putem &lt;strong&gt;asocijacije tipa datoteke.&lt;/strong&gt;</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Kada su ove opcije omogućene, qBittorrentAccess će &lt;strong&gt;izbrisati&lt;/strong&gt; .torrent datoteke nakon što su uspješno (prva opcija) ili ne (druga opcija) dodane u red za preuzimanje. Ovo će se primijeniti &lt;strong&gt;ne samo&lt;/strong&gt; na datoteke otvorene putem akcije menija &amp;quot;Dodaj torrent&amp;quot;, već i na one otvorene putem &lt;strong&gt;asocijacije tipa datoteke.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8357,9 +8357,9 @@ readme[0-9].txt: filtrira &apos;readme1.txt&apos;, &apos;readme2.txt&apos; ali n
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Neki dodaci nisu mogli biti deinstalirani jer su uključeni u qBittorrent. Samo oni koje ste sami dodali mogu biti deinstalirani.
+        <translation>Neki dodaci nisu mogli biti deinstalirani jer su uključeni u qBittorrentAccess. Samo oni koje ste sami dodali mogu biti deinstalirani.
 Ti dodaci su bili onemogućeni.</translation>
     </message>
     <message>
@@ -9947,8 +9947,8 @@ Kliknite na dugme &quot;Pretraži dodatke...&quot; u donjem desnom uglu prozora 
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent će se sada zatvoriti.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess će se sada zatvoriti.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10352,8 +10352,8 @@ Kliknite na dugme &quot;Pretraži dodatke...&quot; u donjem desnom uglu prozora 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent treba ponovo pokrenuti!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess treba ponovo pokrenuti!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10364,8 +10364,8 @@ Kliknite na dugme &quot;Pretraži dodatke...&quot; u donjem desnom uglu prozora 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Van mreže. Ovo obično znači da qBittorrent nije uspio osluškivati odabrani port za dolazne veze.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Van mreže. Ovo obično znači da qBittorrentAccess nije uspio osluškivati odabrani port za dolazne veze.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13236,13 +13236,13 @@ Molimo odaberite drugi naziv i pokušajte ponovo.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>qBittorrent će sada isključiti računar jer su sva preuzimanja završena.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess će sada isključiti računar jer su sva preuzimanja završena.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent će sada ponovo pokrenuti računar jer su svi preuzimanja završena.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess će sada ponovo pokrenuti računar jer su svi preuzimanja završena.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

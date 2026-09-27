@@ -1194,7 +1194,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
 
 <div id="AdvancedTab" class="PrefTab invisible">
     <fieldset class="settings">
-        <legend>QBT_TR(qBittorrent Section)QBT_TR[CONTEXT=OptionsDialog]&nbsp;(<a href="https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent#Advanced" target="_blank">QBT_TR(Open documentation)QBT_TR[CONTEXT=HttpServer]</a>)</legend>
+        <legend>QBT_TR(qBittorrentAccess Section)QBT_TR[CONTEXT=OptionsDialog]&nbsp;(<a href="https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent#Advanced" target="_blank">QBT_TR(Open documentation)QBT_TR[CONTEXT=HttpServer]</a>)</legend>
         <table>
             <tbody>
                 <tr>
@@ -1290,7 +1290,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                         <label for="appInstanceName">QBT_TR(Customize application instance name:)QBT_TR[CONTEXT=OptionsDialog]</label>
                     </td>
                     <td>
-                        <input type="text" id="appInstanceName" style="width: 15em;" title="QBT_TR(It appends the text to the window title to help distinguish qBittorrent instances)QBT_TR[CONTEXT=OptionsDialog]">
+                        <input type="text" id="appInstanceName" style="width: 15em;" title="QBT_TR(It appends the text to the window title to help distinguish qBittorrentAccess instances)QBT_TR[CONTEXT=OptionsDialog]">
                     </td>
                 </tr>
                 <tr>
@@ -2016,7 +2016,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                 })
                 .then((response) => {
                     if (!response.ok) {
-                        alert("QBT_TR(Could not contact qBittorrent)QBT_TR[CONTEXT=HttpServer]");
+                        alert("QBT_TR(Could not contact qBittorrentAccess)QBT_TR[CONTEXT=HttpServer]");
                         return;
                     }
 
@@ -2749,7 +2749,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                     document.getElementById("i2pOutboundLength").value = pref.i2p_outbound_length;
                 }).catch((error) => {
                     console.error(error);
-                    alert("QBT_TR(Unable to load program preferences, qBittorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
+                    alert("QBT_TR(Unable to load program preferences, qBittorrentAccess is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
                 });
         };
 
@@ -3289,7 +3289,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                     if (error.name === "ServerError")
                         alert(`QBT_TR(Error:)QBT_TR[CONTEXT=HttpServer] ${error.message}`);
                     else
-                        alert("QBT_TR(Unable to save preferences, qBittorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
+                        alert("QBT_TR(Unable to save preferences, qBittorrentAccess is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
                 }
             });
         };
@@ -3412,7 +3412,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.)QBT_TR[CONTEXT=OptionsD
                 : "QBT_TR(Generate API key)QBT_TR[CONTEXT=OptionsDialog]";
             const message = hasKey
                 ? "QBT_TR(Rotate this API key? The current key will immediately stop working and a new key will be generated.)QBT_TR[CONTEXT=confirmRotateAPIKeyDialog]"
-                : "QBT_TR(Generate an API key? This key can be used to interact with qBittorrent's API.)QBT_TR[CONTEXT=confirmRotateAPIKeyDialog]";
+                : "QBT_TR(Generate an API key? This key can be used to interact with qBittorrentAccess's API.)QBT_TR[CONTEXT=confirmRotateAPIKeyDialog]";
 
             new MochaUI.Modal({
                 ...window.qBittorrent.Dialog.baseModalOptions,

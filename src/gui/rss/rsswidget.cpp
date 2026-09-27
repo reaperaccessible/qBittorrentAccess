@@ -320,7 +320,7 @@ void RSSWidget::askNewFolder()
     const nonstd::expected<RSS::Folder *, QString> result = RSS::Session::instance()->addFolder(newFolderPath);
     if (!result)
     {
-        QMessageBox::warning(this, u"qBittorrent"_s, result.error(), QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, result.error(), QMessageBox::Ok);
         return;
     }
 
@@ -367,7 +367,7 @@ void RSSWidget::on_newFeedButton_clicked()
         if (result)
             newFeed = result.value();
         else
-            QMessageBox::warning(&dialog, u"qBittorrent"_s, result.error(), QMessageBox::Ok);
+            QMessageBox::warning(&dialog, u"qBittorrentAccess"_s, result.error(), QMessageBox::Ok);
     }
 
     if (!newFeed)
@@ -490,14 +490,14 @@ void RSSWidget::openSelectedArticlesUrls()
         QString message = tr("Blocked opening RSS article URL. The following article URL is pointing to local file and it may be malicious behaviour:\n%1").arg(articleTitle);
         if (badLinkCount > 1)
             message.append(u"\n" + tr("There are %1 more articles with the same issue.").arg(badLinkCount - 1));
-        QMessageBox::warning(this, u"qBittorrent"_s, message, QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, message, QMessageBox::Ok);
     }
     else if (emptyLinkCount > 0)
     {
         QString message = tr("The following article has no news URL provided:\n%1").arg(articleTitle);
         if (emptyLinkCount > 1)
             message.append(u"\n" + tr("There are %1 more articles with the same issue.").arg(emptyLinkCount - 1));
-        QMessageBox::warning(this, u"qBittorrent"_s, message, QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, message, QMessageBox::Ok);
     }
 }
 
@@ -553,7 +553,7 @@ void RSSWidget::editSelectedRSSFeed()
         const QString newURL = dialog->feedURL();
         const nonstd::expected<void, QString> result = RSS::Session::instance()->setFeedURL(rssFeed, newURL);
         if (!result)
-            QMessageBox::warning(this, u"qBittorrent"_s, result.error(), QMessageBox::Ok);
+            QMessageBox::warning(this, u"qBittorrentAccess"_s, result.error(), QMessageBox::Ok);
     });
     dialog->open();
 }

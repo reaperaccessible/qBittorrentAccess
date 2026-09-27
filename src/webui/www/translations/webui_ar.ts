@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>إغلاق كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -367,7 +367,7 @@
         <translation>حفظ</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation>تعذّر الوصول إلى عميل كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>حد سرعة التنزيل العامة</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>هل أنت متأكد من رغبتك في إغلاق كيوبت‎تورنت؟</translation>
     </message>
     <message>
@@ -1371,7 +1371,7 @@
         <translation>إزالة التورنت وملفاته</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>قسم كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,7 +4040,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>‫الاسم:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>عن كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -4080,7 +4080,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>تميمة كيوبت‎تورنت</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>رمز كيوبت‎تورنت</translation>
     </message>
 </context>
@@ -4879,7 +4879,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5167,7 +5167,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

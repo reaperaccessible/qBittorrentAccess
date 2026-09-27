@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>Irten qBittorrent-etik</translation>
     </message>
     <message>
@@ -367,8 +367,8 @@
         <translation>Gorde</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent bezeroa erdietsiezina da</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess bezeroa erdietsiezina da</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation>Ezin izan da qBittorrent-ekin harremanetan jarri</translation>
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation>Jeisketa Abiadura Muga Orokorra</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Zihur zaude qBittorrent uztea nahi duzula?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Zihur zaude qBittorrentAccess uztea nahi duzula?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Kendu torrenta eta bere fitxategiak</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBitorrent atala</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Erabili ';' sarrera ugari banantzeko. '*' ordez-hizkia erabili daiteke.</transla
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,7 +4040,7 @@ Erabili ';' sarrera ugari banantzeko. '*' ordez-hizkia erabili daiteke.</transla
         <translation>Izena:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>qBittorrent-i buruz</translation>
     </message>
     <message>
@@ -4080,8 +4080,8 @@ Erabili ';' sarrera ugari banantzeko. '*' ordez-hizkia erabili daiteke.</transla
         <translation>qBittorrent Maskota</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikonoa</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess ikonoa</translation>
     </message>
 </context>
 <context>
@@ -4879,7 +4879,7 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5167,7 +5167,7 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>

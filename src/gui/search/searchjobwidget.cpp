@@ -376,14 +376,14 @@ void SearchJobWidget::openTorrentPages()
         QString message = tr("Blocked opening search result description page URL. The following result URL is pointing to local file and it may be malicious behaviour:\n%1").arg(warningEntryName);
         if (badLinkCount > 1)
             message.append(u"\n" + tr("There are %1 more results with the same issue.").arg(badLinkCount - 1));
-        QMessageBox::warning(this, u"qBittorrent"_s, message, QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, message, QMessageBox::Ok);
     }
     else if (emptyLinkCount > 0)
     {
         QString message = tr("Entry \"%1\" has no description page URL provided.").arg(warningEntryName);
         if (emptyLinkCount > 1)
             message.append(u"\n" + tr("There are %1 more entries with the same issue.").arg(emptyLinkCount - 1));
-        QMessageBox::warning(this, u"qBittorrent"_s, message, QMessageBox::Ok);
+        QMessageBox::warning(this, u"qBittorrentAccess"_s, message, QMessageBox::Ok);
     }
 }
 

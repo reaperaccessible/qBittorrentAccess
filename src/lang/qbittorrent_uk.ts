@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>Про qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>Про qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>Розділ про qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Розділ про qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Цей текст додається до заголовка вікна, щоб полегшити розрізнення екземплярів qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Цей текст додається до заголовка вікна, щоб полегшити розрізнення екземплярів qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Дякуємо за використання qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Дякуємо за використання qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 запущено. Ідентифікатор процесу: %2</translation>
+        <translation>qBittorrentAccess %1 запущено. Ідентифікатор процесу: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>Щоб керувати qBittorrent, перейдіть до веб-інтерфейсу за адресою: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>Щоб керувати qBittorrentAccess, перейдіть до веб-інтерфейсу за адресою: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>Розпочато припинення роботи qBittorrent</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>Розпочато припинення роботи qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent вимикається...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess вимикається...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>Тепер qBittorrent готовий до виходу</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>Тепер qBittorrentAccess готовий до виходу</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent — це програма для роздачі файлів. Коли ви запускаєте торрент, його дані будуть доступні іншим через відвантаження. Всі дані, які ви роздаєте, на вашій відповідальності.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess — це програма для роздачі файлів. Коли ви запускаєте торрент, його дані будуть доступні іншим через відвантаження. Всі дані, які ви роздаєте, на вашій відповідальності.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent виявив невиправну помилку.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess виявив невиправну помилку.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Ви не можете використовувати %1: qBittorrent вже запущено.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Ви не можете використовувати %1: qBittorrentAccess вже запущено.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Інший екземпляр qBittorrent вже запущено.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Інший екземпляр qBittorrentAccess вже запущено.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Знайдено неочікуваний екземпляр qBittorrent. Вихід з цього екземпляру. Ідентифікатор процесу: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Знайдено неочікуваний екземпляр qBittorrentAccess. Вихід з цього екземпляру. Ідентифікатор процесу: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>За&amp;блокувати qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>За&amp;блокувати qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>В&amp;ийти з qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>В&amp;ийти з qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent згорнено до системного лотка</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess згорнено до системного лотка</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent щойно був оновлений і потребує перезапуску, щоб застосувати зміни.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess щойно був оновлений і потребує перезапуску, щоб застосувати зміни.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent закрито до системного лотка</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess закрито до системного лотка</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Ви впевнені, що хочете вийти з qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Ви впевнені, що хочете вийти з qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,8 +4262,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>Доступне оновлення qBittorrent</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>Доступне оновлення qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4416,8 +4416,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>Вихід із qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>Вихід із qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Запускати qBittorrent при завантаженні системи</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Запускати qBittorrentAccess при завантаженні системи</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щоб встановити qBittorrent як програму за замовчуванням для файлів .torrent і/або Magnet посилань&lt;br/&gt;ви можете використовувати &lt;span style=&quot; font-weight:600;&quot;&gt;Програми за замовчуванням&lt;/span&gt; діалог від &lt;span style=&quot; font-weight:600;&quot;&gt;Панель управління&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щоб встановити qBittorrentAccess як програму за замовчуванням для файлів .torrent і/або Magnet посилань&lt;br/&gt;ви можете використовувати &lt;span style=&quot; font-weight:600;&quot;&gt;Програми за замовчуванням&lt;/span&gt; діалог від &lt;span style=&quot; font-weight:600;&quot;&gt;Панель управління&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,8 +6121,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>Показати qBittorrent у рядку меню</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>Показати qBittorrentAccess у рядку меню</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,8 +6606,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Згортати qBittorrent у область сповіщень</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Згортати qBittorrentAccess у область сповіщень</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,8 +6679,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
-        <translation> Перетягувати вміст з qBittorrent</translation>
+        <source>Drag content from qBittorrentAccess</source>
+        <translation> Перетягувати вміст з qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="605"/>
@@ -6700,13 +6700,13 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Використовувати qBittorrent для файлів .torrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Використовувати qBittorrentAccess для файлів .torrent</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Використовувати qBittorrent для magnet-посилань</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Використовувати qBittorrentAccess для magnet-посилань</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Показувати &amp;qBittorrent в області сповіщень</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Показувати &amp;qBittorrentAccess в області сповіщень</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>При закритті згортати qBittorrent в область сповіщень</translation>
+        <translation>При закритті згортати qBittorrentAccess в область сповіщень</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>Стан вікна qBittorrent під час запуску</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>Стан вікна qBittorrentAccess під час запуску</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,8 +7758,8 @@ readme[0-9].txt: фільтр &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
-        <translation> Згенерувати API-ключ? Цей ключ можна використовувати для взаємодії з API qBittorrent.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
+        <translation> Згенерувати API-ключ? Цей ключ можна використовувати для взаємодії з API qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1512"/>
@@ -7849,8 +7849,8 @@ readme[0-9].txt: фільтр &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Коли ці параметри увімкнено, qBittorrent &lt;strong&gt;видалить&lt;/strong&gt; файли .torrent після того як їх успішно (перший варіант) або неуспішно (другий варіант) додано до черги завантаження. Це буде застосовано &lt;strong&gt;не лише&lt;/strong&gt; до файлів відкритих через меню &amp;ldquo;Додати тооррент&amp;rdquo;, але також до тих, що відкриваються через &lt;strong&gt;асоціацію типів файлів&lt;/strong&gt;</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Коли ці параметри увімкнено, qBittorrentAccess &lt;strong&gt;видалить&lt;/strong&gt; файли .torrent після того як їх успішно (перший варіант) або неуспішно (другий варіант) додано до черги завантаження. Це буде застосовано &lt;strong&gt;не лише&lt;/strong&gt; до файлів відкритих через меню &amp;ldquo;Додати тооррент&amp;rdquo;, але також до тих, що відкриваються через &lt;strong&gt;асоціацію типів файлів&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8358,9 +8358,9 @@ readme[0-9].txt: фільтр &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, 
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
-        <translation>Деякі додатки не вдалось видалити, бо вони є частиною qBittorrent. Можна видалити лише ті додатки, які ви встановили власноруч.
+        <translation>Деякі додатки не вдалось видалити, бо вони є частиною qBittorrentAccess. Можна видалити лише ті додатки, які ви встановили власноруч.
 Ці додатки було вимкнено.</translation>
     </message>
     <message>
@@ -9948,8 +9948,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>Зараз qBittorrent завершиться</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>Зараз qBittorrentAccess завершиться</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10353,8 +10353,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>Потрібно перезапустити qBittorrent!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>Потрібно перезапустити qBittorrentAccess!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10365,8 +10365,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>Не в мережі. Зазвичай це означає, що qBittorrent не може приймати вхідні з&apos;єднання з вибраного порту.</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>Не в мережі. Зазвичай це означає, що qBittorrentAccess не може приймати вхідні з&apos;єднання з вибраного порту.</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13429,13 +13429,13 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>Зараз qBittorrent вимкне комп&apos;ютер, бо всі завантаження завершено.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>Зараз qBittorrentAccess вимкне комп&apos;ютер, бо всі завантаження завершено.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent перезавантажить комп&apos;ютер, оскільки всі завантаження завершені.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess перезавантажить комп&apos;ютер, оскільки всі завантаження завершені.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

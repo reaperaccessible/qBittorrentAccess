@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>O programie qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>O programie qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>Sekcja qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>Sekcja qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,8 +912,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>Dodaje tekst do tytułu okna, aby ułatwić rozróżnianie instancji qBittorrent</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>Dodaje tekst do tytułu okna, aby ułatwić rozróżnianie instancji qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="835"/>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Dziękujemy za używanie qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Dziękujemy za używanie qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@ Powód: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 został uruchomiony. Identyfikator procesu: %2</translation>
+        <translation>qBittorrentAccess %1 został uruchomiony. Identyfikator procesu: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@ Powód: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>Aby kontrolować qBittorrent, należy uzyskać dostęp do interfejsu WWW pod adresem: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>Aby kontrolować qBittorrentAccess, należy uzyskać dostęp do interfejsu WWW pod adresem: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@ Powód: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>Rozpoczęto wyłączanie programu qBittorrent</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>Rozpoczęto wyłączanie programu qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent wyłącza się...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess wyłącza się...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@ Powód: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent jest teraz gotowy do zakończenia</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess jest teraz gotowy do zakończenia</translation>
     </message>
 </context>
 <context>
@@ -3644,8 +3644,8 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent jest programem do wymiany plików. Uruchomienie torrenta powoduje, że jego zawartość jest dostępna dla innych. Użytkownik ponosi pełną odpowiedzialność za udostępniane treści.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess jest programem do wymiany plików. Uruchomienie torrenta powoduje, że jego zawartość jest dostępna dla innych. Użytkownik ponosi pełną odpowiedzialność za udostępniane treści.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
-        <translation>qBittorrent napotkał nieodwracalny błąd.</translation>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
+        <translation>qBittorrentAccess napotkał nieodwracalny błąd.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Nie możesz użyć %1: qBittorrent już działa.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Nie możesz użyć %1: qBittorrentAccess już działa.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Inna instancja qBittorrent już działa.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Inna instancja qBittorrentAccess już działa.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Znaleziono nieoczekiwaną instancję qBittorrent. Wychodzę z tej instancji. Bieżący identyfikator procesu: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Znaleziono nieoczekiwaną instancję qBittorrentAccess. Wychodzę z tej instancji. Bieżący identyfikator procesu: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>Zablo&amp;kuj qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>Zablo&amp;kuj qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>Zakończ &amp;qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>Zakończ &amp;qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent jest zminimalizowany do zasobnika</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess jest zminimalizowany do zasobnika</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent został zaktualizowany i konieczne jest jego ponowne uruchomienie.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess został zaktualizowany i konieczne jest jego ponowne uruchomienie.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent jest zamknięty do zasobnika</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess jest zamknięty do zasobnika</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Obsługuje formaty: S01E01, 1x1, 2017.12.31 oraz 31.12.2017 (Formaty daty równi
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Czy na pewno chcesz zamknąć qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Czy na pewno chcesz zamknąć qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4262,7 +4262,7 @@ Należy zainstalować go ręcznie.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
+        <source>qBittorrentAccess Update Available</source>
         <translation>Dostępna aktualizacja qBittorrenta</translation>
     </message>
     <message>
@@ -4416,8 +4416,8 @@ Minimalny wymóg: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>Zamykanie qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>Zamykanie qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6091,8 +6091,8 @@ Minimalny wymóg: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Uruchamiaj qBittorrent ze startem systemu Windows</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Uruchamiaj qBittorrentAccess ze startem systemu Windows</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6111,8 +6111,8 @@ Minimalny wymóg: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aby ustawić qBittorrent jako program domyślny dla plików .torrent i/lub łączy magnet,&lt;br/&gt;możesz skorzystać z okna &lt;span style=&quot; font-weight:600;&quot;&gt;Programy domyślne&lt;/span&gt; w &lt;span style=&quot; font-weight:600;&quot;&gt;Panelu sterowania&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aby ustawić qBittorrentAccess jako program domyślny dla plików .torrent i/lub łączy magnet,&lt;br/&gt;możesz skorzystać z okna &lt;span style=&quot; font-weight:600;&quot;&gt;Programy domyślne&lt;/span&gt; w &lt;span style=&quot; font-weight:600;&quot;&gt;Panelu sterowania&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6121,8 +6121,8 @@ Minimalny wymóg: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
-        <translation>Pokaż qBittorrent na pasku menu</translation>
+        <source>Show qBittorrentAccess in menu bar</source>
+        <translation>Pokaż qBittorrentAccess na pasku menu</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
@@ -6606,8 +6606,8 @@ Użyj &apos;;&apos; do rozdzielania wielu wpisów. Można użyć wieloznacznika 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Minimalizuj qBittorrent do obszaru powiadomień</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Minimalizuj qBittorrentAccess do obszaru powiadomień</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6679,7 +6679,7 @@ Użyj &apos;;&apos; do rozdzielania wielu wpisów. Można użyć wieloznacznika 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation>Przeciągnij zawartość z qBittorrenta</translation>
     </message>
     <message>
@@ -6700,13 +6700,13 @@ Użyj &apos;;&apos; do rozdzielania wielu wpisów. Można użyć wieloznacznika 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Używaj qBittorrent z plikami .torrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Używaj qBittorrentAccess z plikami .torrent</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Używaj qBittorrent z odnośnikami magnet</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Używaj qBittorrentAccess z odnośnikami magnet</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6842,8 +6842,8 @@ Użyj &apos;;&apos; do rozdzielania wielu wpisów. Można użyć wieloznacznika 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Pokazuj ikonę &amp;qBittorrent w obszarze powiadomień</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Pokazuj ikonę &amp;qBittorrentAccess w obszarze powiadomień</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6908,9 +6908,9 @@ Użyj &apos;;&apos; do rozdzielania wielu wpisów. Można użyć wieloznacznika 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Zamykaj qBittorrent do obszaru powiadomień</translation>
+        <translation>Zamykaj qBittorrentAccess do obszaru powiadomień</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7030,8 +7030,8 @@ Ręcznie: różne właściwości torrenta (np. ścieżka zapisu) muszą być prz
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>Stan okna qBittorrent przy uruchamianiu</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>Stan okna qBittorrentAccess przy uruchamianiu</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7758,7 +7758,7 @@ readme[0-9].txt: filtruje &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, ale 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation>Wygenerować klucz API? Ten klucz może być użyty do interakcji z API qBittorrenta.</translation>
     </message>
     <message>
@@ -7849,8 +7849,8 @@ readme[0-9].txt: filtruje &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, ale 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>Gdy te opcje zostaną włączone, qBittorrent &lt;strong&gt;usunie&lt;/strong&gt; pliki .torrent po ich pomyślnym (pierwsza opcja) lub niepomyślnym (druga opcja) dodaniu do kolejki pobierania. Stosuje się to &lt;strong&gt;nie tylko&lt;/strong&gt; do plików otwarych poprzez czynność menu &amp;ldquo;Dodaj torrent&amp;rdquo;, ale także do plików otwartych poprzez &lt;strong&gt;skojarzenie typu pliku&lt;/strong&gt;</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>Gdy te opcje zostaną włączone, qBittorrentAccess &lt;strong&gt;usunie&lt;/strong&gt; pliki .torrent po ich pomyślnym (pierwsza opcja) lub niepomyślnym (druga opcja) dodaniu do kolejki pobierania. Stosuje się to &lt;strong&gt;nie tylko&lt;/strong&gt; do plików otwarych poprzez czynność menu &amp;ldquo;Dodaj torrent&amp;rdquo;, ale także do plików otwartych poprzez &lt;strong&gt;skojarzenie typu pliku&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8358,7 +8358,7 @@ readme[0-9].txt: filtruje &apos;readme1.txt&apos;, &apos;readme2.txt&apos;, ale 
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>Niektóre wtyczki nie mogą zostać odinstalowane, ponieważ są częścią qBittorenta. Tylko te, które dodałeś, mogą zostać odinstalowane.
 Te wtyczki zostały wyłączone.</translation>
@@ -9948,8 +9948,8 @@ Kliknij przycisk &quot;Wtyczki wyszukiwania...&quot; w prawym dolnym rogu okna, 
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent zostanie teraz zamknięty.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess zostanie teraz zamknięty.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10353,8 +10353,8 @@ Kliknij przycisk &quot;Wtyczki wyszukiwania...&quot; w prawym dolnym rogu okna, 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>qBittorrent musi zostać uruchomiony ponownie!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>qBittorrentAccess musi zostać uruchomiony ponownie!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10365,7 +10365,7 @@ Kliknij przycisk &quot;Wtyczki wyszukiwania...&quot; w prawym dolnym rogu okna, 
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
         <translation>Offline. Oznacza, że qBittorent nie jest w stanie nasłuchiwać połączeń przychodzących na wybranym porcie.</translation>
     </message>
     <message>
@@ -13237,13 +13237,13 @@ Wybierz inną nazwę i spróbuj ponownie.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>qBittorrent wyłączy teraz komputer, ponieważ pobieranie zostało ukończone.</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess wyłączy teraz komputer, ponieważ pobieranie zostało ukończone.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
-        <translation>qBittorrent uruchomi teraz komputer ponownie, ponieważ wszystkie pobieranie zostało zakończone.</translation>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess uruchomi teraz komputer ponownie, ponieważ wszystkie pobieranie zostało zakończone.</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="237"/>

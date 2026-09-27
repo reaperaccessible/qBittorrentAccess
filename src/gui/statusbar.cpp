@@ -179,7 +179,7 @@ StatusBar::~StatusBar()
 void StatusBar::showRestartRequired()
 {
     // Restart required notification
-    const QString restartText = tr("qBittorrent needs to be restarted!");
+    const QString restartText = tr("qBittorrentAccess needs to be restarted!");
 
     const QPixmap pixmap = style()->standardIcon(QStyle::SP_MessageBoxWarning).pixmap(Utils::Gui::smallIconSize());
     auto *restartIconLbl = new QLabel(this);
@@ -199,7 +199,7 @@ void StatusBar::updateConnectionStatus()
     if (!BitTorrent::Session::instance()->isListening())
     {
         m_connecStatusLblIcon->setIcon(UIThemeManager::instance()->getIcon(u"disconnected"_s));
-        const QString tooltip = u"<b>%1</b><br>%2"_s.arg(tr("Connection Status:"), tr("Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections."));
+        const QString tooltip = u"<b>%1</b><br>%2"_s.arg(tr("Connection Status:"), tr("Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections."));
         m_connecStatusLblIcon->setToolTip(tooltip);
     }
     else

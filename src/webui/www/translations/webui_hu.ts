@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent bezárása</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess bezárása</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,7 +367,7 @@
         <translation>Mentés</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation>qBittorent kliens nem elérhető</translation>
     </message>
     <message>
@@ -459,7 +459,7 @@
         <translation>Reverse proxy beállítási példák</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation>Nem sikerült kapcsolatba lépni a qBittorrenttel</translation>
     </message>
     <message>
@@ -555,8 +555,8 @@
         <translation>Torrentek ellenőrzésekor a fennálló memória értékének 0 és 1024 között kell lennie.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nem sikerült betölteni a beállításokat. A qBittorrent valószínűleg nem elérhető.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nem sikerült betölteni a beállításokat. A qBittorrentAccess valószínűleg nem elérhető.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>Peer DSCP-nek 0 és 255 közé kell esnie.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nem sikerült menteni a beállításokat, qBittorrent valószínűleg nem elérhető.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nem sikerült menteni a beállításokat, qBittorrentAccess valószínűleg nem elérhető.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,7 +658,7 @@
         <translation>Globális letöltési sebességkorlát</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>Biztosan ki akar lépni a qBittorrentből?</translation>
     </message>
     <message>
@@ -1371,8 +1371,8 @@
         <translation>Torrent és fájljai eltávolítása</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent beállítások</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess beállítások</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,7 +2243,7 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>Megjelenítési sűrűség:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>A qBittorent példányok megkülönböztetésének megkönnyítése érdekében a szöveget az ablak címéhez csatolja</translation>
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>Név:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>A qBittorrent névjegye</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>A qBittorrentAccess névjegye</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Használja a ';' karaktert az elválasztásra, ha több is van. A '*' helyettes�
         <translation>qBittorrent kabala</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikon</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess ikon</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5172,8 +5172,8 @@ Támogatja a formátumokat: S01E01, 1x1, 2017.12.31 és 31.12.2017. (A dátumfor
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Generál egy API kulcsot? Ez a kulcs a qBittorrent API-val történő kommunikációra használható.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Generál egy API kulcsot? Ez a kulcs a qBittorrentAccess API-val történő kommunikációra használható.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

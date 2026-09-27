@@ -63,7 +63,7 @@ namespace
         self.statusItem.button.image = icon;
         self.statusItem.button.imagePosition = NSImageOnly;
         self.statusItem.button.imageScaling = NSImageScaleProportionallyDown;
-        self.statusItem.button.toolTip = @"qBittorrent";
+        self.statusItem.button.toolTip = @"qBittorrentAccess";
         self.statusItem.button.title = @"";
 
         self.statusMenu = [[NSMenu alloc] init];

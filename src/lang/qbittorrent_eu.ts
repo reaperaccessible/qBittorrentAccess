@@ -18,8 +18,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent buruz</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess buruz</translation>
     </message>
     <message>
         <location filename="../gui/aboutdialog.ui" line="55"/>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Atala</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Atala</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>Mila esker qBittorrent erabiltzeagaitik.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>Mila esker qBittorrentAccess erabiltzeagaitik.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@ Zergaitia: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 hasi da. Prozesuaren ID: %2</translation>
+        <translation>qBittorrentAccess %1 hasi da. Prozesuaren ID: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@ Zergaitia: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>qBittorrent kontrolatzeko, sartu WebUI-ra hemen: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>qBittorrentAccess kontrolatzeko, sartu WebUI-ra hemen: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@ Zergaitia: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
+        <source>qBittorrentAccess termination initiated</source>
         <translation>qBittorrent-en amaiera hasi da</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>qBittorrent itzaltzen ari da...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>qBittorrentAccess itzaltzen ari da...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@ Zergaitia: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent irteteko prest dago</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess irteteko prest dago</translation>
     </message>
 </context>
 <context>
@@ -2955,7 +2955,7 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     <message>
         <location filename="../app/cmdoptions.cpp" line="526"/>
         <source>Store configuration files in directories qBittorrent_&lt;name&gt;</source>
-        <translation>Biltegiratu itxurapen agiriak qBittorrent zuzenbideetan_&lt;name&gt;</translation>
+        <translation>Biltegiratu itxurapen agiriak qBittorrentAccess zuzenbideetan_&lt;name&gt;</translation>
     </message>
     <message>
         <location filename="../app/cmdoptions.cpp" line="528"/>
@@ -3644,8 +3644,8 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
-        <translation>qBittorrent agiri elkarbanatze programa bat da. Torrent bati ekiten diozunean, datu hauek eskuragarriak izango dira besteentzako igoeraren bidez. Elkarbanatzen duzun edozein eduki zure erantzunkizunekoa da.</translation>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <translation>qBittorrentAccess agiri elkarbanatze programa bat da. Torrent bati ekiten diozunean, datu hauek eskuragarriak izango dira besteentzako igoeraren bidez. Elkarbanatzen duzun edozein eduki zure erantzunkizunekoa da.</translation>
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="52"/>
@@ -3709,23 +3709,23 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
         <translation>qBittorrent-ek errore berreskuraezin bat aurkitu du.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
-        <translation>Ezin duzu %1 erabili: qBittorrent dagoeneko martxan dago.</translation>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
+        <translation>Ezin duzu %1 erabili: qBittorrentAccess dagoeneko martxan dago.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
-        <translation>Beste qBittorrent instantzia bat dagoeneko martxan dago.</translation>
+        <source>Another qBittorrentAccess instance is already running.</source>
+        <translation>Beste qBittorrentAccess instantzia bat dagoeneko martxan dago.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
-        <translation>Ustekabeko qBittorrent instantzia aurkitu da. Instantzia honetatik irteten. Uneko prozesuaren IDa: %1.</translation>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
+        <translation>Ustekabeko qBittorrentAccess instantzia aurkitu da. Instantzia honetatik irteten. Uneko prozesuaren IDa: %1.</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="306"/>
@@ -3828,8 +3828,8 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>&amp;Blokeatu qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>&amp;Blokeatu qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,7 +3958,7 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
+        <source>&amp;Exit qBittorrentAccess</source>
         <translation>I&amp;rten qBittorrent-etik</translation>
     </message>
     <message>
@@ -4082,8 +4082,8 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent erretilura txikiendu da</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess erretilura txikiendu da</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent eguneratua izan da eta berrabiarazpena behar du aldaketek eragina izateko.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess eguneratua izan da eta berrabiarazpena behar du aldaketek eragina izateko.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent erretilura itxi da</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess erretilura itxi da</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Sostengatutako heuskarriak: S01E01, 1x1, 2017.12.31 eta 31.12.2017 (Data heuskar
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Zihur zaude qBittorrent uztea nahi duzula?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Zihur zaude qBittorrentAccess uztea nahi duzula?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4261,8 +4261,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>qBittorrent Eguneraketa Eskuragarri</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>qBittorrentAccess Eguneraketa Eskuragarri</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4415,7 +4415,7 @@ Beharrezko gutxiena: %2.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
+        <source>Exiting qBittorrentAccess</source>
         <translation>qBittorrentetik irtetzen</translation>
     </message>
     <message>
@@ -6090,8 +6090,8 @@ Beharrezko gutxiena: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>Hasi qBittorrent Windows hasterakoan</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>Hasi qBittorrentAccess Windows hasterakoan</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6110,8 +6110,8 @@ Beharrezko gutxiena: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;qBittorrent .torrent fitxategietarako eta/edo Magnet esteketarako&lt;br/&gt; programa lehenetsi gisa ezartzeko, &lt;span style=&quot; font-weight:600;&quot;&gt;Kontrol Paneleko&lt;/span&gt; &lt;span style=&quot; font-weight:600;&quot;&gt;Lehenetsitako Programak&lt;/span&gt; elkarrizketa-koadroa erabili dezakezu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;qBittorrentAccess .torrent fitxategietarako eta/edo Magnet esteketarako&lt;br/&gt; programa lehenetsi gisa ezartzeko, &lt;span style=&quot; font-weight:600;&quot;&gt;Kontrol Paneleko&lt;/span&gt; &lt;span style=&quot; font-weight:600;&quot;&gt;Lehenetsitako Programak&lt;/span&gt; elkarrizketa-koadroa erabili dezakezu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="722"/>
@@ -6120,7 +6120,7 @@ Beharrezko gutxiena: %2.</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
+        <source>Show qBittorrentAccess in menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6605,8 +6605,8 @@ Erabili &apos;;&apos; sarrera ugari banantzeko. &apos;*&apos; ordez-hizkia erabi
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>Txikiendu qBittorrent jakinarazpen eremura</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>Txikiendu qBittorrentAccess jakinarazpen eremura</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6678,7 +6678,7 @@ Erabili &apos;;&apos; sarrera ugari banantzeko. &apos;*&apos; ordez-hizkia erabi
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6699,13 +6699,13 @@ Erabili &apos;;&apos; sarrera ugari banantzeko. &apos;*&apos; ordez-hizkia erabi
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>Erabili qBittorrent .torrent agirientzat</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>Erabili qBittorrentAccess .torrent agirientzat</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>Erabili qBittorrent magnet loturentzat</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>Erabili qBittorrentAccess magnet loturentzat</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6841,8 +6841,8 @@ Erabili &apos;;&apos; sarrera ugari banantzeko. &apos;*&apos; ordez-hizkia erabi
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
-        <translation>Erakutsi &amp;qBittorrent jakinarazpen eremuan</translation>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
+        <translation>Erakutsi &amp;qBittorrentAccess jakinarazpen eremuan</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="974"/>
@@ -6907,9 +6907,9 @@ Erabili &apos;;&apos; sarrera ugari banantzeko. &apos;*&apos; ordez-hizkia erabi
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>Itxi qBittorrent jakinarazpen eremura</translation>
+        <translation>Itxi qBittorrentAccess jakinarazpen eremura</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7029,8 +7029,8 @@ Eskuzkoa: Torrent ezaugarri ugari (adib. gordetze helburua) eskuz esleitu behar 
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
-        <translation>qBittorrent leihoaren egoera abiaraztean</translation>
+        <source>qBittorrentAccess window state on start up</source>
+        <translation>qBittorrentAccess leihoaren egoera abiaraztean</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="1064"/>
@@ -7757,7 +7757,7 @@ readme[0-9].txt: iragazi &apos;readme1.txt&apos;, &apos;readme2.txt&apos; baina 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7848,7 +7848,7 @@ readme[0-9].txt: iragazi &apos;readme1.txt&apos;, &apos;readme2.txt&apos; baina 
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
         <translation>Aukera hauek gaitzen direnean, qBittorent-ek .torrent agiriak &lt;strong&gt;ezabatuko&lt;/strong&gt; ditu beren jeitsiera lerrora ongi (lehen aukera) edo ez (bigarren aukera) gehitutakoan. Hau &lt;strong&gt;ez da bakarrik&lt;/strong&gt; &amp;ldquo;Gehitu torrenta&amp;rdquo; menu ekintzaren bidez irekitako agirietan ezarriko, baita &lt;strong&gt;agiri mota elkarketa&lt;/strong&gt; bidez irekitakoetan ere.</translation>
     </message>
     <message>
@@ -8357,7 +8357,7 @@ readme[0-9].txt: iragazi &apos;readme1.txt&apos;, &apos;readme2.txt&apos; baina 
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>Zenbait plugin ezin dira kendu qBittorrenten barnekoak direlako. Zeuk gehitutakoak bakarrik kendu daitezke.
 Plugin hauek ezgaituta daude.</translation>
@@ -9944,8 +9944,8 @@ Klikatu &quot;Bilatu pluginak...&quot; botoia leihoaren behe eskuinean zenbait e
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent orain irten egingo da.</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess orain irten egingo da.</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10349,7 +10349,7 @@ Klikatu &quot;Bilatu pluginak...&quot; botoia leihoaren behe eskuinean zenbait e
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
+        <source>qBittorrentAccess needs to be restarted!</source>
         <translation>qBittorrentek berrabiaraztea behar du!</translation>
     </message>
     <message>
@@ -10361,7 +10361,7 @@ Klikatu &quot;Bilatu pluginak...&quot; botoia leihoaren behe eskuinean zenbait e
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
         <translation>Lineaz-kanpo. Honek arrunt esanahi du qBittorrentek huts egin duela hautatutako barrurako elkarketen atakan aditzean.</translation>
     </message>
     <message>
@@ -13233,12 +13233,12 @@ Mesedez hautatu beste izen bat eta saiatu berriro.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
         <translation>qBittorrent-ek orain ordenagailua itzaliko du jeisketa guztiak osatu direlako.</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -18,7 +18,7 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>qBittorrentについて</translation>
     </message>
     <message>
@@ -735,7 +735,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorrentセクション</translation>
     </message>
     <message>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1471,7 +1471,7 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
+        <source>Thank you for using qBittorrentAccess.</source>
         <translation>qBittorrentをご利用いただきありがとうございます。</translation>
     </message>
     <message>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 が開始されました。プロセスID: %2</translation>
+        <translation>qBittorrentAccess %1 が開始されました。プロセスID: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,7 +1605,7 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
         <translation>qBittorrentを操作するには、Web UI(%1)にアクセスしてください</translation>
     </message>
     <message>
@@ -1645,12 +1645,12 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
+        <source>qBittorrentAccess termination initiated</source>
         <translation>qBittorrentの終了を開始しました</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
+        <source>qBittorrentAccess is shutting down...</source>
         <translation>qBittorrentはシャットダウンしています...</translation>
     </message>
     <message>
@@ -1660,7 +1660,7 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
+        <source>qBittorrentAccess is now ready to exit</source>
         <translation>qBittorrentは終了準備ができました</translation>
     </message>
 </context>
@@ -3644,7 +3644,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
         <translation>qBittorrentはファイル共有プログラムです。あなたがTorrentを実行するとき、そのデータはアップロードによって他の人が入手できるようになります。共有するすべてのコンテンツは、自己責任となります。</translation>
     </message>
     <message>
@@ -3709,22 +3709,22 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
         <translation>qBittorrentで回復不能なエラーが発生しました。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
         <translation>%1を使用できません:  qBittorrentはすでに実行中です。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
+        <source>Another qBittorrentAccess instance is already running.</source>
         <translation>別のqBittorrentインスタンスがすでに実行されています。</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
         <translation>予期せぬqBittorrentインスタンスが見つかりました。このインスタンスを終了します。現在のプロセスID: %1.</translation>
     </message>
     <message>
@@ -3828,7 +3828,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
+        <source>L&amp;ock qBittorrentAccess</source>
         <translation>qBittorrentをロック(&amp;O)</translation>
     </message>
     <message>
@@ -3958,7 +3958,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
+        <source>&amp;Exit qBittorrentAccess</source>
         <translation>qBittorrentを終了(&amp;E)</translation>
     </message>
     <message>
@@ -4082,7 +4082,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
+        <source>qBittorrentAccess is minimized to tray</source>
         <translation>qBittorrentはシステムトレイに最小化されました</translation>
     </message>
     <message>
@@ -4167,12 +4167,12 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
         <translation>qBittorrentがアップデートされました。反映には再起動が必要です。</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
+        <source>qBittorrentAccess is closed to tray</source>
         <translation>qBittorrentはシステムトレイに最小化されました。</translation>
     </message>
     <message>
@@ -4182,7 +4182,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>qBittorrentを終了しますか？</translation>
     </message>
     <message>
@@ -4262,7 +4262,7 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
+        <source>qBittorrentAccess Update Available</source>
         <translation>qBittorrentのアップデートがあります</translation>
     </message>
     <message>
@@ -4416,7 +4416,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
+        <source>Exiting qBittorrentAccess</source>
         <translation>qBittorrentの終了</translation>
     </message>
     <message>
@@ -6091,7 +6091,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
+        <source>Start qBittorrentAccess on Windows start up</source>
         <translation>Windowsの起動時にqBittorrentを起動する</translation>
     </message>
     <message>
@@ -6111,7 +6111,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;.torrentファイルやマグネットリンクの規定のプログラムをqBittorrentに設定するには、&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;コントロールパネル&lt;/span&gt;の&lt;/span&gt;規定のプログラム&lt;span style=&quot; font-weight:600;&quot;&gt;ダイアログを使用します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -6121,7 +6121,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
+        <source>Show qBittorrentAccess in menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6607,7 +6607,7 @@ DNSリバインディング攻撃を防ぐために、Web UIサーバーが使�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
+        <source>Minimize qBittorrentAccess to notification area</source>
         <translation>qBittorrentを最小化したときは通知エリアに入れる</translation>
     </message>
     <message>
@@ -6680,7 +6680,7 @@ DNSリバインディング攻撃を防ぐために、Web UIサーバーが使�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6701,12 +6701,12 @@ DNSリバインディング攻撃を防ぐために、Web UIサーバーが使�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
+        <source>Use qBittorrentAccess for .torrent files</source>
         <translation>&quot;.torrent&quot;ファイルにqBittorrentを使用する</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
+        <source>Use qBittorrentAccess for magnet links</source>
         <translation>マグネットリンクにqBittorrentを使用する</translation>
     </message>
     <message>
@@ -6843,7 +6843,7 @@ DNSリバインディング攻撃を防ぐために、Web UIサーバーが使�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
         <translation>qBittorrentを通知エリアに表示する(&amp;Q)</translation>
     </message>
     <message>
@@ -6909,7 +6909,7 @@ DNSリバインディング攻撃を防ぐために、Web UIサーバーが使�
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
         <translation>qBittorrentを閉じたときは通知エリアに入れる</translation>
     </message>
@@ -7031,7 +7031,7 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
+        <source>qBittorrentAccess window state on start up</source>
         <translation>起動時のqBittorrentのウィンドウ状態</translation>
     </message>
     <message>
@@ -7759,7 +7759,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;をフィルタ
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7850,7 +7850,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;をフィルタ
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
         <translation>最初のオプションが有効の場合、ダウンロードキューに正常に追加された後に&quot;.torrent&quot;ファイルが&lt;strong&gt;削除されます&lt;/strong&gt;。2番目のオプションが有効の場合、キューに追加されなくても削除されます。
 これは、メニュー項目の「Torrentリンクの追加」から追加した場合&lt;strong&gt;だけでなく&lt;/strong&gt;、&lt;strong&gt;ファイルタイプの関連付け&lt;/strong&gt;で開いた場合も適用されます。</translation>
     </message>
@@ -8360,7 +8360,7 @@ readme[0-9].txt: &apos;readme1.txt&apos;, &apos;readme2.txt&apos;をフィルタ
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation>一部のプラグインはqBittorrentに含まれているため、アンインストールできませんでした。自分で追加したものだけがアンインストールできます。
 次のプラグインは無効になりました。</translation>
@@ -9950,8 +9950,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>qBittorrent を終了します。</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>qBittorrentAccess を終了します。</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10355,7 +10355,7 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
+        <source>qBittorrentAccess needs to be restarted!</source>
         <translation>qBittorrentの再起動が必要です。</translation>
     </message>
     <message>
@@ -10367,7 +10367,7 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
         <translation>オフライン。通常これは、受信用に指定されたポートでの接続待ちができなかったことを意味します。</translation>
     </message>
     <message>
@@ -13239,12 +13239,12 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
         <translation>すべてのダウンロードが完了したため、コンピューターがシャットダウンされます。</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -1092,7 +1092,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
                 (error) => {
                     const errorDiv = document.getElementById("error_div");
                     if (errorDiv)
-                        errorDiv.textContent = "QBT_TR(qBittorrent client is not reachable)QBT_TR[CONTEXT=HttpServer]";
+                        errorDiv.textContent = "QBT_TR(qBittorrentAccess client is not reachable)QBT_TR[CONTEXT=HttpServer]";
                     syncRequestInProgress = false;
                     syncData(document.hidden
                         ? (window.qBittorrent.Cache.preferences.get().web_ui_session_timeout * 1000) / 2

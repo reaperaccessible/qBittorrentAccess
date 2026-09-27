@@ -50,13 +50,14 @@ AboutDialog::AboutDialog(QWidget *parent)
     m_ui->setupUi(this);
 
     // Title
-    m_ui->labelName->setText(QStringLiteral("<b><h2>qBittorrent " QBT_VERSION " (%1-bit)</h2></b>").arg(QT_POINTER_SIZE * 8));
+    m_ui->labelName->setText(QStringLiteral("<b><h2>qBittorrentAccess " QBTACCESS_VERSION " (%1-bit)</h2></b>").arg(QT_POINTER_SIZE * 8));
 
     m_ui->logo->setPixmap(UIThemeManager::instance()->getScaledPixmap(u"qbittorrent-tray"_s, 32));
 
     // About
     const QString aboutText =
         u"<p style=\"white-space: pre-wrap;\">"
+        u"%6\n\n"
         u"%1\n\n"
         u"%2\n\n"
         u"<table>"
@@ -70,7 +71,9 @@ AboutDialog::AboutDialog(QWidget *parent)
             , tr("Copyright %1 2006-2026 The qBittorrent project").arg(C_COPYRIGHT)
             , tr("Home Page:")
             , tr("Forum:")
-            , tr("Bug Tracker:"));
+            , tr("Bug Tracker:")
+            , tr("qBittorrentAccess makes qBittorrent accessible to screen readers. It is based on qBittorrent %1, by the qBittorrent project and its authors, credited below. Free software under the GNU General Public License: %2")
+                .arg(QStringLiteral(QBT_VERSION), u"<a href=\"https://github.com/reaperaccessible/qBittorrentAccess\">https://github.com/reaperaccessible/qBittorrentAccess</a>"_s));
     m_ui->labelAbout->setText(aboutText);
 
     m_ui->labelMascot->setPixmap(Utils::Gui::scaledPixmap(Path(u":/icons/mascot.png"_s)));

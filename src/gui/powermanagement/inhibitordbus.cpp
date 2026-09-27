@@ -100,13 +100,13 @@ bool InhibitorDBus::requestBusy()
     switch (m_manager)
     {
     case ManagerType::Freedesktop:
-        args = {u"qBittorrent"_s, message};
+        args = {u"qBittorrentAccess"_s, message};
         break;
     case ManagerType::Gnome:
-        args = {u"qBittorrent"_s, 0u, message, 4u};
+        args = {u"qBittorrentAccess"_s, 0u, message, 4u};
         break;
     case ManagerType::Systemd:
-        args = {u"sleep"_s, u"qBittorrent"_s, message, u"block"_s};
+        args = {u"sleep"_s, u"qBittorrentAccess"_s, message, u"block"_s};
         break;
     }
 

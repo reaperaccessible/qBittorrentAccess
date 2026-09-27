@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>Izlaz iz qBittorrenta</translation>
     </message>
     <message>
@@ -367,8 +367,8 @@
         <translation>Sačuvaj</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klijent nije dostupan</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess klijent nije dostupan</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Primjeri podešavanja obrnutog proxyja</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Nije moguće kontaktirati qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Nije moguće kontaktirati qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>Preostala memorija pri provjeri torrenta mora biti veća od 0 i manja od 1024.</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nije moguće učitati postavke programa, qBittorrent vjerojatno nije dostupan.</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nije moguće učitati postavke programa, qBittorrentAccess vjerojatno nije dostupan.</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>DSCP peerova mora biti između 0 i 255.</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nije moguće sačuvati postavke, qBittorrent vjerovatno nije dostupan.</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>Nije moguće sačuvati postavke, qBittorrentAccess vjerovatno nije dostupan.</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>Globalno ograničenje brzine preuzimanja</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Jeste li sigurni da želite zatvoriti qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>Jeste li sigurni da želite zatvoriti qBittorrentAccess?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,7 +1371,7 @@
         <translation>Uklonite torrent i njegove datoteke</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qBittorrentAccess Section</source>
         <translation>qBittorent sekcija</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ Koristite ';' za razdvajanje više unosa. Možete koristiti džoker '*'.</transl
         <translation>Gustoća prikaza:</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation>Dodaje tekst naslovu prozora kako bi se lakše razlikovale instance qBittorent-a</translation>
     </message>
     <message>
@@ -4040,8 +4040,8 @@ Koristite ';' za razdvajanje više unosa. Možete koristiti džoker '*'.</transl
         <translation>Ime:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>O qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ Koristite ';' za razdvajanje više unosa. Možete koristiti džoker '*'.</transl
         <translation>Maskota qBittorrenta</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>Ikona qBittorrenta</translation>
     </message>
 </context>
@@ -4879,8 +4879,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5169,8 +5169,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (Formati datuma također
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>Generišete li API ključ? Ovaj ključ možete koristiti za interakciju s qBittorrent API-jem.</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>Generišete li API ključ? Ovaj ključ možete koristiti za interakciju s qBittorrentAccess API-jem.</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

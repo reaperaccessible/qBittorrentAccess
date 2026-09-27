@@ -349,7 +349,7 @@
   </action>
   <action name="actionLock">
    <property name="text">
-    <string>L&amp;ock qBittorrent</string>
+    <string>L&amp;ock qBittorrentAccess</string>
    </property>
    <property name="iconText">
     <string>Lock</string>
@@ -371,7 +371,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Exit qBittorrent</string>
+    <string>&amp;Exit qBittorrentAccess</string>
    </property>
   </action>
   <action name="actionAutoSuspend">

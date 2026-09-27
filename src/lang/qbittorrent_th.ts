@@ -18,7 +18,7 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../gui/aboutdialog.ui" line="15"/>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>เกี่ยวกับ qBittorent</translation>
     </message>
     <message>
@@ -735,8 +735,8 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="476"/>
-        <source>qBittorrent Section</source>
-        <translation>ส่วนของ qBittorrent</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>ส่วนของ qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="473"/>
@@ -912,7 +912,7 @@
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="774"/>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1471,8 +1471,8 @@
     <message>
         <location filename="../app/application.cpp" line="708"/>
         <location filename="../app/application.cpp" line="726"/>
-        <source>Thank you for using qBittorrent.</source>
-        <translation>ขอบคุณที่เลือกใช้ qBittorrent.</translation>
+        <source>Thank you for using qBittorrentAccess.</source>
+        <translation>ขอบคุณที่เลือกใช้ qBittorrentAccess.</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="757"/>
@@ -1573,9 +1573,9 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="320"/>
-        <source>qBittorrent %1 started. Process ID: %2</source>
+        <source>qBittorrentAccess %1 started. Process ID: %2</source>
         <comment>qBittorrent v3.2.0alpha started</comment>
-        <translation>qBittorrent %1 เริ่มทำงานแล้ว รหัสกระบวนการ: %2</translation>
+        <translation>qBittorrentAccess %1 เริ่มทำงานแล้ว รหัสกระบวนการ: %2</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="725"/>
@@ -1605,8 +1605,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="991"/>
-        <source>To control qBittorrent, access the WebUI at: %1</source>
-        <translation>ควบคุม qBittorrent ให้เข้าถึง WebUI ได้ที่: %1</translation>
+        <source>To control qBittorrentAccess, access the WebUI at: %1</source>
+        <translation>ควบคุม qBittorrentAccess ให้เข้าถึง WebUI ได้ที่: %1</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1034"/>
@@ -1645,13 +1645,13 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1365"/>
-        <source>qBittorrent termination initiated</source>
-        <translation>เริ่มการยุติการทำงานของ qBittorrent</translation>
+        <source>qBittorrentAccess termination initiated</source>
+        <translation>เริ่มการยุติการทำงานของ qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1371"/>
-        <source>qBittorrent is shutting down...</source>
-        <translation>กำลังปิด qBittorrent...</translation>
+        <source>qBittorrentAccess is shutting down...</source>
+        <translation>กำลังปิด qBittorrentAccess...</translation>
     </message>
     <message>
         <location filename="../app/application.cpp" line="1399"/>
@@ -1660,8 +1660,8 @@
     </message>
     <message>
         <location filename="../app/application.cpp" line="1436"/>
-        <source>qBittorrent is now ready to exit</source>
-        <translation>qBittorrent พร้อมที่จะออกจากระบบแล้ว</translation>
+        <source>qBittorrentAccess is now ready to exit</source>
+        <translation>qBittorrentAccess พร้อมที่จะออกจากระบบแล้ว</translation>
     </message>
 </context>
 <context>
@@ -3644,7 +3644,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../app/legalnotice.cpp" line="51"/>
-        <source>qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
+        <source>qBittorrentAccess is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3709,22 +3709,22 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../app/main.cpp" line="121"/>
         <location filename="../app/main.cpp" line="125"/>
-        <source>qBittorrent has encountered an unrecoverable error.</source>
+        <source>qBittorrentAccess has encountered an unrecoverable error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="234"/>
-        <source>You cannot use %1: qBittorrent is already running.</source>
+        <source>You cannot use %1: qBittorrentAccess is already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="241"/>
-        <source>Another qBittorrent instance is already running.</source>
+        <source>Another qBittorrentAccess instance is already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="297"/>
-        <source>Found unexpected qBittorrent instance. Exiting this instance. Current process ID: %1.</source>
+        <source>Found unexpected qBittorrentAccess instance. Exiting this instance. Current process ID: %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3828,8 +3828,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="352"/>
-        <source>L&amp;ock qBittorrent</source>
-        <translation>ล็อก qBittorrent</translation>
+        <source>L&amp;ock qBittorrentAccess</source>
+        <translation>ล็อก qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="363"/>
@@ -3958,8 +3958,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="374"/>
-        <source>&amp;Exit qBittorrent</source>
-        <translation>&amp;ออก qBittorrent</translation>
+        <source>&amp;Exit qBittorrentAccess</source>
+        <translation>&amp;ออก qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.ui" line="382"/>
@@ -4082,8 +4082,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
         <location filename="../gui/mainwindow.cpp" line="1288"/>
-        <source>qBittorrent is minimized to tray</source>
-        <translation>qBittorrent ย่อขนาดลงในถาด</translation>
+        <source>qBittorrentAccess is minimized to tray</source>
+        <translation>qBittorrentAccess ย่อขนาดลงในถาด</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="472"/>
@@ -4167,13 +4167,13 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1059"/>
-        <source>qBittorrent was just updated and needs to be restarted for the changes to be effective.</source>
-        <translation>qBittorrent เพิ่งได้รับการอัปเดตและจำเป็นต้องเริ่มต้นใหม่เพื่อให้การเปลี่ยนแปลงมีผล.</translation>
+        <source>qBittorrentAccess was just updated and needs to be restarted for the changes to be effective.</source>
+        <translation>qBittorrentAccess เพิ่งได้รับการอัปเดตและจำเป็นต้องเริ่มต้นใหม่เพื่อให้การเปลี่ยนแปลงมีผล.</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1195"/>
-        <source>qBittorrent is closed to tray</source>
-        <translation>qBittorrent ปิดถาด</translation>
+        <source>qBittorrentAccess is closed to tray</source>
+        <translation>qBittorrentAccess ปิดถาด</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
@@ -4182,8 +4182,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1215"/>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>คุณมั่นใจว่าต้องการปิด qBittorrent?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>คุณมั่นใจว่าต้องการปิด qBittorrentAccess?</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1217"/>
@@ -4261,8 +4261,8 @@ Please install it manually.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1694"/>
-        <source>qBittorrent Update Available</source>
-        <translation>qBittorrent มีการอัพเดตที่พร้อมใช้งาน</translation>
+        <source>qBittorrentAccess Update Available</source>
+        <translation>qBittorrentAccess มีการอัพเดตที่พร้อมใช้งาน</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1622"/>
@@ -4413,8 +4413,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1213"/>
-        <source>Exiting qBittorrent</source>
-        <translation>กำลังออก qBittorrent</translation>
+        <source>Exiting qBittorrentAccess</source>
+        <translation>กำลังออก qBittorrentAccess</translation>
     </message>
     <message>
         <location filename="../gui/mainwindow.cpp" line="1321"/>
@@ -6088,8 +6088,8 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="500"/>
-        <source>Start qBittorrent on Windows start up</source>
-        <translation>เริ่ม qBittorrent ตอนเปิดเครื่อง</translation>
+        <source>Start qBittorrentAccess on Windows start up</source>
+        <translation>เริ่ม qBittorrentAccess ตอนเปิดเครื่อง</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="507"/>
@@ -6108,7 +6108,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="702"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrent as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To set qBittorrentAccess as default program for .torrent files and/or Magnet links&lt;br/&gt;you can use &lt;span style=&quot; font-weight:600;&quot;&gt;Default Programs&lt;/span&gt; dialog from &lt;span style=&quot; font-weight:600;&quot;&gt;Control Panel&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6118,7 +6118,7 @@ Minimum requirement: %2.</source>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="729"/>
-        <source>Show qBittorrent in menu bar</source>
+        <source>Show qBittorrentAccess in menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6595,8 +6595,8 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="583"/>
-        <source>Minimize qBittorrent to notification area</source>
-        <translation>ย่อ qBittorrent ให้เล็กสุดไปยังพื้นที่แจ้งเตือน</translation>
+        <source>Minimize qBittorrentAccess to notification area</source>
+        <translation>ย่อ qBittorrentAccess ให้เล็กสุดไปยังพื้นที่แจ้งเตือน</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="77"/>
@@ -6668,7 +6668,7 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="484"/>
-        <source>Drag content from qBittorrent</source>
+        <source>Drag content from qBittorrentAccess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6689,13 +6689,13 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="670"/>
-        <source>Use qBittorrent for .torrent files</source>
-        <translation>ใช้ qBittorrent สำหรับไฟล์ .torrent</translation>
+        <source>Use qBittorrentAccess for .torrent files</source>
+        <translation>ใช้ qBittorrentAccess สำหรับไฟล์ .torrent</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="677"/>
-        <source>Use qBittorrent for magnet links</source>
-        <translation>ใช้ qBittorrent สำหรับลิงก์แม่เหล็ก</translation>
+        <source>Use qBittorrentAccess for magnet links</source>
+        <translation>ใช้ qBittorrentAccess สำหรับลิงก์แม่เหล็ก</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="715"/>
@@ -6831,7 +6831,7 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="571"/>
-        <source>Show &amp;qBittorrent in notification area</source>
+        <source>Show &amp;qBittorrentAccess in notification area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6897,9 +6897,9 @@ Use &apos;;&apos; to split multiple entries. Can use wildcard &apos;*&apos;.</so
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="596"/>
-        <source>Close qBittorrent to notification area</source>
+        <source>Close qBittorrentAccess to notification area</source>
         <extracomment>The systray icon will still be visible when closing the main window</extracomment>
-        <translation>ปิด qBittorrent ในพื้นที่แจ้งเตือน</translation>
+        <translation>ปิด qBittorrentAccess ในพื้นที่แจ้งเตือน</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="618"/>
@@ -7018,7 +7018,7 @@ Manual: Various torrent properties (e.g. save path) must be assigned manually</s
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="526"/>
-        <source>qBittorrent window state on start up</source>
+        <source>qBittorrentAccess window state on start up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7734,7 +7734,7 @@ readme[0-9].txt: filter &apos;readme1.txt&apos;, &apos;readme2.txt&apos; but not
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="1511"/>
-        <source>Generate an API key? This key can be used to interact with qBittorrent&apos;s API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess&apos;s API.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7825,8 +7825,8 @@ readme[0-9].txt: filter &apos;readme1.txt&apos;, &apos;readme2.txt&apos; but not
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="613"/>
-        <source>When these options are enabled, qBittorrent will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
-        <translation>เมื่อเปิดใช้งานตัวเลือกเหล่านี้ qBittorrent จะ&lt;strong&gt;ลบ&lt;/strong&gt;ไฟล์ .torrent หลังจากที่ไฟล์นั้นถูกเพิ่มเข้าสู่คิวการดาวน์โหลดสำเร็จ (ตัวเลือกแรก) หรือไม่สำเร็จ (ตัวเลือกที่สอง) การดำเนินการนี้จะใช้ได้ &lt;strong&gt;ไม่เพียงแต่&lt;/strong&gt; กับไฟล์ที่เปิดจากเมนู &amp;ldquo;เพิ่ม torrent&amp;rdquo; แต่ยังรวมถึงไฟล์ที่เปิดจาก&lt;strong&gt;การระบุโดยนามสกุล&lt;/strong&gt;ด้วย</translation>
+        <source>When these options are enabled, qBittorrentAccess will &lt;strong&gt;delete&lt;/strong&gt; .torrent files after they were successfully (the first option) or not (the second option) added to its download queue. This will be applied &lt;strong&gt;not only&lt;/strong&gt; to the files opened via &amp;ldquo;Add torrent&amp;rdquo; menu action but to those opened via &lt;strong&gt;file type association&lt;/strong&gt; as well</source>
+        <translation>เมื่อเปิดใช้งานตัวเลือกเหล่านี้ qBittorrentAccess จะ&lt;strong&gt;ลบ&lt;/strong&gt;ไฟล์ .torrent หลังจากที่ไฟล์นั้นถูกเพิ่มเข้าสู่คิวการดาวน์โหลดสำเร็จ (ตัวเลือกแรก) หรือไม่สำเร็จ (ตัวเลือกที่สอง) การดำเนินการนี้จะใช้ได้ &lt;strong&gt;ไม่เพียงแต่&lt;/strong&gt; กับไฟล์ที่เปิดจากเมนู &amp;ldquo;เพิ่ม torrent&amp;rdquo; แต่ยังรวมถึงไฟล์ที่เปิดจาก&lt;strong&gt;การระบุโดยนามสกุล&lt;/strong&gt;ด้วย</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.cpp" line="268"/>
@@ -8334,7 +8334,7 @@ readme[0-9].txt: filter &apos;readme1.txt&apos;, &apos;readme2.txt&apos; but not
     </message>
     <message>
         <location filename="../gui/search/pluginselectdialog.cpp" line="216"/>
-        <source>Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.
+        <source>Some plugins could not be uninstalled because they are included in qBittorrentAccess. Only the ones you added yourself can be uninstalled.
 Those plugins were disabled.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9919,8 +9919,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="118"/>
-        <source>qBittorrent will now exit.</source>
-        <translation>กำลังจะออก qBittorrent แล้ว</translation>
+        <source>qBittorrentAccess will now exit.</source>
+        <translation>กำลังจะออก qBittorrentAccess แล้ว</translation>
     </message>
     <message>
         <location filename="../gui/shutdownconfirmdialog.cpp" line="119"/>
@@ -10324,8 +10324,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="182"/>
-        <source>qBittorrent needs to be restarted!</source>
-        <translation>ต้องเริ่มต้น qBittorrent ใหม่!</translation>
+        <source>qBittorrentAccess needs to be restarted!</source>
+        <translation>ต้องเริ่มต้น qBittorrentAccess ใหม่!</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
@@ -10336,8 +10336,8 @@ Click the &quot;Search plugins...&quot; button at the bottom right of the window
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="202"/>
-        <source>Offline. This usually means that qBittorrent failed to listen on the selected port for incoming connections.</source>
-        <translation>ออฟไลน์. ซึ่งมักจะหมายความว่า qBittorrent ไม่สามารถเชื่อมต่อพอร์ตที่เลือกสำหรับการเชื่อมต่อขาเข้า</translation>
+        <source>Offline. This usually means that qBittorrentAccess failed to listen on the selected port for incoming connections.</source>
+        <translation>ออฟไลน์. ซึ่งมักจะหมายความว่า qBittorrentAccess ไม่สามารถเชื่อมต่อพอร์ตที่เลือกสำหรับการเชื่อมต่อขาเข้า</translation>
     </message>
     <message>
         <location filename="../gui/statusbar.cpp" line="211"/>
@@ -13203,12 +13203,12 @@ Please choose a different name and try again.</source>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="92"/>
-        <source>qBittorrent will shutdown the computer now because all downloads are complete.</source>
-        <translation>qBittorrent กำลังปิดคอมพิวเตอร์ของคุณตอนนี้เพราะดาวน์โหลดเสร็จสิ้นหมดแล้ว</translation>
+        <source>qBittorrentAccess will shutdown the computer now because all downloads are complete.</source>
+        <translation>qBittorrentAccess กำลังปิดคอมพิวเตอร์ของคุณตอนนี้เพราะดาวน์โหลดเสร็จสิ้นหมดแล้ว</translation>
     </message>
     <message>
         <location filename="../base/utils/os.cpp" line="98"/>
-        <source>qBittorrent will reboot the computer now because all downloads are complete.</source>
+        <source>qBittorrentAccess will reboot the computer now because all downloads are complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent बाट बाहिर निस्कनुहोस्</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>qBittorrentAccess बाट बाहिर निस्कनुहोस्</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,7 +367,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qBittorrentAccess client is not reachable</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -459,7 +459,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
+        <source>Could not contact qBittorrentAccess</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,8 +658,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>के तपाईं qBittorrent बन्द गर्न निश्चित हुनुहुन्छ?</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>के तपाईं qBittorrentAccess बन्द गर्न निश्चित हुनुहुन्छ?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>टोरेन्ट र यसका फाइलहरू हटाउनुहोस्</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent खण्ड</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess खण्ड</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ DNS रिबाइन्डिङ आक्रमणबाट बचाउन�
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>यसले qBittorrent इन्स्ट्यान्सहरू छुट्याउन मद्दत गर्न विन्डो शीर्षकमा पाठ थप्छ।</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>यसले qBittorrentAccess इन्स्ट्यान्सहरू छुट्याउन मद्दत गर्न विन्डो शीर्षकमा पाठ थप्छ।</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ DNS रिबाइन्डिङ आक्रमणबाट बचाउन�
         <translation>नाम:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent को बारेमा</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>qBittorrentAccess को बारेमा</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,7 +4080,7 @@ DNS रिबाइन्डिङ आक्रमणबाट बचाउन�
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -4879,7 +4879,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
+        <source>qBittorrentAccess WebUI</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -5167,8 +5167,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>API कुञ्जी उत्पन्न गर्ने हो? यो कुञ्जी qBittorrent को API सँग अन्तर्क्रिया गर्न प्रयोग गर्न सकिन्छ।</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>API कुञ्जी उत्पन्न गर्ने हो? यो कुञ्जी qBittorrentAccess को API सँग अन्तर्क्रिया गर्न प्रयोग गर्न सकिन्छ।</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

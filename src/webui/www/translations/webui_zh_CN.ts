@@ -256,8 +256,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>退出 qBittorrent</translation>
+        <source>Exit qBittorrentAccess</source>
+        <translation>退出 qBittorrentAccess</translation>
     </message>
     <message>
         <source>Global upload rate limit must be greater than 0 or disabled.</source>
@@ -367,8 +367,8 @@
         <translation>保存</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>无法访问 qBittorrent 客户端</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>无法访问 qBittorrentAccess 客户端</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>反向代理设置示例</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>无法联系 qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>无法联系 qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,8 +555,8 @@
         <translation>检查种子时的剩余内存必须大于 0 并小于 1024</translation>
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
-        <translation>无法加载程序首选项，可能无法抵达 qBittorrent</translation>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>无法加载程序首选项，可能无法抵达 qBittorrentAccess</translation>
     </message>
     <message>
         <source>Peer turnover cutoff must be between 0 and 100.</source>
@@ -567,8 +567,8 @@
         <translation>对等节点 DSCP 必须在 0 到 255 之间。</translation>
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
-        <translation>无法保存偏好设置，qBittorrent 可能无法访问。</translation>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
+        <translation>无法保存偏好设置，qBittorrentAccess 可能无法访问。</translation>
     </message>
     <message>
         <source>Unable to add torrents.</source>
@@ -658,8 +658,8 @@
         <translation>全局下载速度限制</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>您确定要退出 qBittorrent 吗？</translation>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
+        <translation>您确定要退出 qBittorrentAccess 吗？</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1371,8 +1371,8 @@
         <translation>删除 torrent 及所属文件</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 相关</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess 相关</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,8 +2243,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>显示密度：</translation>
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
-        <translation>它将文本附加到窗口标题来区分不同的 qBittorrent 实例</translation>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
+        <translation>它将文本附加到窗口标题来区分不同的 qBittorrentAccess 实例</translation>
     </message>
     <message>
         <source>Resolve peer host names:</source>
@@ -4040,8 +4040,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>姓名：</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>关于 qBittorrent</translation>
+        <source>About qBittorrentAccess</source>
+        <translation>关于 qBittorrentAccess</translation>
     </message>
     <message>
         <source>License</source>
@@ -4080,8 +4080,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>qBittorrent 吉祥物</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent 图标</translation>
+        <source>qBittorrentAccess icon</source>
+        <translation>qBittorrentAccess 图标</translation>
     </message>
 </context>
 <context>
@@ -4879,8 +4879,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent WebUI</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess WebUI</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5167,8 +5167,8 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
-        <translation>生成 API key 吗？这枚 key 可用于和 qBittorrent 的 API 互动。</translation>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
+        <translation>生成 API key 吗？这枚 key 可用于和 qBittorrentAccess 的 API 互动。</translation>
     </message>
     <message>
         <source>Delete this API key? The current key will immediately stop working.</source>

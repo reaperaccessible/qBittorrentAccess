@@ -6,11 +6,11 @@ IDI_ICON2 ICON "icons\qbittorrent_file.ico"
 #include <windows.h>
 #include "base/version.h"
 
-#define VER_FILEVERSION             QBT_VERSION_MAJOR,QBT_VERSION_MINOR,QBT_VERSION_BUGFIX,QBT_VERSION_BUILD
-#define VER_FILEVERSION_STR         QBT_VERSION
+#define VER_FILEVERSION             QBTACCESS_VERSION_MAJOR,QBTACCESS_VERSION_MINOR,0,0
+#define VER_FILEVERSION_STR         QBTACCESS_VERSION
 
-#define VER_PRODUCTVERSION          QBT_VERSION_MAJOR,QBT_VERSION_MINOR,QBT_VERSION_BUGFIX,QBT_VERSION_BUILD
-#define VER_PRODUCTVERSION_STR      QBT_VERSION
+#define VER_PRODUCTVERSION          QBTACCESS_VERSION_MAJOR,QBTACCESS_VERSION_MINOR,0,0
+#define VER_PRODUCTVERSION_STR      QBTACCESS_VERSION
 
 #ifndef DEBUG
 #define VER_DEBUG                   0
@@ -31,13 +31,13 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "CompanyName",      "The qBittorrent Project"
-            VALUE "FileDescription",  "qBittorrent - A Bittorrent Client"
+            VALUE "CompanyName",      "ReaperAccessible"
+            VALUE "FileDescription",  "qBittorrentAccess - An accessible BitTorrent client based on qBittorrent"
             VALUE "FileVersion",      VER_FILEVERSION_STR
-            VALUE "InternalName",     "qbittorrent"
+            VALUE "InternalName",     "qBittorrentAccess"
             VALUE "LegalCopyright",   "Copyright ©2006-2026 The qBittorrent Project"
-            VALUE "OriginalFilename", "qbittorrent.exe"
-            VALUE "ProductName",      "qBittorrent"
+            VALUE "OriginalFilename", "qBittorrentAccess.exe"
+            VALUE "ProductName",      "qBittorrentAccess"
             VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
         END
     END

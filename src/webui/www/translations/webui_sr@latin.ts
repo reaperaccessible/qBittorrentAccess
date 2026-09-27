@@ -256,7 +256,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qBittorrentAccess</source>
         <translation>Izađi iz qBittorrent-a</translation>
     </message>
     <message>
@@ -367,8 +367,8 @@
         <translation>Sačuvaj</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klijent nije dostupan</translation>
+        <source>qBittorrentAccess client is not reachable</source>
+        <translation>qBittorrentAccess klijent nije dostupan</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -459,8 +459,8 @@
         <translation>Primeri podešavanja obrnutog proksija</translation>
     </message>
     <message>
-        <source>Could not contact qBittorrent</source>
-        <translation>Nije moguće kontaktirati qBittorrent</translation>
+        <source>Could not contact qBittorrentAccess</source>
+        <translation>Nije moguće kontaktirati qBittorrentAccess</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -555,7 +555,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to load program preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -567,7 +567,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save preferences, qBittorrentAccess is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -658,7 +658,7 @@
         <translation>Opšti limit brzine preuzimanja</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qBittorrentAccess?</source>
         <translation>Da li ste sigurni da želite da izađete iz qBittorrent-a?</translation>
     </message>
     <message>
@@ -1371,8 +1371,8 @@
         <translation>Ukloni torent i njegove fajlove</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Odeljak</translation>
+        <source>qBittorrentAccess Section</source>
+        <translation>qBittorrentAccess Odeljak</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -2243,7 +2243,7 @@ Koristite ';' da biste razdvojili više unosa. Možete koristiti džoker '*'.</t
         <translation type="unfinished" />
     </message>
     <message>
-        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <source>It appends the text to the window title to help distinguish qBittorrentAccess instances</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -4040,7 +4040,7 @@ Koristite ';' da biste razdvojili više unosa. Možete koristiti džoker '*'.</t
         <translation>Ime:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qBittorrentAccess</source>
         <translation>O qBittorrent-u</translation>
     </message>
     <message>
@@ -4080,7 +4080,7 @@ Koristite ';' da biste razdvojili više unosa. Možete koristiti džoker '*'.</t
         <translation>Maskota qBittorrent-a</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qBittorrentAccess icon</source>
         <translation>Ikona qBittorrent-a</translation>
     </message>
 </context>
@@ -4879,8 +4879,8 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (formati u vidu datuma t
 <context>
     <name>Login</name>
     <message>
-        <source>qBittorrent WebUI</source>
-        <translation>qBittorrent veb korisnički interfejs</translation>
+        <source>qBittorrentAccess WebUI</source>
+        <translation>qBittorrentAccess veb korisnički interfejs</translation>
     </message>
     <message>
         <source>Password</source>
@@ -5167,7 +5167,7 @@ Podržava formate: S01E01, 1x1, 2017.12.31 i 31.12.2017 (formati u vidu datuma t
 <context>
     <name>confirmRotateAPIKeyDialog</name>
     <message>
-        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <source>Generate an API key? This key can be used to interact with qBittorrentAccess's API.</source>
         <translation type="unfinished" />
     </message>
     <message>
