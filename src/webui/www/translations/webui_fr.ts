@@ -200,7 +200,7 @@
     </message>
     <message>
         <source>KiB/s</source>
-        <translation>Kio/s</translation>
+        <translation>Ko/s</translation>
     </message>
 </context>
 <context>
@@ -1200,7 +1200,7 @@
     </message>
     <message>
         <source>KiB/s</source>
-        <translation>Kio/s</translation>
+        <translation>Ko/s</translation>
     </message>
     <message>
         <source>Enable clickjacking protection</source>
@@ -1436,7 +1436,7 @@
     </message>
     <message>
         <source>KiB</source>
-        <translation>Kio</translation>
+        <translation>Ko</translation>
     </message>
     <message>
         <source>Round-robin</source>
@@ -1448,7 +1448,7 @@
     </message>
     <message>
         <source>MiB</source>
-        <translation>Mio</translation>
+        <translation>Mo</translation>
     </message>
     <message>
         <source>Send buffer low watermark:</source>
@@ -3631,32 +3631,32 @@ Utiliser ';' pour diviser plusieurs entrées. Le caractère générique '*' peut
     <message>
         <source>KiB</source>
         <comment>kibibytes (1024 bytes)</comment>
-        <translation>Kio</translation>
+        <translation>Ko</translation>
     </message>
     <message>
         <source>MiB</source>
         <comment>mebibytes (1024 kibibytes)</comment>
-        <translation>Mio</translation>
+        <translation>Mo</translation>
     </message>
     <message>
         <source>GiB</source>
         <comment>gibibytes (1024 mibibytes)</comment>
-        <translation>Gio</translation>
+        <translation>Go</translation>
     </message>
     <message>
         <source>TiB</source>
         <comment>tebibytes (1024 gibibytes)</comment>
-        <translation>Tio</translation>
+        <translation>To</translation>
     </message>
     <message>
         <source>PiB</source>
         <comment>pebibytes (1024 tebibytes)</comment>
-        <translation>Pio</translation>
+        <translation>Po</translation>
     </message>
     <message>
         <source>EiB</source>
         <comment>exbibytes (1024 pebibytes)</comment>
-        <translation>Eio</translation>
+        <translation>Eo</translation>
     </message>
     <message>
         <source>/s</source>
@@ -5154,7 +5154,7 @@ immédiatement</translation>
     </message>
     <message>
         <source>KiB/s</source>
-        <translation>Kio/s</translation>
+        <translation>Ko/s</translation>
     </message>
 </context>
 <context>

@@ -289,62 +289,62 @@
     <message>
         <location filename="../gui/access/accessibility.cpp" line="581"/>
         <source>kibibyte</source>
-        <translation>kibioctet</translation>
+        <translation>kilooctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="581"/>
         <source>kibibytes</source>
-        <translation>kibioctets</translation>
+        <translation>kilooctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="582"/>
         <source>mebibyte</source>
-        <translation>mébioctet</translation>
+        <translation>mégaoctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="582"/>
         <source>mebibytes</source>
-        <translation>mébioctets</translation>
+        <translation>mégaoctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="583"/>
         <source>gibibyte</source>
-        <translation>gibioctet</translation>
+        <translation>gigaoctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="583"/>
         <source>gibibytes</source>
-        <translation>gibioctets</translation>
+        <translation>gigaoctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="584"/>
         <source>tebibyte</source>
-        <translation>tébioctet</translation>
+        <translation>téraoctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="584"/>
         <source>tebibytes</source>
-        <translation>tébioctets</translation>
+        <translation>téraoctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="585"/>
         <source>pebibyte</source>
-        <translation>pébioctet</translation>
+        <translation>pétaoctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="585"/>
         <source>pebibytes</source>
-        <translation>pébioctets</translation>
+        <translation>pétaoctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="586"/>
         <source>exbibyte</source>
-        <translation>exbioctet</translation>
+        <translation>exaoctet</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="586"/>
         <source>exbibytes</source>
-        <translation>exbioctets</translation>
+        <translation>exaoctets</translation>
     </message>
     <message>
         <location filename="../gui/access/accessibility.cpp" line="601"/>
@@ -1205,7 +1205,7 @@
         <location filename="../gui/advancedsettings.cpp" line="563"/>
         <location filename="../gui/advancedsettings.cpp" line="700"/>
         <source> MiB</source>
-        <translation>Mio</translation>
+        <translation>Mo</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="772"/>
@@ -1456,7 +1456,7 @@
         <location filename="../gui/advancedsettings.cpp" line="664"/>
         <location filename="../gui/advancedsettings.cpp" line="672"/>
         <source> KiB</source>
-        <translation> Kio</translation>
+        <translation> Ko</translation>
     </message>
     <message>
         <location filename="../gui/advancedsettings.cpp" line="403"/>
@@ -6836,7 +6836,7 @@ Configuration minimale requise&#xa0;:&#xa0;%2.</translation>
     <message>
         <location filename="../gui/optionsdialog.ui" line="806"/>
         <source> KiB</source>
-        <translation> Kio</translation>
+        <translation> Ko</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="899"/>
@@ -8024,7 +8024,7 @@ readme[0-9].txt : filtre &apos;readme1.txt&apos; et &apos;readme2.txt&apos;, mai
         <location filename="../gui/optionsdialog.ui" line="3002"/>
         <location filename="../gui/optionsdialog.ui" line="3038"/>
         <source> KiB/s</source>
-        <translation> Kio/s</translation>
+        <translation> Ko/s</translation>
     </message>
     <message>
         <location filename="../gui/optionsdialog.ui" line="2385"/>
@@ -10897,7 +10897,7 @@ Cliquez sur le bouton « Recherche de greffons… » en bas à droite de la fen�
         <location filename="../gui/speedlimitdialog.ui" line="126"/>
         <location filename="../gui/speedlimitdialog.ui" line="156"/>
         <source> KiB/s</source>
-        <translation> Kio/s</translation>
+        <translation> Ko/s</translation>
     </message>
     <message>
         <location filename="../gui/speedlimitdialog.ui" line="63"/>
@@ -11910,7 +11910,7 @@ Veuillez en choisir un autre.</translation>
     <message>
         <location filename="../gui/torrentcreatordialog.ui" line="276"/>
         <source> KiB</source>
-        <translation> Kio</translation>
+        <translation> Ko</translation>
     </message>
     <message>
         <location filename="../gui/torrentcreatordialog.ui" line="313"/>
@@ -12127,7 +12127,7 @@ Veuillez en choisir un autre.</translation>
         <location filename="../gui/torrentoptionsdialog.ui" line="109"/>
         <location filename="../gui/torrentoptionsdialog.ui" line="139"/>
         <source> KiB/s</source>
-        <translation> Kio/s</translation>
+        <translation> Ko/s</translation>
     </message>
     <message>
         <location filename="../gui/torrentoptionsdialog.ui" line="152"/>
@@ -14049,43 +14049,43 @@ Veuillez en choisir un autre.</translation>
         <location filename="../base/utils/misc.cpp" line="59"/>
         <source>B</source>
         <comment>bytes</comment>
-        <translation>Oct</translation>
+        <translation>octets</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="60"/>
         <source>KiB</source>
         <comment>kibibytes (1024 bytes)</comment>
-        <translation>Kio</translation>
+        <translation>Ko</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="61"/>
         <source>MiB</source>
         <comment>mebibytes (1024 kibibytes)</comment>
-        <translation>Mio</translation>
+        <translation>Mo</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="62"/>
         <source>GiB</source>
         <comment>gibibytes (1024 mibibytes)</comment>
-        <translation>Gio</translation>
+        <translation>Go</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="63"/>
         <source>TiB</source>
         <comment>tebibytes (1024 gibibytes)</comment>
-        <translation>Tio</translation>
+        <translation>To</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="64"/>
         <source>PiB</source>
         <comment>pebibytes (1024 tebibytes)</comment>
-        <translation>Pio</translation>
+        <translation>Po</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="65"/>
         <source>EiB</source>
         <comment>exbibytes (1024 pebibytes)</comment>
-        <translation>Eio</translation>
+        <translation>Eo</translation>
     </message>
     <message>
         <location filename="../base/utils/misc.cpp" line="101"/>

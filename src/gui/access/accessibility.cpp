@@ -64,6 +64,7 @@
 
 #include "base/global.h"
 #include "gui/fspathedit.h"
+#include "listaccessible.h"
 
 namespace
 {
@@ -587,7 +588,7 @@ QString Access::spellOut(const QString &text)
         QT_TRANSLATE_NOOP("Access", "exbibyte"), QT_TRANSLATE_NOOP("Access", "exbibytes")};
 
     QString result;
-    // sizes and speeds: "5,8 Mio/s" -> "5,8 mébioctets par seconde"
+    // sizes and speeds: "5,8 Mo/s" -> "5,8 mégaoctets par seconde"
     {
         qsizetype last = 0;
         QRegularExpressionMatchIterator it = rules.sizes.globalMatch(text);
@@ -859,21 +860,7 @@ namespace
     // change and keeps it on the braille display (an announcement would only be a flash message)
     void notifyCurrentNameChanged(QTreeView *view)
     {
-        const QModelIndex current = view->currentIndex();
-        QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(view);
-        if (!current.isValid() || !iface || !iface->tableInterface())
-            return;
-        // the accessible table counts the rows shown on screen: in a tree, a file inside a folder is not
-        // at its model row
-        int visualRow = 0;
-        for (QModelIndex above = view->indexAbove(current); above.isValid(); above = view->indexAbove(above))
-            ++visualRow;
-        if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(visualRow, current.column()))
-        {
-            QAccessibleEvent event {view, QAccessible::NameChanged};
-            event.setChild(iface->indexOfChild(cell));
-            QAccessible::updateAccessibility(&event);
-        }
+        Access::notifyCurrentItemNameChanged(view);
     }
 
     // Left/Right: one column of the current row (Up/Down then stay in it), Home: the primary column,

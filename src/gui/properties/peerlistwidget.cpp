@@ -58,6 +58,7 @@
 #include "base/preferences.h"
 #include "base/utils/misc.h"
 #include "base/utils/string.h"
+#include "gui/access/listaccessible.h"
 #include "gui/uithememanager.h"
 #include "gui/utils/keysequence.h"
 #include "peerlistsortmodel.h"
@@ -101,6 +102,7 @@ PeerListWidget::PeerListWidget(PropertiesWidget *parent)
     // Visual settings
     setUniformRowHeights(true);
     setRootIsDecorated(false);
+    Access::presentAsList(this); // "1 of 12", not "level 1" on every peer
     setItemsExpandable(false);
     setAllColumnsShowFocus(true);
     setEditTriggers(QAbstractItemView::NoEditTriggers);

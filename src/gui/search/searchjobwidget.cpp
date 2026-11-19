@@ -47,6 +47,7 @@
 #include "base/search/searchpluginmanager.h"
 #include "base/utils/misc.h"
 #include "gui/access/accessibility.h"
+#include "gui/access/listaccessible.h"
 #include "gui/interfaces/iguiapplication.h"
 #include "gui/lineedit.h"
 #include "gui/uithememanager.h"
@@ -191,6 +192,7 @@ SearchJobWidget::SearchJobWidget(const QString &id, IGUIApplication *app, QWidge
 
     // Accessibility: results named, read as whole rows or column by column (Left/Right), "First," / "Last," at the edges,
     // filter fields named after their labels
+    Access::presentAsList(m_ui->resultsBrowser); // "1 of 12", not "level 1" on every result
     m_ui->resultsBrowser->setAccessibleName(tr("Search results"));
     m_ui->minSeeds->setAccessibleName(tr("Minimum seeds"));
     m_ui->maxSeeds->setAccessibleName(tr("Maximum seeds"));

@@ -58,6 +58,7 @@
 #include "base/utils/misc.h"
 #include "base/utils/string.h"
 #include "access/accessibility.h"
+#include "access/listaccessible.h"
 #include "autoexpandabledialog.h"
 #include "deletionconfirmationdialog.h"
 #include "interfaces/iguiapplication.h"
@@ -155,6 +156,7 @@ TransferListWidget::TransferListWidget(IGUIApplication *app, QWidget *parent)
     header()->setTextElideMode(Qt::ElideRight);
 
     // Accessibility: name the list and let screen readers read the whole row, not just one cell
+    Access::presentAsList(this); // "1 of 12", not "level 1" on every torrent
     setAccessibleName(tr("Torrents"));
     m_sortFilterModel->setAccessibleTextProvider([this](const QModelIndex &index) -> QString
     {
@@ -1389,16 +1391,7 @@ void TransferListWidget::announceColumn(const int step)
 
 void TransferListWidget::notifyCurrentNameChanged()
 {
-    const QModelIndex current = currentIndex();
-    QAccessibleInterface *iface = QAccessible::queryAccessibleInterface(this);
-    if (!current.isValid() || !iface || !iface->tableInterface())
-        return;
-    if (QAccessibleInterface *cell = iface->tableInterface()->cellAt(current.row(), current.column()))
-    {
-        QAccessibleEvent event {this, QAccessible::NameChanged};
-        event.setChild(iface->indexOfChild(cell));
-        QAccessible::updateAccessibility(&event);
-    }
+    Access::notifyCurrentItemNameChanged(this);
 }
 
 void TransferListWidget::toggleCurrentTorrentsStartStop()

@@ -1,4 +1,4 @@
-find_package(Qt6 ${minQt6Version} REQUIRED COMPONENTS Widgets Svg)
+find_package(Qt6 ${minQt6Version} REQUIRED COMPONENTS Widgets Svg GuiPrivate)
 
 # CMAKE_AUTO_UI causes unnecessary rebuilds
 qt_wrap_ui(UI_HEADERS
@@ -42,6 +42,7 @@ add_library(qbt_gui STATIC
     # headers
     aboutdialog.h
     access/accessibility.h
+    access/listaccessible.h
     access/shortcutsdialog.h
     addnewtorrentdialog.h
     addtorrentparamswidget.h
@@ -152,6 +153,7 @@ add_library(qbt_gui STATIC
     # sources
     aboutdialog.cpp
     access/accessibility.cpp
+    access/listaccessible.cpp
     access/shortcutsdialog.cpp
     addnewtorrentdialog.cpp
     addtorrentparamswidget.cpp
@@ -264,6 +266,7 @@ target_include_directories(qbt_gui PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 target_link_libraries(qbt_gui
     PRIVATE
         qbt_base
+        Qt::GuiPrivate
     PUBLIC
         Qt::Gui Qt::Widgets
 )
