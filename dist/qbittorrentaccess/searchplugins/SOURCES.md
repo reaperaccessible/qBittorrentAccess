@@ -11,6 +11,7 @@ Each plugin belongs to its author; source of each file:
 - nyaasi.py: https://raw.githubusercontent.com/MadeOfMagicAndWires/qBit-plugins/master/engines/nyaasi.py
 - piratebay.py: https://github.com/qbittorrent/search-plugins/tree/master/nova3/engines (official qBittorrent plugins)
 - pirateiro.py: https://raw.githubusercontent.com/LightDestory/qBittorrent-Search-Plugins/master/src/engines/pirateiro.py
+- plugintorrent.py: written for qBittorrentAccess (reads the site's public WordPress API: magnet and size from each post)
 - rutor.py: https://raw.githubusercontent.com/imDMG/qBt_SE/master/engines/rutor.py
 - sktorrent.py: https://raw.githubusercontent.com/Ashalda/sktorrent-qbt/refs/heads/main/sktorrent.py
 - torlock.py: https://github.com/qbittorrent/search-plugins/tree/master/nova3/engines (official qBittorrent plugins)

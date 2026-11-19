@@ -49,5 +49,5 @@
 // qBittorrentAccess: the product's own version (1.00, 1.01...), shown to the user.
 // The qBittorrent version above stays the one sent to peers, trackers and web services.
 #define QBTACCESS_VERSION_MAJOR 1
-#define QBTACCESS_VERSION_MINOR 2
-#define QBTACCESS_VERSION "1.02"
+#define QBTACCESS_VERSION_MINOR 3
+#define QBTACCESS_VERSION "1.03"
